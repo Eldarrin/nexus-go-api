@@ -1,4 +1,4 @@
-module Eldarrin/nexus-go-api
+module nexus-go-api
 
 go 1.17
 
