@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"Eldarrin/nexus-go-api/models"
+	"github.com/Eldarrin/nexus-go-api/models"
 )
 
 // GetRepository19Reader is a Reader for the GetRepository19 structure.

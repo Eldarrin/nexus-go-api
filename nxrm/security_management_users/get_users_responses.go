@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"Eldarrin/nexus-go-api/models"
+	"github.com/Eldarrin/nexus-go-api/models"
 )
 
 // GetUsersReader is a Reader for the GetUsers structure.
