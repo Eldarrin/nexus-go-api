@@ -1,4 +1,4 @@
-module nexus-go-api
+module github.com/Eldarrin/nexus-go-api
 
 go 1.17
 
