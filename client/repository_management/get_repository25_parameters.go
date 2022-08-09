@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository25Params creates a new GetRepository25Params object,
+// NewGetHelmProxyRepositoryParams creates a new GetHelmProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository25Params() *GetRepository25Params {
-	return &GetRepository25Params{
+func NewGetHelmProxyRepositoryParams() *GetHelmProxyRepositoryParams {
+	return &GetHelmProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository25ParamsWithTimeout creates a new GetRepository25Params object
+// NewGetHelmProxyRepositoryParamsWithTimeout creates a new GetHelmProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository25ParamsWithTimeout(timeout time.Duration) *GetRepository25Params {
-	return &GetRepository25Params{
+func NewGetHelmProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetHelmProxyRepositoryParams {
+	return &GetHelmProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository25ParamsWithContext creates a new GetRepository25Params object
+// NewGetHelmProxyRepositoryParamsWithContext creates a new GetHelmProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository25ParamsWithContext(ctx context.Context) *GetRepository25Params {
-	return &GetRepository25Params{
+func NewGetHelmProxyRepositoryParamsWithContext(ctx context.Context) *GetHelmProxyRepositoryParams {
+	return &GetHelmProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository25ParamsWithHTTPClient creates a new GetRepository25Params object
+// NewGetHelmProxyRepositoryParamsWithHTTPClient creates a new GetHelmProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository25ParamsWithHTTPClient(client *http.Client) *GetRepository25Params {
-	return &GetRepository25Params{
+func NewGetHelmProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetHelmProxyRepositoryParams {
+	return &GetHelmProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository25Params contains all the parameters to send to the API endpoint
-   for the get repository 25 operation.
+/*
+GetHelmProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 25 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository25Params struct {
+type GetHelmProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository25Params struct {
 // WithDefaults hydrates default values in the get repository 25 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository25Params) WithDefaults() *GetRepository25Params {
+func (o *GetHelmProxyRepositoryParams) WithDefaults() *GetHelmProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository25Params) WithDefaults() *GetRepository25Params {
 // SetDefaults hydrates default values in the get repository 25 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository25Params) SetDefaults() {
+func (o *GetHelmProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 25 params
-func (o *GetRepository25Params) WithTimeout(timeout time.Duration) *GetRepository25Params {
+func (o *GetHelmProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetHelmProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 25 params
-func (o *GetRepository25Params) SetTimeout(timeout time.Duration) {
+func (o *GetHelmProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 25 params
-func (o *GetRepository25Params) WithContext(ctx context.Context) *GetRepository25Params {
+func (o *GetHelmProxyRepositoryParams) WithContext(ctx context.Context) *GetHelmProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 25 params
-func (o *GetRepository25Params) SetContext(ctx context.Context) {
+func (o *GetHelmProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 25 params
-func (o *GetRepository25Params) WithHTTPClient(client *http.Client) *GetRepository25Params {
+func (o *GetHelmProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetHelmProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 25 params
-func (o *GetRepository25Params) SetHTTPClient(client *http.Client) {
+func (o *GetHelmProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 25 params
-func (o *GetRepository25Params) WithRepositoryName(repositoryName string) *GetRepository25Params {
+func (o *GetHelmProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetHelmProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 25 params
-func (o *GetRepository25Params) SetRepositoryName(repositoryName string) {
+func (o *GetHelmProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository25Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetHelmProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

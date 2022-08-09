@@ -48,7 +48,8 @@ func NewUpdateContentSelectorNoContent() *UpdateContentSelectorNoContent {
 	return &UpdateContentSelectorNoContent{}
 }
 
-/* UpdateContentSelectorNoContent describes a response with status code 204, with default header values.
+/*
+	UpdateContentSelectorNoContent describes a response with status code 204, with default header values.
 
 Content selector updated successfully
 */
@@ -98,7 +99,8 @@ func NewUpdateContentSelectorBadRequest() *UpdateContentSelectorBadRequest {
 	return &UpdateContentSelectorBadRequest{}
 }
 
-/* UpdateContentSelectorBadRequest describes a response with status code 400, with default header values.
+/*
+	UpdateContentSelectorBadRequest describes a response with status code 400, with default header values.
 
 Invalid request
 */
@@ -148,7 +150,8 @@ func NewUpdateContentSelectorForbidden() *UpdateContentSelectorForbidden {
 	return &UpdateContentSelectorForbidden{}
 }
 
-/* UpdateContentSelectorForbidden describes a response with status code 403, with default header values.
+/*
+	UpdateContentSelectorForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to update the content selector
 */

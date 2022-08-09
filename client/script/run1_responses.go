@@ -51,7 +51,8 @@ func NewRun1OK() *Run1OK {
 	return &Run1OK{}
 }
 
-/* Run1OK describes a response with status code 200, with default header values.
+/*
+	Run1OK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -113,7 +114,8 @@ func NewRun1NotFound() *Run1NotFound {
 	return &Run1NotFound{}
 }
 
-/* Run1NotFound describes a response with status code 404, with default header values.
+/*
+	Run1NotFound describes a response with status code 404, with default header values.
 
 No script with the specified name
 */
@@ -163,7 +165,8 @@ func NewRun1InternalServerError() *Run1InternalServerError {
 	return &Run1InternalServerError{}
 }
 
-/* Run1InternalServerError describes a response with status code 500, with default header values.
+/*
+	Run1InternalServerError describes a response with status code 500, with default header values.
 
 Script execution failed with exception
 */

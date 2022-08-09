@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository11Params creates a new GetRepository11Params object,
+// NewGetNpmProxyRepositoryParams creates a new GetNpmProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository11Params() *GetRepository11Params {
-	return &GetRepository11Params{
+func NewGetNpmProxyRepositoryParams() *GetNpmProxyRepositoryParams {
+	return &GetNpmProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository11ParamsWithTimeout creates a new GetRepository11Params object
+// NewGetNpmProxyRepositoryParamsWithTimeout creates a new GetNpmProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository11ParamsWithTimeout(timeout time.Duration) *GetRepository11Params {
-	return &GetRepository11Params{
+func NewGetNpmProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetNpmProxyRepositoryParams {
+	return &GetNpmProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository11ParamsWithContext creates a new GetRepository11Params object
+// NewGetNpmProxyRepositoryParamsWithContext creates a new GetNpmProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository11ParamsWithContext(ctx context.Context) *GetRepository11Params {
-	return &GetRepository11Params{
+func NewGetNpmProxyRepositoryParamsWithContext(ctx context.Context) *GetNpmProxyRepositoryParams {
+	return &GetNpmProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository11ParamsWithHTTPClient creates a new GetRepository11Params object
+// NewGetNpmProxyRepositoryParamsWithHTTPClient creates a new GetNpmProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository11ParamsWithHTTPClient(client *http.Client) *GetRepository11Params {
-	return &GetRepository11Params{
+func NewGetNpmProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetNpmProxyRepositoryParams {
+	return &GetNpmProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository11Params contains all the parameters to send to the API endpoint
-   for the get repository 11 operation.
+/*
+GetNpmProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 11 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository11Params struct {
+type GetNpmProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository11Params struct {
 // WithDefaults hydrates default values in the get repository 11 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository11Params) WithDefaults() *GetRepository11Params {
+func (o *GetNpmProxyRepositoryParams) WithDefaults() *GetNpmProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository11Params) WithDefaults() *GetRepository11Params {
 // SetDefaults hydrates default values in the get repository 11 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository11Params) SetDefaults() {
+func (o *GetNpmProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 11 params
-func (o *GetRepository11Params) WithTimeout(timeout time.Duration) *GetRepository11Params {
+func (o *GetNpmProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetNpmProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 11 params
-func (o *GetRepository11Params) SetTimeout(timeout time.Duration) {
+func (o *GetNpmProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 11 params
-func (o *GetRepository11Params) WithContext(ctx context.Context) *GetRepository11Params {
+func (o *GetNpmProxyRepositoryParams) WithContext(ctx context.Context) *GetNpmProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 11 params
-func (o *GetRepository11Params) SetContext(ctx context.Context) {
+func (o *GetNpmProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 11 params
-func (o *GetRepository11Params) WithHTTPClient(client *http.Client) *GetRepository11Params {
+func (o *GetNpmProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetNpmProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 11 params
-func (o *GetRepository11Params) SetHTTPClient(client *http.Client) {
+func (o *GetNpmProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 11 params
-func (o *GetRepository11Params) WithRepositoryName(repositoryName string) *GetRepository11Params {
+func (o *GetNpmProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetNpmProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 11 params
-func (o *GetRepository11Params) SetRepositoryName(repositoryName string) {
+func (o *GetNpmProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository11Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetNpmProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository13Reader is a Reader for the GetRepository13 structure.
-type GetRepository13Reader struct {
+// GetNugetHostedRepositoryReader is a Reader for the GetNugetHostedRepository structure.
+type GetNugetHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository13Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetNugetHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository13OK()
+		result := NewGetNugetHostedRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository13Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository13OK creates a GetRepository13OK with default headers values
-func NewGetRepository13OK() *GetRepository13OK {
-	return &GetRepository13OK{}
+// NewGetNugetHostedRepositoryOK creates a GetNugetHostedRepositoryOK with default headers values
+func NewGetNugetHostedRepositoryOK() *GetNugetHostedRepositoryOK {
+	return &GetNugetHostedRepositoryOK{}
 }
 
-/* GetRepository13OK describes a response with status code 200, with default header values.
+/*
+	GetNugetHostedRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository13OK struct {
+type GetNugetHostedRepositoryOK struct {
 	Payload *models.SimpleAPIHostedRepository
 }
 
 // IsSuccess returns true when this get repository13 o k response has a 2xx status code
-func (o *GetRepository13OK) IsSuccess() bool {
+func (o *GetNugetHostedRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository13 o k response has a 3xx status code
-func (o *GetRepository13OK) IsRedirect() bool {
+func (o *GetNugetHostedRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository13 o k response has a 4xx status code
-func (o *GetRepository13OK) IsClientError() bool {
+func (o *GetNugetHostedRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository13 o k response has a 5xx status code
-func (o *GetRepository13OK) IsServerError() bool {
+func (o *GetNugetHostedRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository13 o k response a status code equal to that given
-func (o *GetRepository13OK) IsCode(code int) bool {
+func (o *GetNugetHostedRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository13OK) Error() string {
+func (o *GetNugetHostedRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/nuget/hosted/{repositoryName}][%d] getRepository13OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository13OK) String() string {
+func (o *GetNugetHostedRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/nuget/hosted/{repositoryName}][%d] getRepository13OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository13OK) GetPayload() *models.SimpleAPIHostedRepository {
+func (o *GetNugetHostedRepositoryOK) GetPayload() *models.SimpleAPIHostedRepository {
 	return o.Payload
 }
 
-func (o *GetRepository13OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetNugetHostedRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIHostedRepository)
 

@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository24Reader is a Reader for the GetRepository24 structure.
-type GetRepository24Reader struct {
+// GetHelmHostedRepositoryReader is a Reader for the GetHelmHostedRepository structure.
+type GetHelmHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository24Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetHelmHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository24OK()
+		result := NewGetHelmHostedRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository24Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository24OK creates a GetRepository24OK with default headers values
-func NewGetRepository24OK() *GetRepository24OK {
-	return &GetRepository24OK{}
+// NewGetHelmHostedRepositoryOK creates a GetHelmHostedRepositoryOK with default headers values
+func NewGetHelmHostedRepositoryOK() *GetHelmHostedRepositoryOK {
+	return &GetHelmHostedRepositoryOK{}
 }
 
-/* GetRepository24OK describes a response with status code 200, with default header values.
+/*
+	GetHelmHostedRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository24OK struct {
+type GetHelmHostedRepositoryOK struct {
 	Payload *models.SimpleAPIHostedRepository
 }
 
 // IsSuccess returns true when this get repository24 o k response has a 2xx status code
-func (o *GetRepository24OK) IsSuccess() bool {
+func (o *GetHelmHostedRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository24 o k response has a 3xx status code
-func (o *GetRepository24OK) IsRedirect() bool {
+func (o *GetHelmHostedRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository24 o k response has a 4xx status code
-func (o *GetRepository24OK) IsClientError() bool {
+func (o *GetHelmHostedRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository24 o k response has a 5xx status code
-func (o *GetRepository24OK) IsServerError() bool {
+func (o *GetHelmHostedRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository24 o k response a status code equal to that given
-func (o *GetRepository24OK) IsCode(code int) bool {
+func (o *GetHelmHostedRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository24OK) Error() string {
+func (o *GetHelmHostedRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/helm/hosted/{repositoryName}][%d] getRepository24OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository24OK) String() string {
+func (o *GetHelmHostedRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/helm/hosted/{repositoryName}][%d] getRepository24OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository24OK) GetPayload() *models.SimpleAPIHostedRepository {
+func (o *GetHelmHostedRepositoryOK) GetPayload() *models.SimpleAPIHostedRepository {
 	return o.Payload
 }
 
-func (o *GetRepository24OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetHelmHostedRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIHostedRepository)
 

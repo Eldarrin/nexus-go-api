@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository20Params creates a new GetRepository20Params object,
+// NewGetDockerProxyRepositoryParams creates a new GetDockerProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository20Params() *GetRepository20Params {
-	return &GetRepository20Params{
+func NewGetDockerProxyRepositoryParams() *GetDockerProxyRepositoryParams {
+	return &GetDockerProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository20ParamsWithTimeout creates a new GetRepository20Params object
+// NewGetDockerProxyRepositoryParamsWithTimeout creates a new GetDockerProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository20ParamsWithTimeout(timeout time.Duration) *GetRepository20Params {
-	return &GetRepository20Params{
+func NewGetDockerProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetDockerProxyRepositoryParams {
+	return &GetDockerProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository20ParamsWithContext creates a new GetRepository20Params object
+// NewGetDockerProxyRepositoryParamsWithContext creates a new GetDockerProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository20ParamsWithContext(ctx context.Context) *GetRepository20Params {
-	return &GetRepository20Params{
+func NewGetDockerProxyRepositoryParamsWithContext(ctx context.Context) *GetDockerProxyRepositoryParams {
+	return &GetDockerProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository20ParamsWithHTTPClient creates a new GetRepository20Params object
+// NewGetDockerProxyRepositoryParamsWithHTTPClient creates a new GetDockerProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository20ParamsWithHTTPClient(client *http.Client) *GetRepository20Params {
-	return &GetRepository20Params{
+func NewGetDockerProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetDockerProxyRepositoryParams {
+	return &GetDockerProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository20Params contains all the parameters to send to the API endpoint
-   for the get repository 20 operation.
+/*
+GetDockerProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 20 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository20Params struct {
+type GetDockerProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository20Params struct {
 // WithDefaults hydrates default values in the get repository 20 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository20Params) WithDefaults() *GetRepository20Params {
+func (o *GetDockerProxyRepositoryParams) WithDefaults() *GetDockerProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository20Params) WithDefaults() *GetRepository20Params {
 // SetDefaults hydrates default values in the get repository 20 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository20Params) SetDefaults() {
+func (o *GetDockerProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 20 params
-func (o *GetRepository20Params) WithTimeout(timeout time.Duration) *GetRepository20Params {
+func (o *GetDockerProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetDockerProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 20 params
-func (o *GetRepository20Params) SetTimeout(timeout time.Duration) {
+func (o *GetDockerProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 20 params
-func (o *GetRepository20Params) WithContext(ctx context.Context) *GetRepository20Params {
+func (o *GetDockerProxyRepositoryParams) WithContext(ctx context.Context) *GetDockerProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 20 params
-func (o *GetRepository20Params) SetContext(ctx context.Context) {
+func (o *GetDockerProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 20 params
-func (o *GetRepository20Params) WithHTTPClient(client *http.Client) *GetRepository20Params {
+func (o *GetDockerProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetDockerProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 20 params
-func (o *GetRepository20Params) SetHTTPClient(client *http.Client) {
+func (o *GetDockerProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 20 params
-func (o *GetRepository20Params) WithRepositoryName(repositoryName string) *GetRepository20Params {
+func (o *GetDockerProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetDockerProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 20 params
-func (o *GetRepository20Params) SetRepositoryName(repositoryName string) {
+func (o *GetDockerProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository20Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetDockerProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

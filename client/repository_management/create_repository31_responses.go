@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository31Reader is a Reader for the CreateRepository31 structure.
-type CreateRepository31Reader struct {
+// CreateRGroupRepositoryReader is a Reader for the CreateRGroupRepository structure.
+type CreateRGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository31Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateRGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository31Created()
+		result := NewCreateRGroupRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository31Unauthorized()
+		result := NewCreateRGroupRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository31Forbidden()
+		result := NewCreateRGroupRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 405:
-		result := NewCreateRepository31MethodNotAllowed()
+		result := NewCreateRGroupRepositoryMethodNotAllowed()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *CreateRepository31Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository31Created creates a CreateRepository31Created with default headers values
-func NewCreateRepository31Created() *CreateRepository31Created {
-	return &CreateRepository31Created{}
+// NewCreateRGroupRepositoryCreated creates a CreateRGroupRepositoryCreated with default headers values
+func NewCreateRGroupRepositoryCreated() *CreateRGroupRepositoryCreated {
+	return &CreateRGroupRepositoryCreated{}
 }
 
-/* CreateRepository31Created describes a response with status code 201, with default header values.
+/*
+	CreateRGroupRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository31Created struct {
+type CreateRGroupRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository31 created response has a 2xx status code
-func (o *CreateRepository31Created) IsSuccess() bool {
+func (o *CreateRGroupRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository31 created response has a 3xx status code
-func (o *CreateRepository31Created) IsRedirect() bool {
+func (o *CreateRGroupRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository31 created response has a 4xx status code
-func (o *CreateRepository31Created) IsClientError() bool {
+func (o *CreateRGroupRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository31 created response has a 5xx status code
-func (o *CreateRepository31Created) IsServerError() bool {
+func (o *CreateRGroupRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository31 created response a status code equal to that given
-func (o *CreateRepository31Created) IsCode(code int) bool {
+func (o *CreateRGroupRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository31Created) Error() string {
+func (o *CreateRGroupRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/group][%d] createRepository31Created ", 201)
 }
 
-func (o *CreateRepository31Created) String() string {
+func (o *CreateRGroupRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/group][%d] createRepository31Created ", 201)
 }
 
-func (o *CreateRepository31Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRGroupRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository31Unauthorized creates a CreateRepository31Unauthorized with default headers values
-func NewCreateRepository31Unauthorized() *CreateRepository31Unauthorized {
-	return &CreateRepository31Unauthorized{}
+// NewCreateRGroupRepositoryUnauthorized creates a CreateRGroupRepositoryUnauthorized with default headers values
+func NewCreateRGroupRepositoryUnauthorized() *CreateRGroupRepositoryUnauthorized {
+	return &CreateRGroupRepositoryUnauthorized{}
 }
 
-/* CreateRepository31Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateRGroupRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository31Unauthorized struct {
+type CreateRGroupRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository31 unauthorized response has a 2xx status code
-func (o *CreateRepository31Unauthorized) IsSuccess() bool {
+func (o *CreateRGroupRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository31 unauthorized response has a 3xx status code
-func (o *CreateRepository31Unauthorized) IsRedirect() bool {
+func (o *CreateRGroupRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository31 unauthorized response has a 4xx status code
-func (o *CreateRepository31Unauthorized) IsClientError() bool {
+func (o *CreateRGroupRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository31 unauthorized response has a 5xx status code
-func (o *CreateRepository31Unauthorized) IsServerError() bool {
+func (o *CreateRGroupRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository31 unauthorized response a status code equal to that given
-func (o *CreateRepository31Unauthorized) IsCode(code int) bool {
+func (o *CreateRGroupRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository31Unauthorized) Error() string {
+func (o *CreateRGroupRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/group][%d] createRepository31Unauthorized ", 401)
 }
 
-func (o *CreateRepository31Unauthorized) String() string {
+func (o *CreateRGroupRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/group][%d] createRepository31Unauthorized ", 401)
 }
 
-func (o *CreateRepository31Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRGroupRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository31Forbidden creates a CreateRepository31Forbidden with default headers values
-func NewCreateRepository31Forbidden() *CreateRepository31Forbidden {
-	return &CreateRepository31Forbidden{}
+// NewCreateRGroupRepositoryForbidden creates a CreateRGroupRepositoryForbidden with default headers values
+func NewCreateRGroupRepositoryForbidden() *CreateRGroupRepositoryForbidden {
+	return &CreateRGroupRepositoryForbidden{}
 }
 
-/* CreateRepository31Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateRGroupRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository31Forbidden struct {
+type CreateRGroupRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository31 forbidden response has a 2xx status code
-func (o *CreateRepository31Forbidden) IsSuccess() bool {
+func (o *CreateRGroupRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository31 forbidden response has a 3xx status code
-func (o *CreateRepository31Forbidden) IsRedirect() bool {
+func (o *CreateRGroupRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository31 forbidden response has a 4xx status code
-func (o *CreateRepository31Forbidden) IsClientError() bool {
+func (o *CreateRGroupRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository31 forbidden response has a 5xx status code
-func (o *CreateRepository31Forbidden) IsServerError() bool {
+func (o *CreateRGroupRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository31 forbidden response a status code equal to that given
-func (o *CreateRepository31Forbidden) IsCode(code int) bool {
+func (o *CreateRGroupRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository31Forbidden) Error() string {
+func (o *CreateRGroupRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/group][%d] createRepository31Forbidden ", 403)
 }
 
-func (o *CreateRepository31Forbidden) String() string {
+func (o *CreateRGroupRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/group][%d] createRepository31Forbidden ", 403)
 }
 
-func (o *CreateRepository31Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRGroupRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository31MethodNotAllowed creates a CreateRepository31MethodNotAllowed with default headers values
-func NewCreateRepository31MethodNotAllowed() *CreateRepository31MethodNotAllowed {
-	return &CreateRepository31MethodNotAllowed{}
+// NewCreateRGroupRepositoryMethodNotAllowed creates a CreateRGroupRepositoryMethodNotAllowed with default headers values
+func NewCreateRGroupRepositoryMethodNotAllowed() *CreateRGroupRepositoryMethodNotAllowed {
+	return &CreateRGroupRepositoryMethodNotAllowed{}
 }
 
-/* CreateRepository31MethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	CreateRGroupRepositoryMethodNotAllowed describes a response with status code 405, with default header values.
 
 Feature is disabled in High Availability
 */
-type CreateRepository31MethodNotAllowed struct {
+type CreateRGroupRepositoryMethodNotAllowed struct {
 }
 
 // IsSuccess returns true when this create repository31 method not allowed response has a 2xx status code
-func (o *CreateRepository31MethodNotAllowed) IsSuccess() bool {
+func (o *CreateRGroupRepositoryMethodNotAllowed) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository31 method not allowed response has a 3xx status code
-func (o *CreateRepository31MethodNotAllowed) IsRedirect() bool {
+func (o *CreateRGroupRepositoryMethodNotAllowed) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository31 method not allowed response has a 4xx status code
-func (o *CreateRepository31MethodNotAllowed) IsClientError() bool {
+func (o *CreateRGroupRepositoryMethodNotAllowed) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository31 method not allowed response has a 5xx status code
-func (o *CreateRepository31MethodNotAllowed) IsServerError() bool {
+func (o *CreateRGroupRepositoryMethodNotAllowed) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository31 method not allowed response a status code equal to that given
-func (o *CreateRepository31MethodNotAllowed) IsCode(code int) bool {
+func (o *CreateRGroupRepositoryMethodNotAllowed) IsCode(code int) bool {
 	return code == 405
 }
 
-func (o *CreateRepository31MethodNotAllowed) Error() string {
+func (o *CreateRGroupRepositoryMethodNotAllowed) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/group][%d] createRepository31MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository31MethodNotAllowed) String() string {
+func (o *CreateRGroupRepositoryMethodNotAllowed) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/group][%d] createRepository31MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository31MethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRGroupRepositoryMethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

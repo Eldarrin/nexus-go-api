@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository27Reader is a Reader for the GetRepository27 structure.
-type GetRepository27Reader struct {
+// GetPypiGroupRepositoryReader is a Reader for the GetPypiGroupRepository structure.
+type GetPypiGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository27Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetPypiGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository27OK()
+		result := NewGetPypiGroupRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository27Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository27OK creates a GetRepository27OK with default headers values
-func NewGetRepository27OK() *GetRepository27OK {
-	return &GetRepository27OK{}
+// NewGetPypiGroupRepositoryOK creates a GetPypiGroupRepositoryOK with default headers values
+func NewGetPypiGroupRepositoryOK() *GetPypiGroupRepositoryOK {
+	return &GetPypiGroupRepositoryOK{}
 }
 
-/* GetRepository27OK describes a response with status code 200, with default header values.
+/*
+	GetPypiGroupRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository27OK struct {
+type GetPypiGroupRepositoryOK struct {
 	Payload *models.SimpleAPIGroupRepository
 }
 
 // IsSuccess returns true when this get repository27 o k response has a 2xx status code
-func (o *GetRepository27OK) IsSuccess() bool {
+func (o *GetPypiGroupRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository27 o k response has a 3xx status code
-func (o *GetRepository27OK) IsRedirect() bool {
+func (o *GetPypiGroupRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository27 o k response has a 4xx status code
-func (o *GetRepository27OK) IsClientError() bool {
+func (o *GetPypiGroupRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository27 o k response has a 5xx status code
-func (o *GetRepository27OK) IsServerError() bool {
+func (o *GetPypiGroupRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository27 o k response a status code equal to that given
-func (o *GetRepository27OK) IsCode(code int) bool {
+func (o *GetPypiGroupRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository27OK) Error() string {
+func (o *GetPypiGroupRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/pypi/group/{repositoryName}][%d] getRepository27OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository27OK) String() string {
+func (o *GetPypiGroupRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/pypi/group/{repositoryName}][%d] getRepository27OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository27OK) GetPayload() *models.SimpleAPIGroupRepository {
+func (o *GetPypiGroupRepositoryOK) GetPayload() *models.SimpleAPIGroupRepository {
 	return o.Payload
 }
 
-func (o *GetRepository27OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetPypiGroupRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIGroupRepository)
 

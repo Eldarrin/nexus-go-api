@@ -54,7 +54,8 @@ func NewDeleteComponentNoContent() *DeleteComponentNoContent {
 	return &DeleteComponentNoContent{}
 }
 
-/* DeleteComponentNoContent describes a response with status code 204, with default header values.
+/*
+	DeleteComponentNoContent describes a response with status code 204, with default header values.
 
 Component was successfully deleted
 */
@@ -104,7 +105,8 @@ func NewDeleteComponentForbidden() *DeleteComponentForbidden {
 	return &DeleteComponentForbidden{}
 }
 
-/* DeleteComponentForbidden describes a response with status code 403, with default header values.
+/*
+	DeleteComponentForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to delete component
 */
@@ -154,7 +156,8 @@ func NewDeleteComponentNotFound() *DeleteComponentNotFound {
 	return &DeleteComponentNotFound{}
 }
 
-/* DeleteComponentNotFound describes a response with status code 404, with default header values.
+/*
+	DeleteComponentNotFound describes a response with status code 404, with default header values.
 
 Component not found
 */
@@ -204,7 +207,8 @@ func NewDeleteComponentUnprocessableEntity() *DeleteComponentUnprocessableEntity
 	return &DeleteComponentUnprocessableEntity{}
 }
 
-/* DeleteComponentUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+	DeleteComponentUnprocessableEntity describes a response with status code 422, with default header values.
 
 Malformed ID
 */

@@ -45,7 +45,8 @@ func NewGetRoutingRulesOK() *GetRoutingRulesOK {
 	return &GetRoutingRulesOK{}
 }
 
-/* GetRoutingRulesOK describes a response with status code 200, with default header values.
+/*
+	GetRoutingRulesOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -105,7 +106,8 @@ func NewGetRoutingRulesForbidden() *GetRoutingRulesForbidden {
 	return &GetRoutingRulesForbidden{}
 }
 
-/* GetRoutingRulesForbidden describes a response with status code 403, with default header values.
+/*
+	GetRoutingRulesForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to read routing rules
 */

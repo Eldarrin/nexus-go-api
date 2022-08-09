@@ -48,7 +48,8 @@ func NewDeletePrivilegeBadRequest() *DeletePrivilegeBadRequest {
 	return &DeletePrivilegeBadRequest{}
 }
 
-/* DeletePrivilegeBadRequest describes a response with status code 400, with default header values.
+/*
+	DeletePrivilegeBadRequest describes a response with status code 400, with default header values.
 
 The privilege is internal and may not be altered.
 */
@@ -98,7 +99,8 @@ func NewDeletePrivilegeForbidden() *DeletePrivilegeForbidden {
 	return &DeletePrivilegeForbidden{}
 }
 
-/* DeletePrivilegeForbidden describes a response with status code 403, with default header values.
+/*
+	DeletePrivilegeForbidden describes a response with status code 403, with default header values.
 
 The user does not have permission to perform the operation.
 */
@@ -148,7 +150,8 @@ func NewDeletePrivilegeNotFound() *DeletePrivilegeNotFound {
 	return &DeletePrivilegeNotFound{}
 }
 
-/* DeletePrivilegeNotFound describes a response with status code 404, with default header values.
+/*
+	DeletePrivilegeNotFound describes a response with status code 404, with default header values.
 
 Privilege not found in the system.
 */

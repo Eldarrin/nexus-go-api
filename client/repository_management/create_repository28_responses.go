@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository28Reader is a Reader for the CreateRepository28 structure.
-type CreateRepository28Reader struct {
+// CreatePypiProxyRepositoryReader is a Reader for the CreatePypiProxyRepository structure.
+type CreatePypiProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository28Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreatePypiProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository28Created()
+		result := NewCreatePypiProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository28Unauthorized()
+		result := NewCreatePypiProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository28Forbidden()
+		result := NewCreatePypiProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository28Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository28Created creates a CreateRepository28Created with default headers values
-func NewCreateRepository28Created() *CreateRepository28Created {
-	return &CreateRepository28Created{}
+// NewCreatePypiProxyRepositoryCreated creates a CreatePypiProxyRepositoryCreated with default headers values
+func NewCreatePypiProxyRepositoryCreated() *CreatePypiProxyRepositoryCreated {
+	return &CreatePypiProxyRepositoryCreated{}
 }
 
-/* CreateRepository28Created describes a response with status code 201, with default header values.
+/*
+	CreatePypiProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository28Created struct {
+type CreatePypiProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository28 created response has a 2xx status code
-func (o *CreateRepository28Created) IsSuccess() bool {
+func (o *CreatePypiProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository28 created response has a 3xx status code
-func (o *CreateRepository28Created) IsRedirect() bool {
+func (o *CreatePypiProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository28 created response has a 4xx status code
-func (o *CreateRepository28Created) IsClientError() bool {
+func (o *CreatePypiProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository28 created response has a 5xx status code
-func (o *CreateRepository28Created) IsServerError() bool {
+func (o *CreatePypiProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository28 created response a status code equal to that given
-func (o *CreateRepository28Created) IsCode(code int) bool {
+func (o *CreatePypiProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository28Created) Error() string {
+func (o *CreatePypiProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/pypi/proxy][%d] createRepository28Created ", 201)
 }
 
-func (o *CreateRepository28Created) String() string {
+func (o *CreatePypiProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/pypi/proxy][%d] createRepository28Created ", 201)
 }
 
-func (o *CreateRepository28Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreatePypiProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository28Unauthorized creates a CreateRepository28Unauthorized with default headers values
-func NewCreateRepository28Unauthorized() *CreateRepository28Unauthorized {
-	return &CreateRepository28Unauthorized{}
+// NewCreatePypiProxyRepositoryUnauthorized creates a CreatePypiProxyRepositoryUnauthorized with default headers values
+func NewCreatePypiProxyRepositoryUnauthorized() *CreatePypiProxyRepositoryUnauthorized {
+	return &CreatePypiProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository28Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreatePypiProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository28Unauthorized struct {
+type CreatePypiProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository28 unauthorized response has a 2xx status code
-func (o *CreateRepository28Unauthorized) IsSuccess() bool {
+func (o *CreatePypiProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository28 unauthorized response has a 3xx status code
-func (o *CreateRepository28Unauthorized) IsRedirect() bool {
+func (o *CreatePypiProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository28 unauthorized response has a 4xx status code
-func (o *CreateRepository28Unauthorized) IsClientError() bool {
+func (o *CreatePypiProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository28 unauthorized response has a 5xx status code
-func (o *CreateRepository28Unauthorized) IsServerError() bool {
+func (o *CreatePypiProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository28 unauthorized response a status code equal to that given
-func (o *CreateRepository28Unauthorized) IsCode(code int) bool {
+func (o *CreatePypiProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository28Unauthorized) Error() string {
+func (o *CreatePypiProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/pypi/proxy][%d] createRepository28Unauthorized ", 401)
 }
 
-func (o *CreateRepository28Unauthorized) String() string {
+func (o *CreatePypiProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/pypi/proxy][%d] createRepository28Unauthorized ", 401)
 }
 
-func (o *CreateRepository28Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreatePypiProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository28Forbidden creates a CreateRepository28Forbidden with default headers values
-func NewCreateRepository28Forbidden() *CreateRepository28Forbidden {
-	return &CreateRepository28Forbidden{}
+// NewCreatePypiProxyRepositoryForbidden creates a CreatePypiProxyRepositoryForbidden with default headers values
+func NewCreatePypiProxyRepositoryForbidden() *CreatePypiProxyRepositoryForbidden {
+	return &CreatePypiProxyRepositoryForbidden{}
 }
 
-/* CreateRepository28Forbidden describes a response with status code 403, with default header values.
+/*
+	CreatePypiProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository28Forbidden struct {
+type CreatePypiProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository28 forbidden response has a 2xx status code
-func (o *CreateRepository28Forbidden) IsSuccess() bool {
+func (o *CreatePypiProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository28 forbidden response has a 3xx status code
-func (o *CreateRepository28Forbidden) IsRedirect() bool {
+func (o *CreatePypiProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository28 forbidden response has a 4xx status code
-func (o *CreateRepository28Forbidden) IsClientError() bool {
+func (o *CreatePypiProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository28 forbidden response has a 5xx status code
-func (o *CreateRepository28Forbidden) IsServerError() bool {
+func (o *CreatePypiProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository28 forbidden response a status code equal to that given
-func (o *CreateRepository28Forbidden) IsCode(code int) bool {
+func (o *CreatePypiProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository28Forbidden) Error() string {
+func (o *CreatePypiProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/pypi/proxy][%d] createRepository28Forbidden ", 403)
 }
 
-func (o *CreateRepository28Forbidden) String() string {
+func (o *CreatePypiProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/pypi/proxy][%d] createRepository28Forbidden ", 403)
 }
 
-func (o *CreateRepository28Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreatePypiProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

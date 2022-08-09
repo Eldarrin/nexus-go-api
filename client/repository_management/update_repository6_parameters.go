@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository6Params creates a new UpdateRepository6Params object,
+// NewUpdateRawHostedRepositoryParams creates a new UpdateRawHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository6Params() *UpdateRepository6Params {
-	return &UpdateRepository6Params{
+func NewUpdateRawHostedRepositoryParams() *UpdateRawHostedRepositoryParams {
+	return &UpdateRawHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository6ParamsWithTimeout creates a new UpdateRepository6Params object
+// NewUpdateRawHostedRepositoryParamsWithTimeout creates a new UpdateRawHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository6ParamsWithTimeout(timeout time.Duration) *UpdateRepository6Params {
-	return &UpdateRepository6Params{
+func NewUpdateRawHostedRepositoryParamsWithTimeout(timeout time.Duration) *UpdateRawHostedRepositoryParams {
+	return &UpdateRawHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository6ParamsWithContext creates a new UpdateRepository6Params object
+// NewUpdateRawHostedRepositoryParamsWithContext creates a new UpdateRawHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository6ParamsWithContext(ctx context.Context) *UpdateRepository6Params {
-	return &UpdateRepository6Params{
+func NewUpdateRawHostedRepositoryParamsWithContext(ctx context.Context) *UpdateRawHostedRepositoryParams {
+	return &UpdateRawHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository6ParamsWithHTTPClient creates a new UpdateRepository6Params object
+// NewUpdateRawHostedRepositoryParamsWithHTTPClient creates a new UpdateRawHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository6ParamsWithHTTPClient(client *http.Client) *UpdateRepository6Params {
-	return &UpdateRepository6Params{
+func NewUpdateRawHostedRepositoryParamsWithHTTPClient(client *http.Client) *UpdateRawHostedRepositoryParams {
+	return &UpdateRawHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository6Params contains all the parameters to send to the API endpoint
-   for the update repository 6 operation.
+/*
+UpdateRawHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 6 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository6Params struct {
+type UpdateRawHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.RawHostedRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository6Params struct {
 // WithDefaults hydrates default values in the update repository 6 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository6Params) WithDefaults() *UpdateRepository6Params {
+func (o *UpdateRawHostedRepositoryParams) WithDefaults() *UpdateRawHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository6Params) WithDefaults() *UpdateRepository6Params {
 // SetDefaults hydrates default values in the update repository 6 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository6Params) SetDefaults() {
+func (o *UpdateRawHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 6 params
-func (o *UpdateRepository6Params) WithTimeout(timeout time.Duration) *UpdateRepository6Params {
+func (o *UpdateRawHostedRepositoryParams) WithTimeout(timeout time.Duration) *UpdateRawHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 6 params
-func (o *UpdateRepository6Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateRawHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 6 params
-func (o *UpdateRepository6Params) WithContext(ctx context.Context) *UpdateRepository6Params {
+func (o *UpdateRawHostedRepositoryParams) WithContext(ctx context.Context) *UpdateRawHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 6 params
-func (o *UpdateRepository6Params) SetContext(ctx context.Context) {
+func (o *UpdateRawHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 6 params
-func (o *UpdateRepository6Params) WithHTTPClient(client *http.Client) *UpdateRepository6Params {
+func (o *UpdateRawHostedRepositoryParams) WithHTTPClient(client *http.Client) *UpdateRawHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 6 params
-func (o *UpdateRepository6Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateRawHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 6 params
-func (o *UpdateRepository6Params) WithBody(body *models.RawHostedRepositoryAPIRequest) *UpdateRepository6Params {
+func (o *UpdateRawHostedRepositoryParams) WithBody(body *models.RawHostedRepositoryAPIRequest) *UpdateRawHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 6 params
-func (o *UpdateRepository6Params) SetBody(body *models.RawHostedRepositoryAPIRequest) {
+func (o *UpdateRawHostedRepositoryParams) SetBody(body *models.RawHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 6 params
-func (o *UpdateRepository6Params) WithRepositoryName(repositoryName string) *UpdateRepository6Params {
+func (o *UpdateRawHostedRepositoryParams) WithRepositoryName(repositoryName string) *UpdateRawHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 6 params
-func (o *UpdateRepository6Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateRawHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository6Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateRawHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

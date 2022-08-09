@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository14Params creates a new CreateRepository14Params object,
+// NewCreateRubyGemsGroupRepositoryParams creates a new CreateRubyGemsGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository14Params() *CreateRepository14Params {
-	return &CreateRepository14Params{
+func NewCreateRubyGemsGroupRepositoryParams() *CreateRubyGemsGroupRepositoryParams {
+	return &CreateRubyGemsGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository14ParamsWithTimeout creates a new CreateRepository14Params object
+// NewCreateRubyGemsGroupRepositoryParamsWithTimeout creates a new CreateRubyGemsGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository14ParamsWithTimeout(timeout time.Duration) *CreateRepository14Params {
-	return &CreateRepository14Params{
+func NewCreateRubyGemsGroupRepositoryParamsWithTimeout(timeout time.Duration) *CreateRubyGemsGroupRepositoryParams {
+	return &CreateRubyGemsGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository14ParamsWithContext creates a new CreateRepository14Params object
+// NewCreateRubyGemsGroupRepositoryParamsWithContext creates a new CreateRubyGemsGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository14ParamsWithContext(ctx context.Context) *CreateRepository14Params {
-	return &CreateRepository14Params{
+func NewCreateRubyGemsGroupRepositoryParamsWithContext(ctx context.Context) *CreateRubyGemsGroupRepositoryParams {
+	return &CreateRubyGemsGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository14ParamsWithHTTPClient creates a new CreateRepository14Params object
+// NewCreateRubyGemsGroupRepositoryParamsWithHTTPClient creates a new CreateRubyGemsGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository14ParamsWithHTTPClient(client *http.Client) *CreateRepository14Params {
-	return &CreateRepository14Params{
+func NewCreateRubyGemsGroupRepositoryParamsWithHTTPClient(client *http.Client) *CreateRubyGemsGroupRepositoryParams {
+	return &CreateRubyGemsGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository14Params contains all the parameters to send to the API endpoint
-   for the create repository 14 operation.
+/*
+CreateRubyGemsGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 14 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository14Params struct {
+type CreateRubyGemsGroupRepositoryParams struct {
 
 	// Body.
 	Body *models.RubyGemsGroupRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository14Params struct {
 // WithDefaults hydrates default values in the create repository 14 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository14Params) WithDefaults() *CreateRepository14Params {
+func (o *CreateRubyGemsGroupRepositoryParams) WithDefaults() *CreateRubyGemsGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository14Params) WithDefaults() *CreateRepository14Params {
 // SetDefaults hydrates default values in the create repository 14 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository14Params) SetDefaults() {
+func (o *CreateRubyGemsGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 14 params
-func (o *CreateRepository14Params) WithTimeout(timeout time.Duration) *CreateRepository14Params {
+func (o *CreateRubyGemsGroupRepositoryParams) WithTimeout(timeout time.Duration) *CreateRubyGemsGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 14 params
-func (o *CreateRepository14Params) SetTimeout(timeout time.Duration) {
+func (o *CreateRubyGemsGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 14 params
-func (o *CreateRepository14Params) WithContext(ctx context.Context) *CreateRepository14Params {
+func (o *CreateRubyGemsGroupRepositoryParams) WithContext(ctx context.Context) *CreateRubyGemsGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 14 params
-func (o *CreateRepository14Params) SetContext(ctx context.Context) {
+func (o *CreateRubyGemsGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 14 params
-func (o *CreateRepository14Params) WithHTTPClient(client *http.Client) *CreateRepository14Params {
+func (o *CreateRubyGemsGroupRepositoryParams) WithHTTPClient(client *http.Client) *CreateRubyGemsGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 14 params
-func (o *CreateRepository14Params) SetHTTPClient(client *http.Client) {
+func (o *CreateRubyGemsGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 14 params
-func (o *CreateRepository14Params) WithBody(body *models.RubyGemsGroupRepositoryAPIRequest) *CreateRepository14Params {
+func (o *CreateRubyGemsGroupRepositoryParams) WithBody(body *models.RubyGemsGroupRepositoryAPIRequest) *CreateRubyGemsGroupRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 14 params
-func (o *CreateRepository14Params) SetBody(body *models.RubyGemsGroupRepositoryAPIRequest) {
+func (o *CreateRubyGemsGroupRepositoryParams) SetBody(body *models.RubyGemsGroupRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository14Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateRubyGemsGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

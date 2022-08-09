@@ -42,7 +42,8 @@ func NewCreateFileBlobStoreNoContent() *CreateFileBlobStoreNoContent {
 	return &CreateFileBlobStoreNoContent{}
 }
 
-/* CreateFileBlobStoreNoContent describes a response with status code 204, with default header values.
+/*
+	CreateFileBlobStoreNoContent describes a response with status code 204, with default header values.
 
 Success
 */
@@ -92,7 +93,8 @@ func NewCreateFileBlobStoreForbidden() *CreateFileBlobStoreForbidden {
 	return &CreateFileBlobStoreForbidden{}
 }
 
-/* CreateFileBlobStoreForbidden describes a response with status code 403, with default header values.
+/*
+	CreateFileBlobStoreForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

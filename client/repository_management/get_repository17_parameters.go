@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository17Params creates a new GetRepository17Params object,
+// NewGetRubyGemsProxyRepositoryParams creates a new GetRubyGemsProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository17Params() *GetRepository17Params {
-	return &GetRepository17Params{
+func NewGetRubyGemsProxyRepositoryParams() *GetRubyGemsProxyRepositoryParams {
+	return &GetRubyGemsProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository17ParamsWithTimeout creates a new GetRepository17Params object
+// NewGetRubyGemsProxyRepositoryParamsWithTimeout creates a new GetRubyGemsProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository17ParamsWithTimeout(timeout time.Duration) *GetRepository17Params {
-	return &GetRepository17Params{
+func NewGetRubyGemsProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetRubyGemsProxyRepositoryParams {
+	return &GetRubyGemsProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository17ParamsWithContext creates a new GetRepository17Params object
+// NewGetRubyGemsProxyRepositoryParamsWithContext creates a new GetRubyGemsProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository17ParamsWithContext(ctx context.Context) *GetRepository17Params {
-	return &GetRepository17Params{
+func NewGetRubyGemsProxyRepositoryParamsWithContext(ctx context.Context) *GetRubyGemsProxyRepositoryParams {
+	return &GetRubyGemsProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository17ParamsWithHTTPClient creates a new GetRepository17Params object
+// NewGetRubyGemsProxyRepositoryParamsWithHTTPClient creates a new GetRubyGemsProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository17ParamsWithHTTPClient(client *http.Client) *GetRepository17Params {
-	return &GetRepository17Params{
+func NewGetRubyGemsProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetRubyGemsProxyRepositoryParams {
+	return &GetRubyGemsProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository17Params contains all the parameters to send to the API endpoint
-   for the get repository 17 operation.
+/*
+GetRubyGemsProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 17 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository17Params struct {
+type GetRubyGemsProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository17Params struct {
 // WithDefaults hydrates default values in the get repository 17 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository17Params) WithDefaults() *GetRepository17Params {
+func (o *GetRubyGemsProxyRepositoryParams) WithDefaults() *GetRubyGemsProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository17Params) WithDefaults() *GetRepository17Params {
 // SetDefaults hydrates default values in the get repository 17 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository17Params) SetDefaults() {
+func (o *GetRubyGemsProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 17 params
-func (o *GetRepository17Params) WithTimeout(timeout time.Duration) *GetRepository17Params {
+func (o *GetRubyGemsProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetRubyGemsProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 17 params
-func (o *GetRepository17Params) SetTimeout(timeout time.Duration) {
+func (o *GetRubyGemsProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 17 params
-func (o *GetRepository17Params) WithContext(ctx context.Context) *GetRepository17Params {
+func (o *GetRubyGemsProxyRepositoryParams) WithContext(ctx context.Context) *GetRubyGemsProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 17 params
-func (o *GetRepository17Params) SetContext(ctx context.Context) {
+func (o *GetRubyGemsProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 17 params
-func (o *GetRepository17Params) WithHTTPClient(client *http.Client) *GetRepository17Params {
+func (o *GetRubyGemsProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetRubyGemsProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 17 params
-func (o *GetRepository17Params) SetHTTPClient(client *http.Client) {
+func (o *GetRubyGemsProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 17 params
-func (o *GetRepository17Params) WithRepositoryName(repositoryName string) *GetRepository17Params {
+func (o *GetRubyGemsProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetRubyGemsProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 17 params
-func (o *GetRepository17Params) SetRepositoryName(repositoryName string) {
+func (o *GetRubyGemsProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository17Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetRubyGemsProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -39,7 +39,8 @@ func NewGetTasksOK() *GetTasksOK {
 	return &GetTasksOK{}
 }
 
-/* GetTasksOK describes a response with status code 200, with default header values.
+/*
+	GetTasksOK describes a response with status code 200, with default header values.
 
 successful operation
 */

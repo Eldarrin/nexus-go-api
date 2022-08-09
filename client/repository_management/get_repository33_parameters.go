@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository33Params creates a new GetRepository33Params object,
+// NewGetRHostedRepositoryParams creates a new GetRHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository33Params() *GetRepository33Params {
-	return &GetRepository33Params{
+func NewGetRHostedRepositoryParams() *GetRHostedRepositoryParams {
+	return &GetRHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository33ParamsWithTimeout creates a new GetRepository33Params object
+// NewGetRHostedRepositoryParamsWithTimeout creates a new GetRHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository33ParamsWithTimeout(timeout time.Duration) *GetRepository33Params {
-	return &GetRepository33Params{
+func NewGetRHostedRepositoryParamsWithTimeout(timeout time.Duration) *GetRHostedRepositoryParams {
+	return &GetRHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository33ParamsWithContext creates a new GetRepository33Params object
+// NewGetRHostedRepositoryParamsWithContext creates a new GetRHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository33ParamsWithContext(ctx context.Context) *GetRepository33Params {
-	return &GetRepository33Params{
+func NewGetRHostedRepositoryParamsWithContext(ctx context.Context) *GetRHostedRepositoryParams {
+	return &GetRHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository33ParamsWithHTTPClient creates a new GetRepository33Params object
+// NewGetRHostedRepositoryParamsWithHTTPClient creates a new GetRHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository33ParamsWithHTTPClient(client *http.Client) *GetRepository33Params {
-	return &GetRepository33Params{
+func NewGetRHostedRepositoryParamsWithHTTPClient(client *http.Client) *GetRHostedRepositoryParams {
+	return &GetRHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository33Params contains all the parameters to send to the API endpoint
-   for the get repository 33 operation.
+/*
+GetRHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 33 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository33Params struct {
+type GetRHostedRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository33Params struct {
 // WithDefaults hydrates default values in the get repository 33 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository33Params) WithDefaults() *GetRepository33Params {
+func (o *GetRHostedRepositoryParams) WithDefaults() *GetRHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository33Params) WithDefaults() *GetRepository33Params {
 // SetDefaults hydrates default values in the get repository 33 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository33Params) SetDefaults() {
+func (o *GetRHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 33 params
-func (o *GetRepository33Params) WithTimeout(timeout time.Duration) *GetRepository33Params {
+func (o *GetRHostedRepositoryParams) WithTimeout(timeout time.Duration) *GetRHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 33 params
-func (o *GetRepository33Params) SetTimeout(timeout time.Duration) {
+func (o *GetRHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 33 params
-func (o *GetRepository33Params) WithContext(ctx context.Context) *GetRepository33Params {
+func (o *GetRHostedRepositoryParams) WithContext(ctx context.Context) *GetRHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 33 params
-func (o *GetRepository33Params) SetContext(ctx context.Context) {
+func (o *GetRHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 33 params
-func (o *GetRepository33Params) WithHTTPClient(client *http.Client) *GetRepository33Params {
+func (o *GetRHostedRepositoryParams) WithHTTPClient(client *http.Client) *GetRHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 33 params
-func (o *GetRepository33Params) SetHTTPClient(client *http.Client) {
+func (o *GetRHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 33 params
-func (o *GetRepository33Params) WithRepositoryName(repositoryName string) *GetRepository33Params {
+func (o *GetRHostedRepositoryParams) WithRepositoryName(repositoryName string) *GetRHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 33 params
-func (o *GetRepository33Params) SetRepositoryName(repositoryName string) {
+func (o *GetRHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository33Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetRHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

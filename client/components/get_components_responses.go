@@ -51,7 +51,8 @@ func NewGetComponentsOK() *GetComponentsOK {
 	return &GetComponentsOK{}
 }
 
-/* GetComponentsOK describes a response with status code 200, with default header values.
+/*
+	GetComponentsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -113,7 +114,8 @@ func NewGetComponentsForbidden() *GetComponentsForbidden {
 	return &GetComponentsForbidden{}
 }
 
-/* GetComponentsForbidden describes a response with status code 403, with default header values.
+/*
+	GetComponentsForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to list components
 */
@@ -163,7 +165,8 @@ func NewGetComponentsUnprocessableEntity() *GetComponentsUnprocessableEntity {
 	return &GetComponentsUnprocessableEntity{}
 }
 
-/* GetComponentsUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+	GetComponentsUnprocessableEntity describes a response with status code 422, with default header values.
 
 Parameter 'repository' is required
 */

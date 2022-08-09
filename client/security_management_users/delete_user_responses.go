@@ -48,7 +48,8 @@ func NewDeleteUserBadRequest() *DeleteUserBadRequest {
 	return &DeleteUserBadRequest{}
 }
 
-/* DeleteUserBadRequest describes a response with status code 400, with default header values.
+/*
+	DeleteUserBadRequest describes a response with status code 400, with default header values.
 
 There was problem deleting a user. Consult the response body for more details
 */
@@ -98,7 +99,8 @@ func NewDeleteUserForbidden() *DeleteUserForbidden {
 	return &DeleteUserForbidden{}
 }
 
-/* DeleteUserForbidden describes a response with status code 403, with default header values.
+/*
+	DeleteUserForbidden describes a response with status code 403, with default header values.
 
 The user does not have permission to perform the operation.
 */
@@ -148,7 +150,8 @@ func NewDeleteUserNotFound() *DeleteUserNotFound {
 	return &DeleteUserNotFound{}
 }
 
-/* DeleteUserNotFound describes a response with status code 404, with default header values.
+/*
+	DeleteUserNotFound describes a response with status code 404, with default header values.
 
 User or user source not found in the system.
 */

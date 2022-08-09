@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepositoryParams creates a new CreateRepositoryParams object,
+// NewCreateMavenGroupRepositoryParams creates a new CreateMavenGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepositoryParams() *CreateRepositoryParams {
-	return &CreateRepositoryParams{
+func NewCreateMavenGroupRepositoryParams() *CreateMavenGroupRepositoryParams {
+	return &CreateMavenGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepositoryParamsWithTimeout creates a new CreateRepositoryParams object
+// NewCreateMavenGroupRepositoryParamsWithTimeout creates a new CreateMavenGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepositoryParamsWithTimeout(timeout time.Duration) *CreateRepositoryParams {
-	return &CreateRepositoryParams{
+func NewCreateMavenGroupRepositoryParamsWithTimeout(timeout time.Duration) *CreateMavenGroupRepositoryParams {
+	return &CreateMavenGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepositoryParamsWithContext creates a new CreateRepositoryParams object
+// NewCreateMavenGroupRepositoryParamsWithContext creates a new CreateMavenGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepositoryParamsWithContext(ctx context.Context) *CreateRepositoryParams {
-	return &CreateRepositoryParams{
+func NewCreateMavenGroupRepositoryParamsWithContext(ctx context.Context) *CreateMavenGroupRepositoryParams {
+	return &CreateMavenGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepositoryParamsWithHTTPClient creates a new CreateRepositoryParams object
+// NewCreateMavenGroupRepositoryParamsWithHTTPClient creates a new CreateMavenGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepositoryParamsWithHTTPClient(client *http.Client) *CreateRepositoryParams {
-	return &CreateRepositoryParams{
+func NewCreateMavenGroupRepositoryParamsWithHTTPClient(client *http.Client) *CreateMavenGroupRepositoryParams {
+	return &CreateMavenGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepositoryParams contains all the parameters to send to the API endpoint
-   for the create repository operation.
+/*
+CreateMavenGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepositoryParams struct {
+type CreateMavenGroupRepositoryParams struct {
 
 	// Body.
 	Body *models.MavenGroupRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepositoryParams struct {
 // WithDefaults hydrates default values in the create repository params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepositoryParams) WithDefaults() *CreateRepositoryParams {
+func (o *CreateMavenGroupRepositoryParams) WithDefaults() *CreateMavenGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepositoryParams) WithDefaults() *CreateRepositoryParams {
 // SetDefaults hydrates default values in the create repository params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepositoryParams) SetDefaults() {
+func (o *CreateMavenGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository params
-func (o *CreateRepositoryParams) WithTimeout(timeout time.Duration) *CreateRepositoryParams {
+func (o *CreateMavenGroupRepositoryParams) WithTimeout(timeout time.Duration) *CreateMavenGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository params
-func (o *CreateRepositoryParams) SetTimeout(timeout time.Duration) {
+func (o *CreateMavenGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository params
-func (o *CreateRepositoryParams) WithContext(ctx context.Context) *CreateRepositoryParams {
+func (o *CreateMavenGroupRepositoryParams) WithContext(ctx context.Context) *CreateMavenGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository params
-func (o *CreateRepositoryParams) SetContext(ctx context.Context) {
+func (o *CreateMavenGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository params
-func (o *CreateRepositoryParams) WithHTTPClient(client *http.Client) *CreateRepositoryParams {
+func (o *CreateMavenGroupRepositoryParams) WithHTTPClient(client *http.Client) *CreateMavenGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository params
-func (o *CreateRepositoryParams) SetHTTPClient(client *http.Client) {
+func (o *CreateMavenGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository params
-func (o *CreateRepositoryParams) WithBody(body *models.MavenGroupRepositoryAPIRequest) *CreateRepositoryParams {
+func (o *CreateMavenGroupRepositoryParams) WithBody(body *models.MavenGroupRepositoryAPIRequest) *CreateMavenGroupRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository params
-func (o *CreateRepositoryParams) SetBody(body *models.MavenGroupRepositoryAPIRequest) {
+func (o *CreateMavenGroupRepositoryParams) SetBody(body *models.MavenGroupRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateMavenGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

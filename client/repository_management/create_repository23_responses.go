@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository23Reader is a Reader for the CreateRepository23 structure.
-type CreateRepository23Reader struct {
+// CreateHelmHostedRepositoryReader is a Reader for the CreateHelmHostedRepository structure.
+type CreateHelmHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository23Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateHelmHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository23Created()
+		result := NewCreateHelmHostedRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository23Unauthorized()
+		result := NewCreateHelmHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository23Forbidden()
+		result := NewCreateHelmHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 405:
-		result := NewCreateRepository23MethodNotAllowed()
+		result := NewCreateHelmHostedRepositoryMethodNotAllowed()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *CreateRepository23Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository23Created creates a CreateRepository23Created with default headers values
-func NewCreateRepository23Created() *CreateRepository23Created {
-	return &CreateRepository23Created{}
+// NewCreateHelmHostedRepositoryCreated creates a CreateHelmHostedRepositoryCreated with default headers values
+func NewCreateHelmHostedRepositoryCreated() *CreateHelmHostedRepositoryCreated {
+	return &CreateHelmHostedRepositoryCreated{}
 }
 
-/* CreateRepository23Created describes a response with status code 201, with default header values.
+/*
+	CreateHelmHostedRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository23Created struct {
+type CreateHelmHostedRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository23 created response has a 2xx status code
-func (o *CreateRepository23Created) IsSuccess() bool {
+func (o *CreateHelmHostedRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository23 created response has a 3xx status code
-func (o *CreateRepository23Created) IsRedirect() bool {
+func (o *CreateHelmHostedRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository23 created response has a 4xx status code
-func (o *CreateRepository23Created) IsClientError() bool {
+func (o *CreateHelmHostedRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository23 created response has a 5xx status code
-func (o *CreateRepository23Created) IsServerError() bool {
+func (o *CreateHelmHostedRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository23 created response a status code equal to that given
-func (o *CreateRepository23Created) IsCode(code int) bool {
+func (o *CreateHelmHostedRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository23Created) Error() string {
+func (o *CreateHelmHostedRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/helm/hosted][%d] createRepository23Created ", 201)
 }
 
-func (o *CreateRepository23Created) String() string {
+func (o *CreateHelmHostedRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/helm/hosted][%d] createRepository23Created ", 201)
 }
 
-func (o *CreateRepository23Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateHelmHostedRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository23Unauthorized creates a CreateRepository23Unauthorized with default headers values
-func NewCreateRepository23Unauthorized() *CreateRepository23Unauthorized {
-	return &CreateRepository23Unauthorized{}
+// NewCreateHelmHostedRepositoryUnauthorized creates a CreateHelmHostedRepositoryUnauthorized with default headers values
+func NewCreateHelmHostedRepositoryUnauthorized() *CreateHelmHostedRepositoryUnauthorized {
+	return &CreateHelmHostedRepositoryUnauthorized{}
 }
 
-/* CreateRepository23Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateHelmHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository23Unauthorized struct {
+type CreateHelmHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository23 unauthorized response has a 2xx status code
-func (o *CreateRepository23Unauthorized) IsSuccess() bool {
+func (o *CreateHelmHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository23 unauthorized response has a 3xx status code
-func (o *CreateRepository23Unauthorized) IsRedirect() bool {
+func (o *CreateHelmHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository23 unauthorized response has a 4xx status code
-func (o *CreateRepository23Unauthorized) IsClientError() bool {
+func (o *CreateHelmHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository23 unauthorized response has a 5xx status code
-func (o *CreateRepository23Unauthorized) IsServerError() bool {
+func (o *CreateHelmHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository23 unauthorized response a status code equal to that given
-func (o *CreateRepository23Unauthorized) IsCode(code int) bool {
+func (o *CreateHelmHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository23Unauthorized) Error() string {
+func (o *CreateHelmHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/helm/hosted][%d] createRepository23Unauthorized ", 401)
 }
 
-func (o *CreateRepository23Unauthorized) String() string {
+func (o *CreateHelmHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/helm/hosted][%d] createRepository23Unauthorized ", 401)
 }
 
-func (o *CreateRepository23Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateHelmHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository23Forbidden creates a CreateRepository23Forbidden with default headers values
-func NewCreateRepository23Forbidden() *CreateRepository23Forbidden {
-	return &CreateRepository23Forbidden{}
+// NewCreateHelmHostedRepositoryForbidden creates a CreateHelmHostedRepositoryForbidden with default headers values
+func NewCreateHelmHostedRepositoryForbidden() *CreateHelmHostedRepositoryForbidden {
+	return &CreateHelmHostedRepositoryForbidden{}
 }
 
-/* CreateRepository23Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateHelmHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository23Forbidden struct {
+type CreateHelmHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository23 forbidden response has a 2xx status code
-func (o *CreateRepository23Forbidden) IsSuccess() bool {
+func (o *CreateHelmHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository23 forbidden response has a 3xx status code
-func (o *CreateRepository23Forbidden) IsRedirect() bool {
+func (o *CreateHelmHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository23 forbidden response has a 4xx status code
-func (o *CreateRepository23Forbidden) IsClientError() bool {
+func (o *CreateHelmHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository23 forbidden response has a 5xx status code
-func (o *CreateRepository23Forbidden) IsServerError() bool {
+func (o *CreateHelmHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository23 forbidden response a status code equal to that given
-func (o *CreateRepository23Forbidden) IsCode(code int) bool {
+func (o *CreateHelmHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository23Forbidden) Error() string {
+func (o *CreateHelmHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/helm/hosted][%d] createRepository23Forbidden ", 403)
 }
 
-func (o *CreateRepository23Forbidden) String() string {
+func (o *CreateHelmHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/helm/hosted][%d] createRepository23Forbidden ", 403)
 }
 
-func (o *CreateRepository23Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateHelmHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository23MethodNotAllowed creates a CreateRepository23MethodNotAllowed with default headers values
-func NewCreateRepository23MethodNotAllowed() *CreateRepository23MethodNotAllowed {
-	return &CreateRepository23MethodNotAllowed{}
+// NewCreateHelmHostedRepositoryMethodNotAllowed creates a CreateHelmHostedRepositoryMethodNotAllowed with default headers values
+func NewCreateHelmHostedRepositoryMethodNotAllowed() *CreateHelmHostedRepositoryMethodNotAllowed {
+	return &CreateHelmHostedRepositoryMethodNotAllowed{}
 }
 
-/* CreateRepository23MethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	CreateHelmHostedRepositoryMethodNotAllowed describes a response with status code 405, with default header values.
 
 Feature is disabled in High Availability
 */
-type CreateRepository23MethodNotAllowed struct {
+type CreateHelmHostedRepositoryMethodNotAllowed struct {
 }
 
 // IsSuccess returns true when this create repository23 method not allowed response has a 2xx status code
-func (o *CreateRepository23MethodNotAllowed) IsSuccess() bool {
+func (o *CreateHelmHostedRepositoryMethodNotAllowed) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository23 method not allowed response has a 3xx status code
-func (o *CreateRepository23MethodNotAllowed) IsRedirect() bool {
+func (o *CreateHelmHostedRepositoryMethodNotAllowed) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository23 method not allowed response has a 4xx status code
-func (o *CreateRepository23MethodNotAllowed) IsClientError() bool {
+func (o *CreateHelmHostedRepositoryMethodNotAllowed) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository23 method not allowed response has a 5xx status code
-func (o *CreateRepository23MethodNotAllowed) IsServerError() bool {
+func (o *CreateHelmHostedRepositoryMethodNotAllowed) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository23 method not allowed response a status code equal to that given
-func (o *CreateRepository23MethodNotAllowed) IsCode(code int) bool {
+func (o *CreateHelmHostedRepositoryMethodNotAllowed) IsCode(code int) bool {
 	return code == 405
 }
 
-func (o *CreateRepository23MethodNotAllowed) Error() string {
+func (o *CreateHelmHostedRepositoryMethodNotAllowed) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/helm/hosted][%d] createRepository23MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository23MethodNotAllowed) String() string {
+func (o *CreateHelmHostedRepositoryMethodNotAllowed) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/helm/hosted][%d] createRepository23MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository23MethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateHelmHostedRepositoryMethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

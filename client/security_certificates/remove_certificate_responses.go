@@ -36,7 +36,8 @@ func NewRemoveCertificateForbidden() *RemoveCertificateForbidden {
 	return &RemoveCertificateForbidden{}
 }
 
-/* RemoveCertificateForbidden describes a response with status code 403, with default header values.
+/*
+	RemoveCertificateForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to remove certificate from the trust store
 */

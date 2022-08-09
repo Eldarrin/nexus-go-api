@@ -42,7 +42,8 @@ func NewEnableIqNoContent() *EnableIqNoContent {
 	return &EnableIqNoContent{}
 }
 
-/* EnableIqNoContent describes a response with status code 204, with default header values.
+/*
+	EnableIqNoContent describes a response with status code 204, with default header values.
 
 IQ server has been enabled
 */
@@ -92,7 +93,8 @@ func NewEnableIqBadRequest() *EnableIqBadRequest {
 	return &EnableIqBadRequest{}
 }
 
-/* EnableIqBadRequest describes a response with status code 400, with default header values.
+/*
+	EnableIqBadRequest describes a response with status code 400, with default header values.
 
 IQ server connection not configured
 */

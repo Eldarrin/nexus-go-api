@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository36Params creates a new UpdateRepository36Params object,
+// NewUpdateGolangProxyRepositoryParams creates a new UpdateGolangProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository36Params() *UpdateRepository36Params {
-	return &UpdateRepository36Params{
+func NewUpdateGolangProxyRepositoryParams() *UpdateGolangProxyRepositoryParams {
+	return &UpdateGolangProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository36ParamsWithTimeout creates a new UpdateRepository36Params object
+// NewUpdateGolangProxyRepositoryParamsWithTimeout creates a new UpdateGolangProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository36ParamsWithTimeout(timeout time.Duration) *UpdateRepository36Params {
-	return &UpdateRepository36Params{
+func NewUpdateGolangProxyRepositoryParamsWithTimeout(timeout time.Duration) *UpdateGolangProxyRepositoryParams {
+	return &UpdateGolangProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository36ParamsWithContext creates a new UpdateRepository36Params object
+// NewUpdateGolangProxyRepositoryParamsWithContext creates a new UpdateGolangProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository36ParamsWithContext(ctx context.Context) *UpdateRepository36Params {
-	return &UpdateRepository36Params{
+func NewUpdateGolangProxyRepositoryParamsWithContext(ctx context.Context) *UpdateGolangProxyRepositoryParams {
+	return &UpdateGolangProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository36ParamsWithHTTPClient creates a new UpdateRepository36Params object
+// NewUpdateGolangProxyRepositoryParamsWithHTTPClient creates a new UpdateGolangProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository36ParamsWithHTTPClient(client *http.Client) *UpdateRepository36Params {
-	return &UpdateRepository36Params{
+func NewUpdateGolangProxyRepositoryParamsWithHTTPClient(client *http.Client) *UpdateGolangProxyRepositoryParams {
+	return &UpdateGolangProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository36Params contains all the parameters to send to the API endpoint
-   for the update repository 36 operation.
+/*
+UpdateGolangProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 36 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository36Params struct {
+type UpdateGolangProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.GolangProxyRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository36Params struct {
 // WithDefaults hydrates default values in the update repository 36 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository36Params) WithDefaults() *UpdateRepository36Params {
+func (o *UpdateGolangProxyRepositoryParams) WithDefaults() *UpdateGolangProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository36Params) WithDefaults() *UpdateRepository36Params {
 // SetDefaults hydrates default values in the update repository 36 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository36Params) SetDefaults() {
+func (o *UpdateGolangProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 36 params
-func (o *UpdateRepository36Params) WithTimeout(timeout time.Duration) *UpdateRepository36Params {
+func (o *UpdateGolangProxyRepositoryParams) WithTimeout(timeout time.Duration) *UpdateGolangProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 36 params
-func (o *UpdateRepository36Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateGolangProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 36 params
-func (o *UpdateRepository36Params) WithContext(ctx context.Context) *UpdateRepository36Params {
+func (o *UpdateGolangProxyRepositoryParams) WithContext(ctx context.Context) *UpdateGolangProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 36 params
-func (o *UpdateRepository36Params) SetContext(ctx context.Context) {
+func (o *UpdateGolangProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 36 params
-func (o *UpdateRepository36Params) WithHTTPClient(client *http.Client) *UpdateRepository36Params {
+func (o *UpdateGolangProxyRepositoryParams) WithHTTPClient(client *http.Client) *UpdateGolangProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 36 params
-func (o *UpdateRepository36Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateGolangProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 36 params
-func (o *UpdateRepository36Params) WithBody(body *models.GolangProxyRepositoryAPIRequest) *UpdateRepository36Params {
+func (o *UpdateGolangProxyRepositoryParams) WithBody(body *models.GolangProxyRepositoryAPIRequest) *UpdateGolangProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 36 params
-func (o *UpdateRepository36Params) SetBody(body *models.GolangProxyRepositoryAPIRequest) {
+func (o *UpdateGolangProxyRepositoryParams) SetBody(body *models.GolangProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 36 params
-func (o *UpdateRepository36Params) WithRepositoryName(repositoryName string) *UpdateRepository36Params {
+func (o *UpdateGolangProxyRepositoryParams) WithRepositoryName(repositoryName string) *UpdateGolangProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 36 params
-func (o *UpdateRepository36Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateGolangProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository36Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateGolangProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

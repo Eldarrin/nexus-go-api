@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository28Params creates a new UpdateRepository28Params object,
+// NewUpdatePypiProxyRepositoryParams creates a new UpdatePypiProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository28Params() *UpdateRepository28Params {
-	return &UpdateRepository28Params{
+func NewUpdatePypiProxyRepositoryParams() *UpdatePypiProxyRepositoryParams {
+	return &UpdatePypiProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository28ParamsWithTimeout creates a new UpdateRepository28Params object
+// NewUpdatePypiProxyRepositoryParamsWithTimeout creates a new UpdatePypiProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository28ParamsWithTimeout(timeout time.Duration) *UpdateRepository28Params {
-	return &UpdateRepository28Params{
+func NewUpdatePypiProxyRepositoryParamsWithTimeout(timeout time.Duration) *UpdatePypiProxyRepositoryParams {
+	return &UpdatePypiProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository28ParamsWithContext creates a new UpdateRepository28Params object
+// NewUpdatePypiProxyRepositoryParamsWithContext creates a new UpdatePypiProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository28ParamsWithContext(ctx context.Context) *UpdateRepository28Params {
-	return &UpdateRepository28Params{
+func NewUpdatePypiProxyRepositoryParamsWithContext(ctx context.Context) *UpdatePypiProxyRepositoryParams {
+	return &UpdatePypiProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository28ParamsWithHTTPClient creates a new UpdateRepository28Params object
+// NewUpdatePypiProxyRepositoryParamsWithHTTPClient creates a new UpdatePypiProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository28ParamsWithHTTPClient(client *http.Client) *UpdateRepository28Params {
-	return &UpdateRepository28Params{
+func NewUpdatePypiProxyRepositoryParamsWithHTTPClient(client *http.Client) *UpdatePypiProxyRepositoryParams {
+	return &UpdatePypiProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository28Params contains all the parameters to send to the API endpoint
-   for the update repository 28 operation.
+/*
+UpdatePypiProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 28 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository28Params struct {
+type UpdatePypiProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.PypiProxyRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository28Params struct {
 // WithDefaults hydrates default values in the update repository 28 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository28Params) WithDefaults() *UpdateRepository28Params {
+func (o *UpdatePypiProxyRepositoryParams) WithDefaults() *UpdatePypiProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository28Params) WithDefaults() *UpdateRepository28Params {
 // SetDefaults hydrates default values in the update repository 28 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository28Params) SetDefaults() {
+func (o *UpdatePypiProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 28 params
-func (o *UpdateRepository28Params) WithTimeout(timeout time.Duration) *UpdateRepository28Params {
+func (o *UpdatePypiProxyRepositoryParams) WithTimeout(timeout time.Duration) *UpdatePypiProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 28 params
-func (o *UpdateRepository28Params) SetTimeout(timeout time.Duration) {
+func (o *UpdatePypiProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 28 params
-func (o *UpdateRepository28Params) WithContext(ctx context.Context) *UpdateRepository28Params {
+func (o *UpdatePypiProxyRepositoryParams) WithContext(ctx context.Context) *UpdatePypiProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 28 params
-func (o *UpdateRepository28Params) SetContext(ctx context.Context) {
+func (o *UpdatePypiProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 28 params
-func (o *UpdateRepository28Params) WithHTTPClient(client *http.Client) *UpdateRepository28Params {
+func (o *UpdatePypiProxyRepositoryParams) WithHTTPClient(client *http.Client) *UpdatePypiProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 28 params
-func (o *UpdateRepository28Params) SetHTTPClient(client *http.Client) {
+func (o *UpdatePypiProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 28 params
-func (o *UpdateRepository28Params) WithBody(body *models.PypiProxyRepositoryAPIRequest) *UpdateRepository28Params {
+func (o *UpdatePypiProxyRepositoryParams) WithBody(body *models.PypiProxyRepositoryAPIRequest) *UpdatePypiProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 28 params
-func (o *UpdateRepository28Params) SetBody(body *models.PypiProxyRepositoryAPIRequest) {
+func (o *UpdatePypiProxyRepositoryParams) SetBody(body *models.PypiProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 28 params
-func (o *UpdateRepository28Params) WithRepositoryName(repositoryName string) *UpdateRepository28Params {
+func (o *UpdatePypiProxyRepositoryParams) WithRepositoryName(repositoryName string) *UpdatePypiProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 28 params
-func (o *UpdateRepository28Params) SetRepositoryName(repositoryName string) {
+func (o *UpdatePypiProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository28Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdatePypiProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

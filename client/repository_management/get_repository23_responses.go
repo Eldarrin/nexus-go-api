@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository23Reader is a Reader for the GetRepository23 structure.
-type GetRepository23Reader struct {
+// GetYumProxyRepositoryReader is a Reader for the GetYumProxyRepository structure.
+type GetYumProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository23Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetYumProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository23OK()
+		result := NewGetYumProxyRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository23Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository23OK creates a GetRepository23OK with default headers values
-func NewGetRepository23OK() *GetRepository23OK {
-	return &GetRepository23OK{}
+// NewGetYumProxyRepositoryOK creates a GetYumProxyRepositoryOK with default headers values
+func NewGetYumProxyRepositoryOK() *GetYumProxyRepositoryOK {
+	return &GetYumProxyRepositoryOK{}
 }
 
-/* GetRepository23OK describes a response with status code 200, with default header values.
+/*
+	GetYumProxyRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository23OK struct {
+type GetYumProxyRepositoryOK struct {
 	Payload *models.SimpleAPIProxyRepository
 }
 
 // IsSuccess returns true when this get repository23 o k response has a 2xx status code
-func (o *GetRepository23OK) IsSuccess() bool {
+func (o *GetYumProxyRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository23 o k response has a 3xx status code
-func (o *GetRepository23OK) IsRedirect() bool {
+func (o *GetYumProxyRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository23 o k response has a 4xx status code
-func (o *GetRepository23OK) IsClientError() bool {
+func (o *GetYumProxyRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository23 o k response has a 5xx status code
-func (o *GetRepository23OK) IsServerError() bool {
+func (o *GetYumProxyRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository23 o k response a status code equal to that given
-func (o *GetRepository23OK) IsCode(code int) bool {
+func (o *GetYumProxyRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository23OK) Error() string {
+func (o *GetYumProxyRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/yum/proxy/{repositoryName}][%d] getRepository23OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository23OK) String() string {
+func (o *GetYumProxyRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/yum/proxy/{repositoryName}][%d] getRepository23OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository23OK) GetPayload() *models.SimpleAPIProxyRepository {
+func (o *GetYumProxyRepositoryOK) GetPayload() *models.SimpleAPIProxyRepository {
 	return o.Payload
 }
 
-func (o *GetRepository23OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetYumProxyRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIProxyRepository)
 

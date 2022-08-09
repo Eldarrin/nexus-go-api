@@ -37,7 +37,8 @@ func NewGetActiveRealmsOK() *GetActiveRealmsOK {
 	return &GetActiveRealmsOK{}
 }
 
-/* GetActiveRealmsOK describes a response with status code 200, with default header values.
+/*
+	GetActiveRealmsOK describes a response with status code 200, with default header values.
 
 successful operation
 */

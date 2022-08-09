@@ -48,7 +48,8 @@ func NewForceReleaseNoContent() *ForceReleaseNoContent {
 	return &ForceReleaseNoContent{}
 }
 
-/* ForceReleaseNoContent describes a response with status code 204, with default header values.
+/*
+	ForceReleaseNoContent describes a response with status code 204, with default header values.
 
 System is no longer read-only
 */
@@ -98,7 +99,8 @@ func NewForceReleaseForbidden() *ForceReleaseForbidden {
 	return &ForceReleaseForbidden{}
 }
 
-/* ForceReleaseForbidden describes a response with status code 403, with default header values.
+/*
+	ForceReleaseForbidden describes a response with status code 403, with default header values.
 
 Authentication required
 */
@@ -148,7 +150,8 @@ func NewForceReleaseNotFound() *ForceReleaseNotFound {
 	return &ForceReleaseNotFound{}
 }
 
-/* ForceReleaseNotFound describes a response with status code 404, with default header values.
+/*
+	ForceReleaseNotFound describes a response with status code 404, with default header values.
 
 No change to read-only state
 */

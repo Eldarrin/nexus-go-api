@@ -45,7 +45,8 @@ func NewGetPrivilegesOK() *GetPrivilegesOK {
 	return &GetPrivilegesOK{}
 }
 
-/* GetPrivilegesOK describes a response with status code 200, with default header values.
+/*
+	GetPrivilegesOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -105,7 +106,8 @@ func NewGetPrivilegesForbidden() *GetPrivilegesForbidden {
 	return &GetPrivilegesForbidden{}
 }
 
-/* GetPrivilegesForbidden describes a response with status code 403, with default header values.
+/*
+	GetPrivilegesForbidden describes a response with status code 403, with default header values.
 
 The user does not have permission to perform the operation.
 */

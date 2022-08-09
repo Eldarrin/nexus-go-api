@@ -51,7 +51,8 @@ func NewRetrieveCertificateOK() *RetrieveCertificateOK {
 	return &RetrieveCertificateOK{}
 }
 
-/* RetrieveCertificateOK describes a response with status code 200, with default header values.
+/*
+	RetrieveCertificateOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -113,7 +114,8 @@ func NewRetrieveCertificateBadRequest() *RetrieveCertificateBadRequest {
 	return &RetrieveCertificateBadRequest{}
 }
 
-/* RetrieveCertificateBadRequest describes a response with status code 400, with default header values.
+/*
+	RetrieveCertificateBadRequest describes a response with status code 400, with default header values.
 
 A certificate could not be retrieved, see the message for details.
 */
@@ -163,7 +165,8 @@ func NewRetrieveCertificateForbidden() *RetrieveCertificateForbidden {
 	return &RetrieveCertificateForbidden{}
 }
 
-/* RetrieveCertificateForbidden describes a response with status code 403, with default header values.
+/*
+	RetrieveCertificateForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to retrieve remote certificate.
 */

@@ -42,7 +42,8 @@ func NewUpdate1Forbidden() *Update1Forbidden {
 	return &Update1Forbidden{}
 }
 
-/* Update1Forbidden describes a response with status code 403, with default header values.
+/*
+	Update1Forbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to update role
 */
@@ -92,7 +93,8 @@ func NewUpdate1NotFound() *Update1NotFound {
 	return &Update1NotFound{}
 }
 
-/* Update1NotFound describes a response with status code 404, with default header values.
+/*
+	Update1NotFound describes a response with status code 404, with default header values.
 
 Role not found
 */

@@ -54,7 +54,8 @@ func NewUpdateRoutingRuleNoContent() *UpdateRoutingRuleNoContent {
 	return &UpdateRoutingRuleNoContent{}
 }
 
-/* UpdateRoutingRuleNoContent describes a response with status code 204, with default header values.
+/*
+	UpdateRoutingRuleNoContent describes a response with status code 204, with default header values.
 
 Routing rule was successfully updated
 */
@@ -104,7 +105,8 @@ func NewUpdateRoutingRuleBadRequest() *UpdateRoutingRuleBadRequest {
 	return &UpdateRoutingRuleBadRequest{}
 }
 
-/* UpdateRoutingRuleBadRequest describes a response with status code 400, with default header values.
+/*
+	UpdateRoutingRuleBadRequest describes a response with status code 400, with default header values.
 
 Another routing rule with the same name already exists or required parameters missing
 */
@@ -154,7 +156,8 @@ func NewUpdateRoutingRuleForbidden() *UpdateRoutingRuleForbidden {
 	return &UpdateRoutingRuleForbidden{}
 }
 
-/* UpdateRoutingRuleForbidden describes a response with status code 403, with default header values.
+/*
+	UpdateRoutingRuleForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to edit routing rules
 */
@@ -204,7 +207,8 @@ func NewUpdateRoutingRuleNotFound() *UpdateRoutingRuleNotFound {
 	return &UpdateRoutingRuleNotFound{}
 }
 
-/* UpdateRoutingRuleNotFound describes a response with status code 404, with default header values.
+/*
+	UpdateRoutingRuleNotFound describes a response with status code 404, with default header values.
 
 Routing rule not found
 */

@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository39Reader is a Reader for the GetRepository39 structure.
-type GetRepository39Reader struct {
+// GetBowerGroupRepositoryReader is a Reader for the GetBowerGroupRepository structure.
+type GetBowerGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository39Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetBowerGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository39OK()
+		result := NewGetBowerGroupRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository39Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository39OK creates a GetRepository39OK with default headers values
-func NewGetRepository39OK() *GetRepository39OK {
-	return &GetRepository39OK{}
+// NewGetBowerGroupRepositoryOK creates a GetBowerGroupRepositoryOK with default headers values
+func NewGetBowerGroupRepositoryOK() *GetBowerGroupRepositoryOK {
+	return &GetBowerGroupRepositoryOK{}
 }
 
-/* GetRepository39OK describes a response with status code 200, with default header values.
+/*
+	GetBowerGroupRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository39OK struct {
+type GetBowerGroupRepositoryOK struct {
 	Payload *models.SimpleAPIGroupRepository
 }
 
 // IsSuccess returns true when this get repository39 o k response has a 2xx status code
-func (o *GetRepository39OK) IsSuccess() bool {
+func (o *GetBowerGroupRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository39 o k response has a 3xx status code
-func (o *GetRepository39OK) IsRedirect() bool {
+func (o *GetBowerGroupRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository39 o k response has a 4xx status code
-func (o *GetRepository39OK) IsClientError() bool {
+func (o *GetBowerGroupRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository39 o k response has a 5xx status code
-func (o *GetRepository39OK) IsServerError() bool {
+func (o *GetBowerGroupRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository39 o k response a status code equal to that given
-func (o *GetRepository39OK) IsCode(code int) bool {
+func (o *GetBowerGroupRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository39OK) Error() string {
+func (o *GetBowerGroupRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/bower/group/{repositoryName}][%d] getRepository39OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository39OK) String() string {
+func (o *GetBowerGroupRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/bower/group/{repositoryName}][%d] getRepository39OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository39OK) GetPayload() *models.SimpleAPIGroupRepository {
+func (o *GetBowerGroupRepositoryOK) GetPayload() *models.SimpleAPIGroupRepository {
 	return o.Payload
 }
 
-func (o *GetRepository39OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetBowerGroupRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIGroupRepository)
 

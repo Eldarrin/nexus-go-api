@@ -36,7 +36,8 @@ func NewGetConfigurationOK() *GetConfigurationOK {
 	return &GetConfigurationOK{}
 }
 
-/* GetConfigurationOK describes a response with status code 200, with default header values.
+/*
+	GetConfigurationOK describes a response with status code 200, with default header values.
 
 IQ server configuration returned
 */

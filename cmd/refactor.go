@@ -1,5 +1,7 @@
 package main
 
+//TODO: refactor this function
+
 import (
 	"log"
 	"os"
@@ -7,6 +9,8 @@ import (
 )
 
 const directoryStructure = "client\\repository_management"
+
+var clientFile string
 
 func reworkCreateRepoParams(fileName string, sType []string) {
 
@@ -22,11 +26,13 @@ func reworkCreateRepoParams(fileName string, sType []string) {
 	idx := strings.Index(s, "Body *models.")
 	if idx > 0 {
 		s2 := s[idx+len("Body *models."):]
-		idx2 := strings.Index(s2, "APIRequest")
+		idx2 := strings.Index(s2, "RepositoryAPIRequest")
 		if idx2 == -1 {
 			log.Printf("Could not find model name")
 		}
 		modelName := s2[0:idx2]
+
+		modelName = handleSpecials(modelName)
 
 		log.Printf("Model name: %s", modelName)
 
@@ -41,11 +47,13 @@ func reworkCreateRepoParams(fileName string, sType []string) {
 			oldName = "CreateRepository" + sType[1][len(sType[1])-3:len(sType[1])]
 		}
 
-		newName := "Create" + modelName
+		newName := "Create" + modelName + "Repository"
 		log.Printf("Old name: %s", oldName)
 		log.Printf("New name: %s", newName)
 
 		nS := strings.ReplaceAll(s, oldName, newName)
+
+		clientFile = strings.ReplaceAll(clientFile, oldName, newName)
 
 		log.Printf("New string: %s", nS)
 
@@ -78,6 +86,8 @@ func reworkCreateRepoResp(fileName string, sType []string) {
 
 		modelName = strings.ReplaceAll(modelName, "/", "")
 
+		modelName = handleSpecials(modelName)
+
 		log.Printf("Model name: %s", modelName)
 		//sModel := strings.Split(modelName, "/")
 
@@ -97,6 +107,8 @@ func reworkCreateRepoResp(fileName string, sType []string) {
 		log.Printf("New name: %s", newName)
 
 		nS := strings.ReplaceAll(s, oldName, newName)
+
+		clientFile = strings.ReplaceAll(clientFile, oldName, newName)
 
 		log.Printf("New string: %s", nS)
 
@@ -128,6 +140,8 @@ func reworkGetRepoUpdate(fileName string, sType []string) {
 
 		modelName = strings.ReplaceAll(modelName, "/", "")
 
+		modelName = handleSpecials(modelName)
+
 		log.Printf("Model name: %s", modelName)
 		//sModel := strings.Split(modelName, "/")
 
@@ -148,6 +162,8 @@ func reworkGetRepoUpdate(fileName string, sType []string) {
 
 		nS := strings.ReplaceAll(s, oldName, newName)
 
+		clientFile = strings.ReplaceAll(clientFile, oldName, newName)
+
 		log.Printf("New string: %s", nS)
 		sO := []byte(nS) // convert string to byte slice
 		os.WriteFile(directoryStructure+"\\tmp\\"+fileName, sO, 0644)
@@ -161,6 +177,8 @@ func reworkGetRepoUpdate(fileName string, sType []string) {
 
 		s = string(dataParams)
 		nS = strings.ReplaceAll(s, oldName, newName)
+
+		clientFile = strings.ReplaceAll(clientFile, oldName, newName)
 
 		log.Printf("New string: %s", nS)
 		sO = []byte(nS) // convert string to byte slice
@@ -182,11 +200,13 @@ func reworkUpdateRepoParams(fileName string, sType []string) {
 	idx := strings.Index(s, "Body *models.")
 	if idx > 0 {
 		s2 := s[idx+len("Body *models."):]
-		idx2 := strings.Index(s2, "APIRequest")
+		idx2 := strings.Index(s2, "RepositoryAPIRequest")
 		if idx2 == -1 {
 			log.Printf("Could not find model name")
 		}
 		modelName := s2[0:idx2]
+
+		modelName = handleSpecials(modelName)
 
 		log.Printf("Model name: %s", modelName)
 
@@ -201,11 +221,13 @@ func reworkUpdateRepoParams(fileName string, sType []string) {
 			oldName = "UpdateRepository" + sType[1][len(sType[1])-3:len(sType[1])]
 		}
 
-		newName := "Update" + modelName
+		newName := "Update" + modelName + "Repository"
 		log.Printf("Old name: %s", oldName)
 		log.Printf("New name: %s", newName)
 
 		nS := strings.ReplaceAll(s, oldName, newName)
+
+		clientFile = strings.ReplaceAll(clientFile, oldName, newName)
 
 		log.Printf("New string: %s", nS)
 
@@ -238,6 +260,8 @@ func reworkUpdateRepoResp(fileName string, sType []string) {
 
 		modelName = strings.ReplaceAll(modelName, "/", "")
 
+		modelName = handleSpecials(modelName)
+
 		log.Printf("Model name: %s", modelName)
 		//sModel := strings.Split(modelName, "/")
 
@@ -258,6 +282,8 @@ func reworkUpdateRepoResp(fileName string, sType []string) {
 
 		nS := strings.ReplaceAll(s, oldName, newName)
 
+		clientFile = strings.ReplaceAll(clientFile, oldName, newName)
+
 		log.Printf("New string: %s", nS)
 
 		sO := []byte(nS) // convert string to byte slice
@@ -266,11 +292,43 @@ func reworkUpdateRepoResp(fileName string, sType []string) {
 	}
 }
 
+func handleSpecials(modelName string) string {
+	var outType string
+	if strings.Contains(modelName, "Hosted") {
+		outType = "Hosted"
+	} else if strings.Contains(modelName, "Proxy") {
+		outType = "Proxy"
+	} else if strings.Contains(modelName, "Group") {
+		outType = "Group"
+	} else {
+	}
+
+	// go = golang = Golang
+	// gitlfs = Gitlfs = GitLfs
+	// rubygems = Rubygems = RubyGems
+	if strings.Contains(modelName, "go") || strings.Contains(modelName, "Go") || strings.Contains(modelName, "golang") {
+		return "Golang" + outType
+	}
+	if strings.Contains(modelName, "gitlfs") || strings.Contains(modelName, "Gitlfs") {
+		return "GitLfs" + outType
+	}
+	if strings.Contains(modelName, "rubygems") || strings.Contains(modelName, "Rubygems") {
+		return "RubyGems" + outType
+	}
+	return modelName
+}
+
 func main() {
 	files, err := os.ReadDir(directoryStructure)
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	clientData, err := os.ReadFile(directoryStructure + "\\" + "repository_management_client.go")
+	if err != nil {
+		log.Fatal(err)
+	}
+	clientFile = string(clientData)
 
 	for _, file := range files {
 
@@ -296,6 +354,12 @@ func main() {
 			}
 
 		}
+	}
+
+	sO := []byte(clientFile) // convert string to byte slice
+	err = os.WriteFile(directoryStructure+"\\tmp\\"+"repository_management_client.go", sO, 0644)
+	if err != nil {
+		log.Fatal(err)
 	}
 
 }

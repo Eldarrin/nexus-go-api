@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository2Params creates a new GetRepository2Params object,
+// NewGetMavenHostedRepositoryParams creates a new GetMavenHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository2Params() *GetRepository2Params {
-	return &GetRepository2Params{
+func NewGetMavenHostedRepositoryParams() *GetMavenHostedRepositoryParams {
+	return &GetMavenHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository2ParamsWithTimeout creates a new GetRepository2Params object
+// NewGetMavenHostedRepositoryParamsWithTimeout creates a new GetMavenHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository2ParamsWithTimeout(timeout time.Duration) *GetRepository2Params {
-	return &GetRepository2Params{
+func NewGetMavenHostedRepositoryParamsWithTimeout(timeout time.Duration) *GetMavenHostedRepositoryParams {
+	return &GetMavenHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository2ParamsWithContext creates a new GetRepository2Params object
+// NewGetMavenHostedRepositoryParamsWithContext creates a new GetMavenHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository2ParamsWithContext(ctx context.Context) *GetRepository2Params {
-	return &GetRepository2Params{
+func NewGetMavenHostedRepositoryParamsWithContext(ctx context.Context) *GetMavenHostedRepositoryParams {
+	return &GetMavenHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository2ParamsWithHTTPClient creates a new GetRepository2Params object
+// NewGetMavenHostedRepositoryParamsWithHTTPClient creates a new GetMavenHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository2ParamsWithHTTPClient(client *http.Client) *GetRepository2Params {
-	return &GetRepository2Params{
+func NewGetMavenHostedRepositoryParamsWithHTTPClient(client *http.Client) *GetMavenHostedRepositoryParams {
+	return &GetMavenHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository2Params contains all the parameters to send to the API endpoint
-   for the get repository 2 operation.
+/*
+GetMavenHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 2 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository2Params struct {
+type GetMavenHostedRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository2Params struct {
 // WithDefaults hydrates default values in the get repository 2 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository2Params) WithDefaults() *GetRepository2Params {
+func (o *GetMavenHostedRepositoryParams) WithDefaults() *GetMavenHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository2Params) WithDefaults() *GetRepository2Params {
 // SetDefaults hydrates default values in the get repository 2 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository2Params) SetDefaults() {
+func (o *GetMavenHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 2 params
-func (o *GetRepository2Params) WithTimeout(timeout time.Duration) *GetRepository2Params {
+func (o *GetMavenHostedRepositoryParams) WithTimeout(timeout time.Duration) *GetMavenHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 2 params
-func (o *GetRepository2Params) SetTimeout(timeout time.Duration) {
+func (o *GetMavenHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 2 params
-func (o *GetRepository2Params) WithContext(ctx context.Context) *GetRepository2Params {
+func (o *GetMavenHostedRepositoryParams) WithContext(ctx context.Context) *GetMavenHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 2 params
-func (o *GetRepository2Params) SetContext(ctx context.Context) {
+func (o *GetMavenHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 2 params
-func (o *GetRepository2Params) WithHTTPClient(client *http.Client) *GetRepository2Params {
+func (o *GetMavenHostedRepositoryParams) WithHTTPClient(client *http.Client) *GetMavenHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 2 params
-func (o *GetRepository2Params) SetHTTPClient(client *http.Client) {
+func (o *GetMavenHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 2 params
-func (o *GetRepository2Params) WithRepositoryName(repositoryName string) *GetRepository2Params {
+func (o *GetMavenHostedRepositoryParams) WithRepositoryName(repositoryName string) *GetMavenHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 2 params
-func (o *GetRepository2Params) SetRepositoryName(repositoryName string) {
+func (o *GetMavenHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository2Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetMavenHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

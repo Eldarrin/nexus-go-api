@@ -54,7 +54,8 @@ func NewDeleteRepositoryNoContent() *DeleteRepositoryNoContent {
 	return &DeleteRepositoryNoContent{}
 }
 
-/* DeleteRepositoryNoContent describes a response with status code 204, with default header values.
+/*
+	DeleteRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository deleted
 */
@@ -104,7 +105,8 @@ func NewDeleteRepositoryUnauthorized() *DeleteRepositoryUnauthorized {
 	return &DeleteRepositoryUnauthorized{}
 }
 
-/* DeleteRepositoryUnauthorized describes a response with status code 401, with default header values.
+/*
+	DeleteRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -154,7 +156,8 @@ func NewDeleteRepositoryForbidden() *DeleteRepositoryForbidden {
 	return &DeleteRepositoryForbidden{}
 }
 
-/* DeleteRepositoryForbidden describes a response with status code 403, with default header values.
+/*
+	DeleteRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
@@ -204,7 +207,8 @@ func NewDeleteRepositoryNotFound() *DeleteRepositoryNotFound {
 	return &DeleteRepositoryNotFound{}
 }
 
-/* DeleteRepositoryNotFound describes a response with status code 404, with default header values.
+/*
+	DeleteRepositoryNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */

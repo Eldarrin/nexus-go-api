@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository22Reader is a Reader for the CreateRepository22 structure.
-type CreateRepository22Reader struct {
+// CreateYumProxyRepositoryReader is a Reader for the CreateYumProxyRepository structure.
+type CreateYumProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository22Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateYumProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository22Created()
+		result := NewCreateYumProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository22Unauthorized()
+		result := NewCreateYumProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository22Forbidden()
+		result := NewCreateYumProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository22Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository22Created creates a CreateRepository22Created with default headers values
-func NewCreateRepository22Created() *CreateRepository22Created {
-	return &CreateRepository22Created{}
+// NewCreateYumProxyRepositoryCreated creates a CreateYumProxyRepositoryCreated with default headers values
+func NewCreateYumProxyRepositoryCreated() *CreateYumProxyRepositoryCreated {
+	return &CreateYumProxyRepositoryCreated{}
 }
 
-/* CreateRepository22Created describes a response with status code 201, with default header values.
+/*
+	CreateYumProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository22Created struct {
+type CreateYumProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository22 created response has a 2xx status code
-func (o *CreateRepository22Created) IsSuccess() bool {
+func (o *CreateYumProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository22 created response has a 3xx status code
-func (o *CreateRepository22Created) IsRedirect() bool {
+func (o *CreateYumProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository22 created response has a 4xx status code
-func (o *CreateRepository22Created) IsClientError() bool {
+func (o *CreateYumProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository22 created response has a 5xx status code
-func (o *CreateRepository22Created) IsServerError() bool {
+func (o *CreateYumProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository22 created response a status code equal to that given
-func (o *CreateRepository22Created) IsCode(code int) bool {
+func (o *CreateYumProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository22Created) Error() string {
+func (o *CreateYumProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/proxy][%d] createRepository22Created ", 201)
 }
 
-func (o *CreateRepository22Created) String() string {
+func (o *CreateYumProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/proxy][%d] createRepository22Created ", 201)
 }
 
-func (o *CreateRepository22Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateYumProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository22Unauthorized creates a CreateRepository22Unauthorized with default headers values
-func NewCreateRepository22Unauthorized() *CreateRepository22Unauthorized {
-	return &CreateRepository22Unauthorized{}
+// NewCreateYumProxyRepositoryUnauthorized creates a CreateYumProxyRepositoryUnauthorized with default headers values
+func NewCreateYumProxyRepositoryUnauthorized() *CreateYumProxyRepositoryUnauthorized {
+	return &CreateYumProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository22Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateYumProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository22Unauthorized struct {
+type CreateYumProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository22 unauthorized response has a 2xx status code
-func (o *CreateRepository22Unauthorized) IsSuccess() bool {
+func (o *CreateYumProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository22 unauthorized response has a 3xx status code
-func (o *CreateRepository22Unauthorized) IsRedirect() bool {
+func (o *CreateYumProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository22 unauthorized response has a 4xx status code
-func (o *CreateRepository22Unauthorized) IsClientError() bool {
+func (o *CreateYumProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository22 unauthorized response has a 5xx status code
-func (o *CreateRepository22Unauthorized) IsServerError() bool {
+func (o *CreateYumProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository22 unauthorized response a status code equal to that given
-func (o *CreateRepository22Unauthorized) IsCode(code int) bool {
+func (o *CreateYumProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository22Unauthorized) Error() string {
+func (o *CreateYumProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/proxy][%d] createRepository22Unauthorized ", 401)
 }
 
-func (o *CreateRepository22Unauthorized) String() string {
+func (o *CreateYumProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/proxy][%d] createRepository22Unauthorized ", 401)
 }
 
-func (o *CreateRepository22Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateYumProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository22Forbidden creates a CreateRepository22Forbidden with default headers values
-func NewCreateRepository22Forbidden() *CreateRepository22Forbidden {
-	return &CreateRepository22Forbidden{}
+// NewCreateYumProxyRepositoryForbidden creates a CreateYumProxyRepositoryForbidden with default headers values
+func NewCreateYumProxyRepositoryForbidden() *CreateYumProxyRepositoryForbidden {
+	return &CreateYumProxyRepositoryForbidden{}
 }
 
-/* CreateRepository22Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateYumProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository22Forbidden struct {
+type CreateYumProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository22 forbidden response has a 2xx status code
-func (o *CreateRepository22Forbidden) IsSuccess() bool {
+func (o *CreateYumProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository22 forbidden response has a 3xx status code
-func (o *CreateRepository22Forbidden) IsRedirect() bool {
+func (o *CreateYumProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository22 forbidden response has a 4xx status code
-func (o *CreateRepository22Forbidden) IsClientError() bool {
+func (o *CreateYumProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository22 forbidden response has a 5xx status code
-func (o *CreateRepository22Forbidden) IsServerError() bool {
+func (o *CreateYumProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository22 forbidden response a status code equal to that given
-func (o *CreateRepository22Forbidden) IsCode(code int) bool {
+func (o *CreateYumProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository22Forbidden) Error() string {
+func (o *CreateYumProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/proxy][%d] createRepository22Forbidden ", 403)
 }
 
-func (o *CreateRepository22Forbidden) String() string {
+func (o *CreateYumProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/proxy][%d] createRepository22Forbidden ", 403)
 }
 
-func (o *CreateRepository22Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateYumProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

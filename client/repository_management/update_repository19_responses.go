@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository19Reader is a Reader for the UpdateRepository19 structure.
-type UpdateRepository19Reader struct {
+// UpdateDockerProxyRepositoryReader is a Reader for the UpdateDockerProxyRepository structure.
+type UpdateDockerProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository19Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateDockerProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository19NoContent()
+		result := NewUpdateDockerProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository19Unauthorized()
+		result := NewUpdateDockerProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository19Forbidden()
+		result := NewUpdateDockerProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 404:
-		result := NewUpdateRepository19NotFound()
+		result := NewUpdateDockerProxyRepositoryNotFound()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *UpdateRepository19Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository19NoContent creates a UpdateRepository19NoContent with default headers values
-func NewUpdateRepository19NoContent() *UpdateRepository19NoContent {
-	return &UpdateRepository19NoContent{}
+// NewUpdateDockerProxyRepositoryNoContent creates a UpdateDockerProxyRepositoryNoContent with default headers values
+func NewUpdateDockerProxyRepositoryNoContent() *UpdateDockerProxyRepositoryNoContent {
+	return &UpdateDockerProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository19NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateDockerProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository19NoContent struct {
+type UpdateDockerProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository19 no content response has a 2xx status code
-func (o *UpdateRepository19NoContent) IsSuccess() bool {
+func (o *UpdateDockerProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository19 no content response has a 3xx status code
-func (o *UpdateRepository19NoContent) IsRedirect() bool {
+func (o *UpdateDockerProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository19 no content response has a 4xx status code
-func (o *UpdateRepository19NoContent) IsClientError() bool {
+func (o *UpdateDockerProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository19 no content response has a 5xx status code
-func (o *UpdateRepository19NoContent) IsServerError() bool {
+func (o *UpdateDockerProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository19 no content response a status code equal to that given
-func (o *UpdateRepository19NoContent) IsCode(code int) bool {
+func (o *UpdateDockerProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository19NoContent) Error() string {
+func (o *UpdateDockerProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/proxy/{repositoryName}][%d] updateRepository19NoContent ", 204)
 }
 
-func (o *UpdateRepository19NoContent) String() string {
+func (o *UpdateDockerProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/proxy/{repositoryName}][%d] updateRepository19NoContent ", 204)
 }
 
-func (o *UpdateRepository19NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository19Unauthorized creates a UpdateRepository19Unauthorized with default headers values
-func NewUpdateRepository19Unauthorized() *UpdateRepository19Unauthorized {
-	return &UpdateRepository19Unauthorized{}
+// NewUpdateDockerProxyRepositoryUnauthorized creates a UpdateDockerProxyRepositoryUnauthorized with default headers values
+func NewUpdateDockerProxyRepositoryUnauthorized() *UpdateDockerProxyRepositoryUnauthorized {
+	return &UpdateDockerProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository19Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateDockerProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository19Unauthorized struct {
+type UpdateDockerProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository19 unauthorized response has a 2xx status code
-func (o *UpdateRepository19Unauthorized) IsSuccess() bool {
+func (o *UpdateDockerProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository19 unauthorized response has a 3xx status code
-func (o *UpdateRepository19Unauthorized) IsRedirect() bool {
+func (o *UpdateDockerProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository19 unauthorized response has a 4xx status code
-func (o *UpdateRepository19Unauthorized) IsClientError() bool {
+func (o *UpdateDockerProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository19 unauthorized response has a 5xx status code
-func (o *UpdateRepository19Unauthorized) IsServerError() bool {
+func (o *UpdateDockerProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository19 unauthorized response a status code equal to that given
-func (o *UpdateRepository19Unauthorized) IsCode(code int) bool {
+func (o *UpdateDockerProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository19Unauthorized) Error() string {
+func (o *UpdateDockerProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/proxy/{repositoryName}][%d] updateRepository19Unauthorized ", 401)
 }
 
-func (o *UpdateRepository19Unauthorized) String() string {
+func (o *UpdateDockerProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/proxy/{repositoryName}][%d] updateRepository19Unauthorized ", 401)
 }
 
-func (o *UpdateRepository19Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository19Forbidden creates a UpdateRepository19Forbidden with default headers values
-func NewUpdateRepository19Forbidden() *UpdateRepository19Forbidden {
-	return &UpdateRepository19Forbidden{}
+// NewUpdateDockerProxyRepositoryForbidden creates a UpdateDockerProxyRepositoryForbidden with default headers values
+func NewUpdateDockerProxyRepositoryForbidden() *UpdateDockerProxyRepositoryForbidden {
+	return &UpdateDockerProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository19Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateDockerProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository19Forbidden struct {
+type UpdateDockerProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository19 forbidden response has a 2xx status code
-func (o *UpdateRepository19Forbidden) IsSuccess() bool {
+func (o *UpdateDockerProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository19 forbidden response has a 3xx status code
-func (o *UpdateRepository19Forbidden) IsRedirect() bool {
+func (o *UpdateDockerProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository19 forbidden response has a 4xx status code
-func (o *UpdateRepository19Forbidden) IsClientError() bool {
+func (o *UpdateDockerProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository19 forbidden response has a 5xx status code
-func (o *UpdateRepository19Forbidden) IsServerError() bool {
+func (o *UpdateDockerProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository19 forbidden response a status code equal to that given
-func (o *UpdateRepository19Forbidden) IsCode(code int) bool {
+func (o *UpdateDockerProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository19Forbidden) Error() string {
+func (o *UpdateDockerProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/proxy/{repositoryName}][%d] updateRepository19Forbidden ", 403)
 }
 
-func (o *UpdateRepository19Forbidden) String() string {
+func (o *UpdateDockerProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/proxy/{repositoryName}][%d] updateRepository19Forbidden ", 403)
 }
 
-func (o *UpdateRepository19Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository19NotFound creates a UpdateRepository19NotFound with default headers values
-func NewUpdateRepository19NotFound() *UpdateRepository19NotFound {
-	return &UpdateRepository19NotFound{}
+// NewUpdateDockerProxyRepositoryNotFound creates a UpdateDockerProxyRepositoryNotFound with default headers values
+func NewUpdateDockerProxyRepositoryNotFound() *UpdateDockerProxyRepositoryNotFound {
+	return &UpdateDockerProxyRepositoryNotFound{}
 }
 
-/* UpdateRepository19NotFound describes a response with status code 404, with default header values.
+/*
+	UpdateDockerProxyRepositoryNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */
-type UpdateRepository19NotFound struct {
+type UpdateDockerProxyRepositoryNotFound struct {
 }
 
 // IsSuccess returns true when this update repository19 not found response has a 2xx status code
-func (o *UpdateRepository19NotFound) IsSuccess() bool {
+func (o *UpdateDockerProxyRepositoryNotFound) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository19 not found response has a 3xx status code
-func (o *UpdateRepository19NotFound) IsRedirect() bool {
+func (o *UpdateDockerProxyRepositoryNotFound) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository19 not found response has a 4xx status code
-func (o *UpdateRepository19NotFound) IsClientError() bool {
+func (o *UpdateDockerProxyRepositoryNotFound) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository19 not found response has a 5xx status code
-func (o *UpdateRepository19NotFound) IsServerError() bool {
+func (o *UpdateDockerProxyRepositoryNotFound) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository19 not found response a status code equal to that given
-func (o *UpdateRepository19NotFound) IsCode(code int) bool {
+func (o *UpdateDockerProxyRepositoryNotFound) IsCode(code int) bool {
 	return code == 404
 }
 
-func (o *UpdateRepository19NotFound) Error() string {
+func (o *UpdateDockerProxyRepositoryNotFound) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/proxy/{repositoryName}][%d] updateRepository19NotFound ", 404)
 }
 
-func (o *UpdateRepository19NotFound) String() string {
+func (o *UpdateDockerProxyRepositoryNotFound) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/proxy/{repositoryName}][%d] updateRepository19NotFound ", 404)
 }
 
-func (o *UpdateRepository19NotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerProxyRepositoryNotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository22Reader is a Reader for the UpdateRepository22 structure.
-type UpdateRepository22Reader struct {
+// UpdateYumProxyRepositoryReader is a Reader for the UpdateYumProxyRepository structure.
+type UpdateYumProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository22Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateYumProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository22NoContent()
+		result := NewUpdateYumProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository22Unauthorized()
+		result := NewUpdateYumProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository22Forbidden()
+		result := NewUpdateYumProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository22Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository22NoContent creates a UpdateRepository22NoContent with default headers values
-func NewUpdateRepository22NoContent() *UpdateRepository22NoContent {
-	return &UpdateRepository22NoContent{}
+// NewUpdateYumProxyRepositoryNoContent creates a UpdateYumProxyRepositoryNoContent with default headers values
+func NewUpdateYumProxyRepositoryNoContent() *UpdateYumProxyRepositoryNoContent {
+	return &UpdateYumProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository22NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateYumProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository22NoContent struct {
+type UpdateYumProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository22 no content response has a 2xx status code
-func (o *UpdateRepository22NoContent) IsSuccess() bool {
+func (o *UpdateYumProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository22 no content response has a 3xx status code
-func (o *UpdateRepository22NoContent) IsRedirect() bool {
+func (o *UpdateYumProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository22 no content response has a 4xx status code
-func (o *UpdateRepository22NoContent) IsClientError() bool {
+func (o *UpdateYumProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository22 no content response has a 5xx status code
-func (o *UpdateRepository22NoContent) IsServerError() bool {
+func (o *UpdateYumProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository22 no content response a status code equal to that given
-func (o *UpdateRepository22NoContent) IsCode(code int) bool {
+func (o *UpdateYumProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository22NoContent) Error() string {
+func (o *UpdateYumProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/proxy/{repositoryName}][%d] updateRepository22NoContent ", 204)
 }
 
-func (o *UpdateRepository22NoContent) String() string {
+func (o *UpdateYumProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/proxy/{repositoryName}][%d] updateRepository22NoContent ", 204)
 }
 
-func (o *UpdateRepository22NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateYumProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository22Unauthorized creates a UpdateRepository22Unauthorized with default headers values
-func NewUpdateRepository22Unauthorized() *UpdateRepository22Unauthorized {
-	return &UpdateRepository22Unauthorized{}
+// NewUpdateYumProxyRepositoryUnauthorized creates a UpdateYumProxyRepositoryUnauthorized with default headers values
+func NewUpdateYumProxyRepositoryUnauthorized() *UpdateYumProxyRepositoryUnauthorized {
+	return &UpdateYumProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository22Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateYumProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository22Unauthorized struct {
+type UpdateYumProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository22 unauthorized response has a 2xx status code
-func (o *UpdateRepository22Unauthorized) IsSuccess() bool {
+func (o *UpdateYumProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository22 unauthorized response has a 3xx status code
-func (o *UpdateRepository22Unauthorized) IsRedirect() bool {
+func (o *UpdateYumProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository22 unauthorized response has a 4xx status code
-func (o *UpdateRepository22Unauthorized) IsClientError() bool {
+func (o *UpdateYumProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository22 unauthorized response has a 5xx status code
-func (o *UpdateRepository22Unauthorized) IsServerError() bool {
+func (o *UpdateYumProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository22 unauthorized response a status code equal to that given
-func (o *UpdateRepository22Unauthorized) IsCode(code int) bool {
+func (o *UpdateYumProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository22Unauthorized) Error() string {
+func (o *UpdateYumProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/proxy/{repositoryName}][%d] updateRepository22Unauthorized ", 401)
 }
 
-func (o *UpdateRepository22Unauthorized) String() string {
+func (o *UpdateYumProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/proxy/{repositoryName}][%d] updateRepository22Unauthorized ", 401)
 }
 
-func (o *UpdateRepository22Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateYumProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository22Forbidden creates a UpdateRepository22Forbidden with default headers values
-func NewUpdateRepository22Forbidden() *UpdateRepository22Forbidden {
-	return &UpdateRepository22Forbidden{}
+// NewUpdateYumProxyRepositoryForbidden creates a UpdateYumProxyRepositoryForbidden with default headers values
+func NewUpdateYumProxyRepositoryForbidden() *UpdateYumProxyRepositoryForbidden {
+	return &UpdateYumProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository22Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateYumProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository22Forbidden struct {
+type UpdateYumProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository22 forbidden response has a 2xx status code
-func (o *UpdateRepository22Forbidden) IsSuccess() bool {
+func (o *UpdateYumProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository22 forbidden response has a 3xx status code
-func (o *UpdateRepository22Forbidden) IsRedirect() bool {
+func (o *UpdateYumProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository22 forbidden response has a 4xx status code
-func (o *UpdateRepository22Forbidden) IsClientError() bool {
+func (o *UpdateYumProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository22 forbidden response has a 5xx status code
-func (o *UpdateRepository22Forbidden) IsServerError() bool {
+func (o *UpdateYumProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository22 forbidden response a status code equal to that given
-func (o *UpdateRepository22Forbidden) IsCode(code int) bool {
+func (o *UpdateYumProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository22Forbidden) Error() string {
+func (o *UpdateYumProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/proxy/{repositoryName}][%d] updateRepository22Forbidden ", 403)
 }
 
-func (o *UpdateRepository22Forbidden) String() string {
+func (o *UpdateYumProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/proxy/{repositoryName}][%d] updateRepository22Forbidden ", 403)
 }
 
-func (o *UpdateRepository22Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateYumProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

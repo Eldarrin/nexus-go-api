@@ -34,7 +34,7 @@ type ClientService interface {
 }
 
 /*
-  ResetSecret resets j w t secret note that session will be expired for the all logged in users
+ResetSecret resets j w t secret note that session will be expired for the all logged in users
 */
 func (a *Client) ResetSecret(params *ResetSecretParams, opts ...ClientOption) error {
 	// TODO: Validate the params before sending

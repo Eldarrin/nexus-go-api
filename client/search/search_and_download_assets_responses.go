@@ -42,7 +42,8 @@ func NewSearchAndDownloadAssetsBadRequest() *SearchAndDownloadAssetsBadRequest {
 	return &SearchAndDownloadAssetsBadRequest{}
 }
 
-/* SearchAndDownloadAssetsBadRequest describes a response with status code 400, with default header values.
+/*
+	SearchAndDownloadAssetsBadRequest describes a response with status code 400, with default header values.
 
 Search returned multiple assets, please refine search criteria to find a single asset or use the sort query parameter to retrieve the first result.
 */
@@ -92,7 +93,8 @@ func NewSearchAndDownloadAssetsNotFound() *SearchAndDownloadAssetsNotFound {
 	return &SearchAndDownloadAssetsNotFound{}
 }
 
-/* SearchAndDownloadAssetsNotFound describes a response with status code 404, with default header values.
+/*
+	SearchAndDownloadAssetsNotFound describes a response with status code 404, with default header values.
 
 Asset search returned no results
 */

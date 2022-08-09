@@ -54,7 +54,8 @@ func NewUpdateLdapServerNoContent() *UpdateLdapServerNoContent {
 	return &UpdateLdapServerNoContent{}
 }
 
-/* UpdateLdapServerNoContent describes a response with status code 204, with default header values.
+/*
+	UpdateLdapServerNoContent describes a response with status code 204, with default header values.
 
 LDAP server updated
 */
@@ -104,7 +105,8 @@ func NewUpdateLdapServerUnauthorized() *UpdateLdapServerUnauthorized {
 	return &UpdateLdapServerUnauthorized{}
 }
 
-/* UpdateLdapServerUnauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateLdapServerUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -154,7 +156,8 @@ func NewUpdateLdapServerForbidden() *UpdateLdapServerForbidden {
 	return &UpdateLdapServerForbidden{}
 }
 
-/* UpdateLdapServerForbidden describes a response with status code 403, with default header values.
+/*
+	UpdateLdapServerForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
@@ -204,7 +207,8 @@ func NewUpdateLdapServerNotFound() *UpdateLdapServerNotFound {
 	return &UpdateLdapServerNotFound{}
 }
 
-/* UpdateLdapServerNotFound describes a response with status code 404, with default header values.
+/*
+	UpdateLdapServerNotFound describes a response with status code 404, with default header values.
 
 LDAP server not found
 */

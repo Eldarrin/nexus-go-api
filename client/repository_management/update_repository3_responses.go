@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository3Reader is a Reader for the UpdateRepository3 structure.
-type UpdateRepository3Reader struct {
+// UpdateAptHostedRepositoryReader is a Reader for the UpdateAptHostedRepository structure.
+type UpdateAptHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository3Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateAptHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository3NoContent()
+		result := NewUpdateAptHostedRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository3Unauthorized()
+		result := NewUpdateAptHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository3Forbidden()
+		result := NewUpdateAptHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 404:
-		result := NewUpdateRepository3NotFound()
+		result := NewUpdateAptHostedRepositoryNotFound()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *UpdateRepository3Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewUpdateRepository3NoContent creates a UpdateRepository3NoContent with default headers values
-func NewUpdateRepository3NoContent() *UpdateRepository3NoContent {
-	return &UpdateRepository3NoContent{}
+// NewUpdateAptHostedRepositoryNoContent creates a UpdateAptHostedRepositoryNoContent with default headers values
+func NewUpdateAptHostedRepositoryNoContent() *UpdateAptHostedRepositoryNoContent {
+	return &UpdateAptHostedRepositoryNoContent{}
 }
 
-/* UpdateRepository3NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateAptHostedRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository3NoContent struct {
+type UpdateAptHostedRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository3 no content response has a 2xx status code
-func (o *UpdateRepository3NoContent) IsSuccess() bool {
+func (o *UpdateAptHostedRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository3 no content response has a 3xx status code
-func (o *UpdateRepository3NoContent) IsRedirect() bool {
+func (o *UpdateAptHostedRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository3 no content response has a 4xx status code
-func (o *UpdateRepository3NoContent) IsClientError() bool {
+func (o *UpdateAptHostedRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository3 no content response has a 5xx status code
-func (o *UpdateRepository3NoContent) IsServerError() bool {
+func (o *UpdateAptHostedRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository3 no content response a status code equal to that given
-func (o *UpdateRepository3NoContent) IsCode(code int) bool {
+func (o *UpdateAptHostedRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository3NoContent) Error() string {
+func (o *UpdateAptHostedRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/hosted/{repositoryName}][%d] updateRepository3NoContent ", 204)
 }
 
-func (o *UpdateRepository3NoContent) String() string {
+func (o *UpdateAptHostedRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/hosted/{repositoryName}][%d] updateRepository3NoContent ", 204)
 }
 
-func (o *UpdateRepository3NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateAptHostedRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository3Unauthorized creates a UpdateRepository3Unauthorized with default headers values
-func NewUpdateRepository3Unauthorized() *UpdateRepository3Unauthorized {
-	return &UpdateRepository3Unauthorized{}
+// NewUpdateAptHostedRepositoryUnauthorized creates a UpdateAptHostedRepositoryUnauthorized with default headers values
+func NewUpdateAptHostedRepositoryUnauthorized() *UpdateAptHostedRepositoryUnauthorized {
+	return &UpdateAptHostedRepositoryUnauthorized{}
 }
 
-/* UpdateRepository3Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateAptHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository3Unauthorized struct {
+type UpdateAptHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository3 unauthorized response has a 2xx status code
-func (o *UpdateRepository3Unauthorized) IsSuccess() bool {
+func (o *UpdateAptHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository3 unauthorized response has a 3xx status code
-func (o *UpdateRepository3Unauthorized) IsRedirect() bool {
+func (o *UpdateAptHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository3 unauthorized response has a 4xx status code
-func (o *UpdateRepository3Unauthorized) IsClientError() bool {
+func (o *UpdateAptHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository3 unauthorized response has a 5xx status code
-func (o *UpdateRepository3Unauthorized) IsServerError() bool {
+func (o *UpdateAptHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository3 unauthorized response a status code equal to that given
-func (o *UpdateRepository3Unauthorized) IsCode(code int) bool {
+func (o *UpdateAptHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository3Unauthorized) Error() string {
+func (o *UpdateAptHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/hosted/{repositoryName}][%d] updateRepository3Unauthorized ", 401)
 }
 
-func (o *UpdateRepository3Unauthorized) String() string {
+func (o *UpdateAptHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/hosted/{repositoryName}][%d] updateRepository3Unauthorized ", 401)
 }
 
-func (o *UpdateRepository3Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateAptHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository3Forbidden creates a UpdateRepository3Forbidden with default headers values
-func NewUpdateRepository3Forbidden() *UpdateRepository3Forbidden {
-	return &UpdateRepository3Forbidden{}
+// NewUpdateAptHostedRepositoryForbidden creates a UpdateAptHostedRepositoryForbidden with default headers values
+func NewUpdateAptHostedRepositoryForbidden() *UpdateAptHostedRepositoryForbidden {
+	return &UpdateAptHostedRepositoryForbidden{}
 }
 
-/* UpdateRepository3Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateAptHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository3Forbidden struct {
+type UpdateAptHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository3 forbidden response has a 2xx status code
-func (o *UpdateRepository3Forbidden) IsSuccess() bool {
+func (o *UpdateAptHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository3 forbidden response has a 3xx status code
-func (o *UpdateRepository3Forbidden) IsRedirect() bool {
+func (o *UpdateAptHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository3 forbidden response has a 4xx status code
-func (o *UpdateRepository3Forbidden) IsClientError() bool {
+func (o *UpdateAptHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository3 forbidden response has a 5xx status code
-func (o *UpdateRepository3Forbidden) IsServerError() bool {
+func (o *UpdateAptHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository3 forbidden response a status code equal to that given
-func (o *UpdateRepository3Forbidden) IsCode(code int) bool {
+func (o *UpdateAptHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository3Forbidden) Error() string {
+func (o *UpdateAptHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/hosted/{repositoryName}][%d] updateRepository3Forbidden ", 403)
 }
 
-func (o *UpdateRepository3Forbidden) String() string {
+func (o *UpdateAptHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/hosted/{repositoryName}][%d] updateRepository3Forbidden ", 403)
 }
 
-func (o *UpdateRepository3Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateAptHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository3NotFound creates a UpdateRepository3NotFound with default headers values
-func NewUpdateRepository3NotFound() *UpdateRepository3NotFound {
-	return &UpdateRepository3NotFound{}
+// NewUpdateAptHostedRepositoryNotFound creates a UpdateAptHostedRepositoryNotFound with default headers values
+func NewUpdateAptHostedRepositoryNotFound() *UpdateAptHostedRepositoryNotFound {
+	return &UpdateAptHostedRepositoryNotFound{}
 }
 
-/* UpdateRepository3NotFound describes a response with status code 404, with default header values.
+/*
+	UpdateAptHostedRepositoryNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */
-type UpdateRepository3NotFound struct {
+type UpdateAptHostedRepositoryNotFound struct {
 }
 
 // IsSuccess returns true when this update repository3 not found response has a 2xx status code
-func (o *UpdateRepository3NotFound) IsSuccess() bool {
+func (o *UpdateAptHostedRepositoryNotFound) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository3 not found response has a 3xx status code
-func (o *UpdateRepository3NotFound) IsRedirect() bool {
+func (o *UpdateAptHostedRepositoryNotFound) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository3 not found response has a 4xx status code
-func (o *UpdateRepository3NotFound) IsClientError() bool {
+func (o *UpdateAptHostedRepositoryNotFound) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository3 not found response has a 5xx status code
-func (o *UpdateRepository3NotFound) IsServerError() bool {
+func (o *UpdateAptHostedRepositoryNotFound) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository3 not found response a status code equal to that given
-func (o *UpdateRepository3NotFound) IsCode(code int) bool {
+func (o *UpdateAptHostedRepositoryNotFound) IsCode(code int) bool {
 	return code == 404
 }
 
-func (o *UpdateRepository3NotFound) Error() string {
+func (o *UpdateAptHostedRepositoryNotFound) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/hosted/{repositoryName}][%d] updateRepository3NotFound ", 404)
 }
 
-func (o *UpdateRepository3NotFound) String() string {
+func (o *UpdateAptHostedRepositoryNotFound) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/hosted/{repositoryName}][%d] updateRepository3NotFound ", 404)
 }
 
-func (o *UpdateRepository3NotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateAptHostedRepositoryNotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

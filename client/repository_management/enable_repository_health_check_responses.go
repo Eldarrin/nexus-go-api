@@ -60,7 +60,8 @@ func NewEnableRepositoryHealthCheckNoContent() *EnableRepositoryHealthCheckNoCon
 	return &EnableRepositoryHealthCheckNoContent{}
 }
 
-/* EnableRepositoryHealthCheckNoContent describes a response with status code 204, with default header values.
+/*
+	EnableRepositoryHealthCheckNoContent describes a response with status code 204, with default header values.
 
 Repository Health Check enabled
 */
@@ -110,7 +111,8 @@ func NewEnableRepositoryHealthCheckUnauthorized() *EnableRepositoryHealthCheckUn
 	return &EnableRepositoryHealthCheckUnauthorized{}
 }
 
-/* EnableRepositoryHealthCheckUnauthorized describes a response with status code 401, with default header values.
+/*
+	EnableRepositoryHealthCheckUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -160,7 +162,8 @@ func NewEnableRepositoryHealthCheckForbidden() *EnableRepositoryHealthCheckForbi
 	return &EnableRepositoryHealthCheckForbidden{}
 }
 
-/* EnableRepositoryHealthCheckForbidden describes a response with status code 403, with default header values.
+/*
+	EnableRepositoryHealthCheckForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
@@ -210,7 +213,8 @@ func NewEnableRepositoryHealthCheckNotFound() *EnableRepositoryHealthCheckNotFou
 	return &EnableRepositoryHealthCheckNotFound{}
 }
 
-/* EnableRepositoryHealthCheckNotFound describes a response with status code 404, with default header values.
+/*
+	EnableRepositoryHealthCheckNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */
@@ -260,7 +264,8 @@ func NewEnableRepositoryHealthCheckConflict() *EnableRepositoryHealthCheckConfli
 	return &EnableRepositoryHealthCheckConflict{}
 }
 
-/* EnableRepositoryHealthCheckConflict describes a response with status code 409, with default header values.
+/*
+	EnableRepositoryHealthCheckConflict describes a response with status code 409, with default header values.
 
 EULA not accepted or Repository Health Check capability not active
 */

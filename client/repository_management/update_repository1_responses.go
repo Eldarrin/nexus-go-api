@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository1Reader is a Reader for the UpdateRepository1 structure.
-type UpdateRepository1Reader struct {
+// UpdateMavenHostedRepositoryReader is a Reader for the UpdateMavenHostedRepository structure.
+type UpdateMavenHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository1Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateMavenHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository1NoContent()
+		result := NewUpdateMavenHostedRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository1Unauthorized()
+		result := NewUpdateMavenHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository1Forbidden()
+		result := NewUpdateMavenHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository1Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewUpdateRepository1NoContent creates a UpdateRepository1NoContent with default headers values
-func NewUpdateRepository1NoContent() *UpdateRepository1NoContent {
-	return &UpdateRepository1NoContent{}
+// NewUpdateMavenHostedRepositoryNoContent creates a UpdateMavenHostedRepositoryNoContent with default headers values
+func NewUpdateMavenHostedRepositoryNoContent() *UpdateMavenHostedRepositoryNoContent {
+	return &UpdateMavenHostedRepositoryNoContent{}
 }
 
-/* UpdateRepository1NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateMavenHostedRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository1NoContent struct {
+type UpdateMavenHostedRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository1 no content response has a 2xx status code
-func (o *UpdateRepository1NoContent) IsSuccess() bool {
+func (o *UpdateMavenHostedRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository1 no content response has a 3xx status code
-func (o *UpdateRepository1NoContent) IsRedirect() bool {
+func (o *UpdateMavenHostedRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository1 no content response has a 4xx status code
-func (o *UpdateRepository1NoContent) IsClientError() bool {
+func (o *UpdateMavenHostedRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository1 no content response has a 5xx status code
-func (o *UpdateRepository1NoContent) IsServerError() bool {
+func (o *UpdateMavenHostedRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository1 no content response a status code equal to that given
-func (o *UpdateRepository1NoContent) IsCode(code int) bool {
+func (o *UpdateMavenHostedRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository1NoContent) Error() string {
+func (o *UpdateMavenHostedRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/maven/hosted/{repositoryName}][%d] updateRepository1NoContent ", 204)
 }
 
-func (o *UpdateRepository1NoContent) String() string {
+func (o *UpdateMavenHostedRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/maven/hosted/{repositoryName}][%d] updateRepository1NoContent ", 204)
 }
 
-func (o *UpdateRepository1NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateMavenHostedRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository1Unauthorized creates a UpdateRepository1Unauthorized with default headers values
-func NewUpdateRepository1Unauthorized() *UpdateRepository1Unauthorized {
-	return &UpdateRepository1Unauthorized{}
+// NewUpdateMavenHostedRepositoryUnauthorized creates a UpdateMavenHostedRepositoryUnauthorized with default headers values
+func NewUpdateMavenHostedRepositoryUnauthorized() *UpdateMavenHostedRepositoryUnauthorized {
+	return &UpdateMavenHostedRepositoryUnauthorized{}
 }
 
-/* UpdateRepository1Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateMavenHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository1Unauthorized struct {
+type UpdateMavenHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository1 unauthorized response has a 2xx status code
-func (o *UpdateRepository1Unauthorized) IsSuccess() bool {
+func (o *UpdateMavenHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository1 unauthorized response has a 3xx status code
-func (o *UpdateRepository1Unauthorized) IsRedirect() bool {
+func (o *UpdateMavenHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository1 unauthorized response has a 4xx status code
-func (o *UpdateRepository1Unauthorized) IsClientError() bool {
+func (o *UpdateMavenHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository1 unauthorized response has a 5xx status code
-func (o *UpdateRepository1Unauthorized) IsServerError() bool {
+func (o *UpdateMavenHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository1 unauthorized response a status code equal to that given
-func (o *UpdateRepository1Unauthorized) IsCode(code int) bool {
+func (o *UpdateMavenHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository1Unauthorized) Error() string {
+func (o *UpdateMavenHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/maven/hosted/{repositoryName}][%d] updateRepository1Unauthorized ", 401)
 }
 
-func (o *UpdateRepository1Unauthorized) String() string {
+func (o *UpdateMavenHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/maven/hosted/{repositoryName}][%d] updateRepository1Unauthorized ", 401)
 }
 
-func (o *UpdateRepository1Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateMavenHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository1Forbidden creates a UpdateRepository1Forbidden with default headers values
-func NewUpdateRepository1Forbidden() *UpdateRepository1Forbidden {
-	return &UpdateRepository1Forbidden{}
+// NewUpdateMavenHostedRepositoryForbidden creates a UpdateMavenHostedRepositoryForbidden with default headers values
+func NewUpdateMavenHostedRepositoryForbidden() *UpdateMavenHostedRepositoryForbidden {
+	return &UpdateMavenHostedRepositoryForbidden{}
 }
 
-/* UpdateRepository1Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateMavenHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository1Forbidden struct {
+type UpdateMavenHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository1 forbidden response has a 2xx status code
-func (o *UpdateRepository1Forbidden) IsSuccess() bool {
+func (o *UpdateMavenHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository1 forbidden response has a 3xx status code
-func (o *UpdateRepository1Forbidden) IsRedirect() bool {
+func (o *UpdateMavenHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository1 forbidden response has a 4xx status code
-func (o *UpdateRepository1Forbidden) IsClientError() bool {
+func (o *UpdateMavenHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository1 forbidden response has a 5xx status code
-func (o *UpdateRepository1Forbidden) IsServerError() bool {
+func (o *UpdateMavenHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository1 forbidden response a status code equal to that given
-func (o *UpdateRepository1Forbidden) IsCode(code int) bool {
+func (o *UpdateMavenHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository1Forbidden) Error() string {
+func (o *UpdateMavenHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/maven/hosted/{repositoryName}][%d] updateRepository1Forbidden ", 403)
 }
 
-func (o *UpdateRepository1Forbidden) String() string {
+func (o *UpdateMavenHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/maven/hosted/{repositoryName}][%d] updateRepository1Forbidden ", 403)
 }
 
-func (o *UpdateRepository1Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateMavenHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

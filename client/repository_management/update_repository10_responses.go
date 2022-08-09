@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository10Reader is a Reader for the UpdateRepository10 structure.
-type UpdateRepository10Reader struct {
+// UpdateNpmProxyRepositoryReader is a Reader for the UpdateNpmProxyRepository structure.
+type UpdateNpmProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository10Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateNpmProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository10NoContent()
+		result := NewUpdateNpmProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository10Unauthorized()
+		result := NewUpdateNpmProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository10Forbidden()
+		result := NewUpdateNpmProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository10Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository10NoContent creates a UpdateRepository10NoContent with default headers values
-func NewUpdateRepository10NoContent() *UpdateRepository10NoContent {
-	return &UpdateRepository10NoContent{}
+// NewUpdateNpmProxyRepositoryNoContent creates a UpdateNpmProxyRepositoryNoContent with default headers values
+func NewUpdateNpmProxyRepositoryNoContent() *UpdateNpmProxyRepositoryNoContent {
+	return &UpdateNpmProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository10NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateNpmProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository10NoContent struct {
+type UpdateNpmProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository10 no content response has a 2xx status code
-func (o *UpdateRepository10NoContent) IsSuccess() bool {
+func (o *UpdateNpmProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository10 no content response has a 3xx status code
-func (o *UpdateRepository10NoContent) IsRedirect() bool {
+func (o *UpdateNpmProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository10 no content response has a 4xx status code
-func (o *UpdateRepository10NoContent) IsClientError() bool {
+func (o *UpdateNpmProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository10 no content response has a 5xx status code
-func (o *UpdateRepository10NoContent) IsServerError() bool {
+func (o *UpdateNpmProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository10 no content response a status code equal to that given
-func (o *UpdateRepository10NoContent) IsCode(code int) bool {
+func (o *UpdateNpmProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository10NoContent) Error() string {
+func (o *UpdateNpmProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/proxy/{repositoryName}][%d] updateRepository10NoContent ", 204)
 }
 
-func (o *UpdateRepository10NoContent) String() string {
+func (o *UpdateNpmProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/proxy/{repositoryName}][%d] updateRepository10NoContent ", 204)
 }
 
-func (o *UpdateRepository10NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateNpmProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository10Unauthorized creates a UpdateRepository10Unauthorized with default headers values
-func NewUpdateRepository10Unauthorized() *UpdateRepository10Unauthorized {
-	return &UpdateRepository10Unauthorized{}
+// NewUpdateNpmProxyRepositoryUnauthorized creates a UpdateNpmProxyRepositoryUnauthorized with default headers values
+func NewUpdateNpmProxyRepositoryUnauthorized() *UpdateNpmProxyRepositoryUnauthorized {
+	return &UpdateNpmProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository10Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateNpmProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository10Unauthorized struct {
+type UpdateNpmProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository10 unauthorized response has a 2xx status code
-func (o *UpdateRepository10Unauthorized) IsSuccess() bool {
+func (o *UpdateNpmProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository10 unauthorized response has a 3xx status code
-func (o *UpdateRepository10Unauthorized) IsRedirect() bool {
+func (o *UpdateNpmProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository10 unauthorized response has a 4xx status code
-func (o *UpdateRepository10Unauthorized) IsClientError() bool {
+func (o *UpdateNpmProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository10 unauthorized response has a 5xx status code
-func (o *UpdateRepository10Unauthorized) IsServerError() bool {
+func (o *UpdateNpmProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository10 unauthorized response a status code equal to that given
-func (o *UpdateRepository10Unauthorized) IsCode(code int) bool {
+func (o *UpdateNpmProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository10Unauthorized) Error() string {
+func (o *UpdateNpmProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/proxy/{repositoryName}][%d] updateRepository10Unauthorized ", 401)
 }
 
-func (o *UpdateRepository10Unauthorized) String() string {
+func (o *UpdateNpmProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/proxy/{repositoryName}][%d] updateRepository10Unauthorized ", 401)
 }
 
-func (o *UpdateRepository10Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateNpmProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository10Forbidden creates a UpdateRepository10Forbidden with default headers values
-func NewUpdateRepository10Forbidden() *UpdateRepository10Forbidden {
-	return &UpdateRepository10Forbidden{}
+// NewUpdateNpmProxyRepositoryForbidden creates a UpdateNpmProxyRepositoryForbidden with default headers values
+func NewUpdateNpmProxyRepositoryForbidden() *UpdateNpmProxyRepositoryForbidden {
+	return &UpdateNpmProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository10Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateNpmProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository10Forbidden struct {
+type UpdateNpmProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository10 forbidden response has a 2xx status code
-func (o *UpdateRepository10Forbidden) IsSuccess() bool {
+func (o *UpdateNpmProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository10 forbidden response has a 3xx status code
-func (o *UpdateRepository10Forbidden) IsRedirect() bool {
+func (o *UpdateNpmProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository10 forbidden response has a 4xx status code
-func (o *UpdateRepository10Forbidden) IsClientError() bool {
+func (o *UpdateNpmProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository10 forbidden response has a 5xx status code
-func (o *UpdateRepository10Forbidden) IsServerError() bool {
+func (o *UpdateNpmProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository10 forbidden response a status code equal to that given
-func (o *UpdateRepository10Forbidden) IsCode(code int) bool {
+func (o *UpdateNpmProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository10Forbidden) Error() string {
+func (o *UpdateNpmProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/proxy/{repositoryName}][%d] updateRepository10Forbidden ", 403)
 }
 
-func (o *UpdateRepository10Forbidden) String() string {
+func (o *UpdateNpmProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/proxy/{repositoryName}][%d] updateRepository10Forbidden ", 403)
 }
 
-func (o *UpdateRepository10Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateNpmProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

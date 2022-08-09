@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository40Reader is a Reader for the UpdateRepository40 structure.
-type UpdateRepository40Reader struct {
+// UpdateBowerProxyRepositoryReader is a Reader for the UpdateBowerProxyRepository structure.
+type UpdateBowerProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository40Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateBowerProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository40NoContent()
+		result := NewUpdateBowerProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository40Unauthorized()
+		result := NewUpdateBowerProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository40Forbidden()
+		result := NewUpdateBowerProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository40Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository40NoContent creates a UpdateRepository40NoContent with default headers values
-func NewUpdateRepository40NoContent() *UpdateRepository40NoContent {
-	return &UpdateRepository40NoContent{}
+// NewUpdateBowerProxyRepositoryNoContent creates a UpdateBowerProxyRepositoryNoContent with default headers values
+func NewUpdateBowerProxyRepositoryNoContent() *UpdateBowerProxyRepositoryNoContent {
+	return &UpdateBowerProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository40NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateBowerProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository40NoContent struct {
+type UpdateBowerProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository40 no content response has a 2xx status code
-func (o *UpdateRepository40NoContent) IsSuccess() bool {
+func (o *UpdateBowerProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository40 no content response has a 3xx status code
-func (o *UpdateRepository40NoContent) IsRedirect() bool {
+func (o *UpdateBowerProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository40 no content response has a 4xx status code
-func (o *UpdateRepository40NoContent) IsClientError() bool {
+func (o *UpdateBowerProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository40 no content response has a 5xx status code
-func (o *UpdateRepository40NoContent) IsServerError() bool {
+func (o *UpdateBowerProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository40 no content response a status code equal to that given
-func (o *UpdateRepository40NoContent) IsCode(code int) bool {
+func (o *UpdateBowerProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository40NoContent) Error() string {
+func (o *UpdateBowerProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/bower/proxy/{repositoryName}][%d] updateRepository40NoContent ", 204)
 }
 
-func (o *UpdateRepository40NoContent) String() string {
+func (o *UpdateBowerProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/bower/proxy/{repositoryName}][%d] updateRepository40NoContent ", 204)
 }
 
-func (o *UpdateRepository40NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateBowerProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository40Unauthorized creates a UpdateRepository40Unauthorized with default headers values
-func NewUpdateRepository40Unauthorized() *UpdateRepository40Unauthorized {
-	return &UpdateRepository40Unauthorized{}
+// NewUpdateBowerProxyRepositoryUnauthorized creates a UpdateBowerProxyRepositoryUnauthorized with default headers values
+func NewUpdateBowerProxyRepositoryUnauthorized() *UpdateBowerProxyRepositoryUnauthorized {
+	return &UpdateBowerProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository40Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateBowerProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository40Unauthorized struct {
+type UpdateBowerProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository40 unauthorized response has a 2xx status code
-func (o *UpdateRepository40Unauthorized) IsSuccess() bool {
+func (o *UpdateBowerProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository40 unauthorized response has a 3xx status code
-func (o *UpdateRepository40Unauthorized) IsRedirect() bool {
+func (o *UpdateBowerProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository40 unauthorized response has a 4xx status code
-func (o *UpdateRepository40Unauthorized) IsClientError() bool {
+func (o *UpdateBowerProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository40 unauthorized response has a 5xx status code
-func (o *UpdateRepository40Unauthorized) IsServerError() bool {
+func (o *UpdateBowerProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository40 unauthorized response a status code equal to that given
-func (o *UpdateRepository40Unauthorized) IsCode(code int) bool {
+func (o *UpdateBowerProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository40Unauthorized) Error() string {
+func (o *UpdateBowerProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/bower/proxy/{repositoryName}][%d] updateRepository40Unauthorized ", 401)
 }
 
-func (o *UpdateRepository40Unauthorized) String() string {
+func (o *UpdateBowerProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/bower/proxy/{repositoryName}][%d] updateRepository40Unauthorized ", 401)
 }
 
-func (o *UpdateRepository40Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateBowerProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository40Forbidden creates a UpdateRepository40Forbidden with default headers values
-func NewUpdateRepository40Forbidden() *UpdateRepository40Forbidden {
-	return &UpdateRepository40Forbidden{}
+// NewUpdateBowerProxyRepositoryForbidden creates a UpdateBowerProxyRepositoryForbidden with default headers values
+func NewUpdateBowerProxyRepositoryForbidden() *UpdateBowerProxyRepositoryForbidden {
+	return &UpdateBowerProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository40Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateBowerProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository40Forbidden struct {
+type UpdateBowerProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository40 forbidden response has a 2xx status code
-func (o *UpdateRepository40Forbidden) IsSuccess() bool {
+func (o *UpdateBowerProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository40 forbidden response has a 3xx status code
-func (o *UpdateRepository40Forbidden) IsRedirect() bool {
+func (o *UpdateBowerProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository40 forbidden response has a 4xx status code
-func (o *UpdateRepository40Forbidden) IsClientError() bool {
+func (o *UpdateBowerProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository40 forbidden response has a 5xx status code
-func (o *UpdateRepository40Forbidden) IsServerError() bool {
+func (o *UpdateBowerProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository40 forbidden response a status code equal to that given
-func (o *UpdateRepository40Forbidden) IsCode(code int) bool {
+func (o *UpdateBowerProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository40Forbidden) Error() string {
+func (o *UpdateBowerProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/bower/proxy/{repositoryName}][%d] updateRepository40Forbidden ", 403)
 }
 
-func (o *UpdateRepository40Forbidden) String() string {
+func (o *UpdateBowerProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/bower/proxy/{repositoryName}][%d] updateRepository40Forbidden ", 403)
 }
 
-func (o *UpdateRepository40Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateBowerProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

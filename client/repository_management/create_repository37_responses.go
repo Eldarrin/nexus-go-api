@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository37Reader is a Reader for the CreateRepository37 structure.
-type CreateRepository37Reader struct {
+// CreateP2ProxyRepositoryReader is a Reader for the CreateP2ProxyRepository structure.
+type CreateP2ProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository37Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateP2ProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository37Created()
+		result := NewCreateP2ProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository37Unauthorized()
+		result := NewCreateP2ProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository37Forbidden()
+		result := NewCreateP2ProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 405:
-		result := NewCreateRepository37MethodNotAllowed()
+		result := NewCreateP2ProxyRepositoryMethodNotAllowed()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *CreateRepository37Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository37Created creates a CreateRepository37Created with default headers values
-func NewCreateRepository37Created() *CreateRepository37Created {
-	return &CreateRepository37Created{}
+// NewCreateP2ProxyRepositoryCreated creates a CreateP2ProxyRepositoryCreated with default headers values
+func NewCreateP2ProxyRepositoryCreated() *CreateP2ProxyRepositoryCreated {
+	return &CreateP2ProxyRepositoryCreated{}
 }
 
-/* CreateRepository37Created describes a response with status code 201, with default header values.
+/*
+	CreateP2ProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository37Created struct {
+type CreateP2ProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository37 created response has a 2xx status code
-func (o *CreateRepository37Created) IsSuccess() bool {
+func (o *CreateP2ProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository37 created response has a 3xx status code
-func (o *CreateRepository37Created) IsRedirect() bool {
+func (o *CreateP2ProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository37 created response has a 4xx status code
-func (o *CreateRepository37Created) IsClientError() bool {
+func (o *CreateP2ProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository37 created response has a 5xx status code
-func (o *CreateRepository37Created) IsServerError() bool {
+func (o *CreateP2ProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository37 created response a status code equal to that given
-func (o *CreateRepository37Created) IsCode(code int) bool {
+func (o *CreateP2ProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository37Created) Error() string {
+func (o *CreateP2ProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/p2/proxy][%d] createRepository37Created ", 201)
 }
 
-func (o *CreateRepository37Created) String() string {
+func (o *CreateP2ProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/p2/proxy][%d] createRepository37Created ", 201)
 }
 
-func (o *CreateRepository37Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateP2ProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository37Unauthorized creates a CreateRepository37Unauthorized with default headers values
-func NewCreateRepository37Unauthorized() *CreateRepository37Unauthorized {
-	return &CreateRepository37Unauthorized{}
+// NewCreateP2ProxyRepositoryUnauthorized creates a CreateP2ProxyRepositoryUnauthorized with default headers values
+func NewCreateP2ProxyRepositoryUnauthorized() *CreateP2ProxyRepositoryUnauthorized {
+	return &CreateP2ProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository37Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateP2ProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository37Unauthorized struct {
+type CreateP2ProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository37 unauthorized response has a 2xx status code
-func (o *CreateRepository37Unauthorized) IsSuccess() bool {
+func (o *CreateP2ProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository37 unauthorized response has a 3xx status code
-func (o *CreateRepository37Unauthorized) IsRedirect() bool {
+func (o *CreateP2ProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository37 unauthorized response has a 4xx status code
-func (o *CreateRepository37Unauthorized) IsClientError() bool {
+func (o *CreateP2ProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository37 unauthorized response has a 5xx status code
-func (o *CreateRepository37Unauthorized) IsServerError() bool {
+func (o *CreateP2ProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository37 unauthorized response a status code equal to that given
-func (o *CreateRepository37Unauthorized) IsCode(code int) bool {
+func (o *CreateP2ProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository37Unauthorized) Error() string {
+func (o *CreateP2ProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/p2/proxy][%d] createRepository37Unauthorized ", 401)
 }
 
-func (o *CreateRepository37Unauthorized) String() string {
+func (o *CreateP2ProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/p2/proxy][%d] createRepository37Unauthorized ", 401)
 }
 
-func (o *CreateRepository37Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateP2ProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository37Forbidden creates a CreateRepository37Forbidden with default headers values
-func NewCreateRepository37Forbidden() *CreateRepository37Forbidden {
-	return &CreateRepository37Forbidden{}
+// NewCreateP2ProxyRepositoryForbidden creates a CreateP2ProxyRepositoryForbidden with default headers values
+func NewCreateP2ProxyRepositoryForbidden() *CreateP2ProxyRepositoryForbidden {
+	return &CreateP2ProxyRepositoryForbidden{}
 }
 
-/* CreateRepository37Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateP2ProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository37Forbidden struct {
+type CreateP2ProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository37 forbidden response has a 2xx status code
-func (o *CreateRepository37Forbidden) IsSuccess() bool {
+func (o *CreateP2ProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository37 forbidden response has a 3xx status code
-func (o *CreateRepository37Forbidden) IsRedirect() bool {
+func (o *CreateP2ProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository37 forbidden response has a 4xx status code
-func (o *CreateRepository37Forbidden) IsClientError() bool {
+func (o *CreateP2ProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository37 forbidden response has a 5xx status code
-func (o *CreateRepository37Forbidden) IsServerError() bool {
+func (o *CreateP2ProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository37 forbidden response a status code equal to that given
-func (o *CreateRepository37Forbidden) IsCode(code int) bool {
+func (o *CreateP2ProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository37Forbidden) Error() string {
+func (o *CreateP2ProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/p2/proxy][%d] createRepository37Forbidden ", 403)
 }
 
-func (o *CreateRepository37Forbidden) String() string {
+func (o *CreateP2ProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/p2/proxy][%d] createRepository37Forbidden ", 403)
 }
 
-func (o *CreateRepository37Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateP2ProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository37MethodNotAllowed creates a CreateRepository37MethodNotAllowed with default headers values
-func NewCreateRepository37MethodNotAllowed() *CreateRepository37MethodNotAllowed {
-	return &CreateRepository37MethodNotAllowed{}
+// NewCreateP2ProxyRepositoryMethodNotAllowed creates a CreateP2ProxyRepositoryMethodNotAllowed with default headers values
+func NewCreateP2ProxyRepositoryMethodNotAllowed() *CreateP2ProxyRepositoryMethodNotAllowed {
+	return &CreateP2ProxyRepositoryMethodNotAllowed{}
 }
 
-/* CreateRepository37MethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	CreateP2ProxyRepositoryMethodNotAllowed describes a response with status code 405, with default header values.
 
 Feature is disabled in High Availability
 */
-type CreateRepository37MethodNotAllowed struct {
+type CreateP2ProxyRepositoryMethodNotAllowed struct {
 }
 
 // IsSuccess returns true when this create repository37 method not allowed response has a 2xx status code
-func (o *CreateRepository37MethodNotAllowed) IsSuccess() bool {
+func (o *CreateP2ProxyRepositoryMethodNotAllowed) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository37 method not allowed response has a 3xx status code
-func (o *CreateRepository37MethodNotAllowed) IsRedirect() bool {
+func (o *CreateP2ProxyRepositoryMethodNotAllowed) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository37 method not allowed response has a 4xx status code
-func (o *CreateRepository37MethodNotAllowed) IsClientError() bool {
+func (o *CreateP2ProxyRepositoryMethodNotAllowed) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository37 method not allowed response has a 5xx status code
-func (o *CreateRepository37MethodNotAllowed) IsServerError() bool {
+func (o *CreateP2ProxyRepositoryMethodNotAllowed) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository37 method not allowed response a status code equal to that given
-func (o *CreateRepository37MethodNotAllowed) IsCode(code int) bool {
+func (o *CreateP2ProxyRepositoryMethodNotAllowed) IsCode(code int) bool {
 	return code == 405
 }
 
-func (o *CreateRepository37MethodNotAllowed) Error() string {
+func (o *CreateP2ProxyRepositoryMethodNotAllowed) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/p2/proxy][%d] createRepository37MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository37MethodNotAllowed) String() string {
+func (o *CreateP2ProxyRepositoryMethodNotAllowed) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/p2/proxy][%d] createRepository37MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository37MethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateP2ProxyRepositoryMethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

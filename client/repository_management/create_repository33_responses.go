@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository33Reader is a Reader for the CreateRepository33 structure.
-type CreateRepository33Reader struct {
+// CreateRProxyRepositoryReader is a Reader for the CreateRProxyRepository structure.
+type CreateRProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository33Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateRProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository33Created()
+		result := NewCreateRProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository33Unauthorized()
+		result := NewCreateRProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository33Forbidden()
+		result := NewCreateRProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 405:
-		result := NewCreateRepository33MethodNotAllowed()
+		result := NewCreateRProxyRepositoryMethodNotAllowed()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *CreateRepository33Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository33Created creates a CreateRepository33Created with default headers values
-func NewCreateRepository33Created() *CreateRepository33Created {
-	return &CreateRepository33Created{}
+// NewCreateRProxyRepositoryCreated creates a CreateRProxyRepositoryCreated with default headers values
+func NewCreateRProxyRepositoryCreated() *CreateRProxyRepositoryCreated {
+	return &CreateRProxyRepositoryCreated{}
 }
 
-/* CreateRepository33Created describes a response with status code 201, with default header values.
+/*
+	CreateRProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository33Created struct {
+type CreateRProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository33 created response has a 2xx status code
-func (o *CreateRepository33Created) IsSuccess() bool {
+func (o *CreateRProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository33 created response has a 3xx status code
-func (o *CreateRepository33Created) IsRedirect() bool {
+func (o *CreateRProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository33 created response has a 4xx status code
-func (o *CreateRepository33Created) IsClientError() bool {
+func (o *CreateRProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository33 created response has a 5xx status code
-func (o *CreateRepository33Created) IsServerError() bool {
+func (o *CreateRProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository33 created response a status code equal to that given
-func (o *CreateRepository33Created) IsCode(code int) bool {
+func (o *CreateRProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository33Created) Error() string {
+func (o *CreateRProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/proxy][%d] createRepository33Created ", 201)
 }
 
-func (o *CreateRepository33Created) String() string {
+func (o *CreateRProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/proxy][%d] createRepository33Created ", 201)
 }
 
-func (o *CreateRepository33Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository33Unauthorized creates a CreateRepository33Unauthorized with default headers values
-func NewCreateRepository33Unauthorized() *CreateRepository33Unauthorized {
-	return &CreateRepository33Unauthorized{}
+// NewCreateRProxyRepositoryUnauthorized creates a CreateRProxyRepositoryUnauthorized with default headers values
+func NewCreateRProxyRepositoryUnauthorized() *CreateRProxyRepositoryUnauthorized {
+	return &CreateRProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository33Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateRProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository33Unauthorized struct {
+type CreateRProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository33 unauthorized response has a 2xx status code
-func (o *CreateRepository33Unauthorized) IsSuccess() bool {
+func (o *CreateRProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository33 unauthorized response has a 3xx status code
-func (o *CreateRepository33Unauthorized) IsRedirect() bool {
+func (o *CreateRProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository33 unauthorized response has a 4xx status code
-func (o *CreateRepository33Unauthorized) IsClientError() bool {
+func (o *CreateRProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository33 unauthorized response has a 5xx status code
-func (o *CreateRepository33Unauthorized) IsServerError() bool {
+func (o *CreateRProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository33 unauthorized response a status code equal to that given
-func (o *CreateRepository33Unauthorized) IsCode(code int) bool {
+func (o *CreateRProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository33Unauthorized) Error() string {
+func (o *CreateRProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/proxy][%d] createRepository33Unauthorized ", 401)
 }
 
-func (o *CreateRepository33Unauthorized) String() string {
+func (o *CreateRProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/proxy][%d] createRepository33Unauthorized ", 401)
 }
 
-func (o *CreateRepository33Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository33Forbidden creates a CreateRepository33Forbidden with default headers values
-func NewCreateRepository33Forbidden() *CreateRepository33Forbidden {
-	return &CreateRepository33Forbidden{}
+// NewCreateRProxyRepositoryForbidden creates a CreateRProxyRepositoryForbidden with default headers values
+func NewCreateRProxyRepositoryForbidden() *CreateRProxyRepositoryForbidden {
+	return &CreateRProxyRepositoryForbidden{}
 }
 
-/* CreateRepository33Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateRProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository33Forbidden struct {
+type CreateRProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository33 forbidden response has a 2xx status code
-func (o *CreateRepository33Forbidden) IsSuccess() bool {
+func (o *CreateRProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository33 forbidden response has a 3xx status code
-func (o *CreateRepository33Forbidden) IsRedirect() bool {
+func (o *CreateRProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository33 forbidden response has a 4xx status code
-func (o *CreateRepository33Forbidden) IsClientError() bool {
+func (o *CreateRProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository33 forbidden response has a 5xx status code
-func (o *CreateRepository33Forbidden) IsServerError() bool {
+func (o *CreateRProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository33 forbidden response a status code equal to that given
-func (o *CreateRepository33Forbidden) IsCode(code int) bool {
+func (o *CreateRProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository33Forbidden) Error() string {
+func (o *CreateRProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/proxy][%d] createRepository33Forbidden ", 403)
 }
 
-func (o *CreateRepository33Forbidden) String() string {
+func (o *CreateRProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/proxy][%d] createRepository33Forbidden ", 403)
 }
 
-func (o *CreateRepository33Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository33MethodNotAllowed creates a CreateRepository33MethodNotAllowed with default headers values
-func NewCreateRepository33MethodNotAllowed() *CreateRepository33MethodNotAllowed {
-	return &CreateRepository33MethodNotAllowed{}
+// NewCreateRProxyRepositoryMethodNotAllowed creates a CreateRProxyRepositoryMethodNotAllowed with default headers values
+func NewCreateRProxyRepositoryMethodNotAllowed() *CreateRProxyRepositoryMethodNotAllowed {
+	return &CreateRProxyRepositoryMethodNotAllowed{}
 }
 
-/* CreateRepository33MethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	CreateRProxyRepositoryMethodNotAllowed describes a response with status code 405, with default header values.
 
 Feature is disabled in High Availability
 */
-type CreateRepository33MethodNotAllowed struct {
+type CreateRProxyRepositoryMethodNotAllowed struct {
 }
 
 // IsSuccess returns true when this create repository33 method not allowed response has a 2xx status code
-func (o *CreateRepository33MethodNotAllowed) IsSuccess() bool {
+func (o *CreateRProxyRepositoryMethodNotAllowed) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository33 method not allowed response has a 3xx status code
-func (o *CreateRepository33MethodNotAllowed) IsRedirect() bool {
+func (o *CreateRProxyRepositoryMethodNotAllowed) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository33 method not allowed response has a 4xx status code
-func (o *CreateRepository33MethodNotAllowed) IsClientError() bool {
+func (o *CreateRProxyRepositoryMethodNotAllowed) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository33 method not allowed response has a 5xx status code
-func (o *CreateRepository33MethodNotAllowed) IsServerError() bool {
+func (o *CreateRProxyRepositoryMethodNotAllowed) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository33 method not allowed response a status code equal to that given
-func (o *CreateRepository33MethodNotAllowed) IsCode(code int) bool {
+func (o *CreateRProxyRepositoryMethodNotAllowed) IsCode(code int) bool {
 	return code == 405
 }
 
-func (o *CreateRepository33MethodNotAllowed) Error() string {
+func (o *CreateRProxyRepositoryMethodNotAllowed) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/proxy][%d] createRepository33MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository33MethodNotAllowed) String() string {
+func (o *CreateRProxyRepositoryMethodNotAllowed) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/r/proxy][%d] createRepository33MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository33MethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRProxyRepositoryMethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

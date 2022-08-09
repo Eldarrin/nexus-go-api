@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository21Reader is a Reader for the GetRepository21 structure.
-type GetRepository21Reader struct {
+// GetYumGroupRepositoryReader is a Reader for the GetYumGroupRepository structure.
+type GetYumGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository21Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetYumGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository21OK()
+		result := NewGetYumGroupRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository21Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository21OK creates a GetRepository21OK with default headers values
-func NewGetRepository21OK() *GetRepository21OK {
-	return &GetRepository21OK{}
+// NewGetYumGroupRepositoryOK creates a GetYumGroupRepositoryOK with default headers values
+func NewGetYumGroupRepositoryOK() *GetYumGroupRepositoryOK {
+	return &GetYumGroupRepositoryOK{}
 }
 
-/* GetRepository21OK describes a response with status code 200, with default header values.
+/*
+	GetYumGroupRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository21OK struct {
+type GetYumGroupRepositoryOK struct {
 	Payload *models.SimpleAPIGroupRepository
 }
 
 // IsSuccess returns true when this get repository21 o k response has a 2xx status code
-func (o *GetRepository21OK) IsSuccess() bool {
+func (o *GetYumGroupRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository21 o k response has a 3xx status code
-func (o *GetRepository21OK) IsRedirect() bool {
+func (o *GetYumGroupRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository21 o k response has a 4xx status code
-func (o *GetRepository21OK) IsClientError() bool {
+func (o *GetYumGroupRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository21 o k response has a 5xx status code
-func (o *GetRepository21OK) IsServerError() bool {
+func (o *GetYumGroupRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository21 o k response a status code equal to that given
-func (o *GetRepository21OK) IsCode(code int) bool {
+func (o *GetYumGroupRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository21OK) Error() string {
+func (o *GetYumGroupRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/yum/group/{repositoryName}][%d] getRepository21OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository21OK) String() string {
+func (o *GetYumGroupRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/yum/group/{repositoryName}][%d] getRepository21OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository21OK) GetPayload() *models.SimpleAPIGroupRepository {
+func (o *GetYumGroupRepositoryOK) GetPayload() *models.SimpleAPIGroupRepository {
 	return o.Payload
 }
 
-func (o *GetRepository21OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetYumGroupRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIGroupRepository)
 

@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository8Reader is a Reader for the CreateRepository8 structure.
-type CreateRepository8Reader struct {
+// CreateNpmGroupRepositoryReader is a Reader for the CreateNpmGroupRepository structure.
+type CreateNpmGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository8Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateNpmGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository8Created()
+		result := NewCreateNpmGroupRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository8Unauthorized()
+		result := NewCreateNpmGroupRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository8Forbidden()
+		result := NewCreateNpmGroupRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository8Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewCreateRepository8Created creates a CreateRepository8Created with default headers values
-func NewCreateRepository8Created() *CreateRepository8Created {
-	return &CreateRepository8Created{}
+// NewCreateNpmGroupRepositoryCreated creates a CreateNpmGroupRepositoryCreated with default headers values
+func NewCreateNpmGroupRepositoryCreated() *CreateNpmGroupRepositoryCreated {
+	return &CreateNpmGroupRepositoryCreated{}
 }
 
-/* CreateRepository8Created describes a response with status code 201, with default header values.
+/*
+	CreateNpmGroupRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository8Created struct {
+type CreateNpmGroupRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository8 created response has a 2xx status code
-func (o *CreateRepository8Created) IsSuccess() bool {
+func (o *CreateNpmGroupRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository8 created response has a 3xx status code
-func (o *CreateRepository8Created) IsRedirect() bool {
+func (o *CreateNpmGroupRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository8 created response has a 4xx status code
-func (o *CreateRepository8Created) IsClientError() bool {
+func (o *CreateNpmGroupRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository8 created response has a 5xx status code
-func (o *CreateRepository8Created) IsServerError() bool {
+func (o *CreateNpmGroupRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository8 created response a status code equal to that given
-func (o *CreateRepository8Created) IsCode(code int) bool {
+func (o *CreateNpmGroupRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository8Created) Error() string {
+func (o *CreateNpmGroupRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/group][%d] createRepository8Created ", 201)
 }
 
-func (o *CreateRepository8Created) String() string {
+func (o *CreateNpmGroupRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/group][%d] createRepository8Created ", 201)
 }
 
-func (o *CreateRepository8Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNpmGroupRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository8Unauthorized creates a CreateRepository8Unauthorized with default headers values
-func NewCreateRepository8Unauthorized() *CreateRepository8Unauthorized {
-	return &CreateRepository8Unauthorized{}
+// NewCreateNpmGroupRepositoryUnauthorized creates a CreateNpmGroupRepositoryUnauthorized with default headers values
+func NewCreateNpmGroupRepositoryUnauthorized() *CreateNpmGroupRepositoryUnauthorized {
+	return &CreateNpmGroupRepositoryUnauthorized{}
 }
 
-/* CreateRepository8Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateNpmGroupRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository8Unauthorized struct {
+type CreateNpmGroupRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository8 unauthorized response has a 2xx status code
-func (o *CreateRepository8Unauthorized) IsSuccess() bool {
+func (o *CreateNpmGroupRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository8 unauthorized response has a 3xx status code
-func (o *CreateRepository8Unauthorized) IsRedirect() bool {
+func (o *CreateNpmGroupRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository8 unauthorized response has a 4xx status code
-func (o *CreateRepository8Unauthorized) IsClientError() bool {
+func (o *CreateNpmGroupRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository8 unauthorized response has a 5xx status code
-func (o *CreateRepository8Unauthorized) IsServerError() bool {
+func (o *CreateNpmGroupRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository8 unauthorized response a status code equal to that given
-func (o *CreateRepository8Unauthorized) IsCode(code int) bool {
+func (o *CreateNpmGroupRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository8Unauthorized) Error() string {
+func (o *CreateNpmGroupRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/group][%d] createRepository8Unauthorized ", 401)
 }
 
-func (o *CreateRepository8Unauthorized) String() string {
+func (o *CreateNpmGroupRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/group][%d] createRepository8Unauthorized ", 401)
 }
 
-func (o *CreateRepository8Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNpmGroupRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository8Forbidden creates a CreateRepository8Forbidden with default headers values
-func NewCreateRepository8Forbidden() *CreateRepository8Forbidden {
-	return &CreateRepository8Forbidden{}
+// NewCreateNpmGroupRepositoryForbidden creates a CreateNpmGroupRepositoryForbidden with default headers values
+func NewCreateNpmGroupRepositoryForbidden() *CreateNpmGroupRepositoryForbidden {
+	return &CreateNpmGroupRepositoryForbidden{}
 }
 
-/* CreateRepository8Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateNpmGroupRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository8Forbidden struct {
+type CreateNpmGroupRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository8 forbidden response has a 2xx status code
-func (o *CreateRepository8Forbidden) IsSuccess() bool {
+func (o *CreateNpmGroupRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository8 forbidden response has a 3xx status code
-func (o *CreateRepository8Forbidden) IsRedirect() bool {
+func (o *CreateNpmGroupRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository8 forbidden response has a 4xx status code
-func (o *CreateRepository8Forbidden) IsClientError() bool {
+func (o *CreateNpmGroupRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository8 forbidden response has a 5xx status code
-func (o *CreateRepository8Forbidden) IsServerError() bool {
+func (o *CreateNpmGroupRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository8 forbidden response a status code equal to that given
-func (o *CreateRepository8Forbidden) IsCode(code int) bool {
+func (o *CreateNpmGroupRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository8Forbidden) Error() string {
+func (o *CreateNpmGroupRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/group][%d] createRepository8Forbidden ", 403)
 }
 
-func (o *CreateRepository8Forbidden) String() string {
+func (o *CreateNpmGroupRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/group][%d] createRepository8Forbidden ", 403)
 }
 
-func (o *CreateRepository8Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNpmGroupRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

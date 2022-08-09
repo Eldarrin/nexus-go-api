@@ -39,7 +39,8 @@ func NewGetLicenseStatusOK() *GetLicenseStatusOK {
 	return &GetLicenseStatusOK{}
 }
 
-/* GetLicenseStatusOK describes a response with status code 200, with default header values.
+/*
+	GetLicenseStatusOK describes a response with status code 200, with default header values.
 
 successful operation
 */

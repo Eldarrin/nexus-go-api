@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository30Params creates a new GetRepository30Params object,
+// NewGetCondaProxyRepositoryParams creates a new GetCondaProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository30Params() *GetRepository30Params {
-	return &GetRepository30Params{
+func NewGetCondaProxyRepositoryParams() *GetCondaProxyRepositoryParams {
+	return &GetCondaProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository30ParamsWithTimeout creates a new GetRepository30Params object
+// NewGetCondaProxyRepositoryParamsWithTimeout creates a new GetCondaProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository30ParamsWithTimeout(timeout time.Duration) *GetRepository30Params {
-	return &GetRepository30Params{
+func NewGetCondaProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetCondaProxyRepositoryParams {
+	return &GetCondaProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository30ParamsWithContext creates a new GetRepository30Params object
+// NewGetCondaProxyRepositoryParamsWithContext creates a new GetCondaProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository30ParamsWithContext(ctx context.Context) *GetRepository30Params {
-	return &GetRepository30Params{
+func NewGetCondaProxyRepositoryParamsWithContext(ctx context.Context) *GetCondaProxyRepositoryParams {
+	return &GetCondaProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository30ParamsWithHTTPClient creates a new GetRepository30Params object
+// NewGetCondaProxyRepositoryParamsWithHTTPClient creates a new GetCondaProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository30ParamsWithHTTPClient(client *http.Client) *GetRepository30Params {
-	return &GetRepository30Params{
+func NewGetCondaProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetCondaProxyRepositoryParams {
+	return &GetCondaProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository30Params contains all the parameters to send to the API endpoint
-   for the get repository 30 operation.
+/*
+GetCondaProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 30 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository30Params struct {
+type GetCondaProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository30Params struct {
 // WithDefaults hydrates default values in the get repository 30 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository30Params) WithDefaults() *GetRepository30Params {
+func (o *GetCondaProxyRepositoryParams) WithDefaults() *GetCondaProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository30Params) WithDefaults() *GetRepository30Params {
 // SetDefaults hydrates default values in the get repository 30 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository30Params) SetDefaults() {
+func (o *GetCondaProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 30 params
-func (o *GetRepository30Params) WithTimeout(timeout time.Duration) *GetRepository30Params {
+func (o *GetCondaProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetCondaProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 30 params
-func (o *GetRepository30Params) SetTimeout(timeout time.Duration) {
+func (o *GetCondaProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 30 params
-func (o *GetRepository30Params) WithContext(ctx context.Context) *GetRepository30Params {
+func (o *GetCondaProxyRepositoryParams) WithContext(ctx context.Context) *GetCondaProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 30 params
-func (o *GetRepository30Params) SetContext(ctx context.Context) {
+func (o *GetCondaProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 30 params
-func (o *GetRepository30Params) WithHTTPClient(client *http.Client) *GetRepository30Params {
+func (o *GetCondaProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetCondaProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 30 params
-func (o *GetRepository30Params) SetHTTPClient(client *http.Client) {
+func (o *GetCondaProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 30 params
-func (o *GetRepository30Params) WithRepositoryName(repositoryName string) *GetRepository30Params {
+func (o *GetCondaProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetCondaProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 30 params
-func (o *GetRepository30Params) SetRepositoryName(repositoryName string) {
+func (o *GetCondaProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository30Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetCondaProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

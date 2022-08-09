@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository18Reader is a Reader for the CreateRepository18 structure.
-type CreateRepository18Reader struct {
+// CreateDockerHostedRepositoryReader is a Reader for the CreateDockerHostedRepository structure.
+type CreateDockerHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository18Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateDockerHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository18Created()
+		result := NewCreateDockerHostedRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository18Unauthorized()
+		result := NewCreateDockerHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository18Forbidden()
+		result := NewCreateDockerHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository18Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository18Created creates a CreateRepository18Created with default headers values
-func NewCreateRepository18Created() *CreateRepository18Created {
-	return &CreateRepository18Created{}
+// NewCreateDockerHostedRepositoryCreated creates a CreateDockerHostedRepositoryCreated with default headers values
+func NewCreateDockerHostedRepositoryCreated() *CreateDockerHostedRepositoryCreated {
+	return &CreateDockerHostedRepositoryCreated{}
 }
 
-/* CreateRepository18Created describes a response with status code 201, with default header values.
+/*
+	CreateDockerHostedRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository18Created struct {
+type CreateDockerHostedRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository18 created response has a 2xx status code
-func (o *CreateRepository18Created) IsSuccess() bool {
+func (o *CreateDockerHostedRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository18 created response has a 3xx status code
-func (o *CreateRepository18Created) IsRedirect() bool {
+func (o *CreateDockerHostedRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository18 created response has a 4xx status code
-func (o *CreateRepository18Created) IsClientError() bool {
+func (o *CreateDockerHostedRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository18 created response has a 5xx status code
-func (o *CreateRepository18Created) IsServerError() bool {
+func (o *CreateDockerHostedRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository18 created response a status code equal to that given
-func (o *CreateRepository18Created) IsCode(code int) bool {
+func (o *CreateDockerHostedRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository18Created) Error() string {
+func (o *CreateDockerHostedRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/docker/hosted][%d] createRepository18Created ", 201)
 }
 
-func (o *CreateRepository18Created) String() string {
+func (o *CreateDockerHostedRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/docker/hosted][%d] createRepository18Created ", 201)
 }
 
-func (o *CreateRepository18Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateDockerHostedRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository18Unauthorized creates a CreateRepository18Unauthorized with default headers values
-func NewCreateRepository18Unauthorized() *CreateRepository18Unauthorized {
-	return &CreateRepository18Unauthorized{}
+// NewCreateDockerHostedRepositoryUnauthorized creates a CreateDockerHostedRepositoryUnauthorized with default headers values
+func NewCreateDockerHostedRepositoryUnauthorized() *CreateDockerHostedRepositoryUnauthorized {
+	return &CreateDockerHostedRepositoryUnauthorized{}
 }
 
-/* CreateRepository18Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateDockerHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository18Unauthorized struct {
+type CreateDockerHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository18 unauthorized response has a 2xx status code
-func (o *CreateRepository18Unauthorized) IsSuccess() bool {
+func (o *CreateDockerHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository18 unauthorized response has a 3xx status code
-func (o *CreateRepository18Unauthorized) IsRedirect() bool {
+func (o *CreateDockerHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository18 unauthorized response has a 4xx status code
-func (o *CreateRepository18Unauthorized) IsClientError() bool {
+func (o *CreateDockerHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository18 unauthorized response has a 5xx status code
-func (o *CreateRepository18Unauthorized) IsServerError() bool {
+func (o *CreateDockerHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository18 unauthorized response a status code equal to that given
-func (o *CreateRepository18Unauthorized) IsCode(code int) bool {
+func (o *CreateDockerHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository18Unauthorized) Error() string {
+func (o *CreateDockerHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/docker/hosted][%d] createRepository18Unauthorized ", 401)
 }
 
-func (o *CreateRepository18Unauthorized) String() string {
+func (o *CreateDockerHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/docker/hosted][%d] createRepository18Unauthorized ", 401)
 }
 
-func (o *CreateRepository18Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateDockerHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository18Forbidden creates a CreateRepository18Forbidden with default headers values
-func NewCreateRepository18Forbidden() *CreateRepository18Forbidden {
-	return &CreateRepository18Forbidden{}
+// NewCreateDockerHostedRepositoryForbidden creates a CreateDockerHostedRepositoryForbidden with default headers values
+func NewCreateDockerHostedRepositoryForbidden() *CreateDockerHostedRepositoryForbidden {
+	return &CreateDockerHostedRepositoryForbidden{}
 }
 
-/* CreateRepository18Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateDockerHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Repository not found
 */
-type CreateRepository18Forbidden struct {
+type CreateDockerHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository18 forbidden response has a 2xx status code
-func (o *CreateRepository18Forbidden) IsSuccess() bool {
+func (o *CreateDockerHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository18 forbidden response has a 3xx status code
-func (o *CreateRepository18Forbidden) IsRedirect() bool {
+func (o *CreateDockerHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository18 forbidden response has a 4xx status code
-func (o *CreateRepository18Forbidden) IsClientError() bool {
+func (o *CreateDockerHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository18 forbidden response has a 5xx status code
-func (o *CreateRepository18Forbidden) IsServerError() bool {
+func (o *CreateDockerHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository18 forbidden response a status code equal to that given
-func (o *CreateRepository18Forbidden) IsCode(code int) bool {
+func (o *CreateDockerHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository18Forbidden) Error() string {
+func (o *CreateDockerHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/docker/hosted][%d] createRepository18Forbidden ", 403)
 }
 
-func (o *CreateRepository18Forbidden) String() string {
+func (o *CreateDockerHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/docker/hosted][%d] createRepository18Forbidden ", 403)
 }
 
-func (o *CreateRepository18Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateDockerHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

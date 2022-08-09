@@ -45,7 +45,8 @@ func NewGetTrustStoreCertificatesOK() *GetTrustStoreCertificatesOK {
 	return &GetTrustStoreCertificatesOK{}
 }
 
-/* GetTrustStoreCertificatesOK describes a response with status code 200, with default header values.
+/*
+	GetTrustStoreCertificatesOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -105,7 +106,8 @@ func NewGetTrustStoreCertificatesForbidden() *GetTrustStoreCertificatesForbidden
 	return &GetTrustStoreCertificatesForbidden{}
 }
 
-/* GetTrustStoreCertificatesForbidden describes a response with status code 403, with default header values.
+/*
+	GetTrustStoreCertificatesForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to list certificates in the trust store.
 */

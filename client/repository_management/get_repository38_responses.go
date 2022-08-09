@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository38Reader is a Reader for the GetRepository38 structure.
-type GetRepository38Reader struct {
+// GetP2ProxyRepositoryReader is a Reader for the GetP2ProxyRepository structure.
+type GetP2ProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository38Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetP2ProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository38OK()
+		result := NewGetP2ProxyRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository38Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository38OK creates a GetRepository38OK with default headers values
-func NewGetRepository38OK() *GetRepository38OK {
-	return &GetRepository38OK{}
+// NewGetP2ProxyRepositoryOK creates a GetP2ProxyRepositoryOK with default headers values
+func NewGetP2ProxyRepositoryOK() *GetP2ProxyRepositoryOK {
+	return &GetP2ProxyRepositoryOK{}
 }
 
-/* GetRepository38OK describes a response with status code 200, with default header values.
+/*
+	GetP2ProxyRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository38OK struct {
+type GetP2ProxyRepositoryOK struct {
 	Payload *models.SimpleAPIProxyRepository
 }
 
 // IsSuccess returns true when this get repository38 o k response has a 2xx status code
-func (o *GetRepository38OK) IsSuccess() bool {
+func (o *GetP2ProxyRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository38 o k response has a 3xx status code
-func (o *GetRepository38OK) IsRedirect() bool {
+func (o *GetP2ProxyRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository38 o k response has a 4xx status code
-func (o *GetRepository38OK) IsClientError() bool {
+func (o *GetP2ProxyRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository38 o k response has a 5xx status code
-func (o *GetRepository38OK) IsServerError() bool {
+func (o *GetP2ProxyRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository38 o k response a status code equal to that given
-func (o *GetRepository38OK) IsCode(code int) bool {
+func (o *GetP2ProxyRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository38OK) Error() string {
+func (o *GetP2ProxyRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/p2/proxy/{repositoryName}][%d] getRepository38OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository38OK) String() string {
+func (o *GetP2ProxyRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/p2/proxy/{repositoryName}][%d] getRepository38OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository38OK) GetPayload() *models.SimpleAPIProxyRepository {
+func (o *GetP2ProxyRepositoryOK) GetPayload() *models.SimpleAPIProxyRepository {
 	return o.Payload
 }
 
-func (o *GetRepository38OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetP2ProxyRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIProxyRepository)
 

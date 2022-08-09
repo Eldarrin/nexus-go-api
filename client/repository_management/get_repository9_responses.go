@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository9Reader is a Reader for the GetRepository9 structure.
-type GetRepository9Reader struct {
+// GetNpmGroupRepositoryReader is a Reader for the GetNpmGroupRepository structure.
+type GetNpmGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository9Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetNpmGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository9OK()
+		result := NewGetNpmGroupRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository9Reader) ReadResponse(response runtime.ClientResponse, con
 	}
 }
 
-// NewGetRepository9OK creates a GetRepository9OK with default headers values
-func NewGetRepository9OK() *GetRepository9OK {
-	return &GetRepository9OK{}
+// NewGetNpmGroupRepositoryOK creates a GetNpmGroupRepositoryOK with default headers values
+func NewGetNpmGroupRepositoryOK() *GetNpmGroupRepositoryOK {
+	return &GetNpmGroupRepositoryOK{}
 }
 
-/* GetRepository9OK describes a response with status code 200, with default header values.
+/*
+	GetNpmGroupRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository9OK struct {
+type GetNpmGroupRepositoryOK struct {
 	Payload *models.SimpleAPIGroupDeployRepository
 }
 
 // IsSuccess returns true when this get repository9 o k response has a 2xx status code
-func (o *GetRepository9OK) IsSuccess() bool {
+func (o *GetNpmGroupRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository9 o k response has a 3xx status code
-func (o *GetRepository9OK) IsRedirect() bool {
+func (o *GetNpmGroupRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository9 o k response has a 4xx status code
-func (o *GetRepository9OK) IsClientError() bool {
+func (o *GetNpmGroupRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository9 o k response has a 5xx status code
-func (o *GetRepository9OK) IsServerError() bool {
+func (o *GetNpmGroupRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository9 o k response a status code equal to that given
-func (o *GetRepository9OK) IsCode(code int) bool {
+func (o *GetNpmGroupRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository9OK) Error() string {
+func (o *GetNpmGroupRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/npm/group/{repositoryName}][%d] getRepository9OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository9OK) String() string {
+func (o *GetNpmGroupRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/npm/group/{repositoryName}][%d] getRepository9OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository9OK) GetPayload() *models.SimpleAPIGroupDeployRepository {
+func (o *GetNpmGroupRepositoryOK) GetPayload() *models.SimpleAPIGroupDeployRepository {
 	return o.Payload
 }
 
-func (o *GetRepository9OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetNpmGroupRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIGroupDeployRepository)
 

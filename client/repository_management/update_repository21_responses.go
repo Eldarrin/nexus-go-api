@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository21Reader is a Reader for the UpdateRepository21 structure.
-type UpdateRepository21Reader struct {
+// UpdateYumHostedRepositoryReader is a Reader for the UpdateYumHostedRepository structure.
+type UpdateYumHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository21Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateYumHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository21NoContent()
+		result := NewUpdateYumHostedRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository21Unauthorized()
+		result := NewUpdateYumHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository21Forbidden()
+		result := NewUpdateYumHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository21Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository21NoContent creates a UpdateRepository21NoContent with default headers values
-func NewUpdateRepository21NoContent() *UpdateRepository21NoContent {
-	return &UpdateRepository21NoContent{}
+// NewUpdateYumHostedRepositoryNoContent creates a UpdateYumHostedRepositoryNoContent with default headers values
+func NewUpdateYumHostedRepositoryNoContent() *UpdateYumHostedRepositoryNoContent {
+	return &UpdateYumHostedRepositoryNoContent{}
 }
 
-/* UpdateRepository21NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateYumHostedRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository21NoContent struct {
+type UpdateYumHostedRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository21 no content response has a 2xx status code
-func (o *UpdateRepository21NoContent) IsSuccess() bool {
+func (o *UpdateYumHostedRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository21 no content response has a 3xx status code
-func (o *UpdateRepository21NoContent) IsRedirect() bool {
+func (o *UpdateYumHostedRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository21 no content response has a 4xx status code
-func (o *UpdateRepository21NoContent) IsClientError() bool {
+func (o *UpdateYumHostedRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository21 no content response has a 5xx status code
-func (o *UpdateRepository21NoContent) IsServerError() bool {
+func (o *UpdateYumHostedRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository21 no content response a status code equal to that given
-func (o *UpdateRepository21NoContent) IsCode(code int) bool {
+func (o *UpdateYumHostedRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository21NoContent) Error() string {
+func (o *UpdateYumHostedRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/hosted/{repositoryName}][%d] updateRepository21NoContent ", 204)
 }
 
-func (o *UpdateRepository21NoContent) String() string {
+func (o *UpdateYumHostedRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/hosted/{repositoryName}][%d] updateRepository21NoContent ", 204)
 }
 
-func (o *UpdateRepository21NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateYumHostedRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository21Unauthorized creates a UpdateRepository21Unauthorized with default headers values
-func NewUpdateRepository21Unauthorized() *UpdateRepository21Unauthorized {
-	return &UpdateRepository21Unauthorized{}
+// NewUpdateYumHostedRepositoryUnauthorized creates a UpdateYumHostedRepositoryUnauthorized with default headers values
+func NewUpdateYumHostedRepositoryUnauthorized() *UpdateYumHostedRepositoryUnauthorized {
+	return &UpdateYumHostedRepositoryUnauthorized{}
 }
 
-/* UpdateRepository21Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateYumHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository21Unauthorized struct {
+type UpdateYumHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository21 unauthorized response has a 2xx status code
-func (o *UpdateRepository21Unauthorized) IsSuccess() bool {
+func (o *UpdateYumHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository21 unauthorized response has a 3xx status code
-func (o *UpdateRepository21Unauthorized) IsRedirect() bool {
+func (o *UpdateYumHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository21 unauthorized response has a 4xx status code
-func (o *UpdateRepository21Unauthorized) IsClientError() bool {
+func (o *UpdateYumHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository21 unauthorized response has a 5xx status code
-func (o *UpdateRepository21Unauthorized) IsServerError() bool {
+func (o *UpdateYumHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository21 unauthorized response a status code equal to that given
-func (o *UpdateRepository21Unauthorized) IsCode(code int) bool {
+func (o *UpdateYumHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository21Unauthorized) Error() string {
+func (o *UpdateYumHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/hosted/{repositoryName}][%d] updateRepository21Unauthorized ", 401)
 }
 
-func (o *UpdateRepository21Unauthorized) String() string {
+func (o *UpdateYumHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/hosted/{repositoryName}][%d] updateRepository21Unauthorized ", 401)
 }
 
-func (o *UpdateRepository21Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateYumHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository21Forbidden creates a UpdateRepository21Forbidden with default headers values
-func NewUpdateRepository21Forbidden() *UpdateRepository21Forbidden {
-	return &UpdateRepository21Forbidden{}
+// NewUpdateYumHostedRepositoryForbidden creates a UpdateYumHostedRepositoryForbidden with default headers values
+func NewUpdateYumHostedRepositoryForbidden() *UpdateYumHostedRepositoryForbidden {
+	return &UpdateYumHostedRepositoryForbidden{}
 }
 
-/* UpdateRepository21Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateYumHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository21Forbidden struct {
+type UpdateYumHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository21 forbidden response has a 2xx status code
-func (o *UpdateRepository21Forbidden) IsSuccess() bool {
+func (o *UpdateYumHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository21 forbidden response has a 3xx status code
-func (o *UpdateRepository21Forbidden) IsRedirect() bool {
+func (o *UpdateYumHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository21 forbidden response has a 4xx status code
-func (o *UpdateRepository21Forbidden) IsClientError() bool {
+func (o *UpdateYumHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository21 forbidden response has a 5xx status code
-func (o *UpdateRepository21Forbidden) IsServerError() bool {
+func (o *UpdateYumHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository21 forbidden response a status code equal to that given
-func (o *UpdateRepository21Forbidden) IsCode(code int) bool {
+func (o *UpdateYumHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository21Forbidden) Error() string {
+func (o *UpdateYumHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/hosted/{repositoryName}][%d] updateRepository21Forbidden ", 403)
 }
 
-func (o *UpdateRepository21Forbidden) String() string {
+func (o *UpdateYumHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/yum/hosted/{repositoryName}][%d] updateRepository21Forbidden ", 403)
 }
 
-func (o *UpdateRepository21Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateYumHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository16Reader is a Reader for the CreateRepository16 structure.
-type CreateRepository16Reader struct {
+// CreateRubyGemsProxyRepositoryReader is a Reader for the CreateRubyGemsProxyRepository structure.
+type CreateRubyGemsProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository16Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateRubyGemsProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository16Created()
+		result := NewCreateRubyGemsProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository16Unauthorized()
+		result := NewCreateRubyGemsProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository16Forbidden()
+		result := NewCreateRubyGemsProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository16Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository16Created creates a CreateRepository16Created with default headers values
-func NewCreateRepository16Created() *CreateRepository16Created {
-	return &CreateRepository16Created{}
+// NewCreateRubyGemsProxyRepositoryCreated creates a CreateRubyGemsProxyRepositoryCreated with default headers values
+func NewCreateRubyGemsProxyRepositoryCreated() *CreateRubyGemsProxyRepositoryCreated {
+	return &CreateRubyGemsProxyRepositoryCreated{}
 }
 
-/* CreateRepository16Created describes a response with status code 201, with default header values.
+/*
+	CreateRubyGemsProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository16Created struct {
+type CreateRubyGemsProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository16 created response has a 2xx status code
-func (o *CreateRepository16Created) IsSuccess() bool {
+func (o *CreateRubyGemsProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository16 created response has a 3xx status code
-func (o *CreateRepository16Created) IsRedirect() bool {
+func (o *CreateRubyGemsProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository16 created response has a 4xx status code
-func (o *CreateRepository16Created) IsClientError() bool {
+func (o *CreateRubyGemsProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository16 created response has a 5xx status code
-func (o *CreateRepository16Created) IsServerError() bool {
+func (o *CreateRubyGemsProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository16 created response a status code equal to that given
-func (o *CreateRepository16Created) IsCode(code int) bool {
+func (o *CreateRubyGemsProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository16Created) Error() string {
+func (o *CreateRubyGemsProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/rubygems/proxy][%d] createRepository16Created ", 201)
 }
 
-func (o *CreateRepository16Created) String() string {
+func (o *CreateRubyGemsProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/rubygems/proxy][%d] createRepository16Created ", 201)
 }
 
-func (o *CreateRepository16Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRubyGemsProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository16Unauthorized creates a CreateRepository16Unauthorized with default headers values
-func NewCreateRepository16Unauthorized() *CreateRepository16Unauthorized {
-	return &CreateRepository16Unauthorized{}
+// NewCreateRubyGemsProxyRepositoryUnauthorized creates a CreateRubyGemsProxyRepositoryUnauthorized with default headers values
+func NewCreateRubyGemsProxyRepositoryUnauthorized() *CreateRubyGemsProxyRepositoryUnauthorized {
+	return &CreateRubyGemsProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository16Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateRubyGemsProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository16Unauthorized struct {
+type CreateRubyGemsProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository16 unauthorized response has a 2xx status code
-func (o *CreateRepository16Unauthorized) IsSuccess() bool {
+func (o *CreateRubyGemsProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository16 unauthorized response has a 3xx status code
-func (o *CreateRepository16Unauthorized) IsRedirect() bool {
+func (o *CreateRubyGemsProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository16 unauthorized response has a 4xx status code
-func (o *CreateRepository16Unauthorized) IsClientError() bool {
+func (o *CreateRubyGemsProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository16 unauthorized response has a 5xx status code
-func (o *CreateRepository16Unauthorized) IsServerError() bool {
+func (o *CreateRubyGemsProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository16 unauthorized response a status code equal to that given
-func (o *CreateRepository16Unauthorized) IsCode(code int) bool {
+func (o *CreateRubyGemsProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository16Unauthorized) Error() string {
+func (o *CreateRubyGemsProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/rubygems/proxy][%d] createRepository16Unauthorized ", 401)
 }
 
-func (o *CreateRepository16Unauthorized) String() string {
+func (o *CreateRubyGemsProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/rubygems/proxy][%d] createRepository16Unauthorized ", 401)
 }
 
-func (o *CreateRepository16Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRubyGemsProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository16Forbidden creates a CreateRepository16Forbidden with default headers values
-func NewCreateRepository16Forbidden() *CreateRepository16Forbidden {
-	return &CreateRepository16Forbidden{}
+// NewCreateRubyGemsProxyRepositoryForbidden creates a CreateRubyGemsProxyRepositoryForbidden with default headers values
+func NewCreateRubyGemsProxyRepositoryForbidden() *CreateRubyGemsProxyRepositoryForbidden {
+	return &CreateRubyGemsProxyRepositoryForbidden{}
 }
 
-/* CreateRepository16Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateRubyGemsProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository16Forbidden struct {
+type CreateRubyGemsProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository16 forbidden response has a 2xx status code
-func (o *CreateRepository16Forbidden) IsSuccess() bool {
+func (o *CreateRubyGemsProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository16 forbidden response has a 3xx status code
-func (o *CreateRepository16Forbidden) IsRedirect() bool {
+func (o *CreateRubyGemsProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository16 forbidden response has a 4xx status code
-func (o *CreateRepository16Forbidden) IsClientError() bool {
+func (o *CreateRubyGemsProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository16 forbidden response has a 5xx status code
-func (o *CreateRepository16Forbidden) IsServerError() bool {
+func (o *CreateRubyGemsProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository16 forbidden response a status code equal to that given
-func (o *CreateRepository16Forbidden) IsCode(code int) bool {
+func (o *CreateRubyGemsProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository16Forbidden) Error() string {
+func (o *CreateRubyGemsProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/rubygems/proxy][%d] createRepository16Forbidden ", 403)
 }
 
-func (o *CreateRepository16Forbidden) String() string {
+func (o *CreateRubyGemsProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/rubygems/proxy][%d] createRepository16Forbidden ", 403)
 }
 
-func (o *CreateRepository16Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRubyGemsProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

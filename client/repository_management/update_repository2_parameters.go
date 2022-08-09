@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository2Params creates a new UpdateRepository2Params object,
+// NewUpdateMavenProxyRepositoryParams creates a new UpdateMavenProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository2Params() *UpdateRepository2Params {
-	return &UpdateRepository2Params{
+func NewUpdateMavenProxyRepositoryParams() *UpdateMavenProxyRepositoryParams {
+	return &UpdateMavenProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository2ParamsWithTimeout creates a new UpdateRepository2Params object
+// NewUpdateMavenProxyRepositoryParamsWithTimeout creates a new UpdateMavenProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository2ParamsWithTimeout(timeout time.Duration) *UpdateRepository2Params {
-	return &UpdateRepository2Params{
+func NewUpdateMavenProxyRepositoryParamsWithTimeout(timeout time.Duration) *UpdateMavenProxyRepositoryParams {
+	return &UpdateMavenProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository2ParamsWithContext creates a new UpdateRepository2Params object
+// NewUpdateMavenProxyRepositoryParamsWithContext creates a new UpdateMavenProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository2ParamsWithContext(ctx context.Context) *UpdateRepository2Params {
-	return &UpdateRepository2Params{
+func NewUpdateMavenProxyRepositoryParamsWithContext(ctx context.Context) *UpdateMavenProxyRepositoryParams {
+	return &UpdateMavenProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository2ParamsWithHTTPClient creates a new UpdateRepository2Params object
+// NewUpdateMavenProxyRepositoryParamsWithHTTPClient creates a new UpdateMavenProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository2ParamsWithHTTPClient(client *http.Client) *UpdateRepository2Params {
-	return &UpdateRepository2Params{
+func NewUpdateMavenProxyRepositoryParamsWithHTTPClient(client *http.Client) *UpdateMavenProxyRepositoryParams {
+	return &UpdateMavenProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository2Params contains all the parameters to send to the API endpoint
-   for the update repository 2 operation.
+/*
+UpdateMavenProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 2 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository2Params struct {
+type UpdateMavenProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.MavenProxyRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository2Params struct {
 // WithDefaults hydrates default values in the update repository 2 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository2Params) WithDefaults() *UpdateRepository2Params {
+func (o *UpdateMavenProxyRepositoryParams) WithDefaults() *UpdateMavenProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository2Params) WithDefaults() *UpdateRepository2Params {
 // SetDefaults hydrates default values in the update repository 2 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository2Params) SetDefaults() {
+func (o *UpdateMavenProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 2 params
-func (o *UpdateRepository2Params) WithTimeout(timeout time.Duration) *UpdateRepository2Params {
+func (o *UpdateMavenProxyRepositoryParams) WithTimeout(timeout time.Duration) *UpdateMavenProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 2 params
-func (o *UpdateRepository2Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateMavenProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 2 params
-func (o *UpdateRepository2Params) WithContext(ctx context.Context) *UpdateRepository2Params {
+func (o *UpdateMavenProxyRepositoryParams) WithContext(ctx context.Context) *UpdateMavenProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 2 params
-func (o *UpdateRepository2Params) SetContext(ctx context.Context) {
+func (o *UpdateMavenProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 2 params
-func (o *UpdateRepository2Params) WithHTTPClient(client *http.Client) *UpdateRepository2Params {
+func (o *UpdateMavenProxyRepositoryParams) WithHTTPClient(client *http.Client) *UpdateMavenProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 2 params
-func (o *UpdateRepository2Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateMavenProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 2 params
-func (o *UpdateRepository2Params) WithBody(body *models.MavenProxyRepositoryAPIRequest) *UpdateRepository2Params {
+func (o *UpdateMavenProxyRepositoryParams) WithBody(body *models.MavenProxyRepositoryAPIRequest) *UpdateMavenProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 2 params
-func (o *UpdateRepository2Params) SetBody(body *models.MavenProxyRepositoryAPIRequest) {
+func (o *UpdateMavenProxyRepositoryParams) SetBody(body *models.MavenProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 2 params
-func (o *UpdateRepository2Params) WithRepositoryName(repositoryName string) *UpdateRepository2Params {
+func (o *UpdateMavenProxyRepositoryParams) WithRepositoryName(repositoryName string) *UpdateMavenProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 2 params
-func (o *UpdateRepository2Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateMavenProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository2Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateMavenProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository19Params creates a new CreateRepository19Params object,
+// NewCreateDockerProxyRepositoryParams creates a new CreateDockerProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository19Params() *CreateRepository19Params {
-	return &CreateRepository19Params{
+func NewCreateDockerProxyRepositoryParams() *CreateDockerProxyRepositoryParams {
+	return &CreateDockerProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository19ParamsWithTimeout creates a new CreateRepository19Params object
+// NewCreateDockerProxyRepositoryParamsWithTimeout creates a new CreateDockerProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository19ParamsWithTimeout(timeout time.Duration) *CreateRepository19Params {
-	return &CreateRepository19Params{
+func NewCreateDockerProxyRepositoryParamsWithTimeout(timeout time.Duration) *CreateDockerProxyRepositoryParams {
+	return &CreateDockerProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository19ParamsWithContext creates a new CreateRepository19Params object
+// NewCreateDockerProxyRepositoryParamsWithContext creates a new CreateDockerProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository19ParamsWithContext(ctx context.Context) *CreateRepository19Params {
-	return &CreateRepository19Params{
+func NewCreateDockerProxyRepositoryParamsWithContext(ctx context.Context) *CreateDockerProxyRepositoryParams {
+	return &CreateDockerProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository19ParamsWithHTTPClient creates a new CreateRepository19Params object
+// NewCreateDockerProxyRepositoryParamsWithHTTPClient creates a new CreateDockerProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository19ParamsWithHTTPClient(client *http.Client) *CreateRepository19Params {
-	return &CreateRepository19Params{
+func NewCreateDockerProxyRepositoryParamsWithHTTPClient(client *http.Client) *CreateDockerProxyRepositoryParams {
+	return &CreateDockerProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository19Params contains all the parameters to send to the API endpoint
-   for the create repository 19 operation.
+/*
+CreateDockerProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 19 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository19Params struct {
+type CreateDockerProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.DockerProxyRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository19Params struct {
 // WithDefaults hydrates default values in the create repository 19 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository19Params) WithDefaults() *CreateRepository19Params {
+func (o *CreateDockerProxyRepositoryParams) WithDefaults() *CreateDockerProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository19Params) WithDefaults() *CreateRepository19Params {
 // SetDefaults hydrates default values in the create repository 19 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository19Params) SetDefaults() {
+func (o *CreateDockerProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 19 params
-func (o *CreateRepository19Params) WithTimeout(timeout time.Duration) *CreateRepository19Params {
+func (o *CreateDockerProxyRepositoryParams) WithTimeout(timeout time.Duration) *CreateDockerProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 19 params
-func (o *CreateRepository19Params) SetTimeout(timeout time.Duration) {
+func (o *CreateDockerProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 19 params
-func (o *CreateRepository19Params) WithContext(ctx context.Context) *CreateRepository19Params {
+func (o *CreateDockerProxyRepositoryParams) WithContext(ctx context.Context) *CreateDockerProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 19 params
-func (o *CreateRepository19Params) SetContext(ctx context.Context) {
+func (o *CreateDockerProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 19 params
-func (o *CreateRepository19Params) WithHTTPClient(client *http.Client) *CreateRepository19Params {
+func (o *CreateDockerProxyRepositoryParams) WithHTTPClient(client *http.Client) *CreateDockerProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 19 params
-func (o *CreateRepository19Params) SetHTTPClient(client *http.Client) {
+func (o *CreateDockerProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 19 params
-func (o *CreateRepository19Params) WithBody(body *models.DockerProxyRepositoryAPIRequest) *CreateRepository19Params {
+func (o *CreateDockerProxyRepositoryParams) WithBody(body *models.DockerProxyRepositoryAPIRequest) *CreateDockerProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 19 params
-func (o *CreateRepository19Params) SetBody(body *models.DockerProxyRepositoryAPIRequest) {
+func (o *CreateDockerProxyRepositoryParams) SetBody(body *models.DockerProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository19Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateDockerProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

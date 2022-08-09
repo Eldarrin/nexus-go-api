@@ -48,7 +48,8 @@ func NewDeleteRoutingRuleNoContent() *DeleteRoutingRuleNoContent {
 	return &DeleteRoutingRuleNoContent{}
 }
 
-/* DeleteRoutingRuleNoContent describes a response with status code 204, with default header values.
+/*
+	DeleteRoutingRuleNoContent describes a response with status code 204, with default header values.
 
 Routing rule was successfully deleted
 */
@@ -98,7 +99,8 @@ func NewDeleteRoutingRuleForbidden() *DeleteRoutingRuleForbidden {
 	return &DeleteRoutingRuleForbidden{}
 }
 
-/* DeleteRoutingRuleForbidden describes a response with status code 403, with default header values.
+/*
+	DeleteRoutingRuleForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to delete routing rules
 */
@@ -148,7 +150,8 @@ func NewDeleteRoutingRuleNotFound() *DeleteRoutingRuleNotFound {
 	return &DeleteRoutingRuleNotFound{}
 }
 
-/* DeleteRoutingRuleNotFound describes a response with status code 404, with default header values.
+/*
+	DeleteRoutingRuleNotFound describes a response with status code 404, with default header values.
 
 Routing rule not found
 */

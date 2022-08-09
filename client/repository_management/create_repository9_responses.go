@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository9Reader is a Reader for the CreateRepository9 structure.
-type CreateRepository9Reader struct {
+// CreateNpmHostedRepositoryReader is a Reader for the CreateNpmHostedRepository structure.
+type CreateNpmHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository9Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateNpmHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository9Created()
+		result := NewCreateNpmHostedRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository9Unauthorized()
+		result := NewCreateNpmHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository9Forbidden()
+		result := NewCreateNpmHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository9Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewCreateRepository9Created creates a CreateRepository9Created with default headers values
-func NewCreateRepository9Created() *CreateRepository9Created {
-	return &CreateRepository9Created{}
+// NewCreateNpmHostedRepositoryCreated creates a CreateNpmHostedRepositoryCreated with default headers values
+func NewCreateNpmHostedRepositoryCreated() *CreateNpmHostedRepositoryCreated {
+	return &CreateNpmHostedRepositoryCreated{}
 }
 
-/* CreateRepository9Created describes a response with status code 201, with default header values.
+/*
+	CreateNpmHostedRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository9Created struct {
+type CreateNpmHostedRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository9 created response has a 2xx status code
-func (o *CreateRepository9Created) IsSuccess() bool {
+func (o *CreateNpmHostedRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository9 created response has a 3xx status code
-func (o *CreateRepository9Created) IsRedirect() bool {
+func (o *CreateNpmHostedRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository9 created response has a 4xx status code
-func (o *CreateRepository9Created) IsClientError() bool {
+func (o *CreateNpmHostedRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository9 created response has a 5xx status code
-func (o *CreateRepository9Created) IsServerError() bool {
+func (o *CreateNpmHostedRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository9 created response a status code equal to that given
-func (o *CreateRepository9Created) IsCode(code int) bool {
+func (o *CreateNpmHostedRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository9Created) Error() string {
+func (o *CreateNpmHostedRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/hosted][%d] createRepository9Created ", 201)
 }
 
-func (o *CreateRepository9Created) String() string {
+func (o *CreateNpmHostedRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/hosted][%d] createRepository9Created ", 201)
 }
 
-func (o *CreateRepository9Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNpmHostedRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository9Unauthorized creates a CreateRepository9Unauthorized with default headers values
-func NewCreateRepository9Unauthorized() *CreateRepository9Unauthorized {
-	return &CreateRepository9Unauthorized{}
+// NewCreateNpmHostedRepositoryUnauthorized creates a CreateNpmHostedRepositoryUnauthorized with default headers values
+func NewCreateNpmHostedRepositoryUnauthorized() *CreateNpmHostedRepositoryUnauthorized {
+	return &CreateNpmHostedRepositoryUnauthorized{}
 }
 
-/* CreateRepository9Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateNpmHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository9Unauthorized struct {
+type CreateNpmHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository9 unauthorized response has a 2xx status code
-func (o *CreateRepository9Unauthorized) IsSuccess() bool {
+func (o *CreateNpmHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository9 unauthorized response has a 3xx status code
-func (o *CreateRepository9Unauthorized) IsRedirect() bool {
+func (o *CreateNpmHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository9 unauthorized response has a 4xx status code
-func (o *CreateRepository9Unauthorized) IsClientError() bool {
+func (o *CreateNpmHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository9 unauthorized response has a 5xx status code
-func (o *CreateRepository9Unauthorized) IsServerError() bool {
+func (o *CreateNpmHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository9 unauthorized response a status code equal to that given
-func (o *CreateRepository9Unauthorized) IsCode(code int) bool {
+func (o *CreateNpmHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository9Unauthorized) Error() string {
+func (o *CreateNpmHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/hosted][%d] createRepository9Unauthorized ", 401)
 }
 
-func (o *CreateRepository9Unauthorized) String() string {
+func (o *CreateNpmHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/hosted][%d] createRepository9Unauthorized ", 401)
 }
 
-func (o *CreateRepository9Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNpmHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository9Forbidden creates a CreateRepository9Forbidden with default headers values
-func NewCreateRepository9Forbidden() *CreateRepository9Forbidden {
-	return &CreateRepository9Forbidden{}
+// NewCreateNpmHostedRepositoryForbidden creates a CreateNpmHostedRepositoryForbidden with default headers values
+func NewCreateNpmHostedRepositoryForbidden() *CreateNpmHostedRepositoryForbidden {
+	return &CreateNpmHostedRepositoryForbidden{}
 }
 
-/* CreateRepository9Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateNpmHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository9Forbidden struct {
+type CreateNpmHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository9 forbidden response has a 2xx status code
-func (o *CreateRepository9Forbidden) IsSuccess() bool {
+func (o *CreateNpmHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository9 forbidden response has a 3xx status code
-func (o *CreateRepository9Forbidden) IsRedirect() bool {
+func (o *CreateNpmHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository9 forbidden response has a 4xx status code
-func (o *CreateRepository9Forbidden) IsClientError() bool {
+func (o *CreateNpmHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository9 forbidden response has a 5xx status code
-func (o *CreateRepository9Forbidden) IsServerError() bool {
+func (o *CreateNpmHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository9 forbidden response a status code equal to that given
-func (o *CreateRepository9Forbidden) IsCode(code int) bool {
+func (o *CreateNpmHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository9Forbidden) Error() string {
+func (o *CreateNpmHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/hosted][%d] createRepository9Forbidden ", 403)
 }
 
-func (o *CreateRepository9Forbidden) String() string {
+func (o *CreateNpmHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/npm/hosted][%d] createRepository9Forbidden ", 403)
 }
 
-func (o *CreateRepository9Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNpmHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

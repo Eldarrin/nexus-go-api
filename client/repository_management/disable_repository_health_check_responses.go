@@ -54,7 +54,8 @@ func NewDisableRepositoryHealthCheckNoContent() *DisableRepositoryHealthCheckNoC
 	return &DisableRepositoryHealthCheckNoContent{}
 }
 
-/* DisableRepositoryHealthCheckNoContent describes a response with status code 204, with default header values.
+/*
+	DisableRepositoryHealthCheckNoContent describes a response with status code 204, with default header values.
 
 Repository Health Check disabled
 */
@@ -104,7 +105,8 @@ func NewDisableRepositoryHealthCheckUnauthorized() *DisableRepositoryHealthCheck
 	return &DisableRepositoryHealthCheckUnauthorized{}
 }
 
-/* DisableRepositoryHealthCheckUnauthorized describes a response with status code 401, with default header values.
+/*
+	DisableRepositoryHealthCheckUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -154,7 +156,8 @@ func NewDisableRepositoryHealthCheckForbidden() *DisableRepositoryHealthCheckFor
 	return &DisableRepositoryHealthCheckForbidden{}
 }
 
-/* DisableRepositoryHealthCheckForbidden describes a response with status code 403, with default header values.
+/*
+	DisableRepositoryHealthCheckForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
@@ -204,7 +207,8 @@ func NewDisableRepositoryHealthCheckNotFound() *DisableRepositoryHealthCheckNotF
 	return &DisableRepositoryHealthCheckNotFound{}
 }
 
-/* DisableRepositoryHealthCheckNotFound describes a response with status code 404, with default header values.
+/*
+	DisableRepositoryHealthCheckNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */

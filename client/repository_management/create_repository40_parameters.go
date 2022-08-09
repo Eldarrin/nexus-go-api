@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository40Params creates a new CreateRepository40Params object,
+// NewCreateBowerProxyRepositoryParams creates a new CreateBowerProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository40Params() *CreateRepository40Params {
-	return &CreateRepository40Params{
+func NewCreateBowerProxyRepositoryParams() *CreateBowerProxyRepositoryParams {
+	return &CreateBowerProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository40ParamsWithTimeout creates a new CreateRepository40Params object
+// NewCreateBowerProxyRepositoryParamsWithTimeout creates a new CreateBowerProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository40ParamsWithTimeout(timeout time.Duration) *CreateRepository40Params {
-	return &CreateRepository40Params{
+func NewCreateBowerProxyRepositoryParamsWithTimeout(timeout time.Duration) *CreateBowerProxyRepositoryParams {
+	return &CreateBowerProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository40ParamsWithContext creates a new CreateRepository40Params object
+// NewCreateBowerProxyRepositoryParamsWithContext creates a new CreateBowerProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository40ParamsWithContext(ctx context.Context) *CreateRepository40Params {
-	return &CreateRepository40Params{
+func NewCreateBowerProxyRepositoryParamsWithContext(ctx context.Context) *CreateBowerProxyRepositoryParams {
+	return &CreateBowerProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository40ParamsWithHTTPClient creates a new CreateRepository40Params object
+// NewCreateBowerProxyRepositoryParamsWithHTTPClient creates a new CreateBowerProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository40ParamsWithHTTPClient(client *http.Client) *CreateRepository40Params {
-	return &CreateRepository40Params{
+func NewCreateBowerProxyRepositoryParamsWithHTTPClient(client *http.Client) *CreateBowerProxyRepositoryParams {
+	return &CreateBowerProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository40Params contains all the parameters to send to the API endpoint
-   for the create repository 40 operation.
+/*
+CreateBowerProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 40 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository40Params struct {
+type CreateBowerProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.BowerProxyRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository40Params struct {
 // WithDefaults hydrates default values in the create repository 40 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository40Params) WithDefaults() *CreateRepository40Params {
+func (o *CreateBowerProxyRepositoryParams) WithDefaults() *CreateBowerProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository40Params) WithDefaults() *CreateRepository40Params {
 // SetDefaults hydrates default values in the create repository 40 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository40Params) SetDefaults() {
+func (o *CreateBowerProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 40 params
-func (o *CreateRepository40Params) WithTimeout(timeout time.Duration) *CreateRepository40Params {
+func (o *CreateBowerProxyRepositoryParams) WithTimeout(timeout time.Duration) *CreateBowerProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 40 params
-func (o *CreateRepository40Params) SetTimeout(timeout time.Duration) {
+func (o *CreateBowerProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 40 params
-func (o *CreateRepository40Params) WithContext(ctx context.Context) *CreateRepository40Params {
+func (o *CreateBowerProxyRepositoryParams) WithContext(ctx context.Context) *CreateBowerProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 40 params
-func (o *CreateRepository40Params) SetContext(ctx context.Context) {
+func (o *CreateBowerProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 40 params
-func (o *CreateRepository40Params) WithHTTPClient(client *http.Client) *CreateRepository40Params {
+func (o *CreateBowerProxyRepositoryParams) WithHTTPClient(client *http.Client) *CreateBowerProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 40 params
-func (o *CreateRepository40Params) SetHTTPClient(client *http.Client) {
+func (o *CreateBowerProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 40 params
-func (o *CreateRepository40Params) WithBody(body *models.BowerProxyRepositoryAPIRequest) *CreateRepository40Params {
+func (o *CreateBowerProxyRepositoryParams) WithBody(body *models.BowerProxyRepositoryAPIRequest) *CreateBowerProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 40 params
-func (o *CreateRepository40Params) SetBody(body *models.BowerProxyRepositoryAPIRequest) {
+func (o *CreateBowerProxyRepositoryParams) SetBody(body *models.BowerProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository40Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateBowerProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

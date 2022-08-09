@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository18Reader is a Reader for the GetRepository18 structure.
-type GetRepository18Reader struct {
+// GetDockerGroupRepositoryReader is a Reader for the GetDockerGroupRepository structure.
+type GetDockerGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository18Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetDockerGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository18OK()
+		result := NewGetDockerGroupRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository18Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository18OK creates a GetRepository18OK with default headers values
-func NewGetRepository18OK() *GetRepository18OK {
-	return &GetRepository18OK{}
+// NewGetDockerGroupRepositoryOK creates a GetDockerGroupRepositoryOK with default headers values
+func NewGetDockerGroupRepositoryOK() *GetDockerGroupRepositoryOK {
+	return &GetDockerGroupRepositoryOK{}
 }
 
-/* GetRepository18OK describes a response with status code 200, with default header values.
+/*
+	GetDockerGroupRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository18OK struct {
+type GetDockerGroupRepositoryOK struct {
 	Payload *models.DockerGroupAPIRepository
 }
 
 // IsSuccess returns true when this get repository18 o k response has a 2xx status code
-func (o *GetRepository18OK) IsSuccess() bool {
+func (o *GetDockerGroupRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository18 o k response has a 3xx status code
-func (o *GetRepository18OK) IsRedirect() bool {
+func (o *GetDockerGroupRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository18 o k response has a 4xx status code
-func (o *GetRepository18OK) IsClientError() bool {
+func (o *GetDockerGroupRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository18 o k response has a 5xx status code
-func (o *GetRepository18OK) IsServerError() bool {
+func (o *GetDockerGroupRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository18 o k response a status code equal to that given
-func (o *GetRepository18OK) IsCode(code int) bool {
+func (o *GetDockerGroupRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository18OK) Error() string {
+func (o *GetDockerGroupRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/docker/group/{repositoryName}][%d] getRepository18OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository18OK) String() string {
+func (o *GetDockerGroupRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/docker/group/{repositoryName}][%d] getRepository18OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository18OK) GetPayload() *models.DockerGroupAPIRepository {
+func (o *GetDockerGroupRepositoryOK) GetPayload() *models.DockerGroupAPIRepository {
 	return o.Payload
 }
 
-func (o *GetRepository18OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetDockerGroupRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.DockerGroupAPIRepository)
 

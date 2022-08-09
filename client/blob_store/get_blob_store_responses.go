@@ -57,7 +57,8 @@ func NewGetBlobStoreOK() *GetBlobStoreOK {
 	return &GetBlobStoreOK{}
 }
 
-/* GetBlobStoreOK describes a response with status code 200, with default header values.
+/*
+	GetBlobStoreOK describes a response with status code 200, with default header values.
 
 Success
 */
@@ -119,7 +120,8 @@ func NewGetBlobStoreBadRequest() *GetBlobStoreBadRequest {
 	return &GetBlobStoreBadRequest{}
 }
 
-/* GetBlobStoreBadRequest describes a response with status code 400, with default header values.
+/*
+	GetBlobStoreBadRequest describes a response with status code 400, with default header values.
 
 Specified S3 blob store doesn't exist
 */
@@ -169,7 +171,8 @@ func NewGetBlobStoreUnauthorized() *GetBlobStoreUnauthorized {
 	return &GetBlobStoreUnauthorized{}
 }
 
-/* GetBlobStoreUnauthorized describes a response with status code 401, with default header values.
+/*
+	GetBlobStoreUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -219,7 +222,8 @@ func NewGetBlobStoreForbidden() *GetBlobStoreForbidden {
 	return &GetBlobStoreForbidden{}
 }
 
-/* GetBlobStoreForbidden describes a response with status code 403, with default header values.
+/*
+	GetBlobStoreForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

@@ -48,7 +48,8 @@ func NewSetEmailConfigurationNoContent() *SetEmailConfigurationNoContent {
 	return &SetEmailConfigurationNoContent{}
 }
 
-/* SetEmailConfigurationNoContent describes a response with status code 204, with default header values.
+/*
+	SetEmailConfigurationNoContent describes a response with status code 204, with default header values.
 
 Email configuration was successfully updated
 */
@@ -98,7 +99,8 @@ func NewSetEmailConfigurationBadRequest() *SetEmailConfigurationBadRequest {
 	return &SetEmailConfigurationBadRequest{}
 }
 
-/* SetEmailConfigurationBadRequest describes a response with status code 400, with default header values.
+/*
+	SetEmailConfigurationBadRequest describes a response with status code 400, with default header values.
 
 Invalid request
 */
@@ -148,7 +150,8 @@ func NewSetEmailConfigurationForbidden() *SetEmailConfigurationForbidden {
 	return &SetEmailConfigurationForbidden{}
 }
 
-/* SetEmailConfigurationForbidden describes a response with status code 403, with default header values.
+/*
+	SetEmailConfigurationForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to update the email configuration
 */

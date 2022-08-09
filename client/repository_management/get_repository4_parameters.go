@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository4Params creates a new GetRepository4Params object,
+// NewGetAptHostedRepositoryParams creates a new GetAptHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository4Params() *GetRepository4Params {
-	return &GetRepository4Params{
+func NewGetAptHostedRepositoryParams() *GetAptHostedRepositoryParams {
+	return &GetAptHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository4ParamsWithTimeout creates a new GetRepository4Params object
+// NewGetAptHostedRepositoryParamsWithTimeout creates a new GetAptHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository4ParamsWithTimeout(timeout time.Duration) *GetRepository4Params {
-	return &GetRepository4Params{
+func NewGetAptHostedRepositoryParamsWithTimeout(timeout time.Duration) *GetAptHostedRepositoryParams {
+	return &GetAptHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository4ParamsWithContext creates a new GetRepository4Params object
+// NewGetAptHostedRepositoryParamsWithContext creates a new GetAptHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository4ParamsWithContext(ctx context.Context) *GetRepository4Params {
-	return &GetRepository4Params{
+func NewGetAptHostedRepositoryParamsWithContext(ctx context.Context) *GetAptHostedRepositoryParams {
+	return &GetAptHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository4ParamsWithHTTPClient creates a new GetRepository4Params object
+// NewGetAptHostedRepositoryParamsWithHTTPClient creates a new GetAptHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository4ParamsWithHTTPClient(client *http.Client) *GetRepository4Params {
-	return &GetRepository4Params{
+func NewGetAptHostedRepositoryParamsWithHTTPClient(client *http.Client) *GetAptHostedRepositoryParams {
+	return &GetAptHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository4Params contains all the parameters to send to the API endpoint
-   for the get repository 4 operation.
+/*
+GetAptHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 4 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository4Params struct {
+type GetAptHostedRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository4Params struct {
 // WithDefaults hydrates default values in the get repository 4 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository4Params) WithDefaults() *GetRepository4Params {
+func (o *GetAptHostedRepositoryParams) WithDefaults() *GetAptHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository4Params) WithDefaults() *GetRepository4Params {
 // SetDefaults hydrates default values in the get repository 4 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository4Params) SetDefaults() {
+func (o *GetAptHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 4 params
-func (o *GetRepository4Params) WithTimeout(timeout time.Duration) *GetRepository4Params {
+func (o *GetAptHostedRepositoryParams) WithTimeout(timeout time.Duration) *GetAptHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 4 params
-func (o *GetRepository4Params) SetTimeout(timeout time.Duration) {
+func (o *GetAptHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 4 params
-func (o *GetRepository4Params) WithContext(ctx context.Context) *GetRepository4Params {
+func (o *GetAptHostedRepositoryParams) WithContext(ctx context.Context) *GetAptHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 4 params
-func (o *GetRepository4Params) SetContext(ctx context.Context) {
+func (o *GetAptHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 4 params
-func (o *GetRepository4Params) WithHTTPClient(client *http.Client) *GetRepository4Params {
+func (o *GetAptHostedRepositoryParams) WithHTTPClient(client *http.Client) *GetAptHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 4 params
-func (o *GetRepository4Params) SetHTTPClient(client *http.Client) {
+func (o *GetAptHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 4 params
-func (o *GetRepository4Params) WithRepositoryName(repositoryName string) *GetRepository4Params {
+func (o *GetAptHostedRepositoryParams) WithRepositoryName(repositoryName string) *GetAptHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 4 params
-func (o *GetRepository4Params) SetRepositoryName(repositoryName string) {
+func (o *GetAptHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository4Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetAptHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

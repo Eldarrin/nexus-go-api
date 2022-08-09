@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository36Reader is a Reader for the UpdateRepository36 structure.
-type UpdateRepository36Reader struct {
+// UpdateGolangProxyRepositoryReader is a Reader for the UpdateGolangProxyRepository structure.
+type UpdateGolangProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository36Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateGolangProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository36NoContent()
+		result := NewUpdateGolangProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository36Unauthorized()
+		result := NewUpdateGolangProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository36Forbidden()
+		result := NewUpdateGolangProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 404:
-		result := NewUpdateRepository36NotFound()
+		result := NewUpdateGolangProxyRepositoryNotFound()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *UpdateRepository36Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository36NoContent creates a UpdateRepository36NoContent with default headers values
-func NewUpdateRepository36NoContent() *UpdateRepository36NoContent {
-	return &UpdateRepository36NoContent{}
+// NewUpdateGolangProxyRepositoryNoContent creates a UpdateGolangProxyRepositoryNoContent with default headers values
+func NewUpdateGolangProxyRepositoryNoContent() *UpdateGolangProxyRepositoryNoContent {
+	return &UpdateGolangProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository36NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateGolangProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository36NoContent struct {
+type UpdateGolangProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository36 no content response has a 2xx status code
-func (o *UpdateRepository36NoContent) IsSuccess() bool {
+func (o *UpdateGolangProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository36 no content response has a 3xx status code
-func (o *UpdateRepository36NoContent) IsRedirect() bool {
+func (o *UpdateGolangProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository36 no content response has a 4xx status code
-func (o *UpdateRepository36NoContent) IsClientError() bool {
+func (o *UpdateGolangProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository36 no content response has a 5xx status code
-func (o *UpdateRepository36NoContent) IsServerError() bool {
+func (o *UpdateGolangProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository36 no content response a status code equal to that given
-func (o *UpdateRepository36NoContent) IsCode(code int) bool {
+func (o *UpdateGolangProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository36NoContent) Error() string {
+func (o *UpdateGolangProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/go/proxy/{repositoryName}][%d] updateRepository36NoContent ", 204)
 }
 
-func (o *UpdateRepository36NoContent) String() string {
+func (o *UpdateGolangProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/go/proxy/{repositoryName}][%d] updateRepository36NoContent ", 204)
 }
 
-func (o *UpdateRepository36NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateGolangProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository36Unauthorized creates a UpdateRepository36Unauthorized with default headers values
-func NewUpdateRepository36Unauthorized() *UpdateRepository36Unauthorized {
-	return &UpdateRepository36Unauthorized{}
+// NewUpdateGolangProxyRepositoryUnauthorized creates a UpdateGolangProxyRepositoryUnauthorized with default headers values
+func NewUpdateGolangProxyRepositoryUnauthorized() *UpdateGolangProxyRepositoryUnauthorized {
+	return &UpdateGolangProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository36Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateGolangProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository36Unauthorized struct {
+type UpdateGolangProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository36 unauthorized response has a 2xx status code
-func (o *UpdateRepository36Unauthorized) IsSuccess() bool {
+func (o *UpdateGolangProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository36 unauthorized response has a 3xx status code
-func (o *UpdateRepository36Unauthorized) IsRedirect() bool {
+func (o *UpdateGolangProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository36 unauthorized response has a 4xx status code
-func (o *UpdateRepository36Unauthorized) IsClientError() bool {
+func (o *UpdateGolangProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository36 unauthorized response has a 5xx status code
-func (o *UpdateRepository36Unauthorized) IsServerError() bool {
+func (o *UpdateGolangProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository36 unauthorized response a status code equal to that given
-func (o *UpdateRepository36Unauthorized) IsCode(code int) bool {
+func (o *UpdateGolangProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository36Unauthorized) Error() string {
+func (o *UpdateGolangProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/go/proxy/{repositoryName}][%d] updateRepository36Unauthorized ", 401)
 }
 
-func (o *UpdateRepository36Unauthorized) String() string {
+func (o *UpdateGolangProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/go/proxy/{repositoryName}][%d] updateRepository36Unauthorized ", 401)
 }
 
-func (o *UpdateRepository36Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateGolangProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository36Forbidden creates a UpdateRepository36Forbidden with default headers values
-func NewUpdateRepository36Forbidden() *UpdateRepository36Forbidden {
-	return &UpdateRepository36Forbidden{}
+// NewUpdateGolangProxyRepositoryForbidden creates a UpdateGolangProxyRepositoryForbidden with default headers values
+func NewUpdateGolangProxyRepositoryForbidden() *UpdateGolangProxyRepositoryForbidden {
+	return &UpdateGolangProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository36Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateGolangProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository36Forbidden struct {
+type UpdateGolangProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository36 forbidden response has a 2xx status code
-func (o *UpdateRepository36Forbidden) IsSuccess() bool {
+func (o *UpdateGolangProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository36 forbidden response has a 3xx status code
-func (o *UpdateRepository36Forbidden) IsRedirect() bool {
+func (o *UpdateGolangProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository36 forbidden response has a 4xx status code
-func (o *UpdateRepository36Forbidden) IsClientError() bool {
+func (o *UpdateGolangProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository36 forbidden response has a 5xx status code
-func (o *UpdateRepository36Forbidden) IsServerError() bool {
+func (o *UpdateGolangProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository36 forbidden response a status code equal to that given
-func (o *UpdateRepository36Forbidden) IsCode(code int) bool {
+func (o *UpdateGolangProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository36Forbidden) Error() string {
+func (o *UpdateGolangProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/go/proxy/{repositoryName}][%d] updateRepository36Forbidden ", 403)
 }
 
-func (o *UpdateRepository36Forbidden) String() string {
+func (o *UpdateGolangProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/go/proxy/{repositoryName}][%d] updateRepository36Forbidden ", 403)
 }
 
-func (o *UpdateRepository36Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateGolangProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository36NotFound creates a UpdateRepository36NotFound with default headers values
-func NewUpdateRepository36NotFound() *UpdateRepository36NotFound {
-	return &UpdateRepository36NotFound{}
+// NewUpdateGolangProxyRepositoryNotFound creates a UpdateGolangProxyRepositoryNotFound with default headers values
+func NewUpdateGolangProxyRepositoryNotFound() *UpdateGolangProxyRepositoryNotFound {
+	return &UpdateGolangProxyRepositoryNotFound{}
 }
 
-/* UpdateRepository36NotFound describes a response with status code 404, with default header values.
+/*
+	UpdateGolangProxyRepositoryNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */
-type UpdateRepository36NotFound struct {
+type UpdateGolangProxyRepositoryNotFound struct {
 }
 
 // IsSuccess returns true when this update repository36 not found response has a 2xx status code
-func (o *UpdateRepository36NotFound) IsSuccess() bool {
+func (o *UpdateGolangProxyRepositoryNotFound) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository36 not found response has a 3xx status code
-func (o *UpdateRepository36NotFound) IsRedirect() bool {
+func (o *UpdateGolangProxyRepositoryNotFound) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository36 not found response has a 4xx status code
-func (o *UpdateRepository36NotFound) IsClientError() bool {
+func (o *UpdateGolangProxyRepositoryNotFound) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository36 not found response has a 5xx status code
-func (o *UpdateRepository36NotFound) IsServerError() bool {
+func (o *UpdateGolangProxyRepositoryNotFound) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository36 not found response a status code equal to that given
-func (o *UpdateRepository36NotFound) IsCode(code int) bool {
+func (o *UpdateGolangProxyRepositoryNotFound) IsCode(code int) bool {
 	return code == 404
 }
 
-func (o *UpdateRepository36NotFound) Error() string {
+func (o *UpdateGolangProxyRepositoryNotFound) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/go/proxy/{repositoryName}][%d] updateRepository36NotFound ", 404)
 }
 
-func (o *UpdateRepository36NotFound) String() string {
+func (o *UpdateGolangProxyRepositoryNotFound) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/go/proxy/{repositoryName}][%d] updateRepository36NotFound ", 404)
 }
 
-func (o *UpdateRepository36NotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateGolangProxyRepositoryNotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

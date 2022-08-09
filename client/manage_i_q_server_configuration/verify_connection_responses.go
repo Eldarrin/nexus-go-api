@@ -36,7 +36,8 @@ func NewVerifyConnectionOK() *VerifyConnectionOK {
 	return &VerifyConnectionOK{}
 }
 
-/* VerifyConnectionOK describes a response with status code 200, with default header values.
+/*
+	VerifyConnectionOK describes a response with status code 200, with default header values.
 
 Connection verification complete, check response body for result
 */

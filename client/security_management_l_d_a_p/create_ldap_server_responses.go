@@ -48,7 +48,8 @@ func NewCreateLdapServerCreated() *CreateLdapServerCreated {
 	return &CreateLdapServerCreated{}
 }
 
-/* CreateLdapServerCreated describes a response with status code 201, with default header values.
+/*
+	CreateLdapServerCreated describes a response with status code 201, with default header values.
 
 LDAP server created
 */
@@ -98,7 +99,8 @@ func NewCreateLdapServerUnauthorized() *CreateLdapServerUnauthorized {
 	return &CreateLdapServerUnauthorized{}
 }
 
-/* CreateLdapServerUnauthorized describes a response with status code 401, with default header values.
+/*
+	CreateLdapServerUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -148,7 +150,8 @@ func NewCreateLdapServerForbidden() *CreateLdapServerForbidden {
 	return &CreateLdapServerForbidden{}
 }
 
-/* CreateLdapServerForbidden describes a response with status code 403, with default header values.
+/*
+	CreateLdapServerForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

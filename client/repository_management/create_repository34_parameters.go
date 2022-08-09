@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository34Params creates a new CreateRepository34Params object,
+// NewCreateCocoapodsProxyRepositoryParams creates a new CreateCocoapodsProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository34Params() *CreateRepository34Params {
-	return &CreateRepository34Params{
+func NewCreateCocoapodsProxyRepositoryParams() *CreateCocoapodsProxyRepositoryParams {
+	return &CreateCocoapodsProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository34ParamsWithTimeout creates a new CreateRepository34Params object
+// NewCreateCocoapodsProxyRepositoryParamsWithTimeout creates a new CreateCocoapodsProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository34ParamsWithTimeout(timeout time.Duration) *CreateRepository34Params {
-	return &CreateRepository34Params{
+func NewCreateCocoapodsProxyRepositoryParamsWithTimeout(timeout time.Duration) *CreateCocoapodsProxyRepositoryParams {
+	return &CreateCocoapodsProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository34ParamsWithContext creates a new CreateRepository34Params object
+// NewCreateCocoapodsProxyRepositoryParamsWithContext creates a new CreateCocoapodsProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository34ParamsWithContext(ctx context.Context) *CreateRepository34Params {
-	return &CreateRepository34Params{
+func NewCreateCocoapodsProxyRepositoryParamsWithContext(ctx context.Context) *CreateCocoapodsProxyRepositoryParams {
+	return &CreateCocoapodsProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository34ParamsWithHTTPClient creates a new CreateRepository34Params object
+// NewCreateCocoapodsProxyRepositoryParamsWithHTTPClient creates a new CreateCocoapodsProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository34ParamsWithHTTPClient(client *http.Client) *CreateRepository34Params {
-	return &CreateRepository34Params{
+func NewCreateCocoapodsProxyRepositoryParamsWithHTTPClient(client *http.Client) *CreateCocoapodsProxyRepositoryParams {
+	return &CreateCocoapodsProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository34Params contains all the parameters to send to the API endpoint
-   for the create repository 34 operation.
+/*
+CreateCocoapodsProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 34 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository34Params struct {
+type CreateCocoapodsProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.CocoapodsProxyRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository34Params struct {
 // WithDefaults hydrates default values in the create repository 34 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository34Params) WithDefaults() *CreateRepository34Params {
+func (o *CreateCocoapodsProxyRepositoryParams) WithDefaults() *CreateCocoapodsProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository34Params) WithDefaults() *CreateRepository34Params {
 // SetDefaults hydrates default values in the create repository 34 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository34Params) SetDefaults() {
+func (o *CreateCocoapodsProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 34 params
-func (o *CreateRepository34Params) WithTimeout(timeout time.Duration) *CreateRepository34Params {
+func (o *CreateCocoapodsProxyRepositoryParams) WithTimeout(timeout time.Duration) *CreateCocoapodsProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 34 params
-func (o *CreateRepository34Params) SetTimeout(timeout time.Duration) {
+func (o *CreateCocoapodsProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 34 params
-func (o *CreateRepository34Params) WithContext(ctx context.Context) *CreateRepository34Params {
+func (o *CreateCocoapodsProxyRepositoryParams) WithContext(ctx context.Context) *CreateCocoapodsProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 34 params
-func (o *CreateRepository34Params) SetContext(ctx context.Context) {
+func (o *CreateCocoapodsProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 34 params
-func (o *CreateRepository34Params) WithHTTPClient(client *http.Client) *CreateRepository34Params {
+func (o *CreateCocoapodsProxyRepositoryParams) WithHTTPClient(client *http.Client) *CreateCocoapodsProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 34 params
-func (o *CreateRepository34Params) SetHTTPClient(client *http.Client) {
+func (o *CreateCocoapodsProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 34 params
-func (o *CreateRepository34Params) WithBody(body *models.CocoapodsProxyRepositoryAPIRequest) *CreateRepository34Params {
+func (o *CreateCocoapodsProxyRepositoryParams) WithBody(body *models.CocoapodsProxyRepositoryAPIRequest) *CreateCocoapodsProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 34 params
-func (o *CreateRepository34Params) SetBody(body *models.CocoapodsProxyRepositoryAPIRequest) {
+func (o *CreateCocoapodsProxyRepositoryParams) SetBody(body *models.CocoapodsProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository34Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateCocoapodsProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

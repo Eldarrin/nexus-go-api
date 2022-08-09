@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository22Params creates a new CreateRepository22Params object,
+// NewCreateYumProxyRepositoryParams creates a new CreateYumProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository22Params() *CreateRepository22Params {
-	return &CreateRepository22Params{
+func NewCreateYumProxyRepositoryParams() *CreateYumProxyRepositoryParams {
+	return &CreateYumProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository22ParamsWithTimeout creates a new CreateRepository22Params object
+// NewCreateYumProxyRepositoryParamsWithTimeout creates a new CreateYumProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository22ParamsWithTimeout(timeout time.Duration) *CreateRepository22Params {
-	return &CreateRepository22Params{
+func NewCreateYumProxyRepositoryParamsWithTimeout(timeout time.Duration) *CreateYumProxyRepositoryParams {
+	return &CreateYumProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository22ParamsWithContext creates a new CreateRepository22Params object
+// NewCreateYumProxyRepositoryParamsWithContext creates a new CreateYumProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository22ParamsWithContext(ctx context.Context) *CreateRepository22Params {
-	return &CreateRepository22Params{
+func NewCreateYumProxyRepositoryParamsWithContext(ctx context.Context) *CreateYumProxyRepositoryParams {
+	return &CreateYumProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository22ParamsWithHTTPClient creates a new CreateRepository22Params object
+// NewCreateYumProxyRepositoryParamsWithHTTPClient creates a new CreateYumProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository22ParamsWithHTTPClient(client *http.Client) *CreateRepository22Params {
-	return &CreateRepository22Params{
+func NewCreateYumProxyRepositoryParamsWithHTTPClient(client *http.Client) *CreateYumProxyRepositoryParams {
+	return &CreateYumProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository22Params contains all the parameters to send to the API endpoint
-   for the create repository 22 operation.
+/*
+CreateYumProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 22 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository22Params struct {
+type CreateYumProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.YumProxyRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository22Params struct {
 // WithDefaults hydrates default values in the create repository 22 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository22Params) WithDefaults() *CreateRepository22Params {
+func (o *CreateYumProxyRepositoryParams) WithDefaults() *CreateYumProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository22Params) WithDefaults() *CreateRepository22Params {
 // SetDefaults hydrates default values in the create repository 22 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository22Params) SetDefaults() {
+func (o *CreateYumProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 22 params
-func (o *CreateRepository22Params) WithTimeout(timeout time.Duration) *CreateRepository22Params {
+func (o *CreateYumProxyRepositoryParams) WithTimeout(timeout time.Duration) *CreateYumProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 22 params
-func (o *CreateRepository22Params) SetTimeout(timeout time.Duration) {
+func (o *CreateYumProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 22 params
-func (o *CreateRepository22Params) WithContext(ctx context.Context) *CreateRepository22Params {
+func (o *CreateYumProxyRepositoryParams) WithContext(ctx context.Context) *CreateYumProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 22 params
-func (o *CreateRepository22Params) SetContext(ctx context.Context) {
+func (o *CreateYumProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 22 params
-func (o *CreateRepository22Params) WithHTTPClient(client *http.Client) *CreateRepository22Params {
+func (o *CreateYumProxyRepositoryParams) WithHTTPClient(client *http.Client) *CreateYumProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 22 params
-func (o *CreateRepository22Params) SetHTTPClient(client *http.Client) {
+func (o *CreateYumProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 22 params
-func (o *CreateRepository22Params) WithBody(body *models.YumProxyRepositoryAPIRequest) *CreateRepository22Params {
+func (o *CreateYumProxyRepositoryParams) WithBody(body *models.YumProxyRepositoryAPIRequest) *CreateYumProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 22 params
-func (o *CreateRepository22Params) SetBody(body *models.YumProxyRepositoryAPIRequest) {
+func (o *CreateYumProxyRepositoryParams) SetBody(body *models.YumProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository22Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateYumProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

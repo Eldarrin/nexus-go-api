@@ -48,7 +48,8 @@ func NewCreateBlobStore1Created() *CreateBlobStore1Created {
 	return &CreateBlobStore1Created{}
 }
 
-/* CreateBlobStore1Created describes a response with status code 201, with default header values.
+/*
+	CreateBlobStore1Created describes a response with status code 201, with default header values.
 
 Azure blob store created
 */
@@ -98,7 +99,8 @@ func NewCreateBlobStore1Unauthorized() *CreateBlobStore1Unauthorized {
 	return &CreateBlobStore1Unauthorized{}
 }
 
-/* CreateBlobStore1Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateBlobStore1Unauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -148,7 +150,8 @@ func NewCreateBlobStore1Forbidden() *CreateBlobStore1Forbidden {
 	return &CreateBlobStore1Forbidden{}
 }
 
-/* CreateBlobStore1Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateBlobStore1Forbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

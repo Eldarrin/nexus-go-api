@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository4Reader is a Reader for the UpdateRepository4 structure.
-type UpdateRepository4Reader struct {
+// UpdateAptProxyRepositoryReader is a Reader for the UpdateAptProxyRepository structure.
+type UpdateAptProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository4Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateAptProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository4NoContent()
+		result := NewUpdateAptProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository4Unauthorized()
+		result := NewUpdateAptProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository4Forbidden()
+		result := NewUpdateAptProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 404:
-		result := NewUpdateRepository4NotFound()
+		result := NewUpdateAptProxyRepositoryNotFound()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *UpdateRepository4Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewUpdateRepository4NoContent creates a UpdateRepository4NoContent with default headers values
-func NewUpdateRepository4NoContent() *UpdateRepository4NoContent {
-	return &UpdateRepository4NoContent{}
+// NewUpdateAptProxyRepositoryNoContent creates a UpdateAptProxyRepositoryNoContent with default headers values
+func NewUpdateAptProxyRepositoryNoContent() *UpdateAptProxyRepositoryNoContent {
+	return &UpdateAptProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository4NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateAptProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository4NoContent struct {
+type UpdateAptProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository4 no content response has a 2xx status code
-func (o *UpdateRepository4NoContent) IsSuccess() bool {
+func (o *UpdateAptProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository4 no content response has a 3xx status code
-func (o *UpdateRepository4NoContent) IsRedirect() bool {
+func (o *UpdateAptProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository4 no content response has a 4xx status code
-func (o *UpdateRepository4NoContent) IsClientError() bool {
+func (o *UpdateAptProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository4 no content response has a 5xx status code
-func (o *UpdateRepository4NoContent) IsServerError() bool {
+func (o *UpdateAptProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository4 no content response a status code equal to that given
-func (o *UpdateRepository4NoContent) IsCode(code int) bool {
+func (o *UpdateAptProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository4NoContent) Error() string {
+func (o *UpdateAptProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/proxy/{repositoryName}][%d] updateRepository4NoContent ", 204)
 }
 
-func (o *UpdateRepository4NoContent) String() string {
+func (o *UpdateAptProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/proxy/{repositoryName}][%d] updateRepository4NoContent ", 204)
 }
 
-func (o *UpdateRepository4NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateAptProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository4Unauthorized creates a UpdateRepository4Unauthorized with default headers values
-func NewUpdateRepository4Unauthorized() *UpdateRepository4Unauthorized {
-	return &UpdateRepository4Unauthorized{}
+// NewUpdateAptProxyRepositoryUnauthorized creates a UpdateAptProxyRepositoryUnauthorized with default headers values
+func NewUpdateAptProxyRepositoryUnauthorized() *UpdateAptProxyRepositoryUnauthorized {
+	return &UpdateAptProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository4Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateAptProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository4Unauthorized struct {
+type UpdateAptProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository4 unauthorized response has a 2xx status code
-func (o *UpdateRepository4Unauthorized) IsSuccess() bool {
+func (o *UpdateAptProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository4 unauthorized response has a 3xx status code
-func (o *UpdateRepository4Unauthorized) IsRedirect() bool {
+func (o *UpdateAptProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository4 unauthorized response has a 4xx status code
-func (o *UpdateRepository4Unauthorized) IsClientError() bool {
+func (o *UpdateAptProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository4 unauthorized response has a 5xx status code
-func (o *UpdateRepository4Unauthorized) IsServerError() bool {
+func (o *UpdateAptProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository4 unauthorized response a status code equal to that given
-func (o *UpdateRepository4Unauthorized) IsCode(code int) bool {
+func (o *UpdateAptProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository4Unauthorized) Error() string {
+func (o *UpdateAptProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/proxy/{repositoryName}][%d] updateRepository4Unauthorized ", 401)
 }
 
-func (o *UpdateRepository4Unauthorized) String() string {
+func (o *UpdateAptProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/proxy/{repositoryName}][%d] updateRepository4Unauthorized ", 401)
 }
 
-func (o *UpdateRepository4Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateAptProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository4Forbidden creates a UpdateRepository4Forbidden with default headers values
-func NewUpdateRepository4Forbidden() *UpdateRepository4Forbidden {
-	return &UpdateRepository4Forbidden{}
+// NewUpdateAptProxyRepositoryForbidden creates a UpdateAptProxyRepositoryForbidden with default headers values
+func NewUpdateAptProxyRepositoryForbidden() *UpdateAptProxyRepositoryForbidden {
+	return &UpdateAptProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository4Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateAptProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository4Forbidden struct {
+type UpdateAptProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository4 forbidden response has a 2xx status code
-func (o *UpdateRepository4Forbidden) IsSuccess() bool {
+func (o *UpdateAptProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository4 forbidden response has a 3xx status code
-func (o *UpdateRepository4Forbidden) IsRedirect() bool {
+func (o *UpdateAptProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository4 forbidden response has a 4xx status code
-func (o *UpdateRepository4Forbidden) IsClientError() bool {
+func (o *UpdateAptProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository4 forbidden response has a 5xx status code
-func (o *UpdateRepository4Forbidden) IsServerError() bool {
+func (o *UpdateAptProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository4 forbidden response a status code equal to that given
-func (o *UpdateRepository4Forbidden) IsCode(code int) bool {
+func (o *UpdateAptProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository4Forbidden) Error() string {
+func (o *UpdateAptProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/proxy/{repositoryName}][%d] updateRepository4Forbidden ", 403)
 }
 
-func (o *UpdateRepository4Forbidden) String() string {
+func (o *UpdateAptProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/proxy/{repositoryName}][%d] updateRepository4Forbidden ", 403)
 }
 
-func (o *UpdateRepository4Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateAptProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository4NotFound creates a UpdateRepository4NotFound with default headers values
-func NewUpdateRepository4NotFound() *UpdateRepository4NotFound {
-	return &UpdateRepository4NotFound{}
+// NewUpdateAptProxyRepositoryNotFound creates a UpdateAptProxyRepositoryNotFound with default headers values
+func NewUpdateAptProxyRepositoryNotFound() *UpdateAptProxyRepositoryNotFound {
+	return &UpdateAptProxyRepositoryNotFound{}
 }
 
-/* UpdateRepository4NotFound describes a response with status code 404, with default header values.
+/*
+	UpdateAptProxyRepositoryNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */
-type UpdateRepository4NotFound struct {
+type UpdateAptProxyRepositoryNotFound struct {
 }
 
 // IsSuccess returns true when this update repository4 not found response has a 2xx status code
-func (o *UpdateRepository4NotFound) IsSuccess() bool {
+func (o *UpdateAptProxyRepositoryNotFound) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository4 not found response has a 3xx status code
-func (o *UpdateRepository4NotFound) IsRedirect() bool {
+func (o *UpdateAptProxyRepositoryNotFound) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository4 not found response has a 4xx status code
-func (o *UpdateRepository4NotFound) IsClientError() bool {
+func (o *UpdateAptProxyRepositoryNotFound) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository4 not found response has a 5xx status code
-func (o *UpdateRepository4NotFound) IsServerError() bool {
+func (o *UpdateAptProxyRepositoryNotFound) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository4 not found response a status code equal to that given
-func (o *UpdateRepository4NotFound) IsCode(code int) bool {
+func (o *UpdateAptProxyRepositoryNotFound) IsCode(code int) bool {
 	return code == 404
 }
 
-func (o *UpdateRepository4NotFound) Error() string {
+func (o *UpdateAptProxyRepositoryNotFound) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/proxy/{repositoryName}][%d] updateRepository4NotFound ", 404)
 }
 
-func (o *UpdateRepository4NotFound) String() string {
+func (o *UpdateAptProxyRepositoryNotFound) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/apt/proxy/{repositoryName}][%d] updateRepository4NotFound ", 404)
 }
 
-func (o *UpdateRepository4NotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateAptProxyRepositoryNotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

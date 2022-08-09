@@ -48,7 +48,8 @@ func NewChangeOrderNoContent() *ChangeOrderNoContent {
 	return &ChangeOrderNoContent{}
 }
 
-/* ChangeOrderNoContent describes a response with status code 204, with default header values.
+/*
+	ChangeOrderNoContent describes a response with status code 204, with default header values.
 
 LDAP server order changed
 */
@@ -98,7 +99,8 @@ func NewChangeOrderUnauthorized() *ChangeOrderUnauthorized {
 	return &ChangeOrderUnauthorized{}
 }
 
-/* ChangeOrderUnauthorized describes a response with status code 401, with default header values.
+/*
+	ChangeOrderUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -148,7 +150,8 @@ func NewChangeOrderForbidden() *ChangeOrderForbidden {
 	return &ChangeOrderForbidden{}
 }
 
-/* ChangeOrderForbidden describes a response with status code 403, with default header values.
+/*
+	ChangeOrderForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

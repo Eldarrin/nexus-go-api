@@ -48,7 +48,8 @@ func NewUpdatePrivilege3BadRequest() *UpdatePrivilege3BadRequest {
 	return &UpdatePrivilege3BadRequest{}
 }
 
-/* UpdatePrivilege3BadRequest describes a response with status code 400, with default header values.
+/*
+	UpdatePrivilege3BadRequest describes a response with status code 400, with default header values.
 
 Privilege object not configured properly.
 */
@@ -98,7 +99,8 @@ func NewUpdatePrivilege3Forbidden() *UpdatePrivilege3Forbidden {
 	return &UpdatePrivilege3Forbidden{}
 }
 
-/* UpdatePrivilege3Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdatePrivilege3Forbidden describes a response with status code 403, with default header values.
 
 The user does not have permission to perform the operation.
 */
@@ -148,7 +150,8 @@ func NewUpdatePrivilege3NotFound() *UpdatePrivilege3NotFound {
 	return &UpdatePrivilege3NotFound{}
 }
 
-/* UpdatePrivilege3NotFound describes a response with status code 404, with default header values.
+/*
+	UpdatePrivilege3NotFound describes a response with status code 404, with default header values.
 
 Privilege not found in the system.
 */

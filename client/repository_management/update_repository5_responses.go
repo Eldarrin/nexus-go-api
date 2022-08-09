@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository5Reader is a Reader for the UpdateRepository5 structure.
-type UpdateRepository5Reader struct {
+// UpdateRawGroupRepositoryReader is a Reader for the UpdateRawGroupRepository structure.
+type UpdateRawGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository5Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateRawGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository5NoContent()
+		result := NewUpdateRawGroupRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository5Unauthorized()
+		result := NewUpdateRawGroupRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository5Forbidden()
+		result := NewUpdateRawGroupRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository5Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewUpdateRepository5NoContent creates a UpdateRepository5NoContent with default headers values
-func NewUpdateRepository5NoContent() *UpdateRepository5NoContent {
-	return &UpdateRepository5NoContent{}
+// NewUpdateRawGroupRepositoryNoContent creates a UpdateRawGroupRepositoryNoContent with default headers values
+func NewUpdateRawGroupRepositoryNoContent() *UpdateRawGroupRepositoryNoContent {
+	return &UpdateRawGroupRepositoryNoContent{}
 }
 
-/* UpdateRepository5NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateRawGroupRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository5NoContent struct {
+type UpdateRawGroupRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository5 no content response has a 2xx status code
-func (o *UpdateRepository5NoContent) IsSuccess() bool {
+func (o *UpdateRawGroupRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository5 no content response has a 3xx status code
-func (o *UpdateRepository5NoContent) IsRedirect() bool {
+func (o *UpdateRawGroupRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository5 no content response has a 4xx status code
-func (o *UpdateRepository5NoContent) IsClientError() bool {
+func (o *UpdateRawGroupRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository5 no content response has a 5xx status code
-func (o *UpdateRepository5NoContent) IsServerError() bool {
+func (o *UpdateRawGroupRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository5 no content response a status code equal to that given
-func (o *UpdateRepository5NoContent) IsCode(code int) bool {
+func (o *UpdateRawGroupRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository5NoContent) Error() string {
+func (o *UpdateRawGroupRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/group/{repositoryName}][%d] updateRepository5NoContent ", 204)
 }
 
-func (o *UpdateRepository5NoContent) String() string {
+func (o *UpdateRawGroupRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/group/{repositoryName}][%d] updateRepository5NoContent ", 204)
 }
 
-func (o *UpdateRepository5NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRawGroupRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository5Unauthorized creates a UpdateRepository5Unauthorized with default headers values
-func NewUpdateRepository5Unauthorized() *UpdateRepository5Unauthorized {
-	return &UpdateRepository5Unauthorized{}
+// NewUpdateRawGroupRepositoryUnauthorized creates a UpdateRawGroupRepositoryUnauthorized with default headers values
+func NewUpdateRawGroupRepositoryUnauthorized() *UpdateRawGroupRepositoryUnauthorized {
+	return &UpdateRawGroupRepositoryUnauthorized{}
 }
 
-/* UpdateRepository5Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateRawGroupRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository5Unauthorized struct {
+type UpdateRawGroupRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository5 unauthorized response has a 2xx status code
-func (o *UpdateRepository5Unauthorized) IsSuccess() bool {
+func (o *UpdateRawGroupRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository5 unauthorized response has a 3xx status code
-func (o *UpdateRepository5Unauthorized) IsRedirect() bool {
+func (o *UpdateRawGroupRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository5 unauthorized response has a 4xx status code
-func (o *UpdateRepository5Unauthorized) IsClientError() bool {
+func (o *UpdateRawGroupRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository5 unauthorized response has a 5xx status code
-func (o *UpdateRepository5Unauthorized) IsServerError() bool {
+func (o *UpdateRawGroupRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository5 unauthorized response a status code equal to that given
-func (o *UpdateRepository5Unauthorized) IsCode(code int) bool {
+func (o *UpdateRawGroupRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository5Unauthorized) Error() string {
+func (o *UpdateRawGroupRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/group/{repositoryName}][%d] updateRepository5Unauthorized ", 401)
 }
 
-func (o *UpdateRepository5Unauthorized) String() string {
+func (o *UpdateRawGroupRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/group/{repositoryName}][%d] updateRepository5Unauthorized ", 401)
 }
 
-func (o *UpdateRepository5Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRawGroupRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository5Forbidden creates a UpdateRepository5Forbidden with default headers values
-func NewUpdateRepository5Forbidden() *UpdateRepository5Forbidden {
-	return &UpdateRepository5Forbidden{}
+// NewUpdateRawGroupRepositoryForbidden creates a UpdateRawGroupRepositoryForbidden with default headers values
+func NewUpdateRawGroupRepositoryForbidden() *UpdateRawGroupRepositoryForbidden {
+	return &UpdateRawGroupRepositoryForbidden{}
 }
 
-/* UpdateRepository5Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateRawGroupRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository5Forbidden struct {
+type UpdateRawGroupRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository5 forbidden response has a 2xx status code
-func (o *UpdateRepository5Forbidden) IsSuccess() bool {
+func (o *UpdateRawGroupRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository5 forbidden response has a 3xx status code
-func (o *UpdateRepository5Forbidden) IsRedirect() bool {
+func (o *UpdateRawGroupRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository5 forbidden response has a 4xx status code
-func (o *UpdateRepository5Forbidden) IsClientError() bool {
+func (o *UpdateRawGroupRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository5 forbidden response has a 5xx status code
-func (o *UpdateRepository5Forbidden) IsServerError() bool {
+func (o *UpdateRawGroupRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository5 forbidden response a status code equal to that given
-func (o *UpdateRepository5Forbidden) IsCode(code int) bool {
+func (o *UpdateRawGroupRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository5Forbidden) Error() string {
+func (o *UpdateRawGroupRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/group/{repositoryName}][%d] updateRepository5Forbidden ", 403)
 }
 
-func (o *UpdateRepository5Forbidden) String() string {
+func (o *UpdateRawGroupRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/group/{repositoryName}][%d] updateRepository5Forbidden ", 403)
 }
 
-func (o *UpdateRepository5Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRawGroupRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

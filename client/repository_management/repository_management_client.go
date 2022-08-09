@@ -30,87 +30,87 @@ type ClientOption func(*runtime.ClientOperation)
 
 // ClientService is the interface for Client methods
 type ClientService interface {
-	CreateRepository(params *CreateRepositoryParams, opts ...ClientOption) (*CreateRepositoryCreated, error)
+	CreateMavenGroupRepository(params *CreateMavenGroupRepositoryParams, opts ...ClientOption) (*CreateMavenGroupRepositoryCreated, error)
 
-	CreateRepository1(params *CreateRepository1Params, opts ...ClientOption) (*CreateRepository1Created, error)
+	CreateMavenHostedRepository(params *CreateMavenHostedRepositoryParams, opts ...ClientOption) (*CreateMavenHostedRepositoryCreated, error)
 
-	CreateRepository10(params *CreateRepository10Params, opts ...ClientOption) (*CreateRepository10Created, error)
+	CreateNpmProxyRepository(params *CreateNpmProxyRepositoryParams, opts ...ClientOption) (*CreateNpmProxyRepositoryCreated, error)
 
-	CreateRepository11(params *CreateRepository11Params, opts ...ClientOption) (*CreateRepository11Created, error)
+	CreateNugetGroupRepository(params *CreateNugetGroupRepositoryParams, opts ...ClientOption) (*CreateNugetGroupRepositoryCreated, error)
 
-	CreateRepository12(params *CreateRepository12Params, opts ...ClientOption) (*CreateRepository12Created, error)
+	CreateNugetHostedRepository(params *CreateNugetHostedRepositoryParams, opts ...ClientOption) (*CreateNugetHostedRepositoryCreated, error)
 
-	CreateRepository13(params *CreateRepository13Params, opts ...ClientOption) (*CreateRepository13Created, error)
+	CreateNugetProxyRepository(params *CreateNugetProxyRepositoryParams, opts ...ClientOption) (*CreateNugetProxyRepositoryCreated, error)
 
-	CreateRepository14(params *CreateRepository14Params, opts ...ClientOption) (*CreateRepository14Created, error)
+	CreateRubyGemsGroupRepository(params *CreateRubyGemsGroupRepositoryParams, opts ...ClientOption) (*CreateRubyGemsGroupRepositoryCreated, error)
 
-	CreateRepository15(params *CreateRepository15Params, opts ...ClientOption) (*CreateRepository15Created, error)
+	CreateRubyGemsHostedRepository(params *CreateRubyGemsHostedRepositoryParams, opts ...ClientOption) (*CreateRubyGemsHostedRepositoryCreated, error)
 
-	CreateRepository16(params *CreateRepository16Params, opts ...ClientOption) (*CreateRepository16Created, error)
+	CreateRubyGemsProxyRepository(params *CreateRubyGemsProxyRepositoryParams, opts ...ClientOption) (*CreateRubyGemsProxyRepositoryCreated, error)
 
-	CreateRepository17(params *CreateRepository17Params, opts ...ClientOption) (*CreateRepository17Created, error)
+	CreateDockerGroupRepository(params *CreateDockerGroupRepositoryParams, opts ...ClientOption) (*CreateDockerGroupRepositoryCreated, error)
 
-	CreateRepository18(params *CreateRepository18Params, opts ...ClientOption) (*CreateRepository18Created, error)
+	CreateDockerHostedRepository(params *CreateDockerHostedRepositoryParams, opts ...ClientOption) (*CreateDockerHostedRepositoryCreated, error)
 
-	CreateRepository19(params *CreateRepository19Params, opts ...ClientOption) (*CreateRepository19Created, error)
+	CreateDockerProxyRepository(params *CreateDockerProxyRepositoryParams, opts ...ClientOption) (*CreateDockerProxyRepositoryCreated, error)
 
-	CreateRepository2(params *CreateRepository2Params, opts ...ClientOption) (*CreateRepository2Created, error)
+	CreateMavenProxyRepository(params *CreateMavenProxyRepositoryParams, opts ...ClientOption) (*CreateMavenProxyRepositoryCreated, error)
 
-	CreateRepository20(params *CreateRepository20Params, opts ...ClientOption) (*CreateRepository20Created, error)
+	CreateYumGroupRepository(params *CreateYumGroupRepositoryParams, opts ...ClientOption) (*CreateYumGroupRepositoryCreated, error)
 
-	CreateRepository21(params *CreateRepository21Params, opts ...ClientOption) (*CreateRepository21Created, error)
+	CreateYumHostedRepository(params *CreateYumHostedRepositoryParams, opts ...ClientOption) (*CreateYumHostedRepositoryCreated, error)
 
-	CreateRepository22(params *CreateRepository22Params, opts ...ClientOption) (*CreateRepository22Created, error)
+	CreateYumProxyRepository(params *CreateYumProxyRepositoryParams, opts ...ClientOption) (*CreateYumProxyRepositoryCreated, error)
 
-	CreateRepository23(params *CreateRepository23Params, opts ...ClientOption) (*CreateRepository23Created, error)
+	CreateHelmHostedRepository(params *CreateHelmHostedRepositoryParams, opts ...ClientOption) (*CreateHelmHostedRepositoryCreated, error)
 
-	CreateRepository24(params *CreateRepository24Params, opts ...ClientOption) (*CreateRepository24Created, error)
+	CreateHelmProxyRepository(params *CreateHelmProxyRepositoryParams, opts ...ClientOption) (*CreateHelmProxyRepositoryCreated, error)
 
-	CreateRepository25(params *CreateRepository25Params, opts ...ClientOption) (*CreateRepository25Created, error)
+	CreateGitLfsHostedRepository(params *CreateGitLfsHostedRepositoryParams, opts ...ClientOption) (*CreateGitLfsHostedRepositoryCreated, error)
 
-	CreateRepository26(params *CreateRepository26Params, opts ...ClientOption) (*CreateRepository26Created, error)
+	CreatePypiGroupRepository(params *CreatePypiGroupRepositoryParams, opts ...ClientOption) (*CreatePypiGroupRepositoryCreated, error)
 
-	CreateRepository27(params *CreateRepository27Params, opts ...ClientOption) (*CreateRepository27Created, error)
+	CreatePypiHostedRepository(params *CreatePypiHostedRepositoryParams, opts ...ClientOption) (*CreatePypiHostedRepositoryCreated, error)
 
-	CreateRepository28(params *CreateRepository28Params, opts ...ClientOption) (*CreateRepository28Created, error)
+	CreatePypiProxyRepository(params *CreatePypiProxyRepositoryParams, opts ...ClientOption) (*CreatePypiProxyRepositoryCreated, error)
 
-	CreateRepository29(params *CreateRepository29Params, opts ...ClientOption) (*CreateRepository29Created, error)
+	CreateCondaProxyRepository(params *CreateCondaProxyRepositoryParams, opts ...ClientOption) (*CreateCondaProxyRepositoryCreated, error)
 
-	CreateRepository3(params *CreateRepository3Params, opts ...ClientOption) (*CreateRepository3Created, error)
+	CreateAptHostedRepository(params *CreateAptHostedRepositoryParams, opts ...ClientOption) (*CreateAptHostedRepositoryCreated, error)
 
-	CreateRepository30(params *CreateRepository30Params, opts ...ClientOption) (*CreateRepository30Created, error)
+	CreateConanProxyRepository(params *CreateConanProxyRepositoryParams, opts ...ClientOption) (*CreateConanProxyRepositoryCreated, error)
 
-	CreateRepository31(params *CreateRepository31Params, opts ...ClientOption) (*CreateRepository31Created, error)
+	CreateRGroupRepository(params *CreateRGroupRepositoryParams, opts ...ClientOption) (*CreateRGroupRepositoryCreated, error)
 
-	CreateRepository32(params *CreateRepository32Params, opts ...ClientOption) (*CreateRepository32Created, error)
+	CreateRHostedRepository(params *CreateRHostedRepositoryParams, opts ...ClientOption) (*CreateRHostedRepositoryCreated, error)
 
-	CreateRepository33(params *CreateRepository33Params, opts ...ClientOption) (*CreateRepository33Created, error)
+	CreateRProxyRepository(params *CreateRProxyRepositoryParams, opts ...ClientOption) (*CreateRProxyRepositoryCreated, error)
 
-	CreateRepository34(params *CreateRepository34Params, opts ...ClientOption) (*CreateRepository34Created, error)
+	CreateCocoapodsProxyRepository(params *CreateCocoapodsProxyRepositoryParams, opts ...ClientOption) (*CreateCocoapodsProxyRepositoryCreated, error)
 
-	CreateRepository35(params *CreateRepository35Params, opts ...ClientOption) (*CreateRepository35Created, error)
+	CreateGolangGroupRepository(params *CreateGolangGroupRepositoryParams, opts ...ClientOption) (*CreateGolangGroupRepositoryCreated, error)
 
-	CreateRepository36(params *CreateRepository36Params, opts ...ClientOption) (*CreateRepository36Created, error)
+	CreateGolangProxyRepository(params *CreateGolangProxyRepositoryParams, opts ...ClientOption) (*CreateGolangProxyRepositoryCreated, error)
 
-	CreateRepository37(params *CreateRepository37Params, opts ...ClientOption) (*CreateRepository37Created, error)
+	CreateP2ProxyRepository(params *CreateP2ProxyRepositoryParams, opts ...ClientOption) (*CreateP2ProxyRepositoryCreated, error)
 
-	CreateRepository38(params *CreateRepository38Params, opts ...ClientOption) (*CreateRepository38Created, error)
+	CreateBowerGroupRepository(params *CreateBowerGroupRepositoryParams, opts ...ClientOption) (*CreateBowerGroupRepositoryCreated, error)
 
-	CreateRepository39(params *CreateRepository39Params, opts ...ClientOption) (*CreateRepository39Created, error)
+	CreateBowerHostedRepository(params *CreateBowerHostedRepositoryParams, opts ...ClientOption) (*CreateBowerHostedRepositoryCreated, error)
 
-	CreateRepository4(params *CreateRepository4Params, opts ...ClientOption) (*CreateRepository4Created, error)
+	CreateAptProxyRepository(params *CreateAptProxyRepositoryParams, opts ...ClientOption) (*CreateAptProxyRepositoryCreated, error)
 
-	CreateRepository40(params *CreateRepository40Params, opts ...ClientOption) (*CreateRepository40Created, error)
+	CreateBowerProxyRepository(params *CreateBowerProxyRepositoryParams, opts ...ClientOption) (*CreateBowerProxyRepositoryCreated, error)
 
-	CreateRepository5(params *CreateRepository5Params, opts ...ClientOption) (*CreateRepository5Created, error)
+	CreateRawGroupRepository(params *CreateRawGroupRepositoryParams, opts ...ClientOption) (*CreateRawGroupRepositoryCreated, error)
 
-	CreateRepository6(params *CreateRepository6Params, opts ...ClientOption) (*CreateRepository6Created, error)
+	CreateRawHostedRepository(params *CreateRawHostedRepositoryParams, opts ...ClientOption) (*CreateRawHostedRepositoryCreated, error)
 
-	CreateRepository7(params *CreateRepository7Params, opts ...ClientOption) (*CreateRepository7Created, error)
+	CreateRawProxyRepository(params *CreateRawProxyRepositoryParams, opts ...ClientOption) (*CreateRawProxyRepositoryCreated, error)
 
-	CreateRepository8(params *CreateRepository8Params, opts ...ClientOption) (*CreateRepository8Created, error)
+	CreateNpmGroupRepository(params *CreateNpmGroupRepositoryParams, opts ...ClientOption) (*CreateNpmGroupRepositoryCreated, error)
 
-	CreateRepository9(params *CreateRepository9Params, opts ...ClientOption) (*CreateRepository9Created, error)
+	CreateNpmHostedRepository(params *CreateNpmHostedRepositoryParams, opts ...ClientOption) (*CreateNpmHostedRepositoryCreated, error)
 
 	DeleteRepository(params *DeleteRepositoryParams, opts ...ClientOption) (*DeleteRepositoryNoContent, error)
 
@@ -124,184 +124,184 @@ type ClientService interface {
 
 	GetRepository(params *GetRepositoryParams, opts ...ClientOption) (*GetRepositoryOK, error)
 
-	GetRepository1(params *GetRepository1Params, opts ...ClientOption) (*GetRepository1OK, error)
+	GetMavenGroupRepository(params *GetMavenGroupRepositoryParams, opts ...ClientOption) (*GetMavenGroupRepositoryOK, error)
 
-	GetRepository10(params *GetRepository10Params, opts ...ClientOption) (*GetRepository10OK, error)
+	GetNpmHostedRepository(params *GetNpmHostedRepositoryParams, opts ...ClientOption) (*GetNpmHostedRepositoryOK, error)
 
-	GetRepository11(params *GetRepository11Params, opts ...ClientOption) (*GetRepository11OK, error)
+	GetNpmProxyRepository(params *GetNpmProxyRepositoryParams, opts ...ClientOption) (*GetNpmProxyRepositoryOK, error)
 
-	GetRepository12(params *GetRepository12Params, opts ...ClientOption) (*GetRepository12OK, error)
+	GetNugetGroupRepository(params *GetNugetGroupRepositoryParams, opts ...ClientOption) (*GetNugetGroupRepositoryOK, error)
 
-	GetRepository13(params *GetRepository13Params, opts ...ClientOption) (*GetRepository13OK, error)
+	GetNugetHostedRepository(params *GetNugetHostedRepositoryParams, opts ...ClientOption) (*GetNugetHostedRepositoryOK, error)
 
-	GetRepository14(params *GetRepository14Params, opts ...ClientOption) (*GetRepository14OK, error)
+	GetNugetProxyRepository(params *GetNugetProxyRepositoryParams, opts ...ClientOption) (*GetNugetProxyRepositoryOK, error)
 
-	GetRepository15(params *GetRepository15Params, opts ...ClientOption) (*GetRepository15OK, error)
+	GetRubyGemsGroupRepository(params *GetRubyGemsGroupRepositoryParams, opts ...ClientOption) (*GetRubyGemsGroupRepositoryOK, error)
 
-	GetRepository16(params *GetRepository16Params, opts ...ClientOption) (*GetRepository16OK, error)
+	GetRubyGemsHostedRepository(params *GetRubyGemsHostedRepositoryParams, opts ...ClientOption) (*GetRubyGemsHostedRepositoryOK, error)
 
-	GetRepository17(params *GetRepository17Params, opts ...ClientOption) (*GetRepository17OK, error)
+	GetRubyGemsProxyRepository(params *GetRubyGemsProxyRepositoryParams, opts ...ClientOption) (*GetRubyGemsProxyRepositoryOK, error)
 
-	GetRepository18(params *GetRepository18Params, opts ...ClientOption) (*GetRepository18OK, error)
+	GetDockerGroupRepository(params *GetDockerGroupRepositoryParams, opts ...ClientOption) (*GetDockerGroupRepositoryOK, error)
 
-	GetRepository19(params *GetRepository19Params, opts ...ClientOption) (*GetRepository19OK, error)
+	GetDockerHostedRepository(params *GetDockerHostedRepositoryParams, opts ...ClientOption) (*GetDockerHostedRepositoryOK, error)
 
-	GetRepository2(params *GetRepository2Params, opts ...ClientOption) (*GetRepository2OK, error)
+	GetMavenHostedRepository(params *GetMavenHostedRepositoryParams, opts ...ClientOption) (*GetMavenHostedRepositoryOK, error)
 
-	GetRepository20(params *GetRepository20Params, opts ...ClientOption) (*GetRepository20OK, error)
+	GetDockerProxyRepository(params *GetDockerProxyRepositoryParams, opts ...ClientOption) (*GetDockerProxyRepositoryOK, error)
 
-	GetRepository21(params *GetRepository21Params, opts ...ClientOption) (*GetRepository21OK, error)
+	GetYumGroupRepository(params *GetYumGroupRepositoryParams, opts ...ClientOption) (*GetYumGroupRepositoryOK, error)
 
-	GetRepository22(params *GetRepository22Params, opts ...ClientOption) (*GetRepository22OK, error)
+	GetYumHostedRepository(params *GetYumHostedRepositoryParams, opts ...ClientOption) (*GetYumHostedRepositoryOK, error)
 
-	GetRepository23(params *GetRepository23Params, opts ...ClientOption) (*GetRepository23OK, error)
+	GetYumProxyRepository(params *GetYumProxyRepositoryParams, opts ...ClientOption) (*GetYumProxyRepositoryOK, error)
 
-	GetRepository24(params *GetRepository24Params, opts ...ClientOption) (*GetRepository24OK, error)
+	GetHelmHostedRepository(params *GetHelmHostedRepositoryParams, opts ...ClientOption) (*GetHelmHostedRepositoryOK, error)
 
-	GetRepository25(params *GetRepository25Params, opts ...ClientOption) (*GetRepository25OK, error)
+	GetHelmProxyRepository(params *GetHelmProxyRepositoryParams, opts ...ClientOption) (*GetHelmProxyRepositoryOK, error)
 
-	GetRepository26(params *GetRepository26Params, opts ...ClientOption) (*GetRepository26OK, error)
+	GetGitLfsHostedRepository(params *GetGitLfsHostedRepositoryParams, opts ...ClientOption) (*GetGitLfsHostedRepositoryOK, error)
 
-	GetRepository27(params *GetRepository27Params, opts ...ClientOption) (*GetRepository27OK, error)
+	GetPypiGroupRepository(params *GetPypiGroupRepositoryParams, opts ...ClientOption) (*GetPypiGroupRepositoryOK, error)
 
-	GetRepository28(params *GetRepository28Params, opts ...ClientOption) (*GetRepository28OK, error)
+	GetPypiHostedRepository(params *GetPypiHostedRepositoryParams, opts ...ClientOption) (*GetPypiHostedRepositoryOK, error)
 
-	GetRepository29(params *GetRepository29Params, opts ...ClientOption) (*GetRepository29OK, error)
+	GetPypiProxyRepository(params *GetPypiProxyRepositoryParams, opts ...ClientOption) (*GetPypiProxyRepositoryOK, error)
 
-	GetRepository3(params *GetRepository3Params, opts ...ClientOption) (*GetRepository3OK, error)
+	GetMavenProxyRepository(params *GetMavenProxyRepositoryParams, opts ...ClientOption) (*GetMavenProxyRepositoryOK, error)
 
-	GetRepository30(params *GetRepository30Params, opts ...ClientOption) (*GetRepository30OK, error)
+	GetCondaProxyRepository(params *GetCondaProxyRepositoryParams, opts ...ClientOption) (*GetCondaProxyRepositoryOK, error)
 
-	GetRepository31(params *GetRepository31Params, opts ...ClientOption) (*GetRepository31OK, error)
+	GetConanProxyRepository(params *GetConanProxyRepositoryParams, opts ...ClientOption) (*GetConanProxyRepositoryOK, error)
 
-	GetRepository32(params *GetRepository32Params, opts ...ClientOption) (*GetRepository32OK, error)
+	GetRGroupRepository(params *GetRGroupRepositoryParams, opts ...ClientOption) (*GetRGroupRepositoryOK, error)
 
-	GetRepository33(params *GetRepository33Params, opts ...ClientOption) (*GetRepository33OK, error)
+	GetRHostedRepository(params *GetRHostedRepositoryParams, opts ...ClientOption) (*GetRHostedRepositoryOK, error)
 
-	GetRepository34(params *GetRepository34Params, opts ...ClientOption) (*GetRepository34OK, error)
+	GetRProxyRepository(params *GetRProxyRepositoryParams, opts ...ClientOption) (*GetRProxyRepositoryOK, error)
 
-	GetRepository35(params *GetRepository35Params, opts ...ClientOption) (*GetRepository35OK, error)
+	GetCocoapodsProxyRepository(params *GetCocoapodsProxyRepositoryParams, opts ...ClientOption) (*GetCocoapodsProxyRepositoryOK, error)
 
-	GetRepository36(params *GetRepository36Params, opts ...ClientOption) (*GetRepository36OK, error)
+	GetGolangGroupRepository(params *GetGolangGroupRepositoryParams, opts ...ClientOption) (*GetGolangGroupRepositoryOK, error)
 
-	GetRepository37(params *GetRepository37Params, opts ...ClientOption) (*GetRepository37OK, error)
+	GetGolangProxyRepository(params *GetGolangProxyRepositoryParams, opts ...ClientOption) (*GetGolangProxyRepositoryOK, error)
 
-	GetRepository38(params *GetRepository38Params, opts ...ClientOption) (*GetRepository38OK, error)
+	GetP2ProxyRepository(params *GetP2ProxyRepositoryParams, opts ...ClientOption) (*GetP2ProxyRepositoryOK, error)
 
-	GetRepository39(params *GetRepository39Params, opts ...ClientOption) (*GetRepository39OK, error)
+	GetBowerGroupRepository(params *GetBowerGroupRepositoryParams, opts ...ClientOption) (*GetBowerGroupRepositoryOK, error)
 
-	GetRepository4(params *GetRepository4Params, opts ...ClientOption) (*GetRepository4OK, error)
+	GetAptHostedRepository(params *GetAptHostedRepositoryParams, opts ...ClientOption) (*GetAptHostedRepositoryOK, error)
 
-	GetRepository40(params *GetRepository40Params, opts ...ClientOption) (*GetRepository40OK, error)
+	GetBowerHostedRepository(params *GetBowerHostedRepositoryParams, opts ...ClientOption) (*GetBowerHostedRepositoryOK, error)
 
-	GetRepository41(params *GetRepository41Params, opts ...ClientOption) (*GetRepository41OK, error)
+	GetBowerProxyRepository(params *GetBowerProxyRepositoryParams, opts ...ClientOption) (*GetBowerProxyRepositoryOK, error)
 
-	GetRepository5(params *GetRepository5Params, opts ...ClientOption) (*GetRepository5OK, error)
+	GetAptProxyRepository(params *GetAptProxyRepositoryParams, opts ...ClientOption) (*GetAptProxyRepositoryOK, error)
 
-	GetRepository6(params *GetRepository6Params, opts ...ClientOption) (*GetRepository6OK, error)
+	GetRawGroupRepository(params *GetRawGroupRepositoryParams, opts ...ClientOption) (*GetRawGroupRepositoryOK, error)
 
-	GetRepository7(params *GetRepository7Params, opts ...ClientOption) (*GetRepository7OK, error)
+	GetRawHostedRepository(params *GetRawHostedRepositoryParams, opts ...ClientOption) (*GetRawHostedRepositoryOK, error)
 
-	GetRepository8(params *GetRepository8Params, opts ...ClientOption) (*GetRepository8OK, error)
+	GetRawProxyRepository(params *GetRawProxyRepositoryParams, opts ...ClientOption) (*GetRawProxyRepositoryOK, error)
 
-	GetRepository9(params *GetRepository9Params, opts ...ClientOption) (*GetRepository9OK, error)
+	GetNpmGroupRepository(params *GetNpmGroupRepositoryParams, opts ...ClientOption) (*GetNpmGroupRepositoryOK, error)
 
 	InvalidateCache(params *InvalidateCacheParams, opts ...ClientOption) (*InvalidateCacheNoContent, error)
 
 	RebuildIndex(params *RebuildIndexParams, opts ...ClientOption) (*RebuildIndexNoContent, error)
 
-	UpdateRepository(params *UpdateRepositoryParams, opts ...ClientOption) (*UpdateRepositoryNoContent, error)
+	UpdateMavenGroupRepository(params *UpdateMavenGroupRepositoryParams, opts ...ClientOption) (*UpdateMavenGroupRepositoryNoContent, error)
 
-	UpdateRepository1(params *UpdateRepository1Params, opts ...ClientOption) (*UpdateRepository1NoContent, error)
+	UpdateMavenHostedRepository(params *UpdateMavenHostedRepositoryParams, opts ...ClientOption) (*UpdateMavenHostedRepositoryNoContent, error)
 
-	UpdateRepository10(params *UpdateRepository10Params, opts ...ClientOption) (*UpdateRepository10NoContent, error)
+	UpdateNpmProxyRepository(params *UpdateNpmProxyRepositoryParams, opts ...ClientOption) (*UpdateNpmProxyRepositoryNoContent, error)
 
-	UpdateRepository11(params *UpdateRepository11Params, opts ...ClientOption) (*UpdateRepository11NoContent, error)
+	UpdateNugetGroupRepository(params *UpdateNugetGroupRepositoryParams, opts ...ClientOption) (*UpdateNugetGroupRepositoryNoContent, error)
 
-	UpdateRepository12(params *UpdateRepository12Params, opts ...ClientOption) (*UpdateRepository12NoContent, error)
+	UpdateNugetHostedRepository(params *UpdateNugetHostedRepositoryParams, opts ...ClientOption) (*UpdateNugetHostedRepositoryNoContent, error)
 
-	UpdateRepository13(params *UpdateRepository13Params, opts ...ClientOption) (*UpdateRepository13NoContent, error)
+	UpdateNugetProxyRepository(params *UpdateNugetProxyRepositoryParams, opts ...ClientOption) (*UpdateNugetProxyRepositoryNoContent, error)
 
-	UpdateRepository14(params *UpdateRepository14Params, opts ...ClientOption) (*UpdateRepository14NoContent, error)
+	UpdateRubyGemsGroupRepository(params *UpdateRubyGemsGroupRepositoryParams, opts ...ClientOption) (*UpdateRubyGemsGroupRepositoryNoContent, error)
 
-	UpdateRepository15(params *UpdateRepository15Params, opts ...ClientOption) (*UpdateRepository15NoContent, error)
+	UpdateRubyGemsHostedRepository(params *UpdateRubyGemsHostedRepositoryParams, opts ...ClientOption) (*UpdateRubyGemsHostedRepositoryNoContent, error)
 
-	UpdateRepository16(params *UpdateRepository16Params, opts ...ClientOption) (*UpdateRepository16NoContent, error)
+	UpdateRubyGemsProxyRepository(params *UpdateRubyGemsProxyRepositoryParams, opts ...ClientOption) (*UpdateRubyGemsProxyRepositoryNoContent, error)
 
-	UpdateRepository17(params *UpdateRepository17Params, opts ...ClientOption) (*UpdateRepository17NoContent, error)
+	UpdateDockerGroupRepository(params *UpdateDockerGroupRepositoryParams, opts ...ClientOption) (*UpdateDockerGroupRepositoryNoContent, error)
 
-	UpdateRepository18(params *UpdateRepository18Params, opts ...ClientOption) (*UpdateRepository18NoContent, error)
+	UpdateDockerHostedRepository(params *UpdateDockerHostedRepositoryParams, opts ...ClientOption) (*UpdateDockerHostedRepositoryNoContent, error)
 
-	UpdateRepository19(params *UpdateRepository19Params, opts ...ClientOption) (*UpdateRepository19NoContent, error)
+	UpdateDockerProxyRepository(params *UpdateDockerProxyRepositoryParams, opts ...ClientOption) (*UpdateDockerProxyRepositoryNoContent, error)
 
-	UpdateRepository2(params *UpdateRepository2Params, opts ...ClientOption) (*UpdateRepository2NoContent, error)
+	UpdateMavenProxyRepository(params *UpdateMavenProxyRepositoryParams, opts ...ClientOption) (*UpdateMavenProxyRepositoryNoContent, error)
 
-	UpdateRepository20(params *UpdateRepository20Params, opts ...ClientOption) (*UpdateRepository20NoContent, error)
+	UpdateYumGroupRepository(params *UpdateYumGroupRepositoryParams, opts ...ClientOption) (*UpdateYumGroupRepositoryNoContent, error)
 
-	UpdateRepository21(params *UpdateRepository21Params, opts ...ClientOption) (*UpdateRepository21NoContent, error)
+	UpdateYumHostedRepository(params *UpdateYumHostedRepositoryParams, opts ...ClientOption) (*UpdateYumHostedRepositoryNoContent, error)
 
-	UpdateRepository22(params *UpdateRepository22Params, opts ...ClientOption) (*UpdateRepository22NoContent, error)
+	UpdateYumProxyRepository(params *UpdateYumProxyRepositoryParams, opts ...ClientOption) (*UpdateYumProxyRepositoryNoContent, error)
 
-	UpdateRepository23(params *UpdateRepository23Params, opts ...ClientOption) (*UpdateRepository23NoContent, error)
+	UpdateHelmHostedRepository(params *UpdateHelmHostedRepositoryParams, opts ...ClientOption) (*UpdateHelmHostedRepositoryNoContent, error)
 
-	UpdateRepository24(params *UpdateRepository24Params, opts ...ClientOption) (*UpdateRepository24NoContent, error)
+	UpdateHelmProxyRepository(params *UpdateHelmProxyRepositoryParams, opts ...ClientOption) (*UpdateHelmProxyRepositoryNoContent, error)
 
-	UpdateRepository25(params *UpdateRepository25Params, opts ...ClientOption) (*UpdateRepository25NoContent, error)
+	UpdateGitLfsHostedRepository(params *UpdateGitLfsHostedRepositoryParams, opts ...ClientOption) (*UpdateGitLfsHostedRepositoryNoContent, error)
 
-	UpdateRepository26(params *UpdateRepository26Params, opts ...ClientOption) (*UpdateRepository26NoContent, error)
+	UpdatePypiGroupRepository(params *UpdatePypiGroupRepositoryParams, opts ...ClientOption) (*UpdatePypiGroupRepositoryNoContent, error)
 
-	UpdateRepository27(params *UpdateRepository27Params, opts ...ClientOption) (*UpdateRepository27NoContent, error)
+	UpdatePypiHostedRepository(params *UpdatePypiHostedRepositoryParams, opts ...ClientOption) (*UpdatePypiHostedRepositoryNoContent, error)
 
-	UpdateRepository28(params *UpdateRepository28Params, opts ...ClientOption) (*UpdateRepository28NoContent, error)
+	UpdatePypiProxyRepository(params *UpdatePypiProxyRepositoryParams, opts ...ClientOption) (*UpdatePypiProxyRepositoryNoContent, error)
 
-	UpdateRepository29(params *UpdateRepository29Params, opts ...ClientOption) (*UpdateRepository29NoContent, error)
+	UpdateCondaProxyRepository(params *UpdateCondaProxyRepositoryParams, opts ...ClientOption) (*UpdateCondaProxyRepositoryNoContent, error)
 
-	UpdateRepository3(params *UpdateRepository3Params, opts ...ClientOption) (*UpdateRepository3NoContent, error)
+	UpdateAptHostedRepository(params *UpdateAptHostedRepositoryParams, opts ...ClientOption) (*UpdateAptHostedRepositoryNoContent, error)
 
-	UpdateRepository30(params *UpdateRepository30Params, opts ...ClientOption) (*UpdateRepository30NoContent, error)
+	UpdateConanProxyRepository(params *UpdateConanProxyRepositoryParams, opts ...ClientOption) (*UpdateConanProxyRepositoryNoContent, error)
 
-	UpdateRepository31(params *UpdateRepository31Params, opts ...ClientOption) (*UpdateRepository31NoContent, error)
+	UpdateRGroupRepository(params *UpdateRGroupRepositoryParams, opts ...ClientOption) (*UpdateRGroupRepositoryNoContent, error)
 
-	UpdateRepository32(params *UpdateRepository32Params, opts ...ClientOption) (*UpdateRepository32NoContent, error)
+	UpdateRHostedRepository(params *UpdateRHostedRepositoryParams, opts ...ClientOption) (*UpdateRHostedRepositoryNoContent, error)
 
-	UpdateRepository33(params *UpdateRepository33Params, opts ...ClientOption) (*UpdateRepository33NoContent, error)
+	UpdateRProxyRepository(params *UpdateRProxyRepositoryParams, opts ...ClientOption) (*UpdateRProxyRepositoryNoContent, error)
 
-	UpdateRepository34(params *UpdateRepository34Params, opts ...ClientOption) (*UpdateRepository34NoContent, error)
+	UpdateCocoapodsProxyRepository(params *UpdateCocoapodsProxyRepositoryParams, opts ...ClientOption) (*UpdateCocoapodsProxyRepositoryNoContent, error)
 
-	UpdateRepository35(params *UpdateRepository35Params, opts ...ClientOption) (*UpdateRepository35NoContent, error)
+	UpdateGolangGroupRepository(params *UpdateGolangGroupRepositoryParams, opts ...ClientOption) (*UpdateGolangGroupRepositoryNoContent, error)
 
-	UpdateRepository36(params *UpdateRepository36Params, opts ...ClientOption) (*UpdateRepository36NoContent, error)
+	UpdateGolangProxyRepository(params *UpdateGolangProxyRepositoryParams, opts ...ClientOption) (*UpdateGolangProxyRepositoryNoContent, error)
 
-	UpdateRepository37(params *UpdateRepository37Params, opts ...ClientOption) (*UpdateRepository37NoContent, error)
+	UpdateP2ProxyRepository(params *UpdateP2ProxyRepositoryParams, opts ...ClientOption) (*UpdateP2ProxyRepositoryNoContent, error)
 
-	UpdateRepository38(params *UpdateRepository38Params, opts ...ClientOption) (*UpdateRepository38NoContent, error)
+	UpdateBowerGroupRepository(params *UpdateBowerGroupRepositoryParams, opts ...ClientOption) (*UpdateBowerGroupRepositoryNoContent, error)
 
-	UpdateRepository39(params *UpdateRepository39Params, opts ...ClientOption) (*UpdateRepository39NoContent, error)
+	UpdateBowerHostedRepository(params *UpdateBowerHostedRepositoryParams, opts ...ClientOption) (*UpdateBowerHostedRepositoryNoContent, error)
 
-	UpdateRepository4(params *UpdateRepository4Params, opts ...ClientOption) (*UpdateRepository4NoContent, error)
+	UpdateAptProxyRepository(params *UpdateAptProxyRepositoryParams, opts ...ClientOption) (*UpdateAptProxyRepositoryNoContent, error)
 
-	UpdateRepository40(params *UpdateRepository40Params, opts ...ClientOption) (*UpdateRepository40NoContent, error)
+	UpdateBowerProxyRepository(params *UpdateBowerProxyRepositoryParams, opts ...ClientOption) (*UpdateBowerProxyRepositoryNoContent, error)
 
-	UpdateRepository5(params *UpdateRepository5Params, opts ...ClientOption) (*UpdateRepository5NoContent, error)
+	UpdateRawGroupRepository(params *UpdateRawGroupRepositoryParams, opts ...ClientOption) (*UpdateRawGroupRepositoryNoContent, error)
 
-	UpdateRepository6(params *UpdateRepository6Params, opts ...ClientOption) (*UpdateRepository6NoContent, error)
+	UpdateRawHostedRepository(params *UpdateRawHostedRepositoryParams, opts ...ClientOption) (*UpdateRawHostedRepositoryNoContent, error)
 
-	UpdateRepository7(params *UpdateRepository7Params, opts ...ClientOption) (*UpdateRepository7NoContent, error)
+	UpdateRawProxyRepository(params *UpdateRawProxyRepositoryParams, opts ...ClientOption) (*UpdateRawProxyRepositoryNoContent, error)
 
-	UpdateRepository8(params *UpdateRepository8Params, opts ...ClientOption) (*UpdateRepository8NoContent, error)
+	UpdateNpmGroupRepository(params *UpdateNpmGroupRepositoryParams, opts ...ClientOption) (*UpdateNpmGroupRepositoryNoContent, error)
 
-	UpdateRepository9(params *UpdateRepository9Params, opts ...ClientOption) (*UpdateRepository9NoContent, error)
+	UpdateNpmHostedRepository(params *UpdateNpmHostedRepositoryParams, opts ...ClientOption) (*UpdateNpmHostedRepositoryNoContent, error)
 
 	SetTransport(transport runtime.ClientTransport)
 }
 
 /*
-  CreateRepository creates maven group repository
+CreateMavenGroupRepository creates maven group repository
 */
-func (a *Client) CreateRepository(params *CreateRepositoryParams, opts ...ClientOption) (*CreateRepositoryCreated, error) {
+func (a *Client) CreateMavenGroupRepository(params *CreateMavenGroupRepositoryParams, opts ...ClientOption) (*CreateMavenGroupRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepositoryParams()
+		params = NewCreateMavenGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository",
@@ -311,7 +311,7 @@ func (a *Client) CreateRepository(params *CreateRepositoryParams, opts ...Client
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepositoryReader{formats: a.formats},
+		Reader:             &CreateMavenGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -323,7 +323,7 @@ func (a *Client) CreateRepository(params *CreateRepositoryParams, opts ...Client
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepositoryCreated)
+	success, ok := result.(*CreateMavenGroupRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -334,12 +334,12 @@ func (a *Client) CreateRepository(params *CreateRepositoryParams, opts ...Client
 }
 
 /*
-  CreateRepository1 creates maven hosted repository
+CreateMavenHostedRepository creates maven hosted repository
 */
-func (a *Client) CreateRepository1(params *CreateRepository1Params, opts ...ClientOption) (*CreateRepository1Created, error) {
+func (a *Client) CreateMavenHostedRepository(params *CreateMavenHostedRepositoryParams, opts ...ClientOption) (*CreateMavenHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository1Params()
+		params = NewCreateMavenHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_1",
@@ -349,7 +349,7 @@ func (a *Client) CreateRepository1(params *CreateRepository1Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository1Reader{formats: a.formats},
+		Reader:             &CreateMavenHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -361,7 +361,7 @@ func (a *Client) CreateRepository1(params *CreateRepository1Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository1Created)
+	success, ok := result.(*CreateMavenHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -372,12 +372,12 @@ func (a *Client) CreateRepository1(params *CreateRepository1Params, opts ...Clie
 }
 
 /*
-  CreateRepository10 creates npm proxy repository
+CreateNpmProxyRepository creates npm proxy repository
 */
-func (a *Client) CreateRepository10(params *CreateRepository10Params, opts ...ClientOption) (*CreateRepository10Created, error) {
+func (a *Client) CreateNpmProxyRepository(params *CreateNpmProxyRepositoryParams, opts ...ClientOption) (*CreateNpmProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository10Params()
+		params = NewCreateNpmProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_10",
@@ -387,7 +387,7 @@ func (a *Client) CreateRepository10(params *CreateRepository10Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository10Reader{formats: a.formats},
+		Reader:             &CreateNpmProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -399,7 +399,7 @@ func (a *Client) CreateRepository10(params *CreateRepository10Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository10Created)
+	success, ok := result.(*CreateNpmProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -410,12 +410,12 @@ func (a *Client) CreateRepository10(params *CreateRepository10Params, opts ...Cl
 }
 
 /*
-  CreateRepository11 creates nu get group repository
+CreateNugetGroupRepository creates nu get group repository
 */
-func (a *Client) CreateRepository11(params *CreateRepository11Params, opts ...ClientOption) (*CreateRepository11Created, error) {
+func (a *Client) CreateNugetGroupRepository(params *CreateNugetGroupRepositoryParams, opts ...ClientOption) (*CreateNugetGroupRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository11Params()
+		params = NewCreateNugetGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_11",
@@ -425,7 +425,7 @@ func (a *Client) CreateRepository11(params *CreateRepository11Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository11Reader{formats: a.formats},
+		Reader:             &CreateNugetGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -437,7 +437,7 @@ func (a *Client) CreateRepository11(params *CreateRepository11Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository11Created)
+	success, ok := result.(*CreateNugetGroupRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -448,12 +448,12 @@ func (a *Client) CreateRepository11(params *CreateRepository11Params, opts ...Cl
 }
 
 /*
-  CreateRepository12 creates nu get hosted repository
+CreateNugetHostedRepository creates nu get hosted repository
 */
-func (a *Client) CreateRepository12(params *CreateRepository12Params, opts ...ClientOption) (*CreateRepository12Created, error) {
+func (a *Client) CreateNugetHostedRepository(params *CreateNugetHostedRepositoryParams, opts ...ClientOption) (*CreateNugetHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository12Params()
+		params = NewCreateNugetHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_12",
@@ -463,7 +463,7 @@ func (a *Client) CreateRepository12(params *CreateRepository12Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository12Reader{formats: a.formats},
+		Reader:             &CreateNugetHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -475,7 +475,7 @@ func (a *Client) CreateRepository12(params *CreateRepository12Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository12Created)
+	success, ok := result.(*CreateNugetHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -486,12 +486,12 @@ func (a *Client) CreateRepository12(params *CreateRepository12Params, opts ...Cl
 }
 
 /*
-  CreateRepository13 creates nu get proxy repository
+CreateNugetProxyRepository creates nu get proxy repository
 */
-func (a *Client) CreateRepository13(params *CreateRepository13Params, opts ...ClientOption) (*CreateRepository13Created, error) {
+func (a *Client) CreateNugetProxyRepository(params *CreateNugetProxyRepositoryParams, opts ...ClientOption) (*CreateNugetProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository13Params()
+		params = NewCreateNugetProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_13",
@@ -501,7 +501,7 @@ func (a *Client) CreateRepository13(params *CreateRepository13Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository13Reader{formats: a.formats},
+		Reader:             &CreateNugetProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -513,7 +513,7 @@ func (a *Client) CreateRepository13(params *CreateRepository13Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository13Created)
+	success, ok := result.(*CreateNugetProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -524,12 +524,12 @@ func (a *Client) CreateRepository13(params *CreateRepository13Params, opts ...Cl
 }
 
 /*
-  CreateRepository14 creates ruby gems group repository
+CreateRubyGemsGroupRepository creates ruby gems group repository
 */
-func (a *Client) CreateRepository14(params *CreateRepository14Params, opts ...ClientOption) (*CreateRepository14Created, error) {
+func (a *Client) CreateRubyGemsGroupRepository(params *CreateRubyGemsGroupRepositoryParams, opts ...ClientOption) (*CreateRubyGemsGroupRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository14Params()
+		params = NewCreateRubyGemsGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_14",
@@ -539,7 +539,7 @@ func (a *Client) CreateRepository14(params *CreateRepository14Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository14Reader{formats: a.formats},
+		Reader:             &CreateRubyGemsGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -551,7 +551,7 @@ func (a *Client) CreateRepository14(params *CreateRepository14Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository14Created)
+	success, ok := result.(*CreateRubyGemsGroupRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -562,12 +562,12 @@ func (a *Client) CreateRepository14(params *CreateRepository14Params, opts ...Cl
 }
 
 /*
-  CreateRepository15 creates ruby gems hosted repository
+CreateRubyGemsHostedRepository creates ruby gems hosted repository
 */
-func (a *Client) CreateRepository15(params *CreateRepository15Params, opts ...ClientOption) (*CreateRepository15Created, error) {
+func (a *Client) CreateRubyGemsHostedRepository(params *CreateRubyGemsHostedRepositoryParams, opts ...ClientOption) (*CreateRubyGemsHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository15Params()
+		params = NewCreateRubyGemsHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_15",
@@ -577,7 +577,7 @@ func (a *Client) CreateRepository15(params *CreateRepository15Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository15Reader{formats: a.formats},
+		Reader:             &CreateRubyGemsHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -589,7 +589,7 @@ func (a *Client) CreateRepository15(params *CreateRepository15Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository15Created)
+	success, ok := result.(*CreateRubyGemsHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -600,12 +600,12 @@ func (a *Client) CreateRepository15(params *CreateRepository15Params, opts ...Cl
 }
 
 /*
-  CreateRepository16 creates ruby gems proxy repository
+CreateRubyGemsProxyRepository creates ruby gems proxy repository
 */
-func (a *Client) CreateRepository16(params *CreateRepository16Params, opts ...ClientOption) (*CreateRepository16Created, error) {
+func (a *Client) CreateRubyGemsProxyRepository(params *CreateRubyGemsProxyRepositoryParams, opts ...ClientOption) (*CreateRubyGemsProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository16Params()
+		params = NewCreateRubyGemsProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_16",
@@ -615,7 +615,7 @@ func (a *Client) CreateRepository16(params *CreateRepository16Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository16Reader{formats: a.formats},
+		Reader:             &CreateRubyGemsProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -627,7 +627,7 @@ func (a *Client) CreateRepository16(params *CreateRepository16Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository16Created)
+	success, ok := result.(*CreateRubyGemsProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -638,12 +638,12 @@ func (a *Client) CreateRepository16(params *CreateRepository16Params, opts ...Cl
 }
 
 /*
-  CreateRepository17 creates docker group repository
+CreateDockerGroupRepository creates docker group repository
 */
-func (a *Client) CreateRepository17(params *CreateRepository17Params, opts ...ClientOption) (*CreateRepository17Created, error) {
+func (a *Client) CreateDockerGroupRepository(params *CreateDockerGroupRepositoryParams, opts ...ClientOption) (*CreateDockerGroupRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository17Params()
+		params = NewCreateDockerGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_17",
@@ -653,7 +653,7 @@ func (a *Client) CreateRepository17(params *CreateRepository17Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository17Reader{formats: a.formats},
+		Reader:             &CreateDockerGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -665,7 +665,7 @@ func (a *Client) CreateRepository17(params *CreateRepository17Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository17Created)
+	success, ok := result.(*CreateDockerGroupRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -676,12 +676,12 @@ func (a *Client) CreateRepository17(params *CreateRepository17Params, opts ...Cl
 }
 
 /*
-  CreateRepository18 creates docker hosted repository
+CreateDockerHostedRepository creates docker hosted repository
 */
-func (a *Client) CreateRepository18(params *CreateRepository18Params, opts ...ClientOption) (*CreateRepository18Created, error) {
+func (a *Client) CreateDockerHostedRepository(params *CreateDockerHostedRepositoryParams, opts ...ClientOption) (*CreateDockerHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository18Params()
+		params = NewCreateDockerHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_18",
@@ -691,7 +691,7 @@ func (a *Client) CreateRepository18(params *CreateRepository18Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository18Reader{formats: a.formats},
+		Reader:             &CreateDockerHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -703,7 +703,7 @@ func (a *Client) CreateRepository18(params *CreateRepository18Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository18Created)
+	success, ok := result.(*CreateDockerHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -714,12 +714,12 @@ func (a *Client) CreateRepository18(params *CreateRepository18Params, opts ...Cl
 }
 
 /*
-  CreateRepository19 creates docker proxy repository
+CreateDockerProxyRepository creates docker proxy repository
 */
-func (a *Client) CreateRepository19(params *CreateRepository19Params, opts ...ClientOption) (*CreateRepository19Created, error) {
+func (a *Client) CreateDockerProxyRepository(params *CreateDockerProxyRepositoryParams, opts ...ClientOption) (*CreateDockerProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository19Params()
+		params = NewCreateDockerProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_19",
@@ -729,7 +729,7 @@ func (a *Client) CreateRepository19(params *CreateRepository19Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository19Reader{formats: a.formats},
+		Reader:             &CreateDockerProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -741,7 +741,7 @@ func (a *Client) CreateRepository19(params *CreateRepository19Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository19Created)
+	success, ok := result.(*CreateDockerProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -752,12 +752,12 @@ func (a *Client) CreateRepository19(params *CreateRepository19Params, opts ...Cl
 }
 
 /*
-  CreateRepository2 creates maven proxy repository
+CreateMavenProxyRepository creates maven proxy repository
 */
-func (a *Client) CreateRepository2(params *CreateRepository2Params, opts ...ClientOption) (*CreateRepository2Created, error) {
+func (a *Client) CreateMavenProxyRepository(params *CreateMavenProxyRepositoryParams, opts ...ClientOption) (*CreateMavenProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository2Params()
+		params = NewCreateMavenProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_2",
@@ -767,7 +767,7 @@ func (a *Client) CreateRepository2(params *CreateRepository2Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository2Reader{formats: a.formats},
+		Reader:             &CreateMavenProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -779,7 +779,7 @@ func (a *Client) CreateRepository2(params *CreateRepository2Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository2Created)
+	success, ok := result.(*CreateMavenProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -790,12 +790,12 @@ func (a *Client) CreateRepository2(params *CreateRepository2Params, opts ...Clie
 }
 
 /*
-  CreateRepository20 creates yum group repository
+CreateYumGroupRepository creates yum group repository
 */
-func (a *Client) CreateRepository20(params *CreateRepository20Params, opts ...ClientOption) (*CreateRepository20Created, error) {
+func (a *Client) CreateYumGroupRepository(params *CreateYumGroupRepositoryParams, opts ...ClientOption) (*CreateYumGroupRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository20Params()
+		params = NewCreateYumGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_20",
@@ -805,7 +805,7 @@ func (a *Client) CreateRepository20(params *CreateRepository20Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository20Reader{formats: a.formats},
+		Reader:             &CreateYumGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -817,7 +817,7 @@ func (a *Client) CreateRepository20(params *CreateRepository20Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository20Created)
+	success, ok := result.(*CreateYumGroupRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -828,12 +828,12 @@ func (a *Client) CreateRepository20(params *CreateRepository20Params, opts ...Cl
 }
 
 /*
-  CreateRepository21 creates yum hosted repository
+CreateYumHostedRepository creates yum hosted repository
 */
-func (a *Client) CreateRepository21(params *CreateRepository21Params, opts ...ClientOption) (*CreateRepository21Created, error) {
+func (a *Client) CreateYumHostedRepository(params *CreateYumHostedRepositoryParams, opts ...ClientOption) (*CreateYumHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository21Params()
+		params = NewCreateYumHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_21",
@@ -843,7 +843,7 @@ func (a *Client) CreateRepository21(params *CreateRepository21Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository21Reader{formats: a.formats},
+		Reader:             &CreateYumHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -855,7 +855,7 @@ func (a *Client) CreateRepository21(params *CreateRepository21Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository21Created)
+	success, ok := result.(*CreateYumHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -866,12 +866,12 @@ func (a *Client) CreateRepository21(params *CreateRepository21Params, opts ...Cl
 }
 
 /*
-  CreateRepository22 creates yum proxy repository
+CreateYumProxyRepository creates yum proxy repository
 */
-func (a *Client) CreateRepository22(params *CreateRepository22Params, opts ...ClientOption) (*CreateRepository22Created, error) {
+func (a *Client) CreateYumProxyRepository(params *CreateYumProxyRepositoryParams, opts ...ClientOption) (*CreateYumProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository22Params()
+		params = NewCreateYumProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_22",
@@ -881,7 +881,7 @@ func (a *Client) CreateRepository22(params *CreateRepository22Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository22Reader{formats: a.formats},
+		Reader:             &CreateYumProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -893,7 +893,7 @@ func (a *Client) CreateRepository22(params *CreateRepository22Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository22Created)
+	success, ok := result.(*CreateYumProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -904,12 +904,12 @@ func (a *Client) CreateRepository22(params *CreateRepository22Params, opts ...Cl
 }
 
 /*
-  CreateRepository23 creates helm hosted repository
+CreateHelmHostedRepository creates helm hosted repository
 */
-func (a *Client) CreateRepository23(params *CreateRepository23Params, opts ...ClientOption) (*CreateRepository23Created, error) {
+func (a *Client) CreateHelmHostedRepository(params *CreateHelmHostedRepositoryParams, opts ...ClientOption) (*CreateHelmHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository23Params()
+		params = NewCreateHelmHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_23",
@@ -919,7 +919,7 @@ func (a *Client) CreateRepository23(params *CreateRepository23Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository23Reader{formats: a.formats},
+		Reader:             &CreateHelmHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -931,7 +931,7 @@ func (a *Client) CreateRepository23(params *CreateRepository23Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository23Created)
+	success, ok := result.(*CreateHelmHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -942,12 +942,12 @@ func (a *Client) CreateRepository23(params *CreateRepository23Params, opts ...Cl
 }
 
 /*
-  CreateRepository24 creates helm proxy repository
+CreateHelmProxyRepository creates helm proxy repository
 */
-func (a *Client) CreateRepository24(params *CreateRepository24Params, opts ...ClientOption) (*CreateRepository24Created, error) {
+func (a *Client) CreateHelmProxyRepository(params *CreateHelmProxyRepositoryParams, opts ...ClientOption) (*CreateHelmProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository24Params()
+		params = NewCreateHelmProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_24",
@@ -957,7 +957,7 @@ func (a *Client) CreateRepository24(params *CreateRepository24Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository24Reader{formats: a.formats},
+		Reader:             &CreateHelmProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -969,7 +969,7 @@ func (a *Client) CreateRepository24(params *CreateRepository24Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository24Created)
+	success, ok := result.(*CreateHelmProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -980,12 +980,12 @@ func (a *Client) CreateRepository24(params *CreateRepository24Params, opts ...Cl
 }
 
 /*
-  CreateRepository25 creates git l f s hosted repository
+CreateGitLfsHostedRepository creates git l f s hosted repository
 */
-func (a *Client) CreateRepository25(params *CreateRepository25Params, opts ...ClientOption) (*CreateRepository25Created, error) {
+func (a *Client) CreateGitLfsHostedRepository(params *CreateGitLfsHostedRepositoryParams, opts ...ClientOption) (*CreateGitLfsHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository25Params()
+		params = NewCreateGitLfsHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_25",
@@ -995,7 +995,7 @@ func (a *Client) CreateRepository25(params *CreateRepository25Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository25Reader{formats: a.formats},
+		Reader:             &CreateGitLfsHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1007,7 +1007,7 @@ func (a *Client) CreateRepository25(params *CreateRepository25Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository25Created)
+	success, ok := result.(*CreateGitLfsHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1018,12 +1018,12 @@ func (a *Client) CreateRepository25(params *CreateRepository25Params, opts ...Cl
 }
 
 /*
-  CreateRepository26 creates py p i group repository
+CreatePypiGroupRepository creates py p i group repository
 */
-func (a *Client) CreateRepository26(params *CreateRepository26Params, opts ...ClientOption) (*CreateRepository26Created, error) {
+func (a *Client) CreatePypiGroupRepository(params *CreatePypiGroupRepositoryParams, opts ...ClientOption) (*CreatePypiGroupRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository26Params()
+		params = NewCreatePypiGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_26",
@@ -1033,7 +1033,7 @@ func (a *Client) CreateRepository26(params *CreateRepository26Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository26Reader{formats: a.formats},
+		Reader:             &CreatePypiGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1045,7 +1045,7 @@ func (a *Client) CreateRepository26(params *CreateRepository26Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository26Created)
+	success, ok := result.(*CreatePypiGroupRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1056,12 +1056,12 @@ func (a *Client) CreateRepository26(params *CreateRepository26Params, opts ...Cl
 }
 
 /*
-  CreateRepository27 creates py p i hosted repository
+CreatePypiHostedRepository creates py p i hosted repository
 */
-func (a *Client) CreateRepository27(params *CreateRepository27Params, opts ...ClientOption) (*CreateRepository27Created, error) {
+func (a *Client) CreatePypiHostedRepository(params *CreatePypiHostedRepositoryParams, opts ...ClientOption) (*CreatePypiHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository27Params()
+		params = NewCreatePypiHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_27",
@@ -1071,7 +1071,7 @@ func (a *Client) CreateRepository27(params *CreateRepository27Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository27Reader{formats: a.formats},
+		Reader:             &CreatePypiHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1083,7 +1083,7 @@ func (a *Client) CreateRepository27(params *CreateRepository27Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository27Created)
+	success, ok := result.(*CreatePypiHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1094,12 +1094,12 @@ func (a *Client) CreateRepository27(params *CreateRepository27Params, opts ...Cl
 }
 
 /*
-  CreateRepository28 creates py p i proxy repository
+CreatePypiProxyRepository creates py p i proxy repository
 */
-func (a *Client) CreateRepository28(params *CreateRepository28Params, opts ...ClientOption) (*CreateRepository28Created, error) {
+func (a *Client) CreatePypiProxyRepository(params *CreatePypiProxyRepositoryParams, opts ...ClientOption) (*CreatePypiProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository28Params()
+		params = NewCreatePypiProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_28",
@@ -1109,7 +1109,7 @@ func (a *Client) CreateRepository28(params *CreateRepository28Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository28Reader{formats: a.formats},
+		Reader:             &CreatePypiProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1121,7 +1121,7 @@ func (a *Client) CreateRepository28(params *CreateRepository28Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository28Created)
+	success, ok := result.(*CreatePypiProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1132,12 +1132,12 @@ func (a *Client) CreateRepository28(params *CreateRepository28Params, opts ...Cl
 }
 
 /*
-  CreateRepository29 creates conda proxy repository
+CreateCondaProxyRepository creates conda proxy repository
 */
-func (a *Client) CreateRepository29(params *CreateRepository29Params, opts ...ClientOption) (*CreateRepository29Created, error) {
+func (a *Client) CreateCondaProxyRepository(params *CreateCondaProxyRepositoryParams, opts ...ClientOption) (*CreateCondaProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository29Params()
+		params = NewCreateCondaProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_29",
@@ -1147,7 +1147,7 @@ func (a *Client) CreateRepository29(params *CreateRepository29Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository29Reader{formats: a.formats},
+		Reader:             &CreateCondaProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1159,7 +1159,7 @@ func (a *Client) CreateRepository29(params *CreateRepository29Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository29Created)
+	success, ok := result.(*CreateCondaProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1170,12 +1170,12 @@ func (a *Client) CreateRepository29(params *CreateRepository29Params, opts ...Cl
 }
 
 /*
-  CreateRepository3 creates a p t hosted repository
+CreateAptHostedRepository creates a p t hosted repository
 */
-func (a *Client) CreateRepository3(params *CreateRepository3Params, opts ...ClientOption) (*CreateRepository3Created, error) {
+func (a *Client) CreateAptHostedRepository(params *CreateAptHostedRepositoryParams, opts ...ClientOption) (*CreateAptHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository3Params()
+		params = NewCreateAptHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_3",
@@ -1185,7 +1185,7 @@ func (a *Client) CreateRepository3(params *CreateRepository3Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository3Reader{formats: a.formats},
+		Reader:             &CreateAptHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1197,7 +1197,7 @@ func (a *Client) CreateRepository3(params *CreateRepository3Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository3Created)
+	success, ok := result.(*CreateAptHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1208,12 +1208,12 @@ func (a *Client) CreateRepository3(params *CreateRepository3Params, opts ...Clie
 }
 
 /*
-  CreateRepository30 creates conan proxy repository
+CreateConanProxyRepository creates conan proxy repository
 */
-func (a *Client) CreateRepository30(params *CreateRepository30Params, opts ...ClientOption) (*CreateRepository30Created, error) {
+func (a *Client) CreateConanProxyRepository(params *CreateConanProxyRepositoryParams, opts ...ClientOption) (*CreateConanProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository30Params()
+		params = NewCreateConanProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_30",
@@ -1223,7 +1223,7 @@ func (a *Client) CreateRepository30(params *CreateRepository30Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository30Reader{formats: a.formats},
+		Reader:             &CreateConanProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1235,7 +1235,7 @@ func (a *Client) CreateRepository30(params *CreateRepository30Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository30Created)
+	success, ok := result.(*CreateConanProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1246,12 +1246,12 @@ func (a *Client) CreateRepository30(params *CreateRepository30Params, opts ...Cl
 }
 
 /*
-  CreateRepository31 creates r group repository
+CreateRGroupRepository creates r group repository
 */
-func (a *Client) CreateRepository31(params *CreateRepository31Params, opts ...ClientOption) (*CreateRepository31Created, error) {
+func (a *Client) CreateRGroupRepository(params *CreateRGroupRepositoryParams, opts ...ClientOption) (*CreateRGroupRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository31Params()
+		params = NewCreateRGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_31",
@@ -1261,7 +1261,7 @@ func (a *Client) CreateRepository31(params *CreateRepository31Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository31Reader{formats: a.formats},
+		Reader:             &CreateRGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1273,7 +1273,7 @@ func (a *Client) CreateRepository31(params *CreateRepository31Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository31Created)
+	success, ok := result.(*CreateRGroupRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1284,12 +1284,12 @@ func (a *Client) CreateRepository31(params *CreateRepository31Params, opts ...Cl
 }
 
 /*
-  CreateRepository32 creates r hosted repository
+CreateRHostedRepository creates r hosted repository
 */
-func (a *Client) CreateRepository32(params *CreateRepository32Params, opts ...ClientOption) (*CreateRepository32Created, error) {
+func (a *Client) CreateRHostedRepository(params *CreateRHostedRepositoryParams, opts ...ClientOption) (*CreateRHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository32Params()
+		params = NewCreateRHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_32",
@@ -1299,7 +1299,7 @@ func (a *Client) CreateRepository32(params *CreateRepository32Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository32Reader{formats: a.formats},
+		Reader:             &CreateRHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1311,7 +1311,7 @@ func (a *Client) CreateRepository32(params *CreateRepository32Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository32Created)
+	success, ok := result.(*CreateRHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1322,12 +1322,12 @@ func (a *Client) CreateRepository32(params *CreateRepository32Params, opts ...Cl
 }
 
 /*
-  CreateRepository33 creates r proxy repository
+CreateRProxyRepository creates r proxy repository
 */
-func (a *Client) CreateRepository33(params *CreateRepository33Params, opts ...ClientOption) (*CreateRepository33Created, error) {
+func (a *Client) CreateRProxyRepository(params *CreateRProxyRepositoryParams, opts ...ClientOption) (*CreateRProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository33Params()
+		params = NewCreateRProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_33",
@@ -1337,7 +1337,7 @@ func (a *Client) CreateRepository33(params *CreateRepository33Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository33Reader{formats: a.formats},
+		Reader:             &CreateRProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1349,7 +1349,7 @@ func (a *Client) CreateRepository33(params *CreateRepository33Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository33Created)
+	success, ok := result.(*CreateRProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1360,12 +1360,12 @@ func (a *Client) CreateRepository33(params *CreateRepository33Params, opts ...Cl
 }
 
 /*
-  CreateRepository34 creates cocoapods proxy repository
+CreateCocoapodsProxyRepository creates cocoapods proxy repository
 */
-func (a *Client) CreateRepository34(params *CreateRepository34Params, opts ...ClientOption) (*CreateRepository34Created, error) {
+func (a *Client) CreateCocoapodsProxyRepository(params *CreateCocoapodsProxyRepositoryParams, opts ...ClientOption) (*CreateCocoapodsProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository34Params()
+		params = NewCreateCocoapodsProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_34",
@@ -1375,7 +1375,7 @@ func (a *Client) CreateRepository34(params *CreateRepository34Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository34Reader{formats: a.formats},
+		Reader:             &CreateCocoapodsProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1387,7 +1387,7 @@ func (a *Client) CreateRepository34(params *CreateRepository34Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository34Created)
+	success, ok := result.(*CreateCocoapodsProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1398,12 +1398,12 @@ func (a *Client) CreateRepository34(params *CreateRepository34Params, opts ...Cl
 }
 
 /*
-  CreateRepository35 creates a go group repository
+CreateGolangGroupRepository creates a go group repository
 */
-func (a *Client) CreateRepository35(params *CreateRepository35Params, opts ...ClientOption) (*CreateRepository35Created, error) {
+func (a *Client) CreateGolangGroupRepository(params *CreateGolangGroupRepositoryParams, opts ...ClientOption) (*CreateGolangGroupRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository35Params()
+		params = NewCreateGolangGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_35",
@@ -1413,7 +1413,7 @@ func (a *Client) CreateRepository35(params *CreateRepository35Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository35Reader{formats: a.formats},
+		Reader:             &CreateGolangGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1425,7 +1425,7 @@ func (a *Client) CreateRepository35(params *CreateRepository35Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository35Created)
+	success, ok := result.(*CreateGolangGroupRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1436,12 +1436,12 @@ func (a *Client) CreateRepository35(params *CreateRepository35Params, opts ...Cl
 }
 
 /*
-  CreateRepository36 creates a go proxy repository
+CreateGolangProxyRepository creates a go proxy repository
 */
-func (a *Client) CreateRepository36(params *CreateRepository36Params, opts ...ClientOption) (*CreateRepository36Created, error) {
+func (a *Client) CreateGolangProxyRepository(params *CreateGolangProxyRepositoryParams, opts ...ClientOption) (*CreateGolangProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository36Params()
+		params = NewCreateGolangProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_36",
@@ -1451,7 +1451,7 @@ func (a *Client) CreateRepository36(params *CreateRepository36Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository36Reader{formats: a.formats},
+		Reader:             &CreateGolangProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1463,7 +1463,7 @@ func (a *Client) CreateRepository36(params *CreateRepository36Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository36Created)
+	success, ok := result.(*CreateGolangProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1474,12 +1474,12 @@ func (a *Client) CreateRepository36(params *CreateRepository36Params, opts ...Cl
 }
 
 /*
-  CreateRepository37 creates p2 proxy repository
+CreateP2ProxyRepository creates p2 proxy repository
 */
-func (a *Client) CreateRepository37(params *CreateRepository37Params, opts ...ClientOption) (*CreateRepository37Created, error) {
+func (a *Client) CreateP2ProxyRepository(params *CreateP2ProxyRepositoryParams, opts ...ClientOption) (*CreateP2ProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository37Params()
+		params = NewCreateP2ProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_37",
@@ -1489,7 +1489,7 @@ func (a *Client) CreateRepository37(params *CreateRepository37Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository37Reader{formats: a.formats},
+		Reader:             &CreateP2ProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1501,7 +1501,7 @@ func (a *Client) CreateRepository37(params *CreateRepository37Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository37Created)
+	success, ok := result.(*CreateP2ProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1512,12 +1512,12 @@ func (a *Client) CreateRepository37(params *CreateRepository37Params, opts ...Cl
 }
 
 /*
-  CreateRepository38 creates bower group repository
+CreateBowerGroupRepository creates bower group repository
 */
-func (a *Client) CreateRepository38(params *CreateRepository38Params, opts ...ClientOption) (*CreateRepository38Created, error) {
+func (a *Client) CreateBowerGroupRepository(params *CreateBowerGroupRepositoryParams, opts ...ClientOption) (*CreateBowerGroupRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository38Params()
+		params = NewCreateBowerGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_38",
@@ -1527,7 +1527,7 @@ func (a *Client) CreateRepository38(params *CreateRepository38Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository38Reader{formats: a.formats},
+		Reader:             &CreateBowerGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1539,7 +1539,7 @@ func (a *Client) CreateRepository38(params *CreateRepository38Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository38Created)
+	success, ok := result.(*CreateBowerGroupRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1550,12 +1550,12 @@ func (a *Client) CreateRepository38(params *CreateRepository38Params, opts ...Cl
 }
 
 /*
-  CreateRepository39 creates bower hosted repository
+CreateBowerHostedRepository creates bower hosted repository
 */
-func (a *Client) CreateRepository39(params *CreateRepository39Params, opts ...ClientOption) (*CreateRepository39Created, error) {
+func (a *Client) CreateBowerHostedRepository(params *CreateBowerHostedRepositoryParams, opts ...ClientOption) (*CreateBowerHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository39Params()
+		params = NewCreateBowerHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_39",
@@ -1565,7 +1565,7 @@ func (a *Client) CreateRepository39(params *CreateRepository39Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository39Reader{formats: a.formats},
+		Reader:             &CreateBowerHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1577,7 +1577,7 @@ func (a *Client) CreateRepository39(params *CreateRepository39Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository39Created)
+	success, ok := result.(*CreateBowerHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1588,12 +1588,12 @@ func (a *Client) CreateRepository39(params *CreateRepository39Params, opts ...Cl
 }
 
 /*
-  CreateRepository4 creates a p t proxy repository
+CreateAptProxyRepository creates a p t proxy repository
 */
-func (a *Client) CreateRepository4(params *CreateRepository4Params, opts ...ClientOption) (*CreateRepository4Created, error) {
+func (a *Client) CreateAptProxyRepository(params *CreateAptProxyRepositoryParams, opts ...ClientOption) (*CreateAptProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository4Params()
+		params = NewCreateAptProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_4",
@@ -1603,7 +1603,7 @@ func (a *Client) CreateRepository4(params *CreateRepository4Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository4Reader{formats: a.formats},
+		Reader:             &CreateAptProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1615,7 +1615,7 @@ func (a *Client) CreateRepository4(params *CreateRepository4Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository4Created)
+	success, ok := result.(*CreateAptProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1626,12 +1626,12 @@ func (a *Client) CreateRepository4(params *CreateRepository4Params, opts ...Clie
 }
 
 /*
-  CreateRepository40 creates bower proxy repository
+CreateBowerProxyRepository creates bower proxy repository
 */
-func (a *Client) CreateRepository40(params *CreateRepository40Params, opts ...ClientOption) (*CreateRepository40Created, error) {
+func (a *Client) CreateBowerProxyRepository(params *CreateBowerProxyRepositoryParams, opts ...ClientOption) (*CreateBowerProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository40Params()
+		params = NewCreateBowerProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_40",
@@ -1641,7 +1641,7 @@ func (a *Client) CreateRepository40(params *CreateRepository40Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository40Reader{formats: a.formats},
+		Reader:             &CreateBowerProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1653,7 +1653,7 @@ func (a *Client) CreateRepository40(params *CreateRepository40Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository40Created)
+	success, ok := result.(*CreateBowerProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1664,12 +1664,12 @@ func (a *Client) CreateRepository40(params *CreateRepository40Params, opts ...Cl
 }
 
 /*
-  CreateRepository5 creates raw group repository
+CreateRawGroupRepository creates raw group repository
 */
-func (a *Client) CreateRepository5(params *CreateRepository5Params, opts ...ClientOption) (*CreateRepository5Created, error) {
+func (a *Client) CreateRawGroupRepository(params *CreateRawGroupRepositoryParams, opts ...ClientOption) (*CreateRawGroupRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository5Params()
+		params = NewCreateRawGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_5",
@@ -1679,7 +1679,7 @@ func (a *Client) CreateRepository5(params *CreateRepository5Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository5Reader{formats: a.formats},
+		Reader:             &CreateRawGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1691,7 +1691,7 @@ func (a *Client) CreateRepository5(params *CreateRepository5Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository5Created)
+	success, ok := result.(*CreateRawGroupRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1702,12 +1702,12 @@ func (a *Client) CreateRepository5(params *CreateRepository5Params, opts ...Clie
 }
 
 /*
-  CreateRepository6 creates raw hosted repository
+CreateRawHostedRepository creates raw hosted repository
 */
-func (a *Client) CreateRepository6(params *CreateRepository6Params, opts ...ClientOption) (*CreateRepository6Created, error) {
+func (a *Client) CreateRawHostedRepository(params *CreateRawHostedRepositoryParams, opts ...ClientOption) (*CreateRawHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository6Params()
+		params = NewCreateRawHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_6",
@@ -1717,7 +1717,7 @@ func (a *Client) CreateRepository6(params *CreateRepository6Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository6Reader{formats: a.formats},
+		Reader:             &CreateRawHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1729,7 +1729,7 @@ func (a *Client) CreateRepository6(params *CreateRepository6Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository6Created)
+	success, ok := result.(*CreateRawHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1740,12 +1740,12 @@ func (a *Client) CreateRepository6(params *CreateRepository6Params, opts ...Clie
 }
 
 /*
-  CreateRepository7 creates raw proxy repository
+CreateRawProxyRepository creates raw proxy repository
 */
-func (a *Client) CreateRepository7(params *CreateRepository7Params, opts ...ClientOption) (*CreateRepository7Created, error) {
+func (a *Client) CreateRawProxyRepository(params *CreateRawProxyRepositoryParams, opts ...ClientOption) (*CreateRawProxyRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository7Params()
+		params = NewCreateRawProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_7",
@@ -1755,7 +1755,7 @@ func (a *Client) CreateRepository7(params *CreateRepository7Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository7Reader{formats: a.formats},
+		Reader:             &CreateRawProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1767,7 +1767,7 @@ func (a *Client) CreateRepository7(params *CreateRepository7Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository7Created)
+	success, ok := result.(*CreateRawProxyRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1778,12 +1778,12 @@ func (a *Client) CreateRepository7(params *CreateRepository7Params, opts ...Clie
 }
 
 /*
-  CreateRepository8 creates npm group repository
+CreateNpmGroupRepository creates npm group repository
 */
-func (a *Client) CreateRepository8(params *CreateRepository8Params, opts ...ClientOption) (*CreateRepository8Created, error) {
+func (a *Client) CreateNpmGroupRepository(params *CreateNpmGroupRepositoryParams, opts ...ClientOption) (*CreateNpmGroupRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository8Params()
+		params = NewCreateNpmGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_8",
@@ -1793,7 +1793,7 @@ func (a *Client) CreateRepository8(params *CreateRepository8Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository8Reader{formats: a.formats},
+		Reader:             &CreateNpmGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1805,7 +1805,7 @@ func (a *Client) CreateRepository8(params *CreateRepository8Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository8Created)
+	success, ok := result.(*CreateNpmGroupRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1816,12 +1816,12 @@ func (a *Client) CreateRepository8(params *CreateRepository8Params, opts ...Clie
 }
 
 /*
-  CreateRepository9 creates npm hosted repository
+CreateNpmHostedRepository creates npm hosted repository
 */
-func (a *Client) CreateRepository9(params *CreateRepository9Params, opts ...ClientOption) (*CreateRepository9Created, error) {
+func (a *Client) CreateNpmHostedRepository(params *CreateNpmHostedRepositoryParams, opts ...ClientOption) (*CreateNpmHostedRepositoryCreated, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewCreateRepository9Params()
+		params = NewCreateNpmHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "createRepository_9",
@@ -1831,7 +1831,7 @@ func (a *Client) CreateRepository9(params *CreateRepository9Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &CreateRepository9Reader{formats: a.formats},
+		Reader:             &CreateNpmHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -1843,7 +1843,7 @@ func (a *Client) CreateRepository9(params *CreateRepository9Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*CreateRepository9Created)
+	success, ok := result.(*CreateNpmHostedRepositoryCreated)
 	if ok {
 		return success, nil
 	}
@@ -1854,7 +1854,7 @@ func (a *Client) CreateRepository9(params *CreateRepository9Params, opts ...Clie
 }
 
 /*
-  DeleteRepository deletes repository of any format
+DeleteRepository deletes repository of any format
 */
 func (a *Client) DeleteRepository(params *DeleteRepositoryParams, opts ...ClientOption) (*DeleteRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1892,7 +1892,7 @@ func (a *Client) DeleteRepository(params *DeleteRepositoryParams, opts ...Client
 }
 
 /*
-  DisableRepositoryHealthCheck disables repository health check proxy repositories only
+DisableRepositoryHealthCheck disables repository health check proxy repositories only
 */
 func (a *Client) DisableRepositoryHealthCheck(params *DisableRepositoryHealthCheckParams, opts ...ClientOption) (*DisableRepositoryHealthCheckNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1930,7 +1930,7 @@ func (a *Client) DisableRepositoryHealthCheck(params *DisableRepositoryHealthChe
 }
 
 /*
-  EnableRepositoryHealthCheck enables repository health check proxy repositories only
+EnableRepositoryHealthCheck enables repository health check proxy repositories only
 */
 func (a *Client) EnableRepositoryHealthCheck(params *EnableRepositoryHealthCheckParams, opts ...ClientOption) (*EnableRepositoryHealthCheckNoContent, error) {
 	// TODO: Validate the params before sending
@@ -1968,7 +1968,7 @@ func (a *Client) EnableRepositoryHealthCheck(params *EnableRepositoryHealthCheck
 }
 
 /*
-  GetRepositories lists repositories
+GetRepositories lists repositories
 */
 func (a *Client) GetRepositories(params *GetRepositoriesParams, opts ...ClientOption) (*GetRepositoriesOK, error) {
 	// TODO: Validate the params before sending
@@ -2006,7 +2006,7 @@ func (a *Client) GetRepositories(params *GetRepositoriesParams, opts ...ClientOp
 }
 
 /*
-  GetRepositories1 lists repositories
+GetRepositories1 lists repositories
 */
 func (a *Client) GetRepositories1(params *GetRepositories1Params, opts ...ClientOption) (*GetRepositories1OK, error) {
 	// TODO: Validate the params before sending
@@ -2044,7 +2044,7 @@ func (a *Client) GetRepositories1(params *GetRepositories1Params, opts ...Client
 }
 
 /*
-  GetRepository gets repository details
+GetRepository gets repository details
 */
 func (a *Client) GetRepository(params *GetRepositoryParams, opts ...ClientOption) (*GetRepositoryOK, error) {
 	// TODO: Validate the params before sending
@@ -2082,12 +2082,12 @@ func (a *Client) GetRepository(params *GetRepositoryParams, opts ...ClientOption
 }
 
 /*
-  GetRepository1 gets repository
+GetMavenGroupRepository gets repository
 */
-func (a *Client) GetRepository1(params *GetRepository1Params, opts ...ClientOption) (*GetRepository1OK, error) {
+func (a *Client) GetMavenGroupRepository(params *GetMavenGroupRepositoryParams, opts ...ClientOption) (*GetMavenGroupRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository1Params()
+		params = NewGetMavenGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_1",
@@ -2097,7 +2097,7 @@ func (a *Client) GetRepository1(params *GetRepository1Params, opts ...ClientOpti
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository1Reader{formats: a.formats},
+		Reader:             &GetMavenGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2109,7 +2109,7 @@ func (a *Client) GetRepository1(params *GetRepository1Params, opts ...ClientOpti
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository1OK)
+	success, ok := result.(*GetMavenGroupRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2120,12 +2120,12 @@ func (a *Client) GetRepository1(params *GetRepository1Params, opts ...ClientOpti
 }
 
 /*
-  GetRepository10 gets repository
+GetNpmHostedRepository gets repository
 */
-func (a *Client) GetRepository10(params *GetRepository10Params, opts ...ClientOption) (*GetRepository10OK, error) {
+func (a *Client) GetNpmHostedRepository(params *GetNpmHostedRepositoryParams, opts ...ClientOption) (*GetNpmHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository10Params()
+		params = NewGetNpmHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_10",
@@ -2135,7 +2135,7 @@ func (a *Client) GetRepository10(params *GetRepository10Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository10Reader{formats: a.formats},
+		Reader:             &GetNpmHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2147,7 +2147,7 @@ func (a *Client) GetRepository10(params *GetRepository10Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository10OK)
+	success, ok := result.(*GetNpmHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2158,12 +2158,12 @@ func (a *Client) GetRepository10(params *GetRepository10Params, opts ...ClientOp
 }
 
 /*
-  GetRepository11 gets repository
+GetNpmProxyRepository gets repository
 */
-func (a *Client) GetRepository11(params *GetRepository11Params, opts ...ClientOption) (*GetRepository11OK, error) {
+func (a *Client) GetNpmProxyRepository(params *GetNpmProxyRepositoryParams, opts ...ClientOption) (*GetNpmProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository11Params()
+		params = NewGetNpmProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_11",
@@ -2173,7 +2173,7 @@ func (a *Client) GetRepository11(params *GetRepository11Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository11Reader{formats: a.formats},
+		Reader:             &GetNpmProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2185,7 +2185,7 @@ func (a *Client) GetRepository11(params *GetRepository11Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository11OK)
+	success, ok := result.(*GetNpmProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2196,12 +2196,12 @@ func (a *Client) GetRepository11(params *GetRepository11Params, opts ...ClientOp
 }
 
 /*
-  GetRepository12 gets repository
+GetNugetGroupRepository gets repository
 */
-func (a *Client) GetRepository12(params *GetRepository12Params, opts ...ClientOption) (*GetRepository12OK, error) {
+func (a *Client) GetNugetGroupRepository(params *GetNugetGroupRepositoryParams, opts ...ClientOption) (*GetNugetGroupRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository12Params()
+		params = NewGetNugetGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_12",
@@ -2211,7 +2211,7 @@ func (a *Client) GetRepository12(params *GetRepository12Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository12Reader{formats: a.formats},
+		Reader:             &GetNugetGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2223,7 +2223,7 @@ func (a *Client) GetRepository12(params *GetRepository12Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository12OK)
+	success, ok := result.(*GetNugetGroupRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2234,12 +2234,12 @@ func (a *Client) GetRepository12(params *GetRepository12Params, opts ...ClientOp
 }
 
 /*
-  GetRepository13 gets repository
+GetNugetHostedRepository gets repository
 */
-func (a *Client) GetRepository13(params *GetRepository13Params, opts ...ClientOption) (*GetRepository13OK, error) {
+func (a *Client) GetNugetHostedRepository(params *GetNugetHostedRepositoryParams, opts ...ClientOption) (*GetNugetHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository13Params()
+		params = NewGetNugetHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_13",
@@ -2249,7 +2249,7 @@ func (a *Client) GetRepository13(params *GetRepository13Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository13Reader{formats: a.formats},
+		Reader:             &GetNugetHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2261,7 +2261,7 @@ func (a *Client) GetRepository13(params *GetRepository13Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository13OK)
+	success, ok := result.(*GetNugetHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2272,12 +2272,12 @@ func (a *Client) GetRepository13(params *GetRepository13Params, opts ...ClientOp
 }
 
 /*
-  GetRepository14 gets repository
+GetNugetProxyRepository gets repository
 */
-func (a *Client) GetRepository14(params *GetRepository14Params, opts ...ClientOption) (*GetRepository14OK, error) {
+func (a *Client) GetNugetProxyRepository(params *GetNugetProxyRepositoryParams, opts ...ClientOption) (*GetNugetProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository14Params()
+		params = NewGetNugetProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_14",
@@ -2287,7 +2287,7 @@ func (a *Client) GetRepository14(params *GetRepository14Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository14Reader{formats: a.formats},
+		Reader:             &GetNugetProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2299,7 +2299,7 @@ func (a *Client) GetRepository14(params *GetRepository14Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository14OK)
+	success, ok := result.(*GetNugetProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2310,12 +2310,12 @@ func (a *Client) GetRepository14(params *GetRepository14Params, opts ...ClientOp
 }
 
 /*
-  GetRepository15 gets repository
+GetRubyGemsGroupRepository gets repository
 */
-func (a *Client) GetRepository15(params *GetRepository15Params, opts ...ClientOption) (*GetRepository15OK, error) {
+func (a *Client) GetRubyGemsGroupRepository(params *GetRubyGemsGroupRepositoryParams, opts ...ClientOption) (*GetRubyGemsGroupRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository15Params()
+		params = NewGetRubyGemsGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_15",
@@ -2325,7 +2325,7 @@ func (a *Client) GetRepository15(params *GetRepository15Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository15Reader{formats: a.formats},
+		Reader:             &GetRubyGemsGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2337,7 +2337,7 @@ func (a *Client) GetRepository15(params *GetRepository15Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository15OK)
+	success, ok := result.(*GetRubyGemsGroupRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2348,12 +2348,12 @@ func (a *Client) GetRepository15(params *GetRepository15Params, opts ...ClientOp
 }
 
 /*
-  GetRepository16 gets repository
+GetRubyGemsHostedRepository gets repository
 */
-func (a *Client) GetRepository16(params *GetRepository16Params, opts ...ClientOption) (*GetRepository16OK, error) {
+func (a *Client) GetRubyGemsHostedRepository(params *GetRubyGemsHostedRepositoryParams, opts ...ClientOption) (*GetRubyGemsHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository16Params()
+		params = NewGetRubyGemsHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_16",
@@ -2363,7 +2363,7 @@ func (a *Client) GetRepository16(params *GetRepository16Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository16Reader{formats: a.formats},
+		Reader:             &GetRubyGemsHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2375,7 +2375,7 @@ func (a *Client) GetRepository16(params *GetRepository16Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository16OK)
+	success, ok := result.(*GetRubyGemsHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2386,12 +2386,12 @@ func (a *Client) GetRepository16(params *GetRepository16Params, opts ...ClientOp
 }
 
 /*
-  GetRepository17 gets repository
+GetRubyGemsProxyRepository gets repository
 */
-func (a *Client) GetRepository17(params *GetRepository17Params, opts ...ClientOption) (*GetRepository17OK, error) {
+func (a *Client) GetRubyGemsProxyRepository(params *GetRubyGemsProxyRepositoryParams, opts ...ClientOption) (*GetRubyGemsProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository17Params()
+		params = NewGetRubyGemsProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_17",
@@ -2401,7 +2401,7 @@ func (a *Client) GetRepository17(params *GetRepository17Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository17Reader{formats: a.formats},
+		Reader:             &GetRubyGemsProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2413,7 +2413,7 @@ func (a *Client) GetRepository17(params *GetRepository17Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository17OK)
+	success, ok := result.(*GetRubyGemsProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2424,12 +2424,12 @@ func (a *Client) GetRepository17(params *GetRepository17Params, opts ...ClientOp
 }
 
 /*
-  GetRepository18 gets repository
+GetDockerGroupRepository gets repository
 */
-func (a *Client) GetRepository18(params *GetRepository18Params, opts ...ClientOption) (*GetRepository18OK, error) {
+func (a *Client) GetDockerGroupRepository(params *GetDockerGroupRepositoryParams, opts ...ClientOption) (*GetDockerGroupRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository18Params()
+		params = NewGetDockerGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_18",
@@ -2439,7 +2439,7 @@ func (a *Client) GetRepository18(params *GetRepository18Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository18Reader{formats: a.formats},
+		Reader:             &GetDockerGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2451,7 +2451,7 @@ func (a *Client) GetRepository18(params *GetRepository18Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository18OK)
+	success, ok := result.(*GetDockerGroupRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2462,12 +2462,12 @@ func (a *Client) GetRepository18(params *GetRepository18Params, opts ...ClientOp
 }
 
 /*
-  GetRepository19 gets repository
+GetDockerHostedRepository gets repository
 */
-func (a *Client) GetRepository19(params *GetRepository19Params, opts ...ClientOption) (*GetRepository19OK, error) {
+func (a *Client) GetDockerHostedRepository(params *GetDockerHostedRepositoryParams, opts ...ClientOption) (*GetDockerHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository19Params()
+		params = NewGetDockerHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_19",
@@ -2477,7 +2477,7 @@ func (a *Client) GetRepository19(params *GetRepository19Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository19Reader{formats: a.formats},
+		Reader:             &GetDockerHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2489,7 +2489,7 @@ func (a *Client) GetRepository19(params *GetRepository19Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository19OK)
+	success, ok := result.(*GetDockerHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2500,12 +2500,12 @@ func (a *Client) GetRepository19(params *GetRepository19Params, opts ...ClientOp
 }
 
 /*
-  GetRepository2 gets repository
+GetMavenHostedRepository gets repository
 */
-func (a *Client) GetRepository2(params *GetRepository2Params, opts ...ClientOption) (*GetRepository2OK, error) {
+func (a *Client) GetMavenHostedRepository(params *GetMavenHostedRepositoryParams, opts ...ClientOption) (*GetMavenHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository2Params()
+		params = NewGetMavenHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_2",
@@ -2515,7 +2515,7 @@ func (a *Client) GetRepository2(params *GetRepository2Params, opts ...ClientOpti
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository2Reader{formats: a.formats},
+		Reader:             &GetMavenHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2527,7 +2527,7 @@ func (a *Client) GetRepository2(params *GetRepository2Params, opts ...ClientOpti
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository2OK)
+	success, ok := result.(*GetMavenHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2538,12 +2538,12 @@ func (a *Client) GetRepository2(params *GetRepository2Params, opts ...ClientOpti
 }
 
 /*
-  GetRepository20 gets repository
+GetDockerProxyRepository gets repository
 */
-func (a *Client) GetRepository20(params *GetRepository20Params, opts ...ClientOption) (*GetRepository20OK, error) {
+func (a *Client) GetDockerProxyRepository(params *GetDockerProxyRepositoryParams, opts ...ClientOption) (*GetDockerProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository20Params()
+		params = NewGetDockerProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_20",
@@ -2553,7 +2553,7 @@ func (a *Client) GetRepository20(params *GetRepository20Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository20Reader{formats: a.formats},
+		Reader:             &GetDockerProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2565,7 +2565,7 @@ func (a *Client) GetRepository20(params *GetRepository20Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository20OK)
+	success, ok := result.(*GetDockerProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2576,12 +2576,12 @@ func (a *Client) GetRepository20(params *GetRepository20Params, opts ...ClientOp
 }
 
 /*
-  GetRepository21 gets repository
+GetYumGroupRepository gets repository
 */
-func (a *Client) GetRepository21(params *GetRepository21Params, opts ...ClientOption) (*GetRepository21OK, error) {
+func (a *Client) GetYumGroupRepository(params *GetYumGroupRepositoryParams, opts ...ClientOption) (*GetYumGroupRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository21Params()
+		params = NewGetYumGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_21",
@@ -2591,7 +2591,7 @@ func (a *Client) GetRepository21(params *GetRepository21Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository21Reader{formats: a.formats},
+		Reader:             &GetYumGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2603,7 +2603,7 @@ func (a *Client) GetRepository21(params *GetRepository21Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository21OK)
+	success, ok := result.(*GetYumGroupRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2614,12 +2614,12 @@ func (a *Client) GetRepository21(params *GetRepository21Params, opts ...ClientOp
 }
 
 /*
-  GetRepository22 gets repository
+GetYumHostedRepository gets repository
 */
-func (a *Client) GetRepository22(params *GetRepository22Params, opts ...ClientOption) (*GetRepository22OK, error) {
+func (a *Client) GetYumHostedRepository(params *GetYumHostedRepositoryParams, opts ...ClientOption) (*GetYumHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository22Params()
+		params = NewGetYumHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_22",
@@ -2629,7 +2629,7 @@ func (a *Client) GetRepository22(params *GetRepository22Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository22Reader{formats: a.formats},
+		Reader:             &GetYumHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2641,7 +2641,7 @@ func (a *Client) GetRepository22(params *GetRepository22Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository22OK)
+	success, ok := result.(*GetYumHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2652,12 +2652,12 @@ func (a *Client) GetRepository22(params *GetRepository22Params, opts ...ClientOp
 }
 
 /*
-  GetRepository23 gets repository
+GetYumProxyRepository gets repository
 */
-func (a *Client) GetRepository23(params *GetRepository23Params, opts ...ClientOption) (*GetRepository23OK, error) {
+func (a *Client) GetYumProxyRepository(params *GetYumProxyRepositoryParams, opts ...ClientOption) (*GetYumProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository23Params()
+		params = NewGetYumProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_23",
@@ -2667,7 +2667,7 @@ func (a *Client) GetRepository23(params *GetRepository23Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository23Reader{formats: a.formats},
+		Reader:             &GetYumProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2679,7 +2679,7 @@ func (a *Client) GetRepository23(params *GetRepository23Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository23OK)
+	success, ok := result.(*GetYumProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2690,12 +2690,12 @@ func (a *Client) GetRepository23(params *GetRepository23Params, opts ...ClientOp
 }
 
 /*
-  GetRepository24 gets repository
+GetHelmHostedRepository gets repository
 */
-func (a *Client) GetRepository24(params *GetRepository24Params, opts ...ClientOption) (*GetRepository24OK, error) {
+func (a *Client) GetHelmHostedRepository(params *GetHelmHostedRepositoryParams, opts ...ClientOption) (*GetHelmHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository24Params()
+		params = NewGetHelmHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_24",
@@ -2705,7 +2705,7 @@ func (a *Client) GetRepository24(params *GetRepository24Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository24Reader{formats: a.formats},
+		Reader:             &GetHelmHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2717,7 +2717,7 @@ func (a *Client) GetRepository24(params *GetRepository24Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository24OK)
+	success, ok := result.(*GetHelmHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2728,12 +2728,12 @@ func (a *Client) GetRepository24(params *GetRepository24Params, opts ...ClientOp
 }
 
 /*
-  GetRepository25 gets repository
+GetHelmProxyRepository gets repository
 */
-func (a *Client) GetRepository25(params *GetRepository25Params, opts ...ClientOption) (*GetRepository25OK, error) {
+func (a *Client) GetHelmProxyRepository(params *GetHelmProxyRepositoryParams, opts ...ClientOption) (*GetHelmProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository25Params()
+		params = NewGetHelmProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_25",
@@ -2743,7 +2743,7 @@ func (a *Client) GetRepository25(params *GetRepository25Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository25Reader{formats: a.formats},
+		Reader:             &GetHelmProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2755,7 +2755,7 @@ func (a *Client) GetRepository25(params *GetRepository25Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository25OK)
+	success, ok := result.(*GetHelmProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2766,12 +2766,12 @@ func (a *Client) GetRepository25(params *GetRepository25Params, opts ...ClientOp
 }
 
 /*
-  GetRepository26 gets repository
+GetGitLfsHostedRepository gets repository
 */
-func (a *Client) GetRepository26(params *GetRepository26Params, opts ...ClientOption) (*GetRepository26OK, error) {
+func (a *Client) GetGitLfsHostedRepository(params *GetGitLfsHostedRepositoryParams, opts ...ClientOption) (*GetGitLfsHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository26Params()
+		params = NewGetGitLfsHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_26",
@@ -2781,7 +2781,7 @@ func (a *Client) GetRepository26(params *GetRepository26Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository26Reader{formats: a.formats},
+		Reader:             &GetGitLfsHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2793,7 +2793,7 @@ func (a *Client) GetRepository26(params *GetRepository26Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository26OK)
+	success, ok := result.(*GetGitLfsHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2804,12 +2804,12 @@ func (a *Client) GetRepository26(params *GetRepository26Params, opts ...ClientOp
 }
 
 /*
-  GetRepository27 gets repository
+GetPypiGroupRepository gets repository
 */
-func (a *Client) GetRepository27(params *GetRepository27Params, opts ...ClientOption) (*GetRepository27OK, error) {
+func (a *Client) GetPypiGroupRepository(params *GetPypiGroupRepositoryParams, opts ...ClientOption) (*GetPypiGroupRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository27Params()
+		params = NewGetPypiGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_27",
@@ -2819,7 +2819,7 @@ func (a *Client) GetRepository27(params *GetRepository27Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository27Reader{formats: a.formats},
+		Reader:             &GetPypiGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2831,7 +2831,7 @@ func (a *Client) GetRepository27(params *GetRepository27Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository27OK)
+	success, ok := result.(*GetPypiGroupRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2842,12 +2842,12 @@ func (a *Client) GetRepository27(params *GetRepository27Params, opts ...ClientOp
 }
 
 /*
-  GetRepository28 gets repository
+GetPypiHostedRepository gets repository
 */
-func (a *Client) GetRepository28(params *GetRepository28Params, opts ...ClientOption) (*GetRepository28OK, error) {
+func (a *Client) GetPypiHostedRepository(params *GetPypiHostedRepositoryParams, opts ...ClientOption) (*GetPypiHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository28Params()
+		params = NewGetPypiHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_28",
@@ -2857,7 +2857,7 @@ func (a *Client) GetRepository28(params *GetRepository28Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository28Reader{formats: a.formats},
+		Reader:             &GetPypiHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2869,7 +2869,7 @@ func (a *Client) GetRepository28(params *GetRepository28Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository28OK)
+	success, ok := result.(*GetPypiHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2880,12 +2880,12 @@ func (a *Client) GetRepository28(params *GetRepository28Params, opts ...ClientOp
 }
 
 /*
-  GetRepository29 gets repository
+GetPypiProxyRepository gets repository
 */
-func (a *Client) GetRepository29(params *GetRepository29Params, opts ...ClientOption) (*GetRepository29OK, error) {
+func (a *Client) GetPypiProxyRepository(params *GetPypiProxyRepositoryParams, opts ...ClientOption) (*GetPypiProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository29Params()
+		params = NewGetPypiProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_29",
@@ -2895,7 +2895,7 @@ func (a *Client) GetRepository29(params *GetRepository29Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository29Reader{formats: a.formats},
+		Reader:             &GetPypiProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2907,7 +2907,7 @@ func (a *Client) GetRepository29(params *GetRepository29Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository29OK)
+	success, ok := result.(*GetPypiProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2918,12 +2918,12 @@ func (a *Client) GetRepository29(params *GetRepository29Params, opts ...ClientOp
 }
 
 /*
-  GetRepository3 gets repository
+GetMavenProxyRepository gets repository
 */
-func (a *Client) GetRepository3(params *GetRepository3Params, opts ...ClientOption) (*GetRepository3OK, error) {
+func (a *Client) GetMavenProxyRepository(params *GetMavenProxyRepositoryParams, opts ...ClientOption) (*GetMavenProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository3Params()
+		params = NewGetMavenProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_3",
@@ -2933,7 +2933,7 @@ func (a *Client) GetRepository3(params *GetRepository3Params, opts ...ClientOpti
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository3Reader{formats: a.formats},
+		Reader:             &GetMavenProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2945,7 +2945,7 @@ func (a *Client) GetRepository3(params *GetRepository3Params, opts ...ClientOpti
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository3OK)
+	success, ok := result.(*GetMavenProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2956,12 +2956,12 @@ func (a *Client) GetRepository3(params *GetRepository3Params, opts ...ClientOpti
 }
 
 /*
-  GetRepository30 gets repository
+GetCondaProxyRepository gets repository
 */
-func (a *Client) GetRepository30(params *GetRepository30Params, opts ...ClientOption) (*GetRepository30OK, error) {
+func (a *Client) GetCondaProxyRepository(params *GetCondaProxyRepositoryParams, opts ...ClientOption) (*GetCondaProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository30Params()
+		params = NewGetCondaProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_30",
@@ -2971,7 +2971,7 @@ func (a *Client) GetRepository30(params *GetRepository30Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository30Reader{formats: a.formats},
+		Reader:             &GetCondaProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -2983,7 +2983,7 @@ func (a *Client) GetRepository30(params *GetRepository30Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository30OK)
+	success, ok := result.(*GetCondaProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -2994,12 +2994,12 @@ func (a *Client) GetRepository30(params *GetRepository30Params, opts ...ClientOp
 }
 
 /*
-  GetRepository31 gets repository
+GetConanProxyRepository gets repository
 */
-func (a *Client) GetRepository31(params *GetRepository31Params, opts ...ClientOption) (*GetRepository31OK, error) {
+func (a *Client) GetConanProxyRepository(params *GetConanProxyRepositoryParams, opts ...ClientOption) (*GetConanProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository31Params()
+		params = NewGetConanProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_31",
@@ -3009,7 +3009,7 @@ func (a *Client) GetRepository31(params *GetRepository31Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository31Reader{formats: a.formats},
+		Reader:             &GetConanProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3021,7 +3021,7 @@ func (a *Client) GetRepository31(params *GetRepository31Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository31OK)
+	success, ok := result.(*GetConanProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3032,12 +3032,12 @@ func (a *Client) GetRepository31(params *GetRepository31Params, opts ...ClientOp
 }
 
 /*
-  GetRepository32 gets repository
+GetRGroupRepository gets repository
 */
-func (a *Client) GetRepository32(params *GetRepository32Params, opts ...ClientOption) (*GetRepository32OK, error) {
+func (a *Client) GetRGroupRepository(params *GetRGroupRepositoryParams, opts ...ClientOption) (*GetRGroupRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository32Params()
+		params = NewGetRGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_32",
@@ -3047,7 +3047,7 @@ func (a *Client) GetRepository32(params *GetRepository32Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository32Reader{formats: a.formats},
+		Reader:             &GetRGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3059,7 +3059,7 @@ func (a *Client) GetRepository32(params *GetRepository32Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository32OK)
+	success, ok := result.(*GetRGroupRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3070,12 +3070,12 @@ func (a *Client) GetRepository32(params *GetRepository32Params, opts ...ClientOp
 }
 
 /*
-  GetRepository33 gets repository
+GetRHostedRepository gets repository
 */
-func (a *Client) GetRepository33(params *GetRepository33Params, opts ...ClientOption) (*GetRepository33OK, error) {
+func (a *Client) GetRHostedRepository(params *GetRHostedRepositoryParams, opts ...ClientOption) (*GetRHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository33Params()
+		params = NewGetRHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_33",
@@ -3085,7 +3085,7 @@ func (a *Client) GetRepository33(params *GetRepository33Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository33Reader{formats: a.formats},
+		Reader:             &GetRHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3097,7 +3097,7 @@ func (a *Client) GetRepository33(params *GetRepository33Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository33OK)
+	success, ok := result.(*GetRHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3108,12 +3108,12 @@ func (a *Client) GetRepository33(params *GetRepository33Params, opts ...ClientOp
 }
 
 /*
-  GetRepository34 gets repository
+GetRProxyRepository gets repository
 */
-func (a *Client) GetRepository34(params *GetRepository34Params, opts ...ClientOption) (*GetRepository34OK, error) {
+func (a *Client) GetRProxyRepository(params *GetRProxyRepositoryParams, opts ...ClientOption) (*GetRProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository34Params()
+		params = NewGetRProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_34",
@@ -3123,7 +3123,7 @@ func (a *Client) GetRepository34(params *GetRepository34Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository34Reader{formats: a.formats},
+		Reader:             &GetRProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3135,7 +3135,7 @@ func (a *Client) GetRepository34(params *GetRepository34Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository34OK)
+	success, ok := result.(*GetRProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3146,12 +3146,12 @@ func (a *Client) GetRepository34(params *GetRepository34Params, opts ...ClientOp
 }
 
 /*
-  GetRepository35 gets repository
+GetCocoapodsProxyRepository gets repository
 */
-func (a *Client) GetRepository35(params *GetRepository35Params, opts ...ClientOption) (*GetRepository35OK, error) {
+func (a *Client) GetCocoapodsProxyRepository(params *GetCocoapodsProxyRepositoryParams, opts ...ClientOption) (*GetCocoapodsProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository35Params()
+		params = NewGetCocoapodsProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_35",
@@ -3161,7 +3161,7 @@ func (a *Client) GetRepository35(params *GetRepository35Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository35Reader{formats: a.formats},
+		Reader:             &GetCocoapodsProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3173,7 +3173,7 @@ func (a *Client) GetRepository35(params *GetRepository35Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository35OK)
+	success, ok := result.(*GetCocoapodsProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3184,12 +3184,12 @@ func (a *Client) GetRepository35(params *GetRepository35Params, opts ...ClientOp
 }
 
 /*
-  GetRepository36 gets repository
+GetGolangGroupRepository gets repository
 */
-func (a *Client) GetRepository36(params *GetRepository36Params, opts ...ClientOption) (*GetRepository36OK, error) {
+func (a *Client) GetGolangGroupRepository(params *GetGolangGroupRepositoryParams, opts ...ClientOption) (*GetGolangGroupRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository36Params()
+		params = NewGetGolangGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_36",
@@ -3199,7 +3199,7 @@ func (a *Client) GetRepository36(params *GetRepository36Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository36Reader{formats: a.formats},
+		Reader:             &GetGolangGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3211,7 +3211,7 @@ func (a *Client) GetRepository36(params *GetRepository36Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository36OK)
+	success, ok := result.(*GetGolangGroupRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3222,12 +3222,12 @@ func (a *Client) GetRepository36(params *GetRepository36Params, opts ...ClientOp
 }
 
 /*
-  GetRepository37 gets repository
+GetGolangProxyRepository gets repository
 */
-func (a *Client) GetRepository37(params *GetRepository37Params, opts ...ClientOption) (*GetRepository37OK, error) {
+func (a *Client) GetGolangProxyRepository(params *GetGolangProxyRepositoryParams, opts ...ClientOption) (*GetGolangProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository37Params()
+		params = NewGetGolangProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_37",
@@ -3237,7 +3237,7 @@ func (a *Client) GetRepository37(params *GetRepository37Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository37Reader{formats: a.formats},
+		Reader:             &GetGolangProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3249,7 +3249,7 @@ func (a *Client) GetRepository37(params *GetRepository37Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository37OK)
+	success, ok := result.(*GetGolangProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3260,12 +3260,12 @@ func (a *Client) GetRepository37(params *GetRepository37Params, opts ...ClientOp
 }
 
 /*
-  GetRepository38 gets repository
+GetP2ProxyRepository gets repository
 */
-func (a *Client) GetRepository38(params *GetRepository38Params, opts ...ClientOption) (*GetRepository38OK, error) {
+func (a *Client) GetP2ProxyRepository(params *GetP2ProxyRepositoryParams, opts ...ClientOption) (*GetP2ProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository38Params()
+		params = NewGetP2ProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_38",
@@ -3275,7 +3275,7 @@ func (a *Client) GetRepository38(params *GetRepository38Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository38Reader{formats: a.formats},
+		Reader:             &GetP2ProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3287,7 +3287,7 @@ func (a *Client) GetRepository38(params *GetRepository38Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository38OK)
+	success, ok := result.(*GetP2ProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3298,12 +3298,12 @@ func (a *Client) GetRepository38(params *GetRepository38Params, opts ...ClientOp
 }
 
 /*
-  GetRepository39 gets repository
+GetBowerGroupRepository gets repository
 */
-func (a *Client) GetRepository39(params *GetRepository39Params, opts ...ClientOption) (*GetRepository39OK, error) {
+func (a *Client) GetBowerGroupRepository(params *GetBowerGroupRepositoryParams, opts ...ClientOption) (*GetBowerGroupRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository39Params()
+		params = NewGetBowerGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_39",
@@ -3313,7 +3313,7 @@ func (a *Client) GetRepository39(params *GetRepository39Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository39Reader{formats: a.formats},
+		Reader:             &GetBowerGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3325,7 +3325,7 @@ func (a *Client) GetRepository39(params *GetRepository39Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository39OK)
+	success, ok := result.(*GetBowerGroupRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3336,12 +3336,12 @@ func (a *Client) GetRepository39(params *GetRepository39Params, opts ...ClientOp
 }
 
 /*
-  GetRepository4 gets repository
+GetAptHostedRepository gets repository
 */
-func (a *Client) GetRepository4(params *GetRepository4Params, opts ...ClientOption) (*GetRepository4OK, error) {
+func (a *Client) GetAptHostedRepository(params *GetAptHostedRepositoryParams, opts ...ClientOption) (*GetAptHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository4Params()
+		params = NewGetAptHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_4",
@@ -3351,7 +3351,7 @@ func (a *Client) GetRepository4(params *GetRepository4Params, opts ...ClientOpti
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository4Reader{formats: a.formats},
+		Reader:             &GetAptHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3363,7 +3363,7 @@ func (a *Client) GetRepository4(params *GetRepository4Params, opts ...ClientOpti
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository4OK)
+	success, ok := result.(*GetAptHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3374,12 +3374,12 @@ func (a *Client) GetRepository4(params *GetRepository4Params, opts ...ClientOpti
 }
 
 /*
-  GetRepository40 gets repository
+GetBowerHostedRepository gets repository
 */
-func (a *Client) GetRepository40(params *GetRepository40Params, opts ...ClientOption) (*GetRepository40OK, error) {
+func (a *Client) GetBowerHostedRepository(params *GetBowerHostedRepositoryParams, opts ...ClientOption) (*GetBowerHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository40Params()
+		params = NewGetBowerHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_40",
@@ -3389,7 +3389,7 @@ func (a *Client) GetRepository40(params *GetRepository40Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository40Reader{formats: a.formats},
+		Reader:             &GetBowerHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3401,7 +3401,7 @@ func (a *Client) GetRepository40(params *GetRepository40Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository40OK)
+	success, ok := result.(*GetBowerHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3412,12 +3412,12 @@ func (a *Client) GetRepository40(params *GetRepository40Params, opts ...ClientOp
 }
 
 /*
-  GetRepository41 gets repository
+GetBowerProxyRepository gets repository
 */
-func (a *Client) GetRepository41(params *GetRepository41Params, opts ...ClientOption) (*GetRepository41OK, error) {
+func (a *Client) GetBowerProxyRepository(params *GetBowerProxyRepositoryParams, opts ...ClientOption) (*GetBowerProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository41Params()
+		params = NewGetBowerProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_41",
@@ -3427,7 +3427,7 @@ func (a *Client) GetRepository41(params *GetRepository41Params, opts ...ClientOp
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository41Reader{formats: a.formats},
+		Reader:             &GetBowerProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3439,7 +3439,7 @@ func (a *Client) GetRepository41(params *GetRepository41Params, opts ...ClientOp
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository41OK)
+	success, ok := result.(*GetBowerProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3450,12 +3450,12 @@ func (a *Client) GetRepository41(params *GetRepository41Params, opts ...ClientOp
 }
 
 /*
-  GetRepository5 gets repository
+GetAptProxyRepository gets repository
 */
-func (a *Client) GetRepository5(params *GetRepository5Params, opts ...ClientOption) (*GetRepository5OK, error) {
+func (a *Client) GetAptProxyRepository(params *GetAptProxyRepositoryParams, opts ...ClientOption) (*GetAptProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository5Params()
+		params = NewGetAptProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_5",
@@ -3465,7 +3465,7 @@ func (a *Client) GetRepository5(params *GetRepository5Params, opts ...ClientOpti
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository5Reader{formats: a.formats},
+		Reader:             &GetAptProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3477,7 +3477,7 @@ func (a *Client) GetRepository5(params *GetRepository5Params, opts ...ClientOpti
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository5OK)
+	success, ok := result.(*GetAptProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3488,12 +3488,12 @@ func (a *Client) GetRepository5(params *GetRepository5Params, opts ...ClientOpti
 }
 
 /*
-  GetRepository6 gets repository
+GetRawGroupRepository gets repository
 */
-func (a *Client) GetRepository6(params *GetRepository6Params, opts ...ClientOption) (*GetRepository6OK, error) {
+func (a *Client) GetRawGroupRepository(params *GetRawGroupRepositoryParams, opts ...ClientOption) (*GetRawGroupRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository6Params()
+		params = NewGetRawGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_6",
@@ -3503,7 +3503,7 @@ func (a *Client) GetRepository6(params *GetRepository6Params, opts ...ClientOpti
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository6Reader{formats: a.formats},
+		Reader:             &GetRawGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3515,7 +3515,7 @@ func (a *Client) GetRepository6(params *GetRepository6Params, opts ...ClientOpti
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository6OK)
+	success, ok := result.(*GetRawGroupRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3526,12 +3526,12 @@ func (a *Client) GetRepository6(params *GetRepository6Params, opts ...ClientOpti
 }
 
 /*
-  GetRepository7 gets repository
+GetRawHostedRepository gets repository
 */
-func (a *Client) GetRepository7(params *GetRepository7Params, opts ...ClientOption) (*GetRepository7OK, error) {
+func (a *Client) GetRawHostedRepository(params *GetRawHostedRepositoryParams, opts ...ClientOption) (*GetRawHostedRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository7Params()
+		params = NewGetRawHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_7",
@@ -3541,7 +3541,7 @@ func (a *Client) GetRepository7(params *GetRepository7Params, opts ...ClientOpti
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository7Reader{formats: a.formats},
+		Reader:             &GetRawHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3553,7 +3553,7 @@ func (a *Client) GetRepository7(params *GetRepository7Params, opts ...ClientOpti
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository7OK)
+	success, ok := result.(*GetRawHostedRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3564,12 +3564,12 @@ func (a *Client) GetRepository7(params *GetRepository7Params, opts ...ClientOpti
 }
 
 /*
-  GetRepository8 gets repository
+GetRawProxyRepository gets repository
 */
-func (a *Client) GetRepository8(params *GetRepository8Params, opts ...ClientOption) (*GetRepository8OK, error) {
+func (a *Client) GetRawProxyRepository(params *GetRawProxyRepositoryParams, opts ...ClientOption) (*GetRawProxyRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository8Params()
+		params = NewGetRawProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_8",
@@ -3579,7 +3579,7 @@ func (a *Client) GetRepository8(params *GetRepository8Params, opts ...ClientOpti
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository8Reader{formats: a.formats},
+		Reader:             &GetRawProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3591,7 +3591,7 @@ func (a *Client) GetRepository8(params *GetRepository8Params, opts ...ClientOpti
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository8OK)
+	success, ok := result.(*GetRawProxyRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3602,12 +3602,12 @@ func (a *Client) GetRepository8(params *GetRepository8Params, opts ...ClientOpti
 }
 
 /*
-  GetRepository9 gets repository
+GetNpmGroupRepository gets repository
 */
-func (a *Client) GetRepository9(params *GetRepository9Params, opts ...ClientOption) (*GetRepository9OK, error) {
+func (a *Client) GetNpmGroupRepository(params *GetNpmGroupRepositoryParams, opts ...ClientOption) (*GetNpmGroupRepositoryOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewGetRepository9Params()
+		params = NewGetNpmGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "getRepository_9",
@@ -3617,7 +3617,7 @@ func (a *Client) GetRepository9(params *GetRepository9Params, opts ...ClientOpti
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &GetRepository9Reader{formats: a.formats},
+		Reader:             &GetNpmGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3629,7 +3629,7 @@ func (a *Client) GetRepository9(params *GetRepository9Params, opts ...ClientOpti
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*GetRepository9OK)
+	success, ok := result.(*GetNpmGroupRepositoryOK)
 	if ok {
 		return success, nil
 	}
@@ -3640,7 +3640,7 @@ func (a *Client) GetRepository9(params *GetRepository9Params, opts ...ClientOpti
 }
 
 /*
-  InvalidateCache invalidates repository cache proxy or group repositories only
+InvalidateCache invalidates repository cache proxy or group repositories only
 */
 func (a *Client) InvalidateCache(params *InvalidateCacheParams, opts ...ClientOption) (*InvalidateCacheNoContent, error) {
 	// TODO: Validate the params before sending
@@ -3678,7 +3678,7 @@ func (a *Client) InvalidateCache(params *InvalidateCacheParams, opts ...ClientOp
 }
 
 /*
-  RebuildIndex schedules a repair rebuild repository search task hosted or proxy repositories only
+RebuildIndex schedules a repair rebuild repository search task hosted or proxy repositories only
 */
 func (a *Client) RebuildIndex(params *RebuildIndexParams, opts ...ClientOption) (*RebuildIndexNoContent, error) {
 	// TODO: Validate the params before sending
@@ -3716,12 +3716,12 @@ func (a *Client) RebuildIndex(params *RebuildIndexParams, opts ...ClientOption) 
 }
 
 /*
-  UpdateRepository updates maven group repository
+UpdateMavenGroupRepository updates maven group repository
 */
-func (a *Client) UpdateRepository(params *UpdateRepositoryParams, opts ...ClientOption) (*UpdateRepositoryNoContent, error) {
+func (a *Client) UpdateMavenGroupRepository(params *UpdateMavenGroupRepositoryParams, opts ...ClientOption) (*UpdateMavenGroupRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepositoryParams()
+		params = NewUpdateMavenGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository",
@@ -3731,7 +3731,7 @@ func (a *Client) UpdateRepository(params *UpdateRepositoryParams, opts ...Client
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepositoryReader{formats: a.formats},
+		Reader:             &UpdateMavenGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3743,7 +3743,7 @@ func (a *Client) UpdateRepository(params *UpdateRepositoryParams, opts ...Client
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepositoryNoContent)
+	success, ok := result.(*UpdateMavenGroupRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -3754,12 +3754,12 @@ func (a *Client) UpdateRepository(params *UpdateRepositoryParams, opts ...Client
 }
 
 /*
-  UpdateRepository1 updates maven hosted repository
+UpdateMavenHostedRepository updates maven hosted repository
 */
-func (a *Client) UpdateRepository1(params *UpdateRepository1Params, opts ...ClientOption) (*UpdateRepository1NoContent, error) {
+func (a *Client) UpdateMavenHostedRepository(params *UpdateMavenHostedRepositoryParams, opts ...ClientOption) (*UpdateMavenHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository1Params()
+		params = NewUpdateMavenHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_1",
@@ -3769,7 +3769,7 @@ func (a *Client) UpdateRepository1(params *UpdateRepository1Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository1Reader{formats: a.formats},
+		Reader:             &UpdateMavenHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3781,7 +3781,7 @@ func (a *Client) UpdateRepository1(params *UpdateRepository1Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository1NoContent)
+	success, ok := result.(*UpdateMavenHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -3792,12 +3792,12 @@ func (a *Client) UpdateRepository1(params *UpdateRepository1Params, opts ...Clie
 }
 
 /*
-  UpdateRepository10 updates npm proxy repository
+UpdateNpmProxyRepository updates npm proxy repository
 */
-func (a *Client) UpdateRepository10(params *UpdateRepository10Params, opts ...ClientOption) (*UpdateRepository10NoContent, error) {
+func (a *Client) UpdateNpmProxyRepository(params *UpdateNpmProxyRepositoryParams, opts ...ClientOption) (*UpdateNpmProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository10Params()
+		params = NewUpdateNpmProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_10",
@@ -3807,7 +3807,7 @@ func (a *Client) UpdateRepository10(params *UpdateRepository10Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository10Reader{formats: a.formats},
+		Reader:             &UpdateNpmProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3819,7 +3819,7 @@ func (a *Client) UpdateRepository10(params *UpdateRepository10Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository10NoContent)
+	success, ok := result.(*UpdateNpmProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -3830,12 +3830,12 @@ func (a *Client) UpdateRepository10(params *UpdateRepository10Params, opts ...Cl
 }
 
 /*
-  UpdateRepository11 updates nu get group repository
+UpdateNugetGroupRepository updates nu get group repository
 */
-func (a *Client) UpdateRepository11(params *UpdateRepository11Params, opts ...ClientOption) (*UpdateRepository11NoContent, error) {
+func (a *Client) UpdateNugetGroupRepository(params *UpdateNugetGroupRepositoryParams, opts ...ClientOption) (*UpdateNugetGroupRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository11Params()
+		params = NewUpdateNugetGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_11",
@@ -3845,7 +3845,7 @@ func (a *Client) UpdateRepository11(params *UpdateRepository11Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository11Reader{formats: a.formats},
+		Reader:             &UpdateNugetGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3857,7 +3857,7 @@ func (a *Client) UpdateRepository11(params *UpdateRepository11Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository11NoContent)
+	success, ok := result.(*UpdateNugetGroupRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -3868,12 +3868,12 @@ func (a *Client) UpdateRepository11(params *UpdateRepository11Params, opts ...Cl
 }
 
 /*
-  UpdateRepository12 updates nu get hosted repository
+UpdateNugetHostedRepository updates nu get hosted repository
 */
-func (a *Client) UpdateRepository12(params *UpdateRepository12Params, opts ...ClientOption) (*UpdateRepository12NoContent, error) {
+func (a *Client) UpdateNugetHostedRepository(params *UpdateNugetHostedRepositoryParams, opts ...ClientOption) (*UpdateNugetHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository12Params()
+		params = NewUpdateNugetHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_12",
@@ -3883,7 +3883,7 @@ func (a *Client) UpdateRepository12(params *UpdateRepository12Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository12Reader{formats: a.formats},
+		Reader:             &UpdateNugetHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3895,7 +3895,7 @@ func (a *Client) UpdateRepository12(params *UpdateRepository12Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository12NoContent)
+	success, ok := result.(*UpdateNugetHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -3906,12 +3906,12 @@ func (a *Client) UpdateRepository12(params *UpdateRepository12Params, opts ...Cl
 }
 
 /*
-  UpdateRepository13 updates nu get proxy repository
+UpdateNugetProxyRepository updates nu get proxy repository
 */
-func (a *Client) UpdateRepository13(params *UpdateRepository13Params, opts ...ClientOption) (*UpdateRepository13NoContent, error) {
+func (a *Client) UpdateNugetProxyRepository(params *UpdateNugetProxyRepositoryParams, opts ...ClientOption) (*UpdateNugetProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository13Params()
+		params = NewUpdateNugetProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_13",
@@ -3921,7 +3921,7 @@ func (a *Client) UpdateRepository13(params *UpdateRepository13Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository13Reader{formats: a.formats},
+		Reader:             &UpdateNugetProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3933,7 +3933,7 @@ func (a *Client) UpdateRepository13(params *UpdateRepository13Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository13NoContent)
+	success, ok := result.(*UpdateNugetProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -3944,12 +3944,12 @@ func (a *Client) UpdateRepository13(params *UpdateRepository13Params, opts ...Cl
 }
 
 /*
-  UpdateRepository14 updates ruby gems group repository
+UpdateRubyGemsGroupRepository updates ruby gems group repository
 */
-func (a *Client) UpdateRepository14(params *UpdateRepository14Params, opts ...ClientOption) (*UpdateRepository14NoContent, error) {
+func (a *Client) UpdateRubyGemsGroupRepository(params *UpdateRubyGemsGroupRepositoryParams, opts ...ClientOption) (*UpdateRubyGemsGroupRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository14Params()
+		params = NewUpdateRubyGemsGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_14",
@@ -3959,7 +3959,7 @@ func (a *Client) UpdateRepository14(params *UpdateRepository14Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository14Reader{formats: a.formats},
+		Reader:             &UpdateRubyGemsGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -3971,7 +3971,7 @@ func (a *Client) UpdateRepository14(params *UpdateRepository14Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository14NoContent)
+	success, ok := result.(*UpdateRubyGemsGroupRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -3982,12 +3982,12 @@ func (a *Client) UpdateRepository14(params *UpdateRepository14Params, opts ...Cl
 }
 
 /*
-  UpdateRepository15 updates ruby gems hosted repository
+UpdateRubyGemsHostedRepository updates ruby gems hosted repository
 */
-func (a *Client) UpdateRepository15(params *UpdateRepository15Params, opts ...ClientOption) (*UpdateRepository15NoContent, error) {
+func (a *Client) UpdateRubyGemsHostedRepository(params *UpdateRubyGemsHostedRepositoryParams, opts ...ClientOption) (*UpdateRubyGemsHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository15Params()
+		params = NewUpdateRubyGemsHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_15",
@@ -3997,7 +3997,7 @@ func (a *Client) UpdateRepository15(params *UpdateRepository15Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository15Reader{formats: a.formats},
+		Reader:             &UpdateRubyGemsHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4009,7 +4009,7 @@ func (a *Client) UpdateRepository15(params *UpdateRepository15Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository15NoContent)
+	success, ok := result.(*UpdateRubyGemsHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4020,12 +4020,12 @@ func (a *Client) UpdateRepository15(params *UpdateRepository15Params, opts ...Cl
 }
 
 /*
-  UpdateRepository16 updates ruby gems proxy repository
+UpdateRubyGemsProxyRepository updates ruby gems proxy repository
 */
-func (a *Client) UpdateRepository16(params *UpdateRepository16Params, opts ...ClientOption) (*UpdateRepository16NoContent, error) {
+func (a *Client) UpdateRubyGemsProxyRepository(params *UpdateRubyGemsProxyRepositoryParams, opts ...ClientOption) (*UpdateRubyGemsProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository16Params()
+		params = NewUpdateRubyGemsProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_16",
@@ -4035,7 +4035,7 @@ func (a *Client) UpdateRepository16(params *UpdateRepository16Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository16Reader{formats: a.formats},
+		Reader:             &UpdateRubyGemsProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4047,7 +4047,7 @@ func (a *Client) UpdateRepository16(params *UpdateRepository16Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository16NoContent)
+	success, ok := result.(*UpdateRubyGemsProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4058,12 +4058,12 @@ func (a *Client) UpdateRepository16(params *UpdateRepository16Params, opts ...Cl
 }
 
 /*
-  UpdateRepository17 updates docker group repository
+UpdateDockerGroupRepository updates docker group repository
 */
-func (a *Client) UpdateRepository17(params *UpdateRepository17Params, opts ...ClientOption) (*UpdateRepository17NoContent, error) {
+func (a *Client) UpdateDockerGroupRepository(params *UpdateDockerGroupRepositoryParams, opts ...ClientOption) (*UpdateDockerGroupRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository17Params()
+		params = NewUpdateDockerGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_17",
@@ -4073,7 +4073,7 @@ func (a *Client) UpdateRepository17(params *UpdateRepository17Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository17Reader{formats: a.formats},
+		Reader:             &UpdateDockerGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4085,7 +4085,7 @@ func (a *Client) UpdateRepository17(params *UpdateRepository17Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository17NoContent)
+	success, ok := result.(*UpdateDockerGroupRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4096,12 +4096,12 @@ func (a *Client) UpdateRepository17(params *UpdateRepository17Params, opts ...Cl
 }
 
 /*
-  UpdateRepository18 updates docker hosted repository
+UpdateDockerHostedRepository updates docker hosted repository
 */
-func (a *Client) UpdateRepository18(params *UpdateRepository18Params, opts ...ClientOption) (*UpdateRepository18NoContent, error) {
+func (a *Client) UpdateDockerHostedRepository(params *UpdateDockerHostedRepositoryParams, opts ...ClientOption) (*UpdateDockerHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository18Params()
+		params = NewUpdateDockerHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_18",
@@ -4111,7 +4111,7 @@ func (a *Client) UpdateRepository18(params *UpdateRepository18Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository18Reader{formats: a.formats},
+		Reader:             &UpdateDockerHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4123,7 +4123,7 @@ func (a *Client) UpdateRepository18(params *UpdateRepository18Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository18NoContent)
+	success, ok := result.(*UpdateDockerHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4134,12 +4134,12 @@ func (a *Client) UpdateRepository18(params *UpdateRepository18Params, opts ...Cl
 }
 
 /*
-  UpdateRepository19 updates docker group repository
+UpdateDockerProxyRepository updates docker group repository
 */
-func (a *Client) UpdateRepository19(params *UpdateRepository19Params, opts ...ClientOption) (*UpdateRepository19NoContent, error) {
+func (a *Client) UpdateDockerProxyRepository(params *UpdateDockerProxyRepositoryParams, opts ...ClientOption) (*UpdateDockerProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository19Params()
+		params = NewUpdateDockerProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_19",
@@ -4149,7 +4149,7 @@ func (a *Client) UpdateRepository19(params *UpdateRepository19Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository19Reader{formats: a.formats},
+		Reader:             &UpdateDockerProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4161,7 +4161,7 @@ func (a *Client) UpdateRepository19(params *UpdateRepository19Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository19NoContent)
+	success, ok := result.(*UpdateDockerProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4172,12 +4172,12 @@ func (a *Client) UpdateRepository19(params *UpdateRepository19Params, opts ...Cl
 }
 
 /*
-  UpdateRepository2 updates maven proxy repository
+UpdateMavenProxyRepository updates maven proxy repository
 */
-func (a *Client) UpdateRepository2(params *UpdateRepository2Params, opts ...ClientOption) (*UpdateRepository2NoContent, error) {
+func (a *Client) UpdateMavenProxyRepository(params *UpdateMavenProxyRepositoryParams, opts ...ClientOption) (*UpdateMavenProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository2Params()
+		params = NewUpdateMavenProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_2",
@@ -4187,7 +4187,7 @@ func (a *Client) UpdateRepository2(params *UpdateRepository2Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository2Reader{formats: a.formats},
+		Reader:             &UpdateMavenProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4199,7 +4199,7 @@ func (a *Client) UpdateRepository2(params *UpdateRepository2Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository2NoContent)
+	success, ok := result.(*UpdateMavenProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4210,12 +4210,12 @@ func (a *Client) UpdateRepository2(params *UpdateRepository2Params, opts ...Clie
 }
 
 /*
-  UpdateRepository20 updates yum group repository
+UpdateYumGroupRepository updates yum group repository
 */
-func (a *Client) UpdateRepository20(params *UpdateRepository20Params, opts ...ClientOption) (*UpdateRepository20NoContent, error) {
+func (a *Client) UpdateYumGroupRepository(params *UpdateYumGroupRepositoryParams, opts ...ClientOption) (*UpdateYumGroupRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository20Params()
+		params = NewUpdateYumGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_20",
@@ -4225,7 +4225,7 @@ func (a *Client) UpdateRepository20(params *UpdateRepository20Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository20Reader{formats: a.formats},
+		Reader:             &UpdateYumGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4237,7 +4237,7 @@ func (a *Client) UpdateRepository20(params *UpdateRepository20Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository20NoContent)
+	success, ok := result.(*UpdateYumGroupRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4248,12 +4248,12 @@ func (a *Client) UpdateRepository20(params *UpdateRepository20Params, opts ...Cl
 }
 
 /*
-  UpdateRepository21 updates yum hosted repository
+UpdateYumHostedRepository updates yum hosted repository
 */
-func (a *Client) UpdateRepository21(params *UpdateRepository21Params, opts ...ClientOption) (*UpdateRepository21NoContent, error) {
+func (a *Client) UpdateYumHostedRepository(params *UpdateYumHostedRepositoryParams, opts ...ClientOption) (*UpdateYumHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository21Params()
+		params = NewUpdateYumHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_21",
@@ -4263,7 +4263,7 @@ func (a *Client) UpdateRepository21(params *UpdateRepository21Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository21Reader{formats: a.formats},
+		Reader:             &UpdateYumHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4275,7 +4275,7 @@ func (a *Client) UpdateRepository21(params *UpdateRepository21Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository21NoContent)
+	success, ok := result.(*UpdateYumHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4286,12 +4286,12 @@ func (a *Client) UpdateRepository21(params *UpdateRepository21Params, opts ...Cl
 }
 
 /*
-  UpdateRepository22 updates yum proxy repository
+UpdateYumProxyRepository updates yum proxy repository
 */
-func (a *Client) UpdateRepository22(params *UpdateRepository22Params, opts ...ClientOption) (*UpdateRepository22NoContent, error) {
+func (a *Client) UpdateYumProxyRepository(params *UpdateYumProxyRepositoryParams, opts ...ClientOption) (*UpdateYumProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository22Params()
+		params = NewUpdateYumProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_22",
@@ -4301,7 +4301,7 @@ func (a *Client) UpdateRepository22(params *UpdateRepository22Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository22Reader{formats: a.formats},
+		Reader:             &UpdateYumProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4313,7 +4313,7 @@ func (a *Client) UpdateRepository22(params *UpdateRepository22Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository22NoContent)
+	success, ok := result.(*UpdateYumProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4324,12 +4324,12 @@ func (a *Client) UpdateRepository22(params *UpdateRepository22Params, opts ...Cl
 }
 
 /*
-  UpdateRepository23 updates helm hosted repository
+UpdateHelmHostedRepository updates helm hosted repository
 */
-func (a *Client) UpdateRepository23(params *UpdateRepository23Params, opts ...ClientOption) (*UpdateRepository23NoContent, error) {
+func (a *Client) UpdateHelmHostedRepository(params *UpdateHelmHostedRepositoryParams, opts ...ClientOption) (*UpdateHelmHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository23Params()
+		params = NewUpdateHelmHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_23",
@@ -4339,7 +4339,7 @@ func (a *Client) UpdateRepository23(params *UpdateRepository23Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository23Reader{formats: a.formats},
+		Reader:             &UpdateHelmHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4351,7 +4351,7 @@ func (a *Client) UpdateRepository23(params *UpdateRepository23Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository23NoContent)
+	success, ok := result.(*UpdateHelmHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4362,12 +4362,12 @@ func (a *Client) UpdateRepository23(params *UpdateRepository23Params, opts ...Cl
 }
 
 /*
-  UpdateRepository24 updates helm proxy repository
+UpdateHelmProxyRepository updates helm proxy repository
 */
-func (a *Client) UpdateRepository24(params *UpdateRepository24Params, opts ...ClientOption) (*UpdateRepository24NoContent, error) {
+func (a *Client) UpdateHelmProxyRepository(params *UpdateHelmProxyRepositoryParams, opts ...ClientOption) (*UpdateHelmProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository24Params()
+		params = NewUpdateHelmProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_24",
@@ -4377,7 +4377,7 @@ func (a *Client) UpdateRepository24(params *UpdateRepository24Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository24Reader{formats: a.formats},
+		Reader:             &UpdateHelmProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4389,7 +4389,7 @@ func (a *Client) UpdateRepository24(params *UpdateRepository24Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository24NoContent)
+	success, ok := result.(*UpdateHelmProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4400,12 +4400,12 @@ func (a *Client) UpdateRepository24(params *UpdateRepository24Params, opts ...Cl
 }
 
 /*
-  UpdateRepository25 updates git l f s hosted repository
+UpdateGitLfsHostedRepository updates git l f s hosted repository
 */
-func (a *Client) UpdateRepository25(params *UpdateRepository25Params, opts ...ClientOption) (*UpdateRepository25NoContent, error) {
+func (a *Client) UpdateGitLfsHostedRepository(params *UpdateGitLfsHostedRepositoryParams, opts ...ClientOption) (*UpdateGitLfsHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository25Params()
+		params = NewUpdateGitLfsHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_25",
@@ -4415,7 +4415,7 @@ func (a *Client) UpdateRepository25(params *UpdateRepository25Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository25Reader{formats: a.formats},
+		Reader:             &UpdateGitLfsHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4427,7 +4427,7 @@ func (a *Client) UpdateRepository25(params *UpdateRepository25Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository25NoContent)
+	success, ok := result.(*UpdateGitLfsHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4438,12 +4438,12 @@ func (a *Client) UpdateRepository25(params *UpdateRepository25Params, opts ...Cl
 }
 
 /*
-  UpdateRepository26 updates py p i group repository
+UpdatePypiGroupRepository updates py p i group repository
 */
-func (a *Client) UpdateRepository26(params *UpdateRepository26Params, opts ...ClientOption) (*UpdateRepository26NoContent, error) {
+func (a *Client) UpdatePypiGroupRepository(params *UpdatePypiGroupRepositoryParams, opts ...ClientOption) (*UpdatePypiGroupRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository26Params()
+		params = NewUpdatePypiGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_26",
@@ -4453,7 +4453,7 @@ func (a *Client) UpdateRepository26(params *UpdateRepository26Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository26Reader{formats: a.formats},
+		Reader:             &UpdatePypiGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4465,7 +4465,7 @@ func (a *Client) UpdateRepository26(params *UpdateRepository26Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository26NoContent)
+	success, ok := result.(*UpdatePypiGroupRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4476,12 +4476,12 @@ func (a *Client) UpdateRepository26(params *UpdateRepository26Params, opts ...Cl
 }
 
 /*
-  UpdateRepository27 updates py p i hosted repository
+UpdatePypiHostedRepository updates py p i hosted repository
 */
-func (a *Client) UpdateRepository27(params *UpdateRepository27Params, opts ...ClientOption) (*UpdateRepository27NoContent, error) {
+func (a *Client) UpdatePypiHostedRepository(params *UpdatePypiHostedRepositoryParams, opts ...ClientOption) (*UpdatePypiHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository27Params()
+		params = NewUpdatePypiHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_27",
@@ -4491,7 +4491,7 @@ func (a *Client) UpdateRepository27(params *UpdateRepository27Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository27Reader{formats: a.formats},
+		Reader:             &UpdatePypiHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4503,7 +4503,7 @@ func (a *Client) UpdateRepository27(params *UpdateRepository27Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository27NoContent)
+	success, ok := result.(*UpdatePypiHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4514,12 +4514,12 @@ func (a *Client) UpdateRepository27(params *UpdateRepository27Params, opts ...Cl
 }
 
 /*
-  UpdateRepository28 updates py p i proxy repository
+UpdatePypiProxyRepository updates py p i proxy repository
 */
-func (a *Client) UpdateRepository28(params *UpdateRepository28Params, opts ...ClientOption) (*UpdateRepository28NoContent, error) {
+func (a *Client) UpdatePypiProxyRepository(params *UpdatePypiProxyRepositoryParams, opts ...ClientOption) (*UpdatePypiProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository28Params()
+		params = NewUpdatePypiProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_28",
@@ -4529,7 +4529,7 @@ func (a *Client) UpdateRepository28(params *UpdateRepository28Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository28Reader{formats: a.formats},
+		Reader:             &UpdatePypiProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4541,7 +4541,7 @@ func (a *Client) UpdateRepository28(params *UpdateRepository28Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository28NoContent)
+	success, ok := result.(*UpdatePypiProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4552,12 +4552,12 @@ func (a *Client) UpdateRepository28(params *UpdateRepository28Params, opts ...Cl
 }
 
 /*
-  UpdateRepository29 updates conda proxy repository
+UpdateCondaProxyRepository updates conda proxy repository
 */
-func (a *Client) UpdateRepository29(params *UpdateRepository29Params, opts ...ClientOption) (*UpdateRepository29NoContent, error) {
+func (a *Client) UpdateCondaProxyRepository(params *UpdateCondaProxyRepositoryParams, opts ...ClientOption) (*UpdateCondaProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository29Params()
+		params = NewUpdateCondaProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_29",
@@ -4567,7 +4567,7 @@ func (a *Client) UpdateRepository29(params *UpdateRepository29Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository29Reader{formats: a.formats},
+		Reader:             &UpdateCondaProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4579,7 +4579,7 @@ func (a *Client) UpdateRepository29(params *UpdateRepository29Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository29NoContent)
+	success, ok := result.(*UpdateCondaProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4590,12 +4590,12 @@ func (a *Client) UpdateRepository29(params *UpdateRepository29Params, opts ...Cl
 }
 
 /*
-  UpdateRepository3 updates a p t hosted repository
+UpdateAptHostedRepository updates a p t hosted repository
 */
-func (a *Client) UpdateRepository3(params *UpdateRepository3Params, opts ...ClientOption) (*UpdateRepository3NoContent, error) {
+func (a *Client) UpdateAptHostedRepository(params *UpdateAptHostedRepositoryParams, opts ...ClientOption) (*UpdateAptHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository3Params()
+		params = NewUpdateAptHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_3",
@@ -4605,7 +4605,7 @@ func (a *Client) UpdateRepository3(params *UpdateRepository3Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository3Reader{formats: a.formats},
+		Reader:             &UpdateAptHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4617,7 +4617,7 @@ func (a *Client) UpdateRepository3(params *UpdateRepository3Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository3NoContent)
+	success, ok := result.(*UpdateAptHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4628,12 +4628,12 @@ func (a *Client) UpdateRepository3(params *UpdateRepository3Params, opts ...Clie
 }
 
 /*
-  UpdateRepository30 updates conan proxy repository
+UpdateConanProxyRepository updates conan proxy repository
 */
-func (a *Client) UpdateRepository30(params *UpdateRepository30Params, opts ...ClientOption) (*UpdateRepository30NoContent, error) {
+func (a *Client) UpdateConanProxyRepository(params *UpdateConanProxyRepositoryParams, opts ...ClientOption) (*UpdateConanProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository30Params()
+		params = NewUpdateConanProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_30",
@@ -4643,7 +4643,7 @@ func (a *Client) UpdateRepository30(params *UpdateRepository30Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository30Reader{formats: a.formats},
+		Reader:             &UpdateConanProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4655,7 +4655,7 @@ func (a *Client) UpdateRepository30(params *UpdateRepository30Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository30NoContent)
+	success, ok := result.(*UpdateConanProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4666,12 +4666,12 @@ func (a *Client) UpdateRepository30(params *UpdateRepository30Params, opts ...Cl
 }
 
 /*
-  UpdateRepository31 updates r group repository
+UpdateRGroupRepository updates r group repository
 */
-func (a *Client) UpdateRepository31(params *UpdateRepository31Params, opts ...ClientOption) (*UpdateRepository31NoContent, error) {
+func (a *Client) UpdateRGroupRepository(params *UpdateRGroupRepositoryParams, opts ...ClientOption) (*UpdateRGroupRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository31Params()
+		params = NewUpdateRGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_31",
@@ -4681,7 +4681,7 @@ func (a *Client) UpdateRepository31(params *UpdateRepository31Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository31Reader{formats: a.formats},
+		Reader:             &UpdateRGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4693,7 +4693,7 @@ func (a *Client) UpdateRepository31(params *UpdateRepository31Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository31NoContent)
+	success, ok := result.(*UpdateRGroupRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4704,12 +4704,12 @@ func (a *Client) UpdateRepository31(params *UpdateRepository31Params, opts ...Cl
 }
 
 /*
-  UpdateRepository32 updates r hosted repository
+UpdateRHostedRepository updates r hosted repository
 */
-func (a *Client) UpdateRepository32(params *UpdateRepository32Params, opts ...ClientOption) (*UpdateRepository32NoContent, error) {
+func (a *Client) UpdateRHostedRepository(params *UpdateRHostedRepositoryParams, opts ...ClientOption) (*UpdateRHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository32Params()
+		params = NewUpdateRHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_32",
@@ -4719,7 +4719,7 @@ func (a *Client) UpdateRepository32(params *UpdateRepository32Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository32Reader{formats: a.formats},
+		Reader:             &UpdateRHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4731,7 +4731,7 @@ func (a *Client) UpdateRepository32(params *UpdateRepository32Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository32NoContent)
+	success, ok := result.(*UpdateRHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4742,12 +4742,12 @@ func (a *Client) UpdateRepository32(params *UpdateRepository32Params, opts ...Cl
 }
 
 /*
-  UpdateRepository33 updates r proxy repository
+UpdateRProxyRepository updates r proxy repository
 */
-func (a *Client) UpdateRepository33(params *UpdateRepository33Params, opts ...ClientOption) (*UpdateRepository33NoContent, error) {
+func (a *Client) UpdateRProxyRepository(params *UpdateRProxyRepositoryParams, opts ...ClientOption) (*UpdateRProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository33Params()
+		params = NewUpdateRProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_33",
@@ -4757,7 +4757,7 @@ func (a *Client) UpdateRepository33(params *UpdateRepository33Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository33Reader{formats: a.formats},
+		Reader:             &UpdateRProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4769,7 +4769,7 @@ func (a *Client) UpdateRepository33(params *UpdateRepository33Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository33NoContent)
+	success, ok := result.(*UpdateRProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4780,12 +4780,12 @@ func (a *Client) UpdateRepository33(params *UpdateRepository33Params, opts ...Cl
 }
 
 /*
-  UpdateRepository34 updates cocoapods proxy repository
+UpdateCocoapodsProxyRepository updates cocoapods proxy repository
 */
-func (a *Client) UpdateRepository34(params *UpdateRepository34Params, opts ...ClientOption) (*UpdateRepository34NoContent, error) {
+func (a *Client) UpdateCocoapodsProxyRepository(params *UpdateCocoapodsProxyRepositoryParams, opts ...ClientOption) (*UpdateCocoapodsProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository34Params()
+		params = NewUpdateCocoapodsProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_34",
@@ -4795,7 +4795,7 @@ func (a *Client) UpdateRepository34(params *UpdateRepository34Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository34Reader{formats: a.formats},
+		Reader:             &UpdateCocoapodsProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4807,7 +4807,7 @@ func (a *Client) UpdateRepository34(params *UpdateRepository34Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository34NoContent)
+	success, ok := result.(*UpdateCocoapodsProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4818,12 +4818,12 @@ func (a *Client) UpdateRepository34(params *UpdateRepository34Params, opts ...Cl
 }
 
 /*
-  UpdateRepository35 updates a go group repository
+UpdateGolangGroupRepository updates a go group repository
 */
-func (a *Client) UpdateRepository35(params *UpdateRepository35Params, opts ...ClientOption) (*UpdateRepository35NoContent, error) {
+func (a *Client) UpdateGolangGroupRepository(params *UpdateGolangGroupRepositoryParams, opts ...ClientOption) (*UpdateGolangGroupRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository35Params()
+		params = NewUpdateGolangGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_35",
@@ -4833,7 +4833,7 @@ func (a *Client) UpdateRepository35(params *UpdateRepository35Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository35Reader{formats: a.formats},
+		Reader:             &UpdateGolangGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4845,7 +4845,7 @@ func (a *Client) UpdateRepository35(params *UpdateRepository35Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository35NoContent)
+	success, ok := result.(*UpdateGolangGroupRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4856,12 +4856,12 @@ func (a *Client) UpdateRepository35(params *UpdateRepository35Params, opts ...Cl
 }
 
 /*
-  UpdateRepository36 updates a go proxy repository
+UpdateGolangProxyRepository updates a go proxy repository
 */
-func (a *Client) UpdateRepository36(params *UpdateRepository36Params, opts ...ClientOption) (*UpdateRepository36NoContent, error) {
+func (a *Client) UpdateGolangProxyRepository(params *UpdateGolangProxyRepositoryParams, opts ...ClientOption) (*UpdateGolangProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository36Params()
+		params = NewUpdateGolangProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_36",
@@ -4871,7 +4871,7 @@ func (a *Client) UpdateRepository36(params *UpdateRepository36Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository36Reader{formats: a.formats},
+		Reader:             &UpdateGolangProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4883,7 +4883,7 @@ func (a *Client) UpdateRepository36(params *UpdateRepository36Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository36NoContent)
+	success, ok := result.(*UpdateGolangProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4894,12 +4894,12 @@ func (a *Client) UpdateRepository36(params *UpdateRepository36Params, opts ...Cl
 }
 
 /*
-  UpdateRepository37 updates p2 proxy repository
+UpdateP2ProxyRepository updates p2 proxy repository
 */
-func (a *Client) UpdateRepository37(params *UpdateRepository37Params, opts ...ClientOption) (*UpdateRepository37NoContent, error) {
+func (a *Client) UpdateP2ProxyRepository(params *UpdateP2ProxyRepositoryParams, opts ...ClientOption) (*UpdateP2ProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository37Params()
+		params = NewUpdateP2ProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_37",
@@ -4909,7 +4909,7 @@ func (a *Client) UpdateRepository37(params *UpdateRepository37Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository37Reader{formats: a.formats},
+		Reader:             &UpdateP2ProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4921,7 +4921,7 @@ func (a *Client) UpdateRepository37(params *UpdateRepository37Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository37NoContent)
+	success, ok := result.(*UpdateP2ProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4932,12 +4932,12 @@ func (a *Client) UpdateRepository37(params *UpdateRepository37Params, opts ...Cl
 }
 
 /*
-  UpdateRepository38 updates bower group repository
+UpdateBowerGroupRepository updates bower group repository
 */
-func (a *Client) UpdateRepository38(params *UpdateRepository38Params, opts ...ClientOption) (*UpdateRepository38NoContent, error) {
+func (a *Client) UpdateBowerGroupRepository(params *UpdateBowerGroupRepositoryParams, opts ...ClientOption) (*UpdateBowerGroupRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository38Params()
+		params = NewUpdateBowerGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_38",
@@ -4947,7 +4947,7 @@ func (a *Client) UpdateRepository38(params *UpdateRepository38Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository38Reader{formats: a.formats},
+		Reader:             &UpdateBowerGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4959,7 +4959,7 @@ func (a *Client) UpdateRepository38(params *UpdateRepository38Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository38NoContent)
+	success, ok := result.(*UpdateBowerGroupRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -4970,12 +4970,12 @@ func (a *Client) UpdateRepository38(params *UpdateRepository38Params, opts ...Cl
 }
 
 /*
-  UpdateRepository39 updates bower hosted repository
+UpdateBowerHostedRepository updates bower hosted repository
 */
-func (a *Client) UpdateRepository39(params *UpdateRepository39Params, opts ...ClientOption) (*UpdateRepository39NoContent, error) {
+func (a *Client) UpdateBowerHostedRepository(params *UpdateBowerHostedRepositoryParams, opts ...ClientOption) (*UpdateBowerHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository39Params()
+		params = NewUpdateBowerHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_39",
@@ -4985,7 +4985,7 @@ func (a *Client) UpdateRepository39(params *UpdateRepository39Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository39Reader{formats: a.formats},
+		Reader:             &UpdateBowerHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -4997,7 +4997,7 @@ func (a *Client) UpdateRepository39(params *UpdateRepository39Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository39NoContent)
+	success, ok := result.(*UpdateBowerHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -5008,12 +5008,12 @@ func (a *Client) UpdateRepository39(params *UpdateRepository39Params, opts ...Cl
 }
 
 /*
-  UpdateRepository4 updates a p t proxy repository
+UpdateAptProxyRepository updates a p t proxy repository
 */
-func (a *Client) UpdateRepository4(params *UpdateRepository4Params, opts ...ClientOption) (*UpdateRepository4NoContent, error) {
+func (a *Client) UpdateAptProxyRepository(params *UpdateAptProxyRepositoryParams, opts ...ClientOption) (*UpdateAptProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository4Params()
+		params = NewUpdateAptProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_4",
@@ -5023,7 +5023,7 @@ func (a *Client) UpdateRepository4(params *UpdateRepository4Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository4Reader{formats: a.formats},
+		Reader:             &UpdateAptProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -5035,7 +5035,7 @@ func (a *Client) UpdateRepository4(params *UpdateRepository4Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository4NoContent)
+	success, ok := result.(*UpdateAptProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -5046,12 +5046,12 @@ func (a *Client) UpdateRepository4(params *UpdateRepository4Params, opts ...Clie
 }
 
 /*
-  UpdateRepository40 updates bower proxy repository
+UpdateBowerProxyRepository updates bower proxy repository
 */
-func (a *Client) UpdateRepository40(params *UpdateRepository40Params, opts ...ClientOption) (*UpdateRepository40NoContent, error) {
+func (a *Client) UpdateBowerProxyRepository(params *UpdateBowerProxyRepositoryParams, opts ...ClientOption) (*UpdateBowerProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository40Params()
+		params = NewUpdateBowerProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_40",
@@ -5061,7 +5061,7 @@ func (a *Client) UpdateRepository40(params *UpdateRepository40Params, opts ...Cl
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository40Reader{formats: a.formats},
+		Reader:             &UpdateBowerProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -5073,7 +5073,7 @@ func (a *Client) UpdateRepository40(params *UpdateRepository40Params, opts ...Cl
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository40NoContent)
+	success, ok := result.(*UpdateBowerProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -5084,12 +5084,12 @@ func (a *Client) UpdateRepository40(params *UpdateRepository40Params, opts ...Cl
 }
 
 /*
-  UpdateRepository5 updates raw group repository
+UpdateRawGroupRepository updates raw group repository
 */
-func (a *Client) UpdateRepository5(params *UpdateRepository5Params, opts ...ClientOption) (*UpdateRepository5NoContent, error) {
+func (a *Client) UpdateRawGroupRepository(params *UpdateRawGroupRepositoryParams, opts ...ClientOption) (*UpdateRawGroupRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository5Params()
+		params = NewUpdateRawGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_5",
@@ -5099,7 +5099,7 @@ func (a *Client) UpdateRepository5(params *UpdateRepository5Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository5Reader{formats: a.formats},
+		Reader:             &UpdateRawGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -5111,7 +5111,7 @@ func (a *Client) UpdateRepository5(params *UpdateRepository5Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository5NoContent)
+	success, ok := result.(*UpdateRawGroupRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -5122,12 +5122,12 @@ func (a *Client) UpdateRepository5(params *UpdateRepository5Params, opts ...Clie
 }
 
 /*
-  UpdateRepository6 updates raw hosted repository
+UpdateRawHostedRepository updates raw hosted repository
 */
-func (a *Client) UpdateRepository6(params *UpdateRepository6Params, opts ...ClientOption) (*UpdateRepository6NoContent, error) {
+func (a *Client) UpdateRawHostedRepository(params *UpdateRawHostedRepositoryParams, opts ...ClientOption) (*UpdateRawHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository6Params()
+		params = NewUpdateRawHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_6",
@@ -5137,7 +5137,7 @@ func (a *Client) UpdateRepository6(params *UpdateRepository6Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository6Reader{formats: a.formats},
+		Reader:             &UpdateRawHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -5149,7 +5149,7 @@ func (a *Client) UpdateRepository6(params *UpdateRepository6Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository6NoContent)
+	success, ok := result.(*UpdateRawHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -5160,12 +5160,12 @@ func (a *Client) UpdateRepository6(params *UpdateRepository6Params, opts ...Clie
 }
 
 /*
-  UpdateRepository7 updates raw proxy repository
+UpdateRawProxyRepository updates raw proxy repository
 */
-func (a *Client) UpdateRepository7(params *UpdateRepository7Params, opts ...ClientOption) (*UpdateRepository7NoContent, error) {
+func (a *Client) UpdateRawProxyRepository(params *UpdateRawProxyRepositoryParams, opts ...ClientOption) (*UpdateRawProxyRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository7Params()
+		params = NewUpdateRawProxyRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_7",
@@ -5175,7 +5175,7 @@ func (a *Client) UpdateRepository7(params *UpdateRepository7Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository7Reader{formats: a.formats},
+		Reader:             &UpdateRawProxyRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -5187,7 +5187,7 @@ func (a *Client) UpdateRepository7(params *UpdateRepository7Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository7NoContent)
+	success, ok := result.(*UpdateRawProxyRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -5198,12 +5198,12 @@ func (a *Client) UpdateRepository7(params *UpdateRepository7Params, opts ...Clie
 }
 
 /*
-  UpdateRepository8 updates npm group repository
+UpdateNpmGroupRepository updates npm group repository
 */
-func (a *Client) UpdateRepository8(params *UpdateRepository8Params, opts ...ClientOption) (*UpdateRepository8NoContent, error) {
+func (a *Client) UpdateNpmGroupRepository(params *UpdateNpmGroupRepositoryParams, opts ...ClientOption) (*UpdateNpmGroupRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository8Params()
+		params = NewUpdateNpmGroupRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_8",
@@ -5213,7 +5213,7 @@ func (a *Client) UpdateRepository8(params *UpdateRepository8Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository8Reader{formats: a.formats},
+		Reader:             &UpdateNpmGroupRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -5225,7 +5225,7 @@ func (a *Client) UpdateRepository8(params *UpdateRepository8Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository8NoContent)
+	success, ok := result.(*UpdateNpmGroupRepositoryNoContent)
 	if ok {
 		return success, nil
 	}
@@ -5236,12 +5236,12 @@ func (a *Client) UpdateRepository8(params *UpdateRepository8Params, opts ...Clie
 }
 
 /*
-  UpdateRepository9 updates npm hosted repository
+UpdateNpmHostedRepository updates npm hosted repository
 */
-func (a *Client) UpdateRepository9(params *UpdateRepository9Params, opts ...ClientOption) (*UpdateRepository9NoContent, error) {
+func (a *Client) UpdateNpmHostedRepository(params *UpdateNpmHostedRepositoryParams, opts ...ClientOption) (*UpdateNpmHostedRepositoryNoContent, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRepository9Params()
+		params = NewUpdateNpmHostedRepositoryParams()
 	}
 	op := &runtime.ClientOperation{
 		ID:                 "updateRepository_9",
@@ -5251,7 +5251,7 @@ func (a *Client) UpdateRepository9(params *UpdateRepository9Params, opts ...Clie
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http"},
 		Params:             params,
-		Reader:             &UpdateRepository9Reader{formats: a.formats},
+		Reader:             &UpdateNpmHostedRepositoryReader{formats: a.formats},
 		Context:            params.Context,
 		Client:             params.HTTPClient,
 	}
@@ -5263,7 +5263,7 @@ func (a *Client) UpdateRepository9(params *UpdateRepository9Params, opts ...Clie
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRepository9NoContent)
+	success, ok := result.(*UpdateNpmHostedRepositoryNoContent)
 	if ok {
 		return success, nil
 	}

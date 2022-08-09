@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository7Reader is a Reader for the CreateRepository7 structure.
-type CreateRepository7Reader struct {
+// CreateRawProxyRepositoryReader is a Reader for the CreateRawProxyRepository structure.
+type CreateRawProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository7Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateRawProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository7Created()
+		result := NewCreateRawProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository7Unauthorized()
+		result := NewCreateRawProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository7Forbidden()
+		result := NewCreateRawProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository7Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewCreateRepository7Created creates a CreateRepository7Created with default headers values
-func NewCreateRepository7Created() *CreateRepository7Created {
-	return &CreateRepository7Created{}
+// NewCreateRawProxyRepositoryCreated creates a CreateRawProxyRepositoryCreated with default headers values
+func NewCreateRawProxyRepositoryCreated() *CreateRawProxyRepositoryCreated {
+	return &CreateRawProxyRepositoryCreated{}
 }
 
-/* CreateRepository7Created describes a response with status code 201, with default header values.
+/*
+	CreateRawProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository7Created struct {
+type CreateRawProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository7 created response has a 2xx status code
-func (o *CreateRepository7Created) IsSuccess() bool {
+func (o *CreateRawProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository7 created response has a 3xx status code
-func (o *CreateRepository7Created) IsRedirect() bool {
+func (o *CreateRawProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository7 created response has a 4xx status code
-func (o *CreateRepository7Created) IsClientError() bool {
+func (o *CreateRawProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository7 created response has a 5xx status code
-func (o *CreateRepository7Created) IsServerError() bool {
+func (o *CreateRawProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository7 created response a status code equal to that given
-func (o *CreateRepository7Created) IsCode(code int) bool {
+func (o *CreateRawProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository7Created) Error() string {
+func (o *CreateRawProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/proxy][%d] createRepository7Created ", 201)
 }
 
-func (o *CreateRepository7Created) String() string {
+func (o *CreateRawProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/proxy][%d] createRepository7Created ", 201)
 }
 
-func (o *CreateRepository7Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRawProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository7Unauthorized creates a CreateRepository7Unauthorized with default headers values
-func NewCreateRepository7Unauthorized() *CreateRepository7Unauthorized {
-	return &CreateRepository7Unauthorized{}
+// NewCreateRawProxyRepositoryUnauthorized creates a CreateRawProxyRepositoryUnauthorized with default headers values
+func NewCreateRawProxyRepositoryUnauthorized() *CreateRawProxyRepositoryUnauthorized {
+	return &CreateRawProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository7Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateRawProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository7Unauthorized struct {
+type CreateRawProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository7 unauthorized response has a 2xx status code
-func (o *CreateRepository7Unauthorized) IsSuccess() bool {
+func (o *CreateRawProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository7 unauthorized response has a 3xx status code
-func (o *CreateRepository7Unauthorized) IsRedirect() bool {
+func (o *CreateRawProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository7 unauthorized response has a 4xx status code
-func (o *CreateRepository7Unauthorized) IsClientError() bool {
+func (o *CreateRawProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository7 unauthorized response has a 5xx status code
-func (o *CreateRepository7Unauthorized) IsServerError() bool {
+func (o *CreateRawProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository7 unauthorized response a status code equal to that given
-func (o *CreateRepository7Unauthorized) IsCode(code int) bool {
+func (o *CreateRawProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository7Unauthorized) Error() string {
+func (o *CreateRawProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/proxy][%d] createRepository7Unauthorized ", 401)
 }
 
-func (o *CreateRepository7Unauthorized) String() string {
+func (o *CreateRawProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/proxy][%d] createRepository7Unauthorized ", 401)
 }
 
-func (o *CreateRepository7Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRawProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository7Forbidden creates a CreateRepository7Forbidden with default headers values
-func NewCreateRepository7Forbidden() *CreateRepository7Forbidden {
-	return &CreateRepository7Forbidden{}
+// NewCreateRawProxyRepositoryForbidden creates a CreateRawProxyRepositoryForbidden with default headers values
+func NewCreateRawProxyRepositoryForbidden() *CreateRawProxyRepositoryForbidden {
+	return &CreateRawProxyRepositoryForbidden{}
 }
 
-/* CreateRepository7Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateRawProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository7Forbidden struct {
+type CreateRawProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository7 forbidden response has a 2xx status code
-func (o *CreateRepository7Forbidden) IsSuccess() bool {
+func (o *CreateRawProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository7 forbidden response has a 3xx status code
-func (o *CreateRepository7Forbidden) IsRedirect() bool {
+func (o *CreateRawProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository7 forbidden response has a 4xx status code
-func (o *CreateRepository7Forbidden) IsClientError() bool {
+func (o *CreateRawProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository7 forbidden response has a 5xx status code
-func (o *CreateRepository7Forbidden) IsServerError() bool {
+func (o *CreateRawProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository7 forbidden response a status code equal to that given
-func (o *CreateRepository7Forbidden) IsCode(code int) bool {
+func (o *CreateRawProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository7Forbidden) Error() string {
+func (o *CreateRawProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/proxy][%d] createRepository7Forbidden ", 403)
 }
 
-func (o *CreateRepository7Forbidden) String() string {
+func (o *CreateRawProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/proxy][%d] createRepository7Forbidden ", 403)
 }
 
-func (o *CreateRepository7Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRawProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

@@ -42,7 +42,8 @@ func NewDelete1NoContent() *Delete1NoContent {
 	return &Delete1NoContent{}
 }
 
-/* Delete1NoContent describes a response with status code 204, with default header values.
+/*
+	Delete1NoContent describes a response with status code 204, with default header values.
 
 Script was deleted
 */
@@ -92,7 +93,8 @@ func NewDelete1NotFound() *Delete1NotFound {
 	return &Delete1NotFound{}
 }
 
-/* Delete1NotFound describes a response with status code 404, with default header values.
+/*
+	Delete1NotFound describes a response with status code 404, with default header values.
 
 No script with the specified name
 */

@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository12Params creates a new CreateRepository12Params object,
+// NewCreateNugetHostedRepositoryParams creates a new CreateNugetHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository12Params() *CreateRepository12Params {
-	return &CreateRepository12Params{
+func NewCreateNugetHostedRepositoryParams() *CreateNugetHostedRepositoryParams {
+	return &CreateNugetHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository12ParamsWithTimeout creates a new CreateRepository12Params object
+// NewCreateNugetHostedRepositoryParamsWithTimeout creates a new CreateNugetHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository12ParamsWithTimeout(timeout time.Duration) *CreateRepository12Params {
-	return &CreateRepository12Params{
+func NewCreateNugetHostedRepositoryParamsWithTimeout(timeout time.Duration) *CreateNugetHostedRepositoryParams {
+	return &CreateNugetHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository12ParamsWithContext creates a new CreateRepository12Params object
+// NewCreateNugetHostedRepositoryParamsWithContext creates a new CreateNugetHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository12ParamsWithContext(ctx context.Context) *CreateRepository12Params {
-	return &CreateRepository12Params{
+func NewCreateNugetHostedRepositoryParamsWithContext(ctx context.Context) *CreateNugetHostedRepositoryParams {
+	return &CreateNugetHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository12ParamsWithHTTPClient creates a new CreateRepository12Params object
+// NewCreateNugetHostedRepositoryParamsWithHTTPClient creates a new CreateNugetHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository12ParamsWithHTTPClient(client *http.Client) *CreateRepository12Params {
-	return &CreateRepository12Params{
+func NewCreateNugetHostedRepositoryParamsWithHTTPClient(client *http.Client) *CreateNugetHostedRepositoryParams {
+	return &CreateNugetHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository12Params contains all the parameters to send to the API endpoint
-   for the create repository 12 operation.
+/*
+CreateNugetHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 12 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository12Params struct {
+type CreateNugetHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.NugetHostedRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository12Params struct {
 // WithDefaults hydrates default values in the create repository 12 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository12Params) WithDefaults() *CreateRepository12Params {
+func (o *CreateNugetHostedRepositoryParams) WithDefaults() *CreateNugetHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository12Params) WithDefaults() *CreateRepository12Params {
 // SetDefaults hydrates default values in the create repository 12 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository12Params) SetDefaults() {
+func (o *CreateNugetHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 12 params
-func (o *CreateRepository12Params) WithTimeout(timeout time.Duration) *CreateRepository12Params {
+func (o *CreateNugetHostedRepositoryParams) WithTimeout(timeout time.Duration) *CreateNugetHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 12 params
-func (o *CreateRepository12Params) SetTimeout(timeout time.Duration) {
+func (o *CreateNugetHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 12 params
-func (o *CreateRepository12Params) WithContext(ctx context.Context) *CreateRepository12Params {
+func (o *CreateNugetHostedRepositoryParams) WithContext(ctx context.Context) *CreateNugetHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 12 params
-func (o *CreateRepository12Params) SetContext(ctx context.Context) {
+func (o *CreateNugetHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 12 params
-func (o *CreateRepository12Params) WithHTTPClient(client *http.Client) *CreateRepository12Params {
+func (o *CreateNugetHostedRepositoryParams) WithHTTPClient(client *http.Client) *CreateNugetHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 12 params
-func (o *CreateRepository12Params) SetHTTPClient(client *http.Client) {
+func (o *CreateNugetHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 12 params
-func (o *CreateRepository12Params) WithBody(body *models.NugetHostedRepositoryAPIRequest) *CreateRepository12Params {
+func (o *CreateNugetHostedRepositoryParams) WithBody(body *models.NugetHostedRepositoryAPIRequest) *CreateNugetHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 12 params
-func (o *CreateRepository12Params) SetBody(body *models.NugetHostedRepositoryAPIRequest) {
+func (o *CreateNugetHostedRepositoryParams) SetBody(body *models.NugetHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository12Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateNugetHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

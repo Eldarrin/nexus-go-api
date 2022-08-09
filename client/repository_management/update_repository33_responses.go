@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository33Reader is a Reader for the UpdateRepository33 structure.
-type UpdateRepository33Reader struct {
+// UpdateRProxyRepositoryReader is a Reader for the UpdateRProxyRepository structure.
+type UpdateRProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository33Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateRProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository33NoContent()
+		result := NewUpdateRProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository33Unauthorized()
+		result := NewUpdateRProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository33Forbidden()
+		result := NewUpdateRProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 404:
-		result := NewUpdateRepository33NotFound()
+		result := NewUpdateRProxyRepositoryNotFound()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *UpdateRepository33Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository33NoContent creates a UpdateRepository33NoContent with default headers values
-func NewUpdateRepository33NoContent() *UpdateRepository33NoContent {
-	return &UpdateRepository33NoContent{}
+// NewUpdateRProxyRepositoryNoContent creates a UpdateRProxyRepositoryNoContent with default headers values
+func NewUpdateRProxyRepositoryNoContent() *UpdateRProxyRepositoryNoContent {
+	return &UpdateRProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository33NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateRProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository33NoContent struct {
+type UpdateRProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository33 no content response has a 2xx status code
-func (o *UpdateRepository33NoContent) IsSuccess() bool {
+func (o *UpdateRProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository33 no content response has a 3xx status code
-func (o *UpdateRepository33NoContent) IsRedirect() bool {
+func (o *UpdateRProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository33 no content response has a 4xx status code
-func (o *UpdateRepository33NoContent) IsClientError() bool {
+func (o *UpdateRProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository33 no content response has a 5xx status code
-func (o *UpdateRepository33NoContent) IsServerError() bool {
+func (o *UpdateRProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository33 no content response a status code equal to that given
-func (o *UpdateRepository33NoContent) IsCode(code int) bool {
+func (o *UpdateRProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository33NoContent) Error() string {
+func (o *UpdateRProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/r/proxy/{repositoryName}][%d] updateRepository33NoContent ", 204)
 }
 
-func (o *UpdateRepository33NoContent) String() string {
+func (o *UpdateRProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/r/proxy/{repositoryName}][%d] updateRepository33NoContent ", 204)
 }
 
-func (o *UpdateRepository33NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository33Unauthorized creates a UpdateRepository33Unauthorized with default headers values
-func NewUpdateRepository33Unauthorized() *UpdateRepository33Unauthorized {
-	return &UpdateRepository33Unauthorized{}
+// NewUpdateRProxyRepositoryUnauthorized creates a UpdateRProxyRepositoryUnauthorized with default headers values
+func NewUpdateRProxyRepositoryUnauthorized() *UpdateRProxyRepositoryUnauthorized {
+	return &UpdateRProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository33Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateRProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository33Unauthorized struct {
+type UpdateRProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository33 unauthorized response has a 2xx status code
-func (o *UpdateRepository33Unauthorized) IsSuccess() bool {
+func (o *UpdateRProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository33 unauthorized response has a 3xx status code
-func (o *UpdateRepository33Unauthorized) IsRedirect() bool {
+func (o *UpdateRProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository33 unauthorized response has a 4xx status code
-func (o *UpdateRepository33Unauthorized) IsClientError() bool {
+func (o *UpdateRProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository33 unauthorized response has a 5xx status code
-func (o *UpdateRepository33Unauthorized) IsServerError() bool {
+func (o *UpdateRProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository33 unauthorized response a status code equal to that given
-func (o *UpdateRepository33Unauthorized) IsCode(code int) bool {
+func (o *UpdateRProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository33Unauthorized) Error() string {
+func (o *UpdateRProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/r/proxy/{repositoryName}][%d] updateRepository33Unauthorized ", 401)
 }
 
-func (o *UpdateRepository33Unauthorized) String() string {
+func (o *UpdateRProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/r/proxy/{repositoryName}][%d] updateRepository33Unauthorized ", 401)
 }
 
-func (o *UpdateRepository33Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository33Forbidden creates a UpdateRepository33Forbidden with default headers values
-func NewUpdateRepository33Forbidden() *UpdateRepository33Forbidden {
-	return &UpdateRepository33Forbidden{}
+// NewUpdateRProxyRepositoryForbidden creates a UpdateRProxyRepositoryForbidden with default headers values
+func NewUpdateRProxyRepositoryForbidden() *UpdateRProxyRepositoryForbidden {
+	return &UpdateRProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository33Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateRProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository33Forbidden struct {
+type UpdateRProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository33 forbidden response has a 2xx status code
-func (o *UpdateRepository33Forbidden) IsSuccess() bool {
+func (o *UpdateRProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository33 forbidden response has a 3xx status code
-func (o *UpdateRepository33Forbidden) IsRedirect() bool {
+func (o *UpdateRProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository33 forbidden response has a 4xx status code
-func (o *UpdateRepository33Forbidden) IsClientError() bool {
+func (o *UpdateRProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository33 forbidden response has a 5xx status code
-func (o *UpdateRepository33Forbidden) IsServerError() bool {
+func (o *UpdateRProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository33 forbidden response a status code equal to that given
-func (o *UpdateRepository33Forbidden) IsCode(code int) bool {
+func (o *UpdateRProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository33Forbidden) Error() string {
+func (o *UpdateRProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/r/proxy/{repositoryName}][%d] updateRepository33Forbidden ", 403)
 }
 
-func (o *UpdateRepository33Forbidden) String() string {
+func (o *UpdateRProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/r/proxy/{repositoryName}][%d] updateRepository33Forbidden ", 403)
 }
 
-func (o *UpdateRepository33Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository33NotFound creates a UpdateRepository33NotFound with default headers values
-func NewUpdateRepository33NotFound() *UpdateRepository33NotFound {
-	return &UpdateRepository33NotFound{}
+// NewUpdateRProxyRepositoryNotFound creates a UpdateRProxyRepositoryNotFound with default headers values
+func NewUpdateRProxyRepositoryNotFound() *UpdateRProxyRepositoryNotFound {
+	return &UpdateRProxyRepositoryNotFound{}
 }
 
-/* UpdateRepository33NotFound describes a response with status code 404, with default header values.
+/*
+	UpdateRProxyRepositoryNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */
-type UpdateRepository33NotFound struct {
+type UpdateRProxyRepositoryNotFound struct {
 }
 
 // IsSuccess returns true when this update repository33 not found response has a 2xx status code
-func (o *UpdateRepository33NotFound) IsSuccess() bool {
+func (o *UpdateRProxyRepositoryNotFound) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository33 not found response has a 3xx status code
-func (o *UpdateRepository33NotFound) IsRedirect() bool {
+func (o *UpdateRProxyRepositoryNotFound) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository33 not found response has a 4xx status code
-func (o *UpdateRepository33NotFound) IsClientError() bool {
+func (o *UpdateRProxyRepositoryNotFound) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository33 not found response has a 5xx status code
-func (o *UpdateRepository33NotFound) IsServerError() bool {
+func (o *UpdateRProxyRepositoryNotFound) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository33 not found response a status code equal to that given
-func (o *UpdateRepository33NotFound) IsCode(code int) bool {
+func (o *UpdateRProxyRepositoryNotFound) IsCode(code int) bool {
 	return code == 404
 }
 
-func (o *UpdateRepository33NotFound) Error() string {
+func (o *UpdateRProxyRepositoryNotFound) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/r/proxy/{repositoryName}][%d] updateRepository33NotFound ", 404)
 }
 
-func (o *UpdateRepository33NotFound) String() string {
+func (o *UpdateRProxyRepositoryNotFound) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/r/proxy/{repositoryName}][%d] updateRepository33NotFound ", 404)
 }
 
-func (o *UpdateRepository33NotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRProxyRepositoryNotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

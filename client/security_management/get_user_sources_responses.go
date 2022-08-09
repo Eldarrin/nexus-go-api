@@ -45,7 +45,8 @@ func NewGetUserSourcesOK() *GetUserSourcesOK {
 	return &GetUserSourcesOK{}
 }
 
-/* GetUserSourcesOK describes a response with status code 200, with default header values.
+/*
+	GetUserSourcesOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -105,7 +106,8 @@ func NewGetUserSourcesForbidden() *GetUserSourcesForbidden {
 	return &GetUserSourcesForbidden{}
 }
 
-/* GetUserSourcesForbidden describes a response with status code 403, with default header values.
+/*
+	GetUserSourcesForbidden describes a response with status code 403, with default header values.
 
 The user does not have permission to perform the operation.
 */

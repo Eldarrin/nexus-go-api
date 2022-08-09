@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository34Params creates a new GetRepository34Params object,
+// NewGetRProxyRepositoryParams creates a new GetRProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository34Params() *GetRepository34Params {
-	return &GetRepository34Params{
+func NewGetRProxyRepositoryParams() *GetRProxyRepositoryParams {
+	return &GetRProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository34ParamsWithTimeout creates a new GetRepository34Params object
+// NewGetRProxyRepositoryParamsWithTimeout creates a new GetRProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository34ParamsWithTimeout(timeout time.Duration) *GetRepository34Params {
-	return &GetRepository34Params{
+func NewGetRProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetRProxyRepositoryParams {
+	return &GetRProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository34ParamsWithContext creates a new GetRepository34Params object
+// NewGetRProxyRepositoryParamsWithContext creates a new GetRProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository34ParamsWithContext(ctx context.Context) *GetRepository34Params {
-	return &GetRepository34Params{
+func NewGetRProxyRepositoryParamsWithContext(ctx context.Context) *GetRProxyRepositoryParams {
+	return &GetRProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository34ParamsWithHTTPClient creates a new GetRepository34Params object
+// NewGetRProxyRepositoryParamsWithHTTPClient creates a new GetRProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository34ParamsWithHTTPClient(client *http.Client) *GetRepository34Params {
-	return &GetRepository34Params{
+func NewGetRProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetRProxyRepositoryParams {
+	return &GetRProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository34Params contains all the parameters to send to the API endpoint
-   for the get repository 34 operation.
+/*
+GetRProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 34 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository34Params struct {
+type GetRProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository34Params struct {
 // WithDefaults hydrates default values in the get repository 34 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository34Params) WithDefaults() *GetRepository34Params {
+func (o *GetRProxyRepositoryParams) WithDefaults() *GetRProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository34Params) WithDefaults() *GetRepository34Params {
 // SetDefaults hydrates default values in the get repository 34 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository34Params) SetDefaults() {
+func (o *GetRProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 34 params
-func (o *GetRepository34Params) WithTimeout(timeout time.Duration) *GetRepository34Params {
+func (o *GetRProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetRProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 34 params
-func (o *GetRepository34Params) SetTimeout(timeout time.Duration) {
+func (o *GetRProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 34 params
-func (o *GetRepository34Params) WithContext(ctx context.Context) *GetRepository34Params {
+func (o *GetRProxyRepositoryParams) WithContext(ctx context.Context) *GetRProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 34 params
-func (o *GetRepository34Params) SetContext(ctx context.Context) {
+func (o *GetRProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 34 params
-func (o *GetRepository34Params) WithHTTPClient(client *http.Client) *GetRepository34Params {
+func (o *GetRProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetRProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 34 params
-func (o *GetRepository34Params) SetHTTPClient(client *http.Client) {
+func (o *GetRProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 34 params
-func (o *GetRepository34Params) WithRepositoryName(repositoryName string) *GetRepository34Params {
+func (o *GetRProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetRProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 34 params
-func (o *GetRepository34Params) SetRepositoryName(repositoryName string) {
+func (o *GetRProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository34Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetRProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

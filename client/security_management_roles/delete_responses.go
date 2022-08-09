@@ -42,7 +42,8 @@ func NewDeleteForbidden() *DeleteForbidden {
 	return &DeleteForbidden{}
 }
 
-/* DeleteForbidden describes a response with status code 403, with default header values.
+/*
+	DeleteForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to delete role
 */
@@ -92,7 +93,8 @@ func NewDeleteNotFound() *DeleteNotFound {
 	return &DeleteNotFound{}
 }
 
-/* DeleteNotFound describes a response with status code 404, with default header values.
+/*
+	DeleteNotFound describes a response with status code 404, with default header values.
 
 Role not found
 */

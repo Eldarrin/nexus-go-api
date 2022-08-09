@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository29Reader is a Reader for the UpdateRepository29 structure.
-type UpdateRepository29Reader struct {
+// UpdateCondaProxyRepositoryReader is a Reader for the UpdateCondaProxyRepository structure.
+type UpdateCondaProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository29Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateCondaProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository29NoContent()
+		result := NewUpdateCondaProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository29Unauthorized()
+		result := NewUpdateCondaProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository29Forbidden()
+		result := NewUpdateCondaProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository29Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository29NoContent creates a UpdateRepository29NoContent with default headers values
-func NewUpdateRepository29NoContent() *UpdateRepository29NoContent {
-	return &UpdateRepository29NoContent{}
+// NewUpdateCondaProxyRepositoryNoContent creates a UpdateCondaProxyRepositoryNoContent with default headers values
+func NewUpdateCondaProxyRepositoryNoContent() *UpdateCondaProxyRepositoryNoContent {
+	return &UpdateCondaProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository29NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateCondaProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository29NoContent struct {
+type UpdateCondaProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository29 no content response has a 2xx status code
-func (o *UpdateRepository29NoContent) IsSuccess() bool {
+func (o *UpdateCondaProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository29 no content response has a 3xx status code
-func (o *UpdateRepository29NoContent) IsRedirect() bool {
+func (o *UpdateCondaProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository29 no content response has a 4xx status code
-func (o *UpdateRepository29NoContent) IsClientError() bool {
+func (o *UpdateCondaProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository29 no content response has a 5xx status code
-func (o *UpdateRepository29NoContent) IsServerError() bool {
+func (o *UpdateCondaProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository29 no content response a status code equal to that given
-func (o *UpdateRepository29NoContent) IsCode(code int) bool {
+func (o *UpdateCondaProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository29NoContent) Error() string {
+func (o *UpdateCondaProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conda/proxy/{repositoryName}][%d] updateRepository29NoContent ", 204)
 }
 
-func (o *UpdateRepository29NoContent) String() string {
+func (o *UpdateCondaProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conda/proxy/{repositoryName}][%d] updateRepository29NoContent ", 204)
 }
 
-func (o *UpdateRepository29NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateCondaProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository29Unauthorized creates a UpdateRepository29Unauthorized with default headers values
-func NewUpdateRepository29Unauthorized() *UpdateRepository29Unauthorized {
-	return &UpdateRepository29Unauthorized{}
+// NewUpdateCondaProxyRepositoryUnauthorized creates a UpdateCondaProxyRepositoryUnauthorized with default headers values
+func NewUpdateCondaProxyRepositoryUnauthorized() *UpdateCondaProxyRepositoryUnauthorized {
+	return &UpdateCondaProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository29Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateCondaProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository29Unauthorized struct {
+type UpdateCondaProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository29 unauthorized response has a 2xx status code
-func (o *UpdateRepository29Unauthorized) IsSuccess() bool {
+func (o *UpdateCondaProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository29 unauthorized response has a 3xx status code
-func (o *UpdateRepository29Unauthorized) IsRedirect() bool {
+func (o *UpdateCondaProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository29 unauthorized response has a 4xx status code
-func (o *UpdateRepository29Unauthorized) IsClientError() bool {
+func (o *UpdateCondaProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository29 unauthorized response has a 5xx status code
-func (o *UpdateRepository29Unauthorized) IsServerError() bool {
+func (o *UpdateCondaProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository29 unauthorized response a status code equal to that given
-func (o *UpdateRepository29Unauthorized) IsCode(code int) bool {
+func (o *UpdateCondaProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository29Unauthorized) Error() string {
+func (o *UpdateCondaProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conda/proxy/{repositoryName}][%d] updateRepository29Unauthorized ", 401)
 }
 
-func (o *UpdateRepository29Unauthorized) String() string {
+func (o *UpdateCondaProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conda/proxy/{repositoryName}][%d] updateRepository29Unauthorized ", 401)
 }
 
-func (o *UpdateRepository29Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateCondaProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository29Forbidden creates a UpdateRepository29Forbidden with default headers values
-func NewUpdateRepository29Forbidden() *UpdateRepository29Forbidden {
-	return &UpdateRepository29Forbidden{}
+// NewUpdateCondaProxyRepositoryForbidden creates a UpdateCondaProxyRepositoryForbidden with default headers values
+func NewUpdateCondaProxyRepositoryForbidden() *UpdateCondaProxyRepositoryForbidden {
+	return &UpdateCondaProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository29Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateCondaProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository29Forbidden struct {
+type UpdateCondaProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository29 forbidden response has a 2xx status code
-func (o *UpdateRepository29Forbidden) IsSuccess() bool {
+func (o *UpdateCondaProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository29 forbidden response has a 3xx status code
-func (o *UpdateRepository29Forbidden) IsRedirect() bool {
+func (o *UpdateCondaProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository29 forbidden response has a 4xx status code
-func (o *UpdateRepository29Forbidden) IsClientError() bool {
+func (o *UpdateCondaProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository29 forbidden response has a 5xx status code
-func (o *UpdateRepository29Forbidden) IsServerError() bool {
+func (o *UpdateCondaProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository29 forbidden response a status code equal to that given
-func (o *UpdateRepository29Forbidden) IsCode(code int) bool {
+func (o *UpdateCondaProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository29Forbidden) Error() string {
+func (o *UpdateCondaProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conda/proxy/{repositoryName}][%d] updateRepository29Forbidden ", 403)
 }
 
-func (o *UpdateRepository29Forbidden) String() string {
+func (o *UpdateCondaProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conda/proxy/{repositoryName}][%d] updateRepository29Forbidden ", 403)
 }
 
-func (o *UpdateRepository29Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateCondaProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

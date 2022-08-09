@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository32Params creates a new GetRepository32Params object,
+// NewGetRGroupRepositoryParams creates a new GetRGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository32Params() *GetRepository32Params {
-	return &GetRepository32Params{
+func NewGetRGroupRepositoryParams() *GetRGroupRepositoryParams {
+	return &GetRGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository32ParamsWithTimeout creates a new GetRepository32Params object
+// NewGetRGroupRepositoryParamsWithTimeout creates a new GetRGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository32ParamsWithTimeout(timeout time.Duration) *GetRepository32Params {
-	return &GetRepository32Params{
+func NewGetRGroupRepositoryParamsWithTimeout(timeout time.Duration) *GetRGroupRepositoryParams {
+	return &GetRGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository32ParamsWithContext creates a new GetRepository32Params object
+// NewGetRGroupRepositoryParamsWithContext creates a new GetRGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository32ParamsWithContext(ctx context.Context) *GetRepository32Params {
-	return &GetRepository32Params{
+func NewGetRGroupRepositoryParamsWithContext(ctx context.Context) *GetRGroupRepositoryParams {
+	return &GetRGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository32ParamsWithHTTPClient creates a new GetRepository32Params object
+// NewGetRGroupRepositoryParamsWithHTTPClient creates a new GetRGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository32ParamsWithHTTPClient(client *http.Client) *GetRepository32Params {
-	return &GetRepository32Params{
+func NewGetRGroupRepositoryParamsWithHTTPClient(client *http.Client) *GetRGroupRepositoryParams {
+	return &GetRGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository32Params contains all the parameters to send to the API endpoint
-   for the get repository 32 operation.
+/*
+GetRGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 32 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository32Params struct {
+type GetRGroupRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository32Params struct {
 // WithDefaults hydrates default values in the get repository 32 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository32Params) WithDefaults() *GetRepository32Params {
+func (o *GetRGroupRepositoryParams) WithDefaults() *GetRGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository32Params) WithDefaults() *GetRepository32Params {
 // SetDefaults hydrates default values in the get repository 32 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository32Params) SetDefaults() {
+func (o *GetRGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 32 params
-func (o *GetRepository32Params) WithTimeout(timeout time.Duration) *GetRepository32Params {
+func (o *GetRGroupRepositoryParams) WithTimeout(timeout time.Duration) *GetRGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 32 params
-func (o *GetRepository32Params) SetTimeout(timeout time.Duration) {
+func (o *GetRGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 32 params
-func (o *GetRepository32Params) WithContext(ctx context.Context) *GetRepository32Params {
+func (o *GetRGroupRepositoryParams) WithContext(ctx context.Context) *GetRGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 32 params
-func (o *GetRepository32Params) SetContext(ctx context.Context) {
+func (o *GetRGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 32 params
-func (o *GetRepository32Params) WithHTTPClient(client *http.Client) *GetRepository32Params {
+func (o *GetRGroupRepositoryParams) WithHTTPClient(client *http.Client) *GetRGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 32 params
-func (o *GetRepository32Params) SetHTTPClient(client *http.Client) {
+func (o *GetRGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 32 params
-func (o *GetRepository32Params) WithRepositoryName(repositoryName string) *GetRepository32Params {
+func (o *GetRGroupRepositoryParams) WithRepositoryName(repositoryName string) *GetRGroupRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 32 params
-func (o *GetRepository32Params) SetRepositoryName(repositoryName string) {
+func (o *GetRGroupRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository32Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetRGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

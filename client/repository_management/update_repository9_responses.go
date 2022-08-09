@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository9Reader is a Reader for the UpdateRepository9 structure.
-type UpdateRepository9Reader struct {
+// UpdateNpmHostedRepositoryReader is a Reader for the UpdateNpmHostedRepository structure.
+type UpdateNpmHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository9Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateNpmHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository9NoContent()
+		result := NewUpdateNpmHostedRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository9Unauthorized()
+		result := NewUpdateNpmHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository9Forbidden()
+		result := NewUpdateNpmHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository9Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewUpdateRepository9NoContent creates a UpdateRepository9NoContent with default headers values
-func NewUpdateRepository9NoContent() *UpdateRepository9NoContent {
-	return &UpdateRepository9NoContent{}
+// NewUpdateNpmHostedRepositoryNoContent creates a UpdateNpmHostedRepositoryNoContent with default headers values
+func NewUpdateNpmHostedRepositoryNoContent() *UpdateNpmHostedRepositoryNoContent {
+	return &UpdateNpmHostedRepositoryNoContent{}
 }
 
-/* UpdateRepository9NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateNpmHostedRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository9NoContent struct {
+type UpdateNpmHostedRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository9 no content response has a 2xx status code
-func (o *UpdateRepository9NoContent) IsSuccess() bool {
+func (o *UpdateNpmHostedRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository9 no content response has a 3xx status code
-func (o *UpdateRepository9NoContent) IsRedirect() bool {
+func (o *UpdateNpmHostedRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository9 no content response has a 4xx status code
-func (o *UpdateRepository9NoContent) IsClientError() bool {
+func (o *UpdateNpmHostedRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository9 no content response has a 5xx status code
-func (o *UpdateRepository9NoContent) IsServerError() bool {
+func (o *UpdateNpmHostedRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository9 no content response a status code equal to that given
-func (o *UpdateRepository9NoContent) IsCode(code int) bool {
+func (o *UpdateNpmHostedRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository9NoContent) Error() string {
+func (o *UpdateNpmHostedRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/hosted/{repositoryName}][%d] updateRepository9NoContent ", 204)
 }
 
-func (o *UpdateRepository9NoContent) String() string {
+func (o *UpdateNpmHostedRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/hosted/{repositoryName}][%d] updateRepository9NoContent ", 204)
 }
 
-func (o *UpdateRepository9NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateNpmHostedRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository9Unauthorized creates a UpdateRepository9Unauthorized with default headers values
-func NewUpdateRepository9Unauthorized() *UpdateRepository9Unauthorized {
-	return &UpdateRepository9Unauthorized{}
+// NewUpdateNpmHostedRepositoryUnauthorized creates a UpdateNpmHostedRepositoryUnauthorized with default headers values
+func NewUpdateNpmHostedRepositoryUnauthorized() *UpdateNpmHostedRepositoryUnauthorized {
+	return &UpdateNpmHostedRepositoryUnauthorized{}
 }
 
-/* UpdateRepository9Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateNpmHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository9Unauthorized struct {
+type UpdateNpmHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository9 unauthorized response has a 2xx status code
-func (o *UpdateRepository9Unauthorized) IsSuccess() bool {
+func (o *UpdateNpmHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository9 unauthorized response has a 3xx status code
-func (o *UpdateRepository9Unauthorized) IsRedirect() bool {
+func (o *UpdateNpmHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository9 unauthorized response has a 4xx status code
-func (o *UpdateRepository9Unauthorized) IsClientError() bool {
+func (o *UpdateNpmHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository9 unauthorized response has a 5xx status code
-func (o *UpdateRepository9Unauthorized) IsServerError() bool {
+func (o *UpdateNpmHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository9 unauthorized response a status code equal to that given
-func (o *UpdateRepository9Unauthorized) IsCode(code int) bool {
+func (o *UpdateNpmHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository9Unauthorized) Error() string {
+func (o *UpdateNpmHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/hosted/{repositoryName}][%d] updateRepository9Unauthorized ", 401)
 }
 
-func (o *UpdateRepository9Unauthorized) String() string {
+func (o *UpdateNpmHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/hosted/{repositoryName}][%d] updateRepository9Unauthorized ", 401)
 }
 
-func (o *UpdateRepository9Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateNpmHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository9Forbidden creates a UpdateRepository9Forbidden with default headers values
-func NewUpdateRepository9Forbidden() *UpdateRepository9Forbidden {
-	return &UpdateRepository9Forbidden{}
+// NewUpdateNpmHostedRepositoryForbidden creates a UpdateNpmHostedRepositoryForbidden with default headers values
+func NewUpdateNpmHostedRepositoryForbidden() *UpdateNpmHostedRepositoryForbidden {
+	return &UpdateNpmHostedRepositoryForbidden{}
 }
 
-/* UpdateRepository9Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateNpmHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository9Forbidden struct {
+type UpdateNpmHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository9 forbidden response has a 2xx status code
-func (o *UpdateRepository9Forbidden) IsSuccess() bool {
+func (o *UpdateNpmHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository9 forbidden response has a 3xx status code
-func (o *UpdateRepository9Forbidden) IsRedirect() bool {
+func (o *UpdateNpmHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository9 forbidden response has a 4xx status code
-func (o *UpdateRepository9Forbidden) IsClientError() bool {
+func (o *UpdateNpmHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository9 forbidden response has a 5xx status code
-func (o *UpdateRepository9Forbidden) IsServerError() bool {
+func (o *UpdateNpmHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository9 forbidden response a status code equal to that given
-func (o *UpdateRepository9Forbidden) IsCode(code int) bool {
+func (o *UpdateNpmHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository9Forbidden) Error() string {
+func (o *UpdateNpmHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/hosted/{repositoryName}][%d] updateRepository9Forbidden ", 403)
 }
 
-func (o *UpdateRepository9Forbidden) String() string {
+func (o *UpdateNpmHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/npm/hosted/{repositoryName}][%d] updateRepository9Forbidden ", 403)
 }
 
-func (o *UpdateRepository9Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateNpmHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

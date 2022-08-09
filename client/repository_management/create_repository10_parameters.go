@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository10Params creates a new CreateRepository10Params object,
+// NewCreateNpmProxyRepositoryParams creates a new CreateNpmProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository10Params() *CreateRepository10Params {
-	return &CreateRepository10Params{
+func NewCreateNpmProxyRepositoryParams() *CreateNpmProxyRepositoryParams {
+	return &CreateNpmProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository10ParamsWithTimeout creates a new CreateRepository10Params object
+// NewCreateNpmProxyRepositoryParamsWithTimeout creates a new CreateNpmProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository10ParamsWithTimeout(timeout time.Duration) *CreateRepository10Params {
-	return &CreateRepository10Params{
+func NewCreateNpmProxyRepositoryParamsWithTimeout(timeout time.Duration) *CreateNpmProxyRepositoryParams {
+	return &CreateNpmProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository10ParamsWithContext creates a new CreateRepository10Params object
+// NewCreateNpmProxyRepositoryParamsWithContext creates a new CreateNpmProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository10ParamsWithContext(ctx context.Context) *CreateRepository10Params {
-	return &CreateRepository10Params{
+func NewCreateNpmProxyRepositoryParamsWithContext(ctx context.Context) *CreateNpmProxyRepositoryParams {
+	return &CreateNpmProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository10ParamsWithHTTPClient creates a new CreateRepository10Params object
+// NewCreateNpmProxyRepositoryParamsWithHTTPClient creates a new CreateNpmProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository10ParamsWithHTTPClient(client *http.Client) *CreateRepository10Params {
-	return &CreateRepository10Params{
+func NewCreateNpmProxyRepositoryParamsWithHTTPClient(client *http.Client) *CreateNpmProxyRepositoryParams {
+	return &CreateNpmProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository10Params contains all the parameters to send to the API endpoint
-   for the create repository 10 operation.
+/*
+CreateNpmProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 10 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository10Params struct {
+type CreateNpmProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.NpmProxyRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository10Params struct {
 // WithDefaults hydrates default values in the create repository 10 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository10Params) WithDefaults() *CreateRepository10Params {
+func (o *CreateNpmProxyRepositoryParams) WithDefaults() *CreateNpmProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository10Params) WithDefaults() *CreateRepository10Params {
 // SetDefaults hydrates default values in the create repository 10 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository10Params) SetDefaults() {
+func (o *CreateNpmProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 10 params
-func (o *CreateRepository10Params) WithTimeout(timeout time.Duration) *CreateRepository10Params {
+func (o *CreateNpmProxyRepositoryParams) WithTimeout(timeout time.Duration) *CreateNpmProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 10 params
-func (o *CreateRepository10Params) SetTimeout(timeout time.Duration) {
+func (o *CreateNpmProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 10 params
-func (o *CreateRepository10Params) WithContext(ctx context.Context) *CreateRepository10Params {
+func (o *CreateNpmProxyRepositoryParams) WithContext(ctx context.Context) *CreateNpmProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 10 params
-func (o *CreateRepository10Params) SetContext(ctx context.Context) {
+func (o *CreateNpmProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 10 params
-func (o *CreateRepository10Params) WithHTTPClient(client *http.Client) *CreateRepository10Params {
+func (o *CreateNpmProxyRepositoryParams) WithHTTPClient(client *http.Client) *CreateNpmProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 10 params
-func (o *CreateRepository10Params) SetHTTPClient(client *http.Client) {
+func (o *CreateNpmProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 10 params
-func (o *CreateRepository10Params) WithBody(body *models.NpmProxyRepositoryAPIRequest) *CreateRepository10Params {
+func (o *CreateNpmProxyRepositoryParams) WithBody(body *models.NpmProxyRepositoryAPIRequest) *CreateNpmProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 10 params
-func (o *CreateRepository10Params) SetBody(body *models.NpmProxyRepositoryAPIRequest) {
+func (o *CreateNpmProxyRepositoryParams) SetBody(body *models.NpmProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository10Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateNpmProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

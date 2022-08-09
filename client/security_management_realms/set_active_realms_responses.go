@@ -36,7 +36,8 @@ func NewSetActiveRealmsDefault(code int) *SetActiveRealmsDefault {
 	}
 }
 
-/* SetActiveRealmsDefault describes a response with status code -1, with default header values.
+/*
+	SetActiveRealmsDefault describes a response with status code -1, with default header values.
 
 successful operation
 */

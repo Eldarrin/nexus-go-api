@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository24Params creates a new GetRepository24Params object,
+// NewGetHelmHostedRepositoryParams creates a new GetHelmHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository24Params() *GetRepository24Params {
-	return &GetRepository24Params{
+func NewGetHelmHostedRepositoryParams() *GetHelmHostedRepositoryParams {
+	return &GetHelmHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository24ParamsWithTimeout creates a new GetRepository24Params object
+// NewGetHelmHostedRepositoryParamsWithTimeout creates a new GetHelmHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository24ParamsWithTimeout(timeout time.Duration) *GetRepository24Params {
-	return &GetRepository24Params{
+func NewGetHelmHostedRepositoryParamsWithTimeout(timeout time.Duration) *GetHelmHostedRepositoryParams {
+	return &GetHelmHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository24ParamsWithContext creates a new GetRepository24Params object
+// NewGetHelmHostedRepositoryParamsWithContext creates a new GetHelmHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository24ParamsWithContext(ctx context.Context) *GetRepository24Params {
-	return &GetRepository24Params{
+func NewGetHelmHostedRepositoryParamsWithContext(ctx context.Context) *GetHelmHostedRepositoryParams {
+	return &GetHelmHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository24ParamsWithHTTPClient creates a new GetRepository24Params object
+// NewGetHelmHostedRepositoryParamsWithHTTPClient creates a new GetHelmHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository24ParamsWithHTTPClient(client *http.Client) *GetRepository24Params {
-	return &GetRepository24Params{
+func NewGetHelmHostedRepositoryParamsWithHTTPClient(client *http.Client) *GetHelmHostedRepositoryParams {
+	return &GetHelmHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository24Params contains all the parameters to send to the API endpoint
-   for the get repository 24 operation.
+/*
+GetHelmHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 24 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository24Params struct {
+type GetHelmHostedRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository24Params struct {
 // WithDefaults hydrates default values in the get repository 24 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository24Params) WithDefaults() *GetRepository24Params {
+func (o *GetHelmHostedRepositoryParams) WithDefaults() *GetHelmHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository24Params) WithDefaults() *GetRepository24Params {
 // SetDefaults hydrates default values in the get repository 24 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository24Params) SetDefaults() {
+func (o *GetHelmHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 24 params
-func (o *GetRepository24Params) WithTimeout(timeout time.Duration) *GetRepository24Params {
+func (o *GetHelmHostedRepositoryParams) WithTimeout(timeout time.Duration) *GetHelmHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 24 params
-func (o *GetRepository24Params) SetTimeout(timeout time.Duration) {
+func (o *GetHelmHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 24 params
-func (o *GetRepository24Params) WithContext(ctx context.Context) *GetRepository24Params {
+func (o *GetHelmHostedRepositoryParams) WithContext(ctx context.Context) *GetHelmHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 24 params
-func (o *GetRepository24Params) SetContext(ctx context.Context) {
+func (o *GetHelmHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 24 params
-func (o *GetRepository24Params) WithHTTPClient(client *http.Client) *GetRepository24Params {
+func (o *GetHelmHostedRepositoryParams) WithHTTPClient(client *http.Client) *GetHelmHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 24 params
-func (o *GetRepository24Params) SetHTTPClient(client *http.Client) {
+func (o *GetHelmHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 24 params
-func (o *GetRepository24Params) WithRepositoryName(repositoryName string) *GetRepository24Params {
+func (o *GetHelmHostedRepositoryParams) WithRepositoryName(repositoryName string) *GetHelmHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 24 params
-func (o *GetRepository24Params) SetRepositoryName(repositoryName string) {
+func (o *GetHelmHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository24Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetHelmHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

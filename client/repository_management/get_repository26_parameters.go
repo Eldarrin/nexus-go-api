@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository26Params creates a new GetRepository26Params object,
+// NewGetGitLfsHostedRepositoryParams creates a new GetGitLfsHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository26Params() *GetRepository26Params {
-	return &GetRepository26Params{
+func NewGetGitLfsHostedRepositoryParams() *GetGitLfsHostedRepositoryParams {
+	return &GetGitLfsHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository26ParamsWithTimeout creates a new GetRepository26Params object
+// NewGetGitLfsHostedRepositoryParamsWithTimeout creates a new GetGitLfsHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository26ParamsWithTimeout(timeout time.Duration) *GetRepository26Params {
-	return &GetRepository26Params{
+func NewGetGitLfsHostedRepositoryParamsWithTimeout(timeout time.Duration) *GetGitLfsHostedRepositoryParams {
+	return &GetGitLfsHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository26ParamsWithContext creates a new GetRepository26Params object
+// NewGetGitLfsHostedRepositoryParamsWithContext creates a new GetGitLfsHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository26ParamsWithContext(ctx context.Context) *GetRepository26Params {
-	return &GetRepository26Params{
+func NewGetGitLfsHostedRepositoryParamsWithContext(ctx context.Context) *GetGitLfsHostedRepositoryParams {
+	return &GetGitLfsHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository26ParamsWithHTTPClient creates a new GetRepository26Params object
+// NewGetGitLfsHostedRepositoryParamsWithHTTPClient creates a new GetGitLfsHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository26ParamsWithHTTPClient(client *http.Client) *GetRepository26Params {
-	return &GetRepository26Params{
+func NewGetGitLfsHostedRepositoryParamsWithHTTPClient(client *http.Client) *GetGitLfsHostedRepositoryParams {
+	return &GetGitLfsHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository26Params contains all the parameters to send to the API endpoint
-   for the get repository 26 operation.
+/*
+GetGitLfsHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 26 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository26Params struct {
+type GetGitLfsHostedRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository26Params struct {
 // WithDefaults hydrates default values in the get repository 26 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository26Params) WithDefaults() *GetRepository26Params {
+func (o *GetGitLfsHostedRepositoryParams) WithDefaults() *GetGitLfsHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository26Params) WithDefaults() *GetRepository26Params {
 // SetDefaults hydrates default values in the get repository 26 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository26Params) SetDefaults() {
+func (o *GetGitLfsHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 26 params
-func (o *GetRepository26Params) WithTimeout(timeout time.Duration) *GetRepository26Params {
+func (o *GetGitLfsHostedRepositoryParams) WithTimeout(timeout time.Duration) *GetGitLfsHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 26 params
-func (o *GetRepository26Params) SetTimeout(timeout time.Duration) {
+func (o *GetGitLfsHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 26 params
-func (o *GetRepository26Params) WithContext(ctx context.Context) *GetRepository26Params {
+func (o *GetGitLfsHostedRepositoryParams) WithContext(ctx context.Context) *GetGitLfsHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 26 params
-func (o *GetRepository26Params) SetContext(ctx context.Context) {
+func (o *GetGitLfsHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 26 params
-func (o *GetRepository26Params) WithHTTPClient(client *http.Client) *GetRepository26Params {
+func (o *GetGitLfsHostedRepositoryParams) WithHTTPClient(client *http.Client) *GetGitLfsHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 26 params
-func (o *GetRepository26Params) SetHTTPClient(client *http.Client) {
+func (o *GetGitLfsHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 26 params
-func (o *GetRepository26Params) WithRepositoryName(repositoryName string) *GetRepository26Params {
+func (o *GetGitLfsHostedRepositoryParams) WithRepositoryName(repositoryName string) *GetGitLfsHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 26 params
-func (o *GetRepository26Params) SetRepositoryName(repositoryName string) {
+func (o *GetGitLfsHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository26Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetGitLfsHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

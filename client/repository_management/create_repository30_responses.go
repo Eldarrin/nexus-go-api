@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository30Reader is a Reader for the CreateRepository30 structure.
-type CreateRepository30Reader struct {
+// CreateConanProxyRepositoryReader is a Reader for the CreateConanProxyRepository structure.
+type CreateConanProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository30Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateConanProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository30Created()
+		result := NewCreateConanProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository30Unauthorized()
+		result := NewCreateConanProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository30Forbidden()
+		result := NewCreateConanProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 405:
-		result := NewCreateRepository30MethodNotAllowed()
+		result := NewCreateConanProxyRepositoryMethodNotAllowed()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *CreateRepository30Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository30Created creates a CreateRepository30Created with default headers values
-func NewCreateRepository30Created() *CreateRepository30Created {
-	return &CreateRepository30Created{}
+// NewCreateConanProxyRepositoryCreated creates a CreateConanProxyRepositoryCreated with default headers values
+func NewCreateConanProxyRepositoryCreated() *CreateConanProxyRepositoryCreated {
+	return &CreateConanProxyRepositoryCreated{}
 }
 
-/* CreateRepository30Created describes a response with status code 201, with default header values.
+/*
+	CreateConanProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository30Created struct {
+type CreateConanProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository30 created response has a 2xx status code
-func (o *CreateRepository30Created) IsSuccess() bool {
+func (o *CreateConanProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository30 created response has a 3xx status code
-func (o *CreateRepository30Created) IsRedirect() bool {
+func (o *CreateConanProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository30 created response has a 4xx status code
-func (o *CreateRepository30Created) IsClientError() bool {
+func (o *CreateConanProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository30 created response has a 5xx status code
-func (o *CreateRepository30Created) IsServerError() bool {
+func (o *CreateConanProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository30 created response a status code equal to that given
-func (o *CreateRepository30Created) IsCode(code int) bool {
+func (o *CreateConanProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository30Created) Error() string {
+func (o *CreateConanProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/conan/proxy][%d] createRepository30Created ", 201)
 }
 
-func (o *CreateRepository30Created) String() string {
+func (o *CreateConanProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/conan/proxy][%d] createRepository30Created ", 201)
 }
 
-func (o *CreateRepository30Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateConanProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository30Unauthorized creates a CreateRepository30Unauthorized with default headers values
-func NewCreateRepository30Unauthorized() *CreateRepository30Unauthorized {
-	return &CreateRepository30Unauthorized{}
+// NewCreateConanProxyRepositoryUnauthorized creates a CreateConanProxyRepositoryUnauthorized with default headers values
+func NewCreateConanProxyRepositoryUnauthorized() *CreateConanProxyRepositoryUnauthorized {
+	return &CreateConanProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository30Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateConanProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository30Unauthorized struct {
+type CreateConanProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository30 unauthorized response has a 2xx status code
-func (o *CreateRepository30Unauthorized) IsSuccess() bool {
+func (o *CreateConanProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository30 unauthorized response has a 3xx status code
-func (o *CreateRepository30Unauthorized) IsRedirect() bool {
+func (o *CreateConanProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository30 unauthorized response has a 4xx status code
-func (o *CreateRepository30Unauthorized) IsClientError() bool {
+func (o *CreateConanProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository30 unauthorized response has a 5xx status code
-func (o *CreateRepository30Unauthorized) IsServerError() bool {
+func (o *CreateConanProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository30 unauthorized response a status code equal to that given
-func (o *CreateRepository30Unauthorized) IsCode(code int) bool {
+func (o *CreateConanProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository30Unauthorized) Error() string {
+func (o *CreateConanProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/conan/proxy][%d] createRepository30Unauthorized ", 401)
 }
 
-func (o *CreateRepository30Unauthorized) String() string {
+func (o *CreateConanProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/conan/proxy][%d] createRepository30Unauthorized ", 401)
 }
 
-func (o *CreateRepository30Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateConanProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository30Forbidden creates a CreateRepository30Forbidden with default headers values
-func NewCreateRepository30Forbidden() *CreateRepository30Forbidden {
-	return &CreateRepository30Forbidden{}
+// NewCreateConanProxyRepositoryForbidden creates a CreateConanProxyRepositoryForbidden with default headers values
+func NewCreateConanProxyRepositoryForbidden() *CreateConanProxyRepositoryForbidden {
+	return &CreateConanProxyRepositoryForbidden{}
 }
 
-/* CreateRepository30Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateConanProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository30Forbidden struct {
+type CreateConanProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository30 forbidden response has a 2xx status code
-func (o *CreateRepository30Forbidden) IsSuccess() bool {
+func (o *CreateConanProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository30 forbidden response has a 3xx status code
-func (o *CreateRepository30Forbidden) IsRedirect() bool {
+func (o *CreateConanProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository30 forbidden response has a 4xx status code
-func (o *CreateRepository30Forbidden) IsClientError() bool {
+func (o *CreateConanProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository30 forbidden response has a 5xx status code
-func (o *CreateRepository30Forbidden) IsServerError() bool {
+func (o *CreateConanProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository30 forbidden response a status code equal to that given
-func (o *CreateRepository30Forbidden) IsCode(code int) bool {
+func (o *CreateConanProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository30Forbidden) Error() string {
+func (o *CreateConanProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/conan/proxy][%d] createRepository30Forbidden ", 403)
 }
 
-func (o *CreateRepository30Forbidden) String() string {
+func (o *CreateConanProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/conan/proxy][%d] createRepository30Forbidden ", 403)
 }
 
-func (o *CreateRepository30Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateConanProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository30MethodNotAllowed creates a CreateRepository30MethodNotAllowed with default headers values
-func NewCreateRepository30MethodNotAllowed() *CreateRepository30MethodNotAllowed {
-	return &CreateRepository30MethodNotAllowed{}
+// NewCreateConanProxyRepositoryMethodNotAllowed creates a CreateConanProxyRepositoryMethodNotAllowed with default headers values
+func NewCreateConanProxyRepositoryMethodNotAllowed() *CreateConanProxyRepositoryMethodNotAllowed {
+	return &CreateConanProxyRepositoryMethodNotAllowed{}
 }
 
-/* CreateRepository30MethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	CreateConanProxyRepositoryMethodNotAllowed describes a response with status code 405, with default header values.
 
 Feature is disabled in High Availability
 */
-type CreateRepository30MethodNotAllowed struct {
+type CreateConanProxyRepositoryMethodNotAllowed struct {
 }
 
 // IsSuccess returns true when this create repository30 method not allowed response has a 2xx status code
-func (o *CreateRepository30MethodNotAllowed) IsSuccess() bool {
+func (o *CreateConanProxyRepositoryMethodNotAllowed) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository30 method not allowed response has a 3xx status code
-func (o *CreateRepository30MethodNotAllowed) IsRedirect() bool {
+func (o *CreateConanProxyRepositoryMethodNotAllowed) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository30 method not allowed response has a 4xx status code
-func (o *CreateRepository30MethodNotAllowed) IsClientError() bool {
+func (o *CreateConanProxyRepositoryMethodNotAllowed) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository30 method not allowed response has a 5xx status code
-func (o *CreateRepository30MethodNotAllowed) IsServerError() bool {
+func (o *CreateConanProxyRepositoryMethodNotAllowed) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository30 method not allowed response a status code equal to that given
-func (o *CreateRepository30MethodNotAllowed) IsCode(code int) bool {
+func (o *CreateConanProxyRepositoryMethodNotAllowed) IsCode(code int) bool {
 	return code == 405
 }
 
-func (o *CreateRepository30MethodNotAllowed) Error() string {
+func (o *CreateConanProxyRepositoryMethodNotAllowed) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/conan/proxy][%d] createRepository30MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository30MethodNotAllowed) String() string {
+func (o *CreateConanProxyRepositoryMethodNotAllowed) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/conan/proxy][%d] createRepository30MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository30MethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateConanProxyRepositoryMethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

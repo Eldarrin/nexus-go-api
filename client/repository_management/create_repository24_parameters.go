@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository24Params creates a new CreateRepository24Params object,
+// NewCreateHelmProxyRepositoryParams creates a new CreateHelmProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository24Params() *CreateRepository24Params {
-	return &CreateRepository24Params{
+func NewCreateHelmProxyRepositoryParams() *CreateHelmProxyRepositoryParams {
+	return &CreateHelmProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository24ParamsWithTimeout creates a new CreateRepository24Params object
+// NewCreateHelmProxyRepositoryParamsWithTimeout creates a new CreateHelmProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository24ParamsWithTimeout(timeout time.Duration) *CreateRepository24Params {
-	return &CreateRepository24Params{
+func NewCreateHelmProxyRepositoryParamsWithTimeout(timeout time.Duration) *CreateHelmProxyRepositoryParams {
+	return &CreateHelmProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository24ParamsWithContext creates a new CreateRepository24Params object
+// NewCreateHelmProxyRepositoryParamsWithContext creates a new CreateHelmProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository24ParamsWithContext(ctx context.Context) *CreateRepository24Params {
-	return &CreateRepository24Params{
+func NewCreateHelmProxyRepositoryParamsWithContext(ctx context.Context) *CreateHelmProxyRepositoryParams {
+	return &CreateHelmProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository24ParamsWithHTTPClient creates a new CreateRepository24Params object
+// NewCreateHelmProxyRepositoryParamsWithHTTPClient creates a new CreateHelmProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository24ParamsWithHTTPClient(client *http.Client) *CreateRepository24Params {
-	return &CreateRepository24Params{
+func NewCreateHelmProxyRepositoryParamsWithHTTPClient(client *http.Client) *CreateHelmProxyRepositoryParams {
+	return &CreateHelmProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository24Params contains all the parameters to send to the API endpoint
-   for the create repository 24 operation.
+/*
+CreateHelmProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 24 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository24Params struct {
+type CreateHelmProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.HelmProxyRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository24Params struct {
 // WithDefaults hydrates default values in the create repository 24 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository24Params) WithDefaults() *CreateRepository24Params {
+func (o *CreateHelmProxyRepositoryParams) WithDefaults() *CreateHelmProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository24Params) WithDefaults() *CreateRepository24Params {
 // SetDefaults hydrates default values in the create repository 24 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository24Params) SetDefaults() {
+func (o *CreateHelmProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 24 params
-func (o *CreateRepository24Params) WithTimeout(timeout time.Duration) *CreateRepository24Params {
+func (o *CreateHelmProxyRepositoryParams) WithTimeout(timeout time.Duration) *CreateHelmProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 24 params
-func (o *CreateRepository24Params) SetTimeout(timeout time.Duration) {
+func (o *CreateHelmProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 24 params
-func (o *CreateRepository24Params) WithContext(ctx context.Context) *CreateRepository24Params {
+func (o *CreateHelmProxyRepositoryParams) WithContext(ctx context.Context) *CreateHelmProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 24 params
-func (o *CreateRepository24Params) SetContext(ctx context.Context) {
+func (o *CreateHelmProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 24 params
-func (o *CreateRepository24Params) WithHTTPClient(client *http.Client) *CreateRepository24Params {
+func (o *CreateHelmProxyRepositoryParams) WithHTTPClient(client *http.Client) *CreateHelmProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 24 params
-func (o *CreateRepository24Params) SetHTTPClient(client *http.Client) {
+func (o *CreateHelmProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 24 params
-func (o *CreateRepository24Params) WithBody(body *models.HelmProxyRepositoryAPIRequest) *CreateRepository24Params {
+func (o *CreateHelmProxyRepositoryParams) WithBody(body *models.HelmProxyRepositoryAPIRequest) *CreateHelmProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 24 params
-func (o *CreateRepository24Params) SetBody(body *models.HelmProxyRepositoryAPIRequest) {
+func (o *CreateHelmProxyRepositoryParams) SetBody(body *models.HelmProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository24Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateHelmProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

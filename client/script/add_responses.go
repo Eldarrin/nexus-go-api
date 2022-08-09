@@ -42,7 +42,8 @@ func NewAddNoContent() *AddNoContent {
 	return &AddNoContent{}
 }
 
-/* AddNoContent describes a response with status code 204, with default header values.
+/*
+	AddNoContent describes a response with status code 204, with default header values.
 
 Script was added
 */
@@ -92,7 +93,8 @@ func NewAddGone() *AddGone {
 	return &AddGone{}
 }
 
-/* AddGone describes a response with status code 410, with default header values.
+/*
+	AddGone describes a response with status code 410, with default header values.
 
 Script creation is disabled
 */

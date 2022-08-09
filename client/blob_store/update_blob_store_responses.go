@@ -54,7 +54,8 @@ func NewUpdateBlobStoreNoContent() *UpdateBlobStoreNoContent {
 	return &UpdateBlobStoreNoContent{}
 }
 
-/* UpdateBlobStoreNoContent describes a response with status code 204, with default header values.
+/*
+	UpdateBlobStoreNoContent describes a response with status code 204, with default header values.
 
 S3 blob store updated
 */
@@ -104,7 +105,8 @@ func NewUpdateBlobStoreBadRequest() *UpdateBlobStoreBadRequest {
 	return &UpdateBlobStoreBadRequest{}
 }
 
-/* UpdateBlobStoreBadRequest describes a response with status code 400, with default header values.
+/*
+	UpdateBlobStoreBadRequest describes a response with status code 400, with default header values.
 
 Specified S3 blob store doesn't exist
 */
@@ -154,7 +156,8 @@ func NewUpdateBlobStoreUnauthorized() *UpdateBlobStoreUnauthorized {
 	return &UpdateBlobStoreUnauthorized{}
 }
 
-/* UpdateBlobStoreUnauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateBlobStoreUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -204,7 +207,8 @@ func NewUpdateBlobStoreForbidden() *UpdateBlobStoreForbidden {
 	return &UpdateBlobStoreForbidden{}
 }
 
-/* UpdateBlobStoreForbidden describes a response with status code 403, with default header values.
+/*
+	UpdateBlobStoreForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

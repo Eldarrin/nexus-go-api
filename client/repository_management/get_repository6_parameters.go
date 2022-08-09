@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository6Params creates a new GetRepository6Params object,
+// NewGetRawGroupRepositoryParams creates a new GetRawGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository6Params() *GetRepository6Params {
-	return &GetRepository6Params{
+func NewGetRawGroupRepositoryParams() *GetRawGroupRepositoryParams {
+	return &GetRawGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository6ParamsWithTimeout creates a new GetRepository6Params object
+// NewGetRawGroupRepositoryParamsWithTimeout creates a new GetRawGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository6ParamsWithTimeout(timeout time.Duration) *GetRepository6Params {
-	return &GetRepository6Params{
+func NewGetRawGroupRepositoryParamsWithTimeout(timeout time.Duration) *GetRawGroupRepositoryParams {
+	return &GetRawGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository6ParamsWithContext creates a new GetRepository6Params object
+// NewGetRawGroupRepositoryParamsWithContext creates a new GetRawGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository6ParamsWithContext(ctx context.Context) *GetRepository6Params {
-	return &GetRepository6Params{
+func NewGetRawGroupRepositoryParamsWithContext(ctx context.Context) *GetRawGroupRepositoryParams {
+	return &GetRawGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository6ParamsWithHTTPClient creates a new GetRepository6Params object
+// NewGetRawGroupRepositoryParamsWithHTTPClient creates a new GetRawGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository6ParamsWithHTTPClient(client *http.Client) *GetRepository6Params {
-	return &GetRepository6Params{
+func NewGetRawGroupRepositoryParamsWithHTTPClient(client *http.Client) *GetRawGroupRepositoryParams {
+	return &GetRawGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository6Params contains all the parameters to send to the API endpoint
-   for the get repository 6 operation.
+/*
+GetRawGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 6 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository6Params struct {
+type GetRawGroupRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository6Params struct {
 // WithDefaults hydrates default values in the get repository 6 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository6Params) WithDefaults() *GetRepository6Params {
+func (o *GetRawGroupRepositoryParams) WithDefaults() *GetRawGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository6Params) WithDefaults() *GetRepository6Params {
 // SetDefaults hydrates default values in the get repository 6 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository6Params) SetDefaults() {
+func (o *GetRawGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 6 params
-func (o *GetRepository6Params) WithTimeout(timeout time.Duration) *GetRepository6Params {
+func (o *GetRawGroupRepositoryParams) WithTimeout(timeout time.Duration) *GetRawGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 6 params
-func (o *GetRepository6Params) SetTimeout(timeout time.Duration) {
+func (o *GetRawGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 6 params
-func (o *GetRepository6Params) WithContext(ctx context.Context) *GetRepository6Params {
+func (o *GetRawGroupRepositoryParams) WithContext(ctx context.Context) *GetRawGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 6 params
-func (o *GetRepository6Params) SetContext(ctx context.Context) {
+func (o *GetRawGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 6 params
-func (o *GetRepository6Params) WithHTTPClient(client *http.Client) *GetRepository6Params {
+func (o *GetRawGroupRepositoryParams) WithHTTPClient(client *http.Client) *GetRawGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 6 params
-func (o *GetRepository6Params) SetHTTPClient(client *http.Client) {
+func (o *GetRawGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 6 params
-func (o *GetRepository6Params) WithRepositoryName(repositoryName string) *GetRepository6Params {
+func (o *GetRawGroupRepositoryParams) WithRepositoryName(repositoryName string) *GetRawGroupRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 6 params
-func (o *GetRepository6Params) SetRepositoryName(repositoryName string) {
+func (o *GetRawGroupRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository6Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetRawGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

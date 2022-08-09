@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository5Params creates a new GetRepository5Params object,
+// NewGetAptProxyRepositoryParams creates a new GetAptProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository5Params() *GetRepository5Params {
-	return &GetRepository5Params{
+func NewGetAptProxyRepositoryParams() *GetAptProxyRepositoryParams {
+	return &GetAptProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository5ParamsWithTimeout creates a new GetRepository5Params object
+// NewGetAptProxyRepositoryParamsWithTimeout creates a new GetAptProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository5ParamsWithTimeout(timeout time.Duration) *GetRepository5Params {
-	return &GetRepository5Params{
+func NewGetAptProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetAptProxyRepositoryParams {
+	return &GetAptProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository5ParamsWithContext creates a new GetRepository5Params object
+// NewGetAptProxyRepositoryParamsWithContext creates a new GetAptProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository5ParamsWithContext(ctx context.Context) *GetRepository5Params {
-	return &GetRepository5Params{
+func NewGetAptProxyRepositoryParamsWithContext(ctx context.Context) *GetAptProxyRepositoryParams {
+	return &GetAptProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository5ParamsWithHTTPClient creates a new GetRepository5Params object
+// NewGetAptProxyRepositoryParamsWithHTTPClient creates a new GetAptProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository5ParamsWithHTTPClient(client *http.Client) *GetRepository5Params {
-	return &GetRepository5Params{
+func NewGetAptProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetAptProxyRepositoryParams {
+	return &GetAptProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository5Params contains all the parameters to send to the API endpoint
-   for the get repository 5 operation.
+/*
+GetAptProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 5 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository5Params struct {
+type GetAptProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository5Params struct {
 // WithDefaults hydrates default values in the get repository 5 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository5Params) WithDefaults() *GetRepository5Params {
+func (o *GetAptProxyRepositoryParams) WithDefaults() *GetAptProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository5Params) WithDefaults() *GetRepository5Params {
 // SetDefaults hydrates default values in the get repository 5 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository5Params) SetDefaults() {
+func (o *GetAptProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 5 params
-func (o *GetRepository5Params) WithTimeout(timeout time.Duration) *GetRepository5Params {
+func (o *GetAptProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetAptProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 5 params
-func (o *GetRepository5Params) SetTimeout(timeout time.Duration) {
+func (o *GetAptProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 5 params
-func (o *GetRepository5Params) WithContext(ctx context.Context) *GetRepository5Params {
+func (o *GetAptProxyRepositoryParams) WithContext(ctx context.Context) *GetAptProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 5 params
-func (o *GetRepository5Params) SetContext(ctx context.Context) {
+func (o *GetAptProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 5 params
-func (o *GetRepository5Params) WithHTTPClient(client *http.Client) *GetRepository5Params {
+func (o *GetAptProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetAptProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 5 params
-func (o *GetRepository5Params) SetHTTPClient(client *http.Client) {
+func (o *GetAptProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 5 params
-func (o *GetRepository5Params) WithRepositoryName(repositoryName string) *GetRepository5Params {
+func (o *GetAptProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetAptProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 5 params
-func (o *GetRepository5Params) SetRepositoryName(repositoryName string) {
+func (o *GetAptProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository5Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetAptProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

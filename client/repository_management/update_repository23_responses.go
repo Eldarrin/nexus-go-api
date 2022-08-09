@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository23Reader is a Reader for the UpdateRepository23 structure.
-type UpdateRepository23Reader struct {
+// UpdateHelmHostedRepositoryReader is a Reader for the UpdateHelmHostedRepository structure.
+type UpdateHelmHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository23Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateHelmHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository23NoContent()
+		result := NewUpdateHelmHostedRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository23Unauthorized()
+		result := NewUpdateHelmHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository23Forbidden()
+		result := NewUpdateHelmHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository23Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository23NoContent creates a UpdateRepository23NoContent with default headers values
-func NewUpdateRepository23NoContent() *UpdateRepository23NoContent {
-	return &UpdateRepository23NoContent{}
+// NewUpdateHelmHostedRepositoryNoContent creates a UpdateHelmHostedRepositoryNoContent with default headers values
+func NewUpdateHelmHostedRepositoryNoContent() *UpdateHelmHostedRepositoryNoContent {
+	return &UpdateHelmHostedRepositoryNoContent{}
 }
 
-/* UpdateRepository23NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateHelmHostedRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository23NoContent struct {
+type UpdateHelmHostedRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository23 no content response has a 2xx status code
-func (o *UpdateRepository23NoContent) IsSuccess() bool {
+func (o *UpdateHelmHostedRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository23 no content response has a 3xx status code
-func (o *UpdateRepository23NoContent) IsRedirect() bool {
+func (o *UpdateHelmHostedRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository23 no content response has a 4xx status code
-func (o *UpdateRepository23NoContent) IsClientError() bool {
+func (o *UpdateHelmHostedRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository23 no content response has a 5xx status code
-func (o *UpdateRepository23NoContent) IsServerError() bool {
+func (o *UpdateHelmHostedRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository23 no content response a status code equal to that given
-func (o *UpdateRepository23NoContent) IsCode(code int) bool {
+func (o *UpdateHelmHostedRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository23NoContent) Error() string {
+func (o *UpdateHelmHostedRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/helm/hosted/{repositoryName}][%d] updateRepository23NoContent ", 204)
 }
 
-func (o *UpdateRepository23NoContent) String() string {
+func (o *UpdateHelmHostedRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/helm/hosted/{repositoryName}][%d] updateRepository23NoContent ", 204)
 }
 
-func (o *UpdateRepository23NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateHelmHostedRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository23Unauthorized creates a UpdateRepository23Unauthorized with default headers values
-func NewUpdateRepository23Unauthorized() *UpdateRepository23Unauthorized {
-	return &UpdateRepository23Unauthorized{}
+// NewUpdateHelmHostedRepositoryUnauthorized creates a UpdateHelmHostedRepositoryUnauthorized with default headers values
+func NewUpdateHelmHostedRepositoryUnauthorized() *UpdateHelmHostedRepositoryUnauthorized {
+	return &UpdateHelmHostedRepositoryUnauthorized{}
 }
 
-/* UpdateRepository23Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateHelmHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository23Unauthorized struct {
+type UpdateHelmHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository23 unauthorized response has a 2xx status code
-func (o *UpdateRepository23Unauthorized) IsSuccess() bool {
+func (o *UpdateHelmHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository23 unauthorized response has a 3xx status code
-func (o *UpdateRepository23Unauthorized) IsRedirect() bool {
+func (o *UpdateHelmHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository23 unauthorized response has a 4xx status code
-func (o *UpdateRepository23Unauthorized) IsClientError() bool {
+func (o *UpdateHelmHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository23 unauthorized response has a 5xx status code
-func (o *UpdateRepository23Unauthorized) IsServerError() bool {
+func (o *UpdateHelmHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository23 unauthorized response a status code equal to that given
-func (o *UpdateRepository23Unauthorized) IsCode(code int) bool {
+func (o *UpdateHelmHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository23Unauthorized) Error() string {
+func (o *UpdateHelmHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/helm/hosted/{repositoryName}][%d] updateRepository23Unauthorized ", 401)
 }
 
-func (o *UpdateRepository23Unauthorized) String() string {
+func (o *UpdateHelmHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/helm/hosted/{repositoryName}][%d] updateRepository23Unauthorized ", 401)
 }
 
-func (o *UpdateRepository23Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateHelmHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository23Forbidden creates a UpdateRepository23Forbidden with default headers values
-func NewUpdateRepository23Forbidden() *UpdateRepository23Forbidden {
-	return &UpdateRepository23Forbidden{}
+// NewUpdateHelmHostedRepositoryForbidden creates a UpdateHelmHostedRepositoryForbidden with default headers values
+func NewUpdateHelmHostedRepositoryForbidden() *UpdateHelmHostedRepositoryForbidden {
+	return &UpdateHelmHostedRepositoryForbidden{}
 }
 
-/* UpdateRepository23Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateHelmHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository23Forbidden struct {
+type UpdateHelmHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository23 forbidden response has a 2xx status code
-func (o *UpdateRepository23Forbidden) IsSuccess() bool {
+func (o *UpdateHelmHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository23 forbidden response has a 3xx status code
-func (o *UpdateRepository23Forbidden) IsRedirect() bool {
+func (o *UpdateHelmHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository23 forbidden response has a 4xx status code
-func (o *UpdateRepository23Forbidden) IsClientError() bool {
+func (o *UpdateHelmHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository23 forbidden response has a 5xx status code
-func (o *UpdateRepository23Forbidden) IsServerError() bool {
+func (o *UpdateHelmHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository23 forbidden response a status code equal to that given
-func (o *UpdateRepository23Forbidden) IsCode(code int) bool {
+func (o *UpdateHelmHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository23Forbidden) Error() string {
+func (o *UpdateHelmHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/helm/hosted/{repositoryName}][%d] updateRepository23Forbidden ", 403)
 }
 
-func (o *UpdateRepository23Forbidden) String() string {
+func (o *UpdateHelmHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/helm/hosted/{repositoryName}][%d] updateRepository23Forbidden ", 403)
 }
 
-func (o *UpdateRepository23Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateHelmHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

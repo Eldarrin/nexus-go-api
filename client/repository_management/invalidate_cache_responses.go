@@ -60,7 +60,8 @@ func NewInvalidateCacheNoContent() *InvalidateCacheNoContent {
 	return &InvalidateCacheNoContent{}
 }
 
-/* InvalidateCacheNoContent describes a response with status code 204, with default header values.
+/*
+	InvalidateCacheNoContent describes a response with status code 204, with default header values.
 
 Repository cache invalidated
 */
@@ -110,7 +111,8 @@ func NewInvalidateCacheBadRequest() *InvalidateCacheBadRequest {
 	return &InvalidateCacheBadRequest{}
 }
 
-/* InvalidateCacheBadRequest describes a response with status code 400, with default header values.
+/*
+	InvalidateCacheBadRequest describes a response with status code 400, with default header values.
 
 Repository is not of proxy or group type
 */
@@ -160,7 +162,8 @@ func NewInvalidateCacheUnauthorized() *InvalidateCacheUnauthorized {
 	return &InvalidateCacheUnauthorized{}
 }
 
-/* InvalidateCacheUnauthorized describes a response with status code 401, with default header values.
+/*
+	InvalidateCacheUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -210,7 +213,8 @@ func NewInvalidateCacheForbidden() *InvalidateCacheForbidden {
 	return &InvalidateCacheForbidden{}
 }
 
-/* InvalidateCacheForbidden describes a response with status code 403, with default header values.
+/*
+	InvalidateCacheForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
@@ -260,7 +264,8 @@ func NewInvalidateCacheNotFound() *InvalidateCacheNotFound {
 	return &InvalidateCacheNotFound{}
 }
 
-/* InvalidateCacheNotFound describes a response with status code 404, with default header values.
+/*
+	InvalidateCacheNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */

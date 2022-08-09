@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository25Reader is a Reader for the CreateRepository25 structure.
-type CreateRepository25Reader struct {
+// CreateGitLfsHostedRepositoryReader is a Reader for the CreateGitLfsHostedRepository structure.
+type CreateGitLfsHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository25Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateGitLfsHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository25Created()
+		result := NewCreateGitLfsHostedRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository25Unauthorized()
+		result := NewCreateGitLfsHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository25Forbidden()
+		result := NewCreateGitLfsHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository25Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository25Created creates a CreateRepository25Created with default headers values
-func NewCreateRepository25Created() *CreateRepository25Created {
-	return &CreateRepository25Created{}
+// NewCreateGitLfsHostedRepositoryCreated creates a CreateGitLfsHostedRepositoryCreated with default headers values
+func NewCreateGitLfsHostedRepositoryCreated() *CreateGitLfsHostedRepositoryCreated {
+	return &CreateGitLfsHostedRepositoryCreated{}
 }
 
-/* CreateRepository25Created describes a response with status code 201, with default header values.
+/*
+	CreateGitLfsHostedRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository25Created struct {
+type CreateGitLfsHostedRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository25 created response has a 2xx status code
-func (o *CreateRepository25Created) IsSuccess() bool {
+func (o *CreateGitLfsHostedRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository25 created response has a 3xx status code
-func (o *CreateRepository25Created) IsRedirect() bool {
+func (o *CreateGitLfsHostedRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository25 created response has a 4xx status code
-func (o *CreateRepository25Created) IsClientError() bool {
+func (o *CreateGitLfsHostedRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository25 created response has a 5xx status code
-func (o *CreateRepository25Created) IsServerError() bool {
+func (o *CreateGitLfsHostedRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository25 created response a status code equal to that given
-func (o *CreateRepository25Created) IsCode(code int) bool {
+func (o *CreateGitLfsHostedRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository25Created) Error() string {
+func (o *CreateGitLfsHostedRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/gitlfs/hosted][%d] createRepository25Created ", 201)
 }
 
-func (o *CreateRepository25Created) String() string {
+func (o *CreateGitLfsHostedRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/gitlfs/hosted][%d] createRepository25Created ", 201)
 }
 
-func (o *CreateRepository25Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateGitLfsHostedRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository25Unauthorized creates a CreateRepository25Unauthorized with default headers values
-func NewCreateRepository25Unauthorized() *CreateRepository25Unauthorized {
-	return &CreateRepository25Unauthorized{}
+// NewCreateGitLfsHostedRepositoryUnauthorized creates a CreateGitLfsHostedRepositoryUnauthorized with default headers values
+func NewCreateGitLfsHostedRepositoryUnauthorized() *CreateGitLfsHostedRepositoryUnauthorized {
+	return &CreateGitLfsHostedRepositoryUnauthorized{}
 }
 
-/* CreateRepository25Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateGitLfsHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository25Unauthorized struct {
+type CreateGitLfsHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository25 unauthorized response has a 2xx status code
-func (o *CreateRepository25Unauthorized) IsSuccess() bool {
+func (o *CreateGitLfsHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository25 unauthorized response has a 3xx status code
-func (o *CreateRepository25Unauthorized) IsRedirect() bool {
+func (o *CreateGitLfsHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository25 unauthorized response has a 4xx status code
-func (o *CreateRepository25Unauthorized) IsClientError() bool {
+func (o *CreateGitLfsHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository25 unauthorized response has a 5xx status code
-func (o *CreateRepository25Unauthorized) IsServerError() bool {
+func (o *CreateGitLfsHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository25 unauthorized response a status code equal to that given
-func (o *CreateRepository25Unauthorized) IsCode(code int) bool {
+func (o *CreateGitLfsHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository25Unauthorized) Error() string {
+func (o *CreateGitLfsHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/gitlfs/hosted][%d] createRepository25Unauthorized ", 401)
 }
 
-func (o *CreateRepository25Unauthorized) String() string {
+func (o *CreateGitLfsHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/gitlfs/hosted][%d] createRepository25Unauthorized ", 401)
 }
 
-func (o *CreateRepository25Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateGitLfsHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository25Forbidden creates a CreateRepository25Forbidden with default headers values
-func NewCreateRepository25Forbidden() *CreateRepository25Forbidden {
-	return &CreateRepository25Forbidden{}
+// NewCreateGitLfsHostedRepositoryForbidden creates a CreateGitLfsHostedRepositoryForbidden with default headers values
+func NewCreateGitLfsHostedRepositoryForbidden() *CreateGitLfsHostedRepositoryForbidden {
+	return &CreateGitLfsHostedRepositoryForbidden{}
 }
 
-/* CreateRepository25Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateGitLfsHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository25Forbidden struct {
+type CreateGitLfsHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository25 forbidden response has a 2xx status code
-func (o *CreateRepository25Forbidden) IsSuccess() bool {
+func (o *CreateGitLfsHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository25 forbidden response has a 3xx status code
-func (o *CreateRepository25Forbidden) IsRedirect() bool {
+func (o *CreateGitLfsHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository25 forbidden response has a 4xx status code
-func (o *CreateRepository25Forbidden) IsClientError() bool {
+func (o *CreateGitLfsHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository25 forbidden response has a 5xx status code
-func (o *CreateRepository25Forbidden) IsServerError() bool {
+func (o *CreateGitLfsHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository25 forbidden response a status code equal to that given
-func (o *CreateRepository25Forbidden) IsCode(code int) bool {
+func (o *CreateGitLfsHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository25Forbidden) Error() string {
+func (o *CreateGitLfsHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/gitlfs/hosted][%d] createRepository25Forbidden ", 403)
 }
 
-func (o *CreateRepository25Forbidden) String() string {
+func (o *CreateGitLfsHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/gitlfs/hosted][%d] createRepository25Forbidden ", 403)
 }
 
-func (o *CreateRepository25Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateGitLfsHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

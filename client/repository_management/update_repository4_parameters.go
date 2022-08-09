@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository4Params creates a new UpdateRepository4Params object,
+// NewUpdateAptProxyRepositoryParams creates a new UpdateAptProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository4Params() *UpdateRepository4Params {
-	return &UpdateRepository4Params{
+func NewUpdateAptProxyRepositoryParams() *UpdateAptProxyRepositoryParams {
+	return &UpdateAptProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository4ParamsWithTimeout creates a new UpdateRepository4Params object
+// NewUpdateAptProxyRepositoryParamsWithTimeout creates a new UpdateAptProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository4ParamsWithTimeout(timeout time.Duration) *UpdateRepository4Params {
-	return &UpdateRepository4Params{
+func NewUpdateAptProxyRepositoryParamsWithTimeout(timeout time.Duration) *UpdateAptProxyRepositoryParams {
+	return &UpdateAptProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository4ParamsWithContext creates a new UpdateRepository4Params object
+// NewUpdateAptProxyRepositoryParamsWithContext creates a new UpdateAptProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository4ParamsWithContext(ctx context.Context) *UpdateRepository4Params {
-	return &UpdateRepository4Params{
+func NewUpdateAptProxyRepositoryParamsWithContext(ctx context.Context) *UpdateAptProxyRepositoryParams {
+	return &UpdateAptProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository4ParamsWithHTTPClient creates a new UpdateRepository4Params object
+// NewUpdateAptProxyRepositoryParamsWithHTTPClient creates a new UpdateAptProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository4ParamsWithHTTPClient(client *http.Client) *UpdateRepository4Params {
-	return &UpdateRepository4Params{
+func NewUpdateAptProxyRepositoryParamsWithHTTPClient(client *http.Client) *UpdateAptProxyRepositoryParams {
+	return &UpdateAptProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository4Params contains all the parameters to send to the API endpoint
-   for the update repository 4 operation.
+/*
+UpdateAptProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 4 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository4Params struct {
+type UpdateAptProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.AptProxyRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository4Params struct {
 // WithDefaults hydrates default values in the update repository 4 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository4Params) WithDefaults() *UpdateRepository4Params {
+func (o *UpdateAptProxyRepositoryParams) WithDefaults() *UpdateAptProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository4Params) WithDefaults() *UpdateRepository4Params {
 // SetDefaults hydrates default values in the update repository 4 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository4Params) SetDefaults() {
+func (o *UpdateAptProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 4 params
-func (o *UpdateRepository4Params) WithTimeout(timeout time.Duration) *UpdateRepository4Params {
+func (o *UpdateAptProxyRepositoryParams) WithTimeout(timeout time.Duration) *UpdateAptProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 4 params
-func (o *UpdateRepository4Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateAptProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 4 params
-func (o *UpdateRepository4Params) WithContext(ctx context.Context) *UpdateRepository4Params {
+func (o *UpdateAptProxyRepositoryParams) WithContext(ctx context.Context) *UpdateAptProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 4 params
-func (o *UpdateRepository4Params) SetContext(ctx context.Context) {
+func (o *UpdateAptProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 4 params
-func (o *UpdateRepository4Params) WithHTTPClient(client *http.Client) *UpdateRepository4Params {
+func (o *UpdateAptProxyRepositoryParams) WithHTTPClient(client *http.Client) *UpdateAptProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 4 params
-func (o *UpdateRepository4Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateAptProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 4 params
-func (o *UpdateRepository4Params) WithBody(body *models.AptProxyRepositoryAPIRequest) *UpdateRepository4Params {
+func (o *UpdateAptProxyRepositoryParams) WithBody(body *models.AptProxyRepositoryAPIRequest) *UpdateAptProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 4 params
-func (o *UpdateRepository4Params) SetBody(body *models.AptProxyRepositoryAPIRequest) {
+func (o *UpdateAptProxyRepositoryParams) SetBody(body *models.AptProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 4 params
-func (o *UpdateRepository4Params) WithRepositoryName(repositoryName string) *UpdateRepository4Params {
+func (o *UpdateAptProxyRepositoryParams) WithRepositoryName(repositoryName string) *UpdateAptProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 4 params
-func (o *UpdateRepository4Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateAptProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository4Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateAptProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository37Reader is a Reader for the UpdateRepository37 structure.
-type UpdateRepository37Reader struct {
+// UpdateP2ProxyRepositoryReader is a Reader for the UpdateP2ProxyRepository structure.
+type UpdateP2ProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository37Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateP2ProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository37NoContent()
+		result := NewUpdateP2ProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository37Unauthorized()
+		result := NewUpdateP2ProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository37Forbidden()
+		result := NewUpdateP2ProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository37Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository37NoContent creates a UpdateRepository37NoContent with default headers values
-func NewUpdateRepository37NoContent() *UpdateRepository37NoContent {
-	return &UpdateRepository37NoContent{}
+// NewUpdateP2ProxyRepositoryNoContent creates a UpdateP2ProxyRepositoryNoContent with default headers values
+func NewUpdateP2ProxyRepositoryNoContent() *UpdateP2ProxyRepositoryNoContent {
+	return &UpdateP2ProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository37NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateP2ProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository37NoContent struct {
+type UpdateP2ProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository37 no content response has a 2xx status code
-func (o *UpdateRepository37NoContent) IsSuccess() bool {
+func (o *UpdateP2ProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository37 no content response has a 3xx status code
-func (o *UpdateRepository37NoContent) IsRedirect() bool {
+func (o *UpdateP2ProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository37 no content response has a 4xx status code
-func (o *UpdateRepository37NoContent) IsClientError() bool {
+func (o *UpdateP2ProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository37 no content response has a 5xx status code
-func (o *UpdateRepository37NoContent) IsServerError() bool {
+func (o *UpdateP2ProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository37 no content response a status code equal to that given
-func (o *UpdateRepository37NoContent) IsCode(code int) bool {
+func (o *UpdateP2ProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository37NoContent) Error() string {
+func (o *UpdateP2ProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/p2/proxy/{repositoryName}][%d] updateRepository37NoContent ", 204)
 }
 
-func (o *UpdateRepository37NoContent) String() string {
+func (o *UpdateP2ProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/p2/proxy/{repositoryName}][%d] updateRepository37NoContent ", 204)
 }
 
-func (o *UpdateRepository37NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateP2ProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository37Unauthorized creates a UpdateRepository37Unauthorized with default headers values
-func NewUpdateRepository37Unauthorized() *UpdateRepository37Unauthorized {
-	return &UpdateRepository37Unauthorized{}
+// NewUpdateP2ProxyRepositoryUnauthorized creates a UpdateP2ProxyRepositoryUnauthorized with default headers values
+func NewUpdateP2ProxyRepositoryUnauthorized() *UpdateP2ProxyRepositoryUnauthorized {
+	return &UpdateP2ProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository37Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateP2ProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository37Unauthorized struct {
+type UpdateP2ProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository37 unauthorized response has a 2xx status code
-func (o *UpdateRepository37Unauthorized) IsSuccess() bool {
+func (o *UpdateP2ProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository37 unauthorized response has a 3xx status code
-func (o *UpdateRepository37Unauthorized) IsRedirect() bool {
+func (o *UpdateP2ProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository37 unauthorized response has a 4xx status code
-func (o *UpdateRepository37Unauthorized) IsClientError() bool {
+func (o *UpdateP2ProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository37 unauthorized response has a 5xx status code
-func (o *UpdateRepository37Unauthorized) IsServerError() bool {
+func (o *UpdateP2ProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository37 unauthorized response a status code equal to that given
-func (o *UpdateRepository37Unauthorized) IsCode(code int) bool {
+func (o *UpdateP2ProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository37Unauthorized) Error() string {
+func (o *UpdateP2ProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/p2/proxy/{repositoryName}][%d] updateRepository37Unauthorized ", 401)
 }
 
-func (o *UpdateRepository37Unauthorized) String() string {
+func (o *UpdateP2ProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/p2/proxy/{repositoryName}][%d] updateRepository37Unauthorized ", 401)
 }
 
-func (o *UpdateRepository37Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateP2ProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository37Forbidden creates a UpdateRepository37Forbidden with default headers values
-func NewUpdateRepository37Forbidden() *UpdateRepository37Forbidden {
-	return &UpdateRepository37Forbidden{}
+// NewUpdateP2ProxyRepositoryForbidden creates a UpdateP2ProxyRepositoryForbidden with default headers values
+func NewUpdateP2ProxyRepositoryForbidden() *UpdateP2ProxyRepositoryForbidden {
+	return &UpdateP2ProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository37Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateP2ProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository37Forbidden struct {
+type UpdateP2ProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository37 forbidden response has a 2xx status code
-func (o *UpdateRepository37Forbidden) IsSuccess() bool {
+func (o *UpdateP2ProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository37 forbidden response has a 3xx status code
-func (o *UpdateRepository37Forbidden) IsRedirect() bool {
+func (o *UpdateP2ProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository37 forbidden response has a 4xx status code
-func (o *UpdateRepository37Forbidden) IsClientError() bool {
+func (o *UpdateP2ProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository37 forbidden response has a 5xx status code
-func (o *UpdateRepository37Forbidden) IsServerError() bool {
+func (o *UpdateP2ProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository37 forbidden response a status code equal to that given
-func (o *UpdateRepository37Forbidden) IsCode(code int) bool {
+func (o *UpdateP2ProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository37Forbidden) Error() string {
+func (o *UpdateP2ProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/p2/proxy/{repositoryName}][%d] updateRepository37Forbidden ", 403)
 }
 
-func (o *UpdateRepository37Forbidden) String() string {
+func (o *UpdateP2ProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/p2/proxy/{repositoryName}][%d] updateRepository37Forbidden ", 403)
 }
 
-func (o *UpdateRepository37Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateP2ProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

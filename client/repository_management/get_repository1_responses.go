@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository1Reader is a Reader for the GetRepository1 structure.
-type GetRepository1Reader struct {
+// GetMavenGroupRepositoryReader is a Reader for the GetMavenGroupRepository structure.
+type GetMavenGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository1Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetMavenGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository1OK()
+		result := NewGetMavenGroupRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository1Reader) ReadResponse(response runtime.ClientResponse, con
 	}
 }
 
-// NewGetRepository1OK creates a GetRepository1OK with default headers values
-func NewGetRepository1OK() *GetRepository1OK {
-	return &GetRepository1OK{}
+// NewGetMavenGroupRepositoryOK creates a GetMavenGroupRepositoryOK with default headers values
+func NewGetMavenGroupRepositoryOK() *GetMavenGroupRepositoryOK {
+	return &GetMavenGroupRepositoryOK{}
 }
 
-/* GetRepository1OK describes a response with status code 200, with default header values.
+/*
+	GetMavenGroupRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository1OK struct {
+type GetMavenGroupRepositoryOK struct {
 	Payload *models.SimpleAPIGroupRepository
 }
 
 // IsSuccess returns true when this get repository1 o k response has a 2xx status code
-func (o *GetRepository1OK) IsSuccess() bool {
+func (o *GetMavenGroupRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository1 o k response has a 3xx status code
-func (o *GetRepository1OK) IsRedirect() bool {
+func (o *GetMavenGroupRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository1 o k response has a 4xx status code
-func (o *GetRepository1OK) IsClientError() bool {
+func (o *GetMavenGroupRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository1 o k response has a 5xx status code
-func (o *GetRepository1OK) IsServerError() bool {
+func (o *GetMavenGroupRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository1 o k response a status code equal to that given
-func (o *GetRepository1OK) IsCode(code int) bool {
+func (o *GetMavenGroupRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository1OK) Error() string {
+func (o *GetMavenGroupRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/maven/group/{repositoryName}][%d] getRepository1OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository1OK) String() string {
+func (o *GetMavenGroupRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/maven/group/{repositoryName}][%d] getRepository1OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository1OK) GetPayload() *models.SimpleAPIGroupRepository {
+func (o *GetMavenGroupRepositoryOK) GetPayload() *models.SimpleAPIGroupRepository {
 	return o.Payload
 }
 
-func (o *GetRepository1OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetMavenGroupRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIGroupRepository)
 

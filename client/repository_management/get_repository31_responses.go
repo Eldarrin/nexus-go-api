@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository31Reader is a Reader for the GetRepository31 structure.
-type GetRepository31Reader struct {
+// GetConanProxyRepositoryReader is a Reader for the GetConanProxyRepository structure.
+type GetConanProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository31Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetConanProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository31OK()
+		result := NewGetConanProxyRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository31Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository31OK creates a GetRepository31OK with default headers values
-func NewGetRepository31OK() *GetRepository31OK {
-	return &GetRepository31OK{}
+// NewGetConanProxyRepositoryOK creates a GetConanProxyRepositoryOK with default headers values
+func NewGetConanProxyRepositoryOK() *GetConanProxyRepositoryOK {
+	return &GetConanProxyRepositoryOK{}
 }
 
-/* GetRepository31OK describes a response with status code 200, with default header values.
+/*
+	GetConanProxyRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository31OK struct {
+type GetConanProxyRepositoryOK struct {
 	Payload *models.SimpleAPIProxyRepository
 }
 
 // IsSuccess returns true when this get repository31 o k response has a 2xx status code
-func (o *GetRepository31OK) IsSuccess() bool {
+func (o *GetConanProxyRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository31 o k response has a 3xx status code
-func (o *GetRepository31OK) IsRedirect() bool {
+func (o *GetConanProxyRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository31 o k response has a 4xx status code
-func (o *GetRepository31OK) IsClientError() bool {
+func (o *GetConanProxyRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository31 o k response has a 5xx status code
-func (o *GetRepository31OK) IsServerError() bool {
+func (o *GetConanProxyRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository31 o k response a status code equal to that given
-func (o *GetRepository31OK) IsCode(code int) bool {
+func (o *GetConanProxyRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository31OK) Error() string {
+func (o *GetConanProxyRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/conan/proxy/{repositoryName}][%d] getRepository31OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository31OK) String() string {
+func (o *GetConanProxyRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/conan/proxy/{repositoryName}][%d] getRepository31OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository31OK) GetPayload() *models.SimpleAPIProxyRepository {
+func (o *GetConanProxyRepositoryOK) GetPayload() *models.SimpleAPIProxyRepository {
 	return o.Payload
 }
 
-func (o *GetRepository31OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetConanProxyRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIProxyRepository)
 

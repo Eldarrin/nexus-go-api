@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository35Params creates a new CreateRepository35Params object,
+// NewCreateGolangGroupRepositoryParams creates a new CreateGolangGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository35Params() *CreateRepository35Params {
-	return &CreateRepository35Params{
+func NewCreateGolangGroupRepositoryParams() *CreateGolangGroupRepositoryParams {
+	return &CreateGolangGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository35ParamsWithTimeout creates a new CreateRepository35Params object
+// NewCreateGolangGroupRepositoryParamsWithTimeout creates a new CreateGolangGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository35ParamsWithTimeout(timeout time.Duration) *CreateRepository35Params {
-	return &CreateRepository35Params{
+func NewCreateGolangGroupRepositoryParamsWithTimeout(timeout time.Duration) *CreateGolangGroupRepositoryParams {
+	return &CreateGolangGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository35ParamsWithContext creates a new CreateRepository35Params object
+// NewCreateGolangGroupRepositoryParamsWithContext creates a new CreateGolangGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository35ParamsWithContext(ctx context.Context) *CreateRepository35Params {
-	return &CreateRepository35Params{
+func NewCreateGolangGroupRepositoryParamsWithContext(ctx context.Context) *CreateGolangGroupRepositoryParams {
+	return &CreateGolangGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository35ParamsWithHTTPClient creates a new CreateRepository35Params object
+// NewCreateGolangGroupRepositoryParamsWithHTTPClient creates a new CreateGolangGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository35ParamsWithHTTPClient(client *http.Client) *CreateRepository35Params {
-	return &CreateRepository35Params{
+func NewCreateGolangGroupRepositoryParamsWithHTTPClient(client *http.Client) *CreateGolangGroupRepositoryParams {
+	return &CreateGolangGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository35Params contains all the parameters to send to the API endpoint
-   for the create repository 35 operation.
+/*
+CreateGolangGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 35 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository35Params struct {
+type CreateGolangGroupRepositoryParams struct {
 
 	// Body.
 	Body *models.GolangGroupRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository35Params struct {
 // WithDefaults hydrates default values in the create repository 35 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository35Params) WithDefaults() *CreateRepository35Params {
+func (o *CreateGolangGroupRepositoryParams) WithDefaults() *CreateGolangGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository35Params) WithDefaults() *CreateRepository35Params {
 // SetDefaults hydrates default values in the create repository 35 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository35Params) SetDefaults() {
+func (o *CreateGolangGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 35 params
-func (o *CreateRepository35Params) WithTimeout(timeout time.Duration) *CreateRepository35Params {
+func (o *CreateGolangGroupRepositoryParams) WithTimeout(timeout time.Duration) *CreateGolangGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 35 params
-func (o *CreateRepository35Params) SetTimeout(timeout time.Duration) {
+func (o *CreateGolangGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 35 params
-func (o *CreateRepository35Params) WithContext(ctx context.Context) *CreateRepository35Params {
+func (o *CreateGolangGroupRepositoryParams) WithContext(ctx context.Context) *CreateGolangGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 35 params
-func (o *CreateRepository35Params) SetContext(ctx context.Context) {
+func (o *CreateGolangGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 35 params
-func (o *CreateRepository35Params) WithHTTPClient(client *http.Client) *CreateRepository35Params {
+func (o *CreateGolangGroupRepositoryParams) WithHTTPClient(client *http.Client) *CreateGolangGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 35 params
-func (o *CreateRepository35Params) SetHTTPClient(client *http.Client) {
+func (o *CreateGolangGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 35 params
-func (o *CreateRepository35Params) WithBody(body *models.GolangGroupRepositoryAPIRequest) *CreateRepository35Params {
+func (o *CreateGolangGroupRepositoryParams) WithBody(body *models.GolangGroupRepositoryAPIRequest) *CreateGolangGroupRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 35 params
-func (o *CreateRepository35Params) SetBody(body *models.GolangGroupRepositoryAPIRequest) {
+func (o *CreateGolangGroupRepositoryParams) SetBody(body *models.GolangGroupRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository35Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateGolangGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

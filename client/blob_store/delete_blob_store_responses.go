@@ -36,7 +36,8 @@ func NewDeleteBlobStoreDefault(code int) *DeleteBlobStoreDefault {
 	}
 }
 
-/* DeleteBlobStoreDefault describes a response with status code -1, with default header values.
+/*
+	DeleteBlobStoreDefault describes a response with status code -1, with default header values.
 
 successful operation
 */

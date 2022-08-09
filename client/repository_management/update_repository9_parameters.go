@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository9Params creates a new UpdateRepository9Params object,
+// NewUpdateNpmHostedRepositoryParams creates a new UpdateNpmHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository9Params() *UpdateRepository9Params {
-	return &UpdateRepository9Params{
+func NewUpdateNpmHostedRepositoryParams() *UpdateNpmHostedRepositoryParams {
+	return &UpdateNpmHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository9ParamsWithTimeout creates a new UpdateRepository9Params object
+// NewUpdateNpmHostedRepositoryParamsWithTimeout creates a new UpdateNpmHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository9ParamsWithTimeout(timeout time.Duration) *UpdateRepository9Params {
-	return &UpdateRepository9Params{
+func NewUpdateNpmHostedRepositoryParamsWithTimeout(timeout time.Duration) *UpdateNpmHostedRepositoryParams {
+	return &UpdateNpmHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository9ParamsWithContext creates a new UpdateRepository9Params object
+// NewUpdateNpmHostedRepositoryParamsWithContext creates a new UpdateNpmHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository9ParamsWithContext(ctx context.Context) *UpdateRepository9Params {
-	return &UpdateRepository9Params{
+func NewUpdateNpmHostedRepositoryParamsWithContext(ctx context.Context) *UpdateNpmHostedRepositoryParams {
+	return &UpdateNpmHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository9ParamsWithHTTPClient creates a new UpdateRepository9Params object
+// NewUpdateNpmHostedRepositoryParamsWithHTTPClient creates a new UpdateNpmHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository9ParamsWithHTTPClient(client *http.Client) *UpdateRepository9Params {
-	return &UpdateRepository9Params{
+func NewUpdateNpmHostedRepositoryParamsWithHTTPClient(client *http.Client) *UpdateNpmHostedRepositoryParams {
+	return &UpdateNpmHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository9Params contains all the parameters to send to the API endpoint
-   for the update repository 9 operation.
+/*
+UpdateNpmHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 9 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository9Params struct {
+type UpdateNpmHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.NpmHostedRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository9Params struct {
 // WithDefaults hydrates default values in the update repository 9 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository9Params) WithDefaults() *UpdateRepository9Params {
+func (o *UpdateNpmHostedRepositoryParams) WithDefaults() *UpdateNpmHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository9Params) WithDefaults() *UpdateRepository9Params {
 // SetDefaults hydrates default values in the update repository 9 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository9Params) SetDefaults() {
+func (o *UpdateNpmHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 9 params
-func (o *UpdateRepository9Params) WithTimeout(timeout time.Duration) *UpdateRepository9Params {
+func (o *UpdateNpmHostedRepositoryParams) WithTimeout(timeout time.Duration) *UpdateNpmHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 9 params
-func (o *UpdateRepository9Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateNpmHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 9 params
-func (o *UpdateRepository9Params) WithContext(ctx context.Context) *UpdateRepository9Params {
+func (o *UpdateNpmHostedRepositoryParams) WithContext(ctx context.Context) *UpdateNpmHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 9 params
-func (o *UpdateRepository9Params) SetContext(ctx context.Context) {
+func (o *UpdateNpmHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 9 params
-func (o *UpdateRepository9Params) WithHTTPClient(client *http.Client) *UpdateRepository9Params {
+func (o *UpdateNpmHostedRepositoryParams) WithHTTPClient(client *http.Client) *UpdateNpmHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 9 params
-func (o *UpdateRepository9Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateNpmHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 9 params
-func (o *UpdateRepository9Params) WithBody(body *models.NpmHostedRepositoryAPIRequest) *UpdateRepository9Params {
+func (o *UpdateNpmHostedRepositoryParams) WithBody(body *models.NpmHostedRepositoryAPIRequest) *UpdateNpmHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 9 params
-func (o *UpdateRepository9Params) SetBody(body *models.NpmHostedRepositoryAPIRequest) {
+func (o *UpdateNpmHostedRepositoryParams) SetBody(body *models.NpmHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 9 params
-func (o *UpdateRepository9Params) WithRepositoryName(repositoryName string) *UpdateRepository9Params {
+func (o *UpdateNpmHostedRepositoryParams) WithRepositoryName(repositoryName string) *UpdateNpmHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 9 params
-func (o *UpdateRepository9Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateNpmHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository9Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateNpmHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository29Params creates a new GetRepository29Params object,
+// NewGetPypiProxyRepositoryParams creates a new GetPypiProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository29Params() *GetRepository29Params {
-	return &GetRepository29Params{
+func NewGetPypiProxyRepositoryParams() *GetPypiProxyRepositoryParams {
+	return &GetPypiProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository29ParamsWithTimeout creates a new GetRepository29Params object
+// NewGetPypiProxyRepositoryParamsWithTimeout creates a new GetPypiProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository29ParamsWithTimeout(timeout time.Duration) *GetRepository29Params {
-	return &GetRepository29Params{
+func NewGetPypiProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetPypiProxyRepositoryParams {
+	return &GetPypiProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository29ParamsWithContext creates a new GetRepository29Params object
+// NewGetPypiProxyRepositoryParamsWithContext creates a new GetPypiProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository29ParamsWithContext(ctx context.Context) *GetRepository29Params {
-	return &GetRepository29Params{
+func NewGetPypiProxyRepositoryParamsWithContext(ctx context.Context) *GetPypiProxyRepositoryParams {
+	return &GetPypiProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository29ParamsWithHTTPClient creates a new GetRepository29Params object
+// NewGetPypiProxyRepositoryParamsWithHTTPClient creates a new GetPypiProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository29ParamsWithHTTPClient(client *http.Client) *GetRepository29Params {
-	return &GetRepository29Params{
+func NewGetPypiProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetPypiProxyRepositoryParams {
+	return &GetPypiProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository29Params contains all the parameters to send to the API endpoint
-   for the get repository 29 operation.
+/*
+GetPypiProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 29 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository29Params struct {
+type GetPypiProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository29Params struct {
 // WithDefaults hydrates default values in the get repository 29 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository29Params) WithDefaults() *GetRepository29Params {
+func (o *GetPypiProxyRepositoryParams) WithDefaults() *GetPypiProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository29Params) WithDefaults() *GetRepository29Params {
 // SetDefaults hydrates default values in the get repository 29 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository29Params) SetDefaults() {
+func (o *GetPypiProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 29 params
-func (o *GetRepository29Params) WithTimeout(timeout time.Duration) *GetRepository29Params {
+func (o *GetPypiProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetPypiProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 29 params
-func (o *GetRepository29Params) SetTimeout(timeout time.Duration) {
+func (o *GetPypiProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 29 params
-func (o *GetRepository29Params) WithContext(ctx context.Context) *GetRepository29Params {
+func (o *GetPypiProxyRepositoryParams) WithContext(ctx context.Context) *GetPypiProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 29 params
-func (o *GetRepository29Params) SetContext(ctx context.Context) {
+func (o *GetPypiProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 29 params
-func (o *GetRepository29Params) WithHTTPClient(client *http.Client) *GetRepository29Params {
+func (o *GetPypiProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetPypiProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 29 params
-func (o *GetRepository29Params) SetHTTPClient(client *http.Client) {
+func (o *GetPypiProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 29 params
-func (o *GetRepository29Params) WithRepositoryName(repositoryName string) *GetRepository29Params {
+func (o *GetPypiProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetPypiProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 29 params
-func (o *GetRepository29Params) SetRepositoryName(repositoryName string) {
+func (o *GetPypiProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository29Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetPypiProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

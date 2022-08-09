@@ -54,7 +54,8 @@ func NewGetLdapServerOK() *GetLdapServerOK {
 	return &GetLdapServerOK{}
 }
 
-/* GetLdapServerOK describes a response with status code 200, with default header values.
+/*
+	GetLdapServerOK describes a response with status code 200, with default header values.
 
 LDAP server returned
 */
@@ -104,7 +105,8 @@ func NewGetLdapServerUnauthorized() *GetLdapServerUnauthorized {
 	return &GetLdapServerUnauthorized{}
 }
 
-/* GetLdapServerUnauthorized describes a response with status code 401, with default header values.
+/*
+	GetLdapServerUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -154,7 +156,8 @@ func NewGetLdapServerForbidden() *GetLdapServerForbidden {
 	return &GetLdapServerForbidden{}
 }
 
-/* GetLdapServerForbidden describes a response with status code 403, with default header values.
+/*
+	GetLdapServerForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
@@ -204,7 +207,8 @@ func NewGetLdapServerNotFound() *GetLdapServerNotFound {
 	return &GetLdapServerNotFound{}
 }
 
-/* GetLdapServerNotFound describes a response with status code 404, with default header values.
+/*
+	GetLdapServerNotFound describes a response with status code 404, with default header values.
 
 LDAP server not found
 */

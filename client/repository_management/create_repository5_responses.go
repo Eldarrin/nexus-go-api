@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository5Reader is a Reader for the CreateRepository5 structure.
-type CreateRepository5Reader struct {
+// CreateRawGroupRepositoryReader is a Reader for the CreateRawGroupRepository structure.
+type CreateRawGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository5Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateRawGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository5Created()
+		result := NewCreateRawGroupRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository5Unauthorized()
+		result := NewCreateRawGroupRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository5Forbidden()
+		result := NewCreateRawGroupRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository5Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewCreateRepository5Created creates a CreateRepository5Created with default headers values
-func NewCreateRepository5Created() *CreateRepository5Created {
-	return &CreateRepository5Created{}
+// NewCreateRawGroupRepositoryCreated creates a CreateRawGroupRepositoryCreated with default headers values
+func NewCreateRawGroupRepositoryCreated() *CreateRawGroupRepositoryCreated {
+	return &CreateRawGroupRepositoryCreated{}
 }
 
-/* CreateRepository5Created describes a response with status code 201, with default header values.
+/*
+	CreateRawGroupRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository5Created struct {
+type CreateRawGroupRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository5 created response has a 2xx status code
-func (o *CreateRepository5Created) IsSuccess() bool {
+func (o *CreateRawGroupRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository5 created response has a 3xx status code
-func (o *CreateRepository5Created) IsRedirect() bool {
+func (o *CreateRawGroupRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository5 created response has a 4xx status code
-func (o *CreateRepository5Created) IsClientError() bool {
+func (o *CreateRawGroupRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository5 created response has a 5xx status code
-func (o *CreateRepository5Created) IsServerError() bool {
+func (o *CreateRawGroupRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository5 created response a status code equal to that given
-func (o *CreateRepository5Created) IsCode(code int) bool {
+func (o *CreateRawGroupRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository5Created) Error() string {
+func (o *CreateRawGroupRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/group][%d] createRepository5Created ", 201)
 }
 
-func (o *CreateRepository5Created) String() string {
+func (o *CreateRawGroupRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/group][%d] createRepository5Created ", 201)
 }
 
-func (o *CreateRepository5Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRawGroupRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository5Unauthorized creates a CreateRepository5Unauthorized with default headers values
-func NewCreateRepository5Unauthorized() *CreateRepository5Unauthorized {
-	return &CreateRepository5Unauthorized{}
+// NewCreateRawGroupRepositoryUnauthorized creates a CreateRawGroupRepositoryUnauthorized with default headers values
+func NewCreateRawGroupRepositoryUnauthorized() *CreateRawGroupRepositoryUnauthorized {
+	return &CreateRawGroupRepositoryUnauthorized{}
 }
 
-/* CreateRepository5Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateRawGroupRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository5Unauthorized struct {
+type CreateRawGroupRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository5 unauthorized response has a 2xx status code
-func (o *CreateRepository5Unauthorized) IsSuccess() bool {
+func (o *CreateRawGroupRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository5 unauthorized response has a 3xx status code
-func (o *CreateRepository5Unauthorized) IsRedirect() bool {
+func (o *CreateRawGroupRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository5 unauthorized response has a 4xx status code
-func (o *CreateRepository5Unauthorized) IsClientError() bool {
+func (o *CreateRawGroupRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository5 unauthorized response has a 5xx status code
-func (o *CreateRepository5Unauthorized) IsServerError() bool {
+func (o *CreateRawGroupRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository5 unauthorized response a status code equal to that given
-func (o *CreateRepository5Unauthorized) IsCode(code int) bool {
+func (o *CreateRawGroupRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository5Unauthorized) Error() string {
+func (o *CreateRawGroupRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/group][%d] createRepository5Unauthorized ", 401)
 }
 
-func (o *CreateRepository5Unauthorized) String() string {
+func (o *CreateRawGroupRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/group][%d] createRepository5Unauthorized ", 401)
 }
 
-func (o *CreateRepository5Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRawGroupRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository5Forbidden creates a CreateRepository5Forbidden with default headers values
-func NewCreateRepository5Forbidden() *CreateRepository5Forbidden {
-	return &CreateRepository5Forbidden{}
+// NewCreateRawGroupRepositoryForbidden creates a CreateRawGroupRepositoryForbidden with default headers values
+func NewCreateRawGroupRepositoryForbidden() *CreateRawGroupRepositoryForbidden {
+	return &CreateRawGroupRepositoryForbidden{}
 }
 
-/* CreateRepository5Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateRawGroupRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository5Forbidden struct {
+type CreateRawGroupRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository5 forbidden response has a 2xx status code
-func (o *CreateRepository5Forbidden) IsSuccess() bool {
+func (o *CreateRawGroupRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository5 forbidden response has a 3xx status code
-func (o *CreateRepository5Forbidden) IsRedirect() bool {
+func (o *CreateRawGroupRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository5 forbidden response has a 4xx status code
-func (o *CreateRepository5Forbidden) IsClientError() bool {
+func (o *CreateRawGroupRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository5 forbidden response has a 5xx status code
-func (o *CreateRepository5Forbidden) IsServerError() bool {
+func (o *CreateRawGroupRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository5 forbidden response a status code equal to that given
-func (o *CreateRepository5Forbidden) IsCode(code int) bool {
+func (o *CreateRawGroupRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository5Forbidden) Error() string {
+func (o *CreateRawGroupRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/group][%d] createRepository5Forbidden ", 403)
 }
 
-func (o *CreateRepository5Forbidden) String() string {
+func (o *CreateRawGroupRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/raw/group][%d] createRepository5Forbidden ", 403)
 }
 
-func (o *CreateRepository5Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateRawGroupRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository32Params creates a new CreateRepository32Params object,
+// NewCreateRHostedRepositoryParams creates a new CreateRHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository32Params() *CreateRepository32Params {
-	return &CreateRepository32Params{
+func NewCreateRHostedRepositoryParams() *CreateRHostedRepositoryParams {
+	return &CreateRHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository32ParamsWithTimeout creates a new CreateRepository32Params object
+// NewCreateRHostedRepositoryParamsWithTimeout creates a new CreateRHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository32ParamsWithTimeout(timeout time.Duration) *CreateRepository32Params {
-	return &CreateRepository32Params{
+func NewCreateRHostedRepositoryParamsWithTimeout(timeout time.Duration) *CreateRHostedRepositoryParams {
+	return &CreateRHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository32ParamsWithContext creates a new CreateRepository32Params object
+// NewCreateRHostedRepositoryParamsWithContext creates a new CreateRHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository32ParamsWithContext(ctx context.Context) *CreateRepository32Params {
-	return &CreateRepository32Params{
+func NewCreateRHostedRepositoryParamsWithContext(ctx context.Context) *CreateRHostedRepositoryParams {
+	return &CreateRHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository32ParamsWithHTTPClient creates a new CreateRepository32Params object
+// NewCreateRHostedRepositoryParamsWithHTTPClient creates a new CreateRHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository32ParamsWithHTTPClient(client *http.Client) *CreateRepository32Params {
-	return &CreateRepository32Params{
+func NewCreateRHostedRepositoryParamsWithHTTPClient(client *http.Client) *CreateRHostedRepositoryParams {
+	return &CreateRHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository32Params contains all the parameters to send to the API endpoint
-   for the create repository 32 operation.
+/*
+CreateRHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 32 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository32Params struct {
+type CreateRHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.RHostedRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository32Params struct {
 // WithDefaults hydrates default values in the create repository 32 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository32Params) WithDefaults() *CreateRepository32Params {
+func (o *CreateRHostedRepositoryParams) WithDefaults() *CreateRHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository32Params) WithDefaults() *CreateRepository32Params {
 // SetDefaults hydrates default values in the create repository 32 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository32Params) SetDefaults() {
+func (o *CreateRHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 32 params
-func (o *CreateRepository32Params) WithTimeout(timeout time.Duration) *CreateRepository32Params {
+func (o *CreateRHostedRepositoryParams) WithTimeout(timeout time.Duration) *CreateRHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 32 params
-func (o *CreateRepository32Params) SetTimeout(timeout time.Duration) {
+func (o *CreateRHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 32 params
-func (o *CreateRepository32Params) WithContext(ctx context.Context) *CreateRepository32Params {
+func (o *CreateRHostedRepositoryParams) WithContext(ctx context.Context) *CreateRHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 32 params
-func (o *CreateRepository32Params) SetContext(ctx context.Context) {
+func (o *CreateRHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 32 params
-func (o *CreateRepository32Params) WithHTTPClient(client *http.Client) *CreateRepository32Params {
+func (o *CreateRHostedRepositoryParams) WithHTTPClient(client *http.Client) *CreateRHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 32 params
-func (o *CreateRepository32Params) SetHTTPClient(client *http.Client) {
+func (o *CreateRHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 32 params
-func (o *CreateRepository32Params) WithBody(body *models.RHostedRepositoryAPIRequest) *CreateRepository32Params {
+func (o *CreateRHostedRepositoryParams) WithBody(body *models.RHostedRepositoryAPIRequest) *CreateRHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 32 params
-func (o *CreateRepository32Params) SetBody(body *models.RHostedRepositoryAPIRequest) {
+func (o *CreateRHostedRepositoryParams) SetBody(body *models.RHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository32Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateRHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -39,7 +39,8 @@ func NewGetSystemStatusChecksOK() *GetSystemStatusChecksOK {
 	return &GetSystemStatusChecksOK{}
 }
 
-/* GetSystemStatusChecksOK describes a response with status code 200, with default header values.
+/*
+	GetSystemStatusChecksOK describes a response with status code 200, with default header values.
 
 The system status check results
 */

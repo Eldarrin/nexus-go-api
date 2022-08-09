@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository16Params creates a new GetRepository16Params object,
+// NewGetRubyGemsHostedRepositoryParams creates a new GetRubyGemsHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository16Params() *GetRepository16Params {
-	return &GetRepository16Params{
+func NewGetRubyGemsHostedRepositoryParams() *GetRubyGemsHostedRepositoryParams {
+	return &GetRubyGemsHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository16ParamsWithTimeout creates a new GetRepository16Params object
+// NewGetRubyGemsHostedRepositoryParamsWithTimeout creates a new GetRubyGemsHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository16ParamsWithTimeout(timeout time.Duration) *GetRepository16Params {
-	return &GetRepository16Params{
+func NewGetRubyGemsHostedRepositoryParamsWithTimeout(timeout time.Duration) *GetRubyGemsHostedRepositoryParams {
+	return &GetRubyGemsHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository16ParamsWithContext creates a new GetRepository16Params object
+// NewGetRubyGemsHostedRepositoryParamsWithContext creates a new GetRubyGemsHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository16ParamsWithContext(ctx context.Context) *GetRepository16Params {
-	return &GetRepository16Params{
+func NewGetRubyGemsHostedRepositoryParamsWithContext(ctx context.Context) *GetRubyGemsHostedRepositoryParams {
+	return &GetRubyGemsHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository16ParamsWithHTTPClient creates a new GetRepository16Params object
+// NewGetRubyGemsHostedRepositoryParamsWithHTTPClient creates a new GetRubyGemsHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository16ParamsWithHTTPClient(client *http.Client) *GetRepository16Params {
-	return &GetRepository16Params{
+func NewGetRubyGemsHostedRepositoryParamsWithHTTPClient(client *http.Client) *GetRubyGemsHostedRepositoryParams {
+	return &GetRubyGemsHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository16Params contains all the parameters to send to the API endpoint
-   for the get repository 16 operation.
+/*
+GetRubyGemsHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 16 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository16Params struct {
+type GetRubyGemsHostedRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository16Params struct {
 // WithDefaults hydrates default values in the get repository 16 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository16Params) WithDefaults() *GetRepository16Params {
+func (o *GetRubyGemsHostedRepositoryParams) WithDefaults() *GetRubyGemsHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository16Params) WithDefaults() *GetRepository16Params {
 // SetDefaults hydrates default values in the get repository 16 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository16Params) SetDefaults() {
+func (o *GetRubyGemsHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 16 params
-func (o *GetRepository16Params) WithTimeout(timeout time.Duration) *GetRepository16Params {
+func (o *GetRubyGemsHostedRepositoryParams) WithTimeout(timeout time.Duration) *GetRubyGemsHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 16 params
-func (o *GetRepository16Params) SetTimeout(timeout time.Duration) {
+func (o *GetRubyGemsHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 16 params
-func (o *GetRepository16Params) WithContext(ctx context.Context) *GetRepository16Params {
+func (o *GetRubyGemsHostedRepositoryParams) WithContext(ctx context.Context) *GetRubyGemsHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 16 params
-func (o *GetRepository16Params) SetContext(ctx context.Context) {
+func (o *GetRubyGemsHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 16 params
-func (o *GetRepository16Params) WithHTTPClient(client *http.Client) *GetRepository16Params {
+func (o *GetRubyGemsHostedRepositoryParams) WithHTTPClient(client *http.Client) *GetRubyGemsHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 16 params
-func (o *GetRepository16Params) SetHTTPClient(client *http.Client) {
+func (o *GetRubyGemsHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 16 params
-func (o *GetRepository16Params) WithRepositoryName(repositoryName string) *GetRepository16Params {
+func (o *GetRubyGemsHostedRepositoryParams) WithRepositoryName(repositoryName string) *GetRubyGemsHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 16 params
-func (o *GetRepository16Params) SetRepositoryName(repositoryName string) {
+func (o *GetRubyGemsHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository16Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetRubyGemsHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

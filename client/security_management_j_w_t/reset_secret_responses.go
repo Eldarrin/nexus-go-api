@@ -42,7 +42,8 @@ func NewResetSecretUnauthorized() *ResetSecretUnauthorized {
 	return &ResetSecretUnauthorized{}
 }
 
-/* ResetSecretUnauthorized describes a response with status code 401, with default header values.
+/*
+	ResetSecretUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -92,7 +93,8 @@ func NewResetSecretForbidden() *ResetSecretForbidden {
 	return &ResetSecretForbidden{}
 }
 
-/* ResetSecretForbidden describes a response with status code 403, with default header values.
+/*
+	ResetSecretForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

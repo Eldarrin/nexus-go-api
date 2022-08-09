@@ -53,10 +53,12 @@ func NewSearchAndDownloadAssetsParamsWithHTTPClient(client *http.Client) *Search
 	}
 }
 
-/* SearchAndDownloadAssetsParams contains all the parameters to send to the API endpoint
-   for the search and download assets operation.
+/*
+SearchAndDownloadAssetsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the search and download assets operation.
+
+	Typically these are written to a http.Request.
 */
 type SearchAndDownloadAssetsParams struct {
 

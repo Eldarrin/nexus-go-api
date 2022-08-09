@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository11Reader is a Reader for the CreateRepository11 structure.
-type CreateRepository11Reader struct {
+// CreateNugetGroupRepositoryReader is a Reader for the CreateNugetGroupRepository structure.
+type CreateNugetGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository11Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateNugetGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository11Created()
+		result := NewCreateNugetGroupRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository11Unauthorized()
+		result := NewCreateNugetGroupRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository11Forbidden()
+		result := NewCreateNugetGroupRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository11Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository11Created creates a CreateRepository11Created with default headers values
-func NewCreateRepository11Created() *CreateRepository11Created {
-	return &CreateRepository11Created{}
+// NewCreateNugetGroupRepositoryCreated creates a CreateNugetGroupRepositoryCreated with default headers values
+func NewCreateNugetGroupRepositoryCreated() *CreateNugetGroupRepositoryCreated {
+	return &CreateNugetGroupRepositoryCreated{}
 }
 
-/* CreateRepository11Created describes a response with status code 201, with default header values.
+/*
+	CreateNugetGroupRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository11Created struct {
+type CreateNugetGroupRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository11 created response has a 2xx status code
-func (o *CreateRepository11Created) IsSuccess() bool {
+func (o *CreateNugetGroupRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository11 created response has a 3xx status code
-func (o *CreateRepository11Created) IsRedirect() bool {
+func (o *CreateNugetGroupRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository11 created response has a 4xx status code
-func (o *CreateRepository11Created) IsClientError() bool {
+func (o *CreateNugetGroupRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository11 created response has a 5xx status code
-func (o *CreateRepository11Created) IsServerError() bool {
+func (o *CreateNugetGroupRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository11 created response a status code equal to that given
-func (o *CreateRepository11Created) IsCode(code int) bool {
+func (o *CreateNugetGroupRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository11Created) Error() string {
+func (o *CreateNugetGroupRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/group][%d] createRepository11Created ", 201)
 }
 
-func (o *CreateRepository11Created) String() string {
+func (o *CreateNugetGroupRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/group][%d] createRepository11Created ", 201)
 }
 
-func (o *CreateRepository11Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNugetGroupRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository11Unauthorized creates a CreateRepository11Unauthorized with default headers values
-func NewCreateRepository11Unauthorized() *CreateRepository11Unauthorized {
-	return &CreateRepository11Unauthorized{}
+// NewCreateNugetGroupRepositoryUnauthorized creates a CreateNugetGroupRepositoryUnauthorized with default headers values
+func NewCreateNugetGroupRepositoryUnauthorized() *CreateNugetGroupRepositoryUnauthorized {
+	return &CreateNugetGroupRepositoryUnauthorized{}
 }
 
-/* CreateRepository11Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateNugetGroupRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository11Unauthorized struct {
+type CreateNugetGroupRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository11 unauthorized response has a 2xx status code
-func (o *CreateRepository11Unauthorized) IsSuccess() bool {
+func (o *CreateNugetGroupRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository11 unauthorized response has a 3xx status code
-func (o *CreateRepository11Unauthorized) IsRedirect() bool {
+func (o *CreateNugetGroupRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository11 unauthorized response has a 4xx status code
-func (o *CreateRepository11Unauthorized) IsClientError() bool {
+func (o *CreateNugetGroupRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository11 unauthorized response has a 5xx status code
-func (o *CreateRepository11Unauthorized) IsServerError() bool {
+func (o *CreateNugetGroupRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository11 unauthorized response a status code equal to that given
-func (o *CreateRepository11Unauthorized) IsCode(code int) bool {
+func (o *CreateNugetGroupRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository11Unauthorized) Error() string {
+func (o *CreateNugetGroupRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/group][%d] createRepository11Unauthorized ", 401)
 }
 
-func (o *CreateRepository11Unauthorized) String() string {
+func (o *CreateNugetGroupRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/group][%d] createRepository11Unauthorized ", 401)
 }
 
-func (o *CreateRepository11Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNugetGroupRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository11Forbidden creates a CreateRepository11Forbidden with default headers values
-func NewCreateRepository11Forbidden() *CreateRepository11Forbidden {
-	return &CreateRepository11Forbidden{}
+// NewCreateNugetGroupRepositoryForbidden creates a CreateNugetGroupRepositoryForbidden with default headers values
+func NewCreateNugetGroupRepositoryForbidden() *CreateNugetGroupRepositoryForbidden {
+	return &CreateNugetGroupRepositoryForbidden{}
 }
 
-/* CreateRepository11Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateNugetGroupRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository11Forbidden struct {
+type CreateNugetGroupRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository11 forbidden response has a 2xx status code
-func (o *CreateRepository11Forbidden) IsSuccess() bool {
+func (o *CreateNugetGroupRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository11 forbidden response has a 3xx status code
-func (o *CreateRepository11Forbidden) IsRedirect() bool {
+func (o *CreateNugetGroupRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository11 forbidden response has a 4xx status code
-func (o *CreateRepository11Forbidden) IsClientError() bool {
+func (o *CreateNugetGroupRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository11 forbidden response has a 5xx status code
-func (o *CreateRepository11Forbidden) IsServerError() bool {
+func (o *CreateNugetGroupRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository11 forbidden response a status code equal to that given
-func (o *CreateRepository11Forbidden) IsCode(code int) bool {
+func (o *CreateNugetGroupRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository11Forbidden) Error() string {
+func (o *CreateNugetGroupRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/group][%d] createRepository11Forbidden ", 403)
 }
 
-func (o *CreateRepository11Forbidden) String() string {
+func (o *CreateNugetGroupRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/group][%d] createRepository11Forbidden ", 403)
 }
 
-func (o *CreateRepository11Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNugetGroupRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

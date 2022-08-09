@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository33Params creates a new UpdateRepository33Params object,
+// NewUpdateRProxyRepositoryParams creates a new UpdateRProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository33Params() *UpdateRepository33Params {
-	return &UpdateRepository33Params{
+func NewUpdateRProxyRepositoryParams() *UpdateRProxyRepositoryParams {
+	return &UpdateRProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository33ParamsWithTimeout creates a new UpdateRepository33Params object
+// NewUpdateRProxyRepositoryParamsWithTimeout creates a new UpdateRProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository33ParamsWithTimeout(timeout time.Duration) *UpdateRepository33Params {
-	return &UpdateRepository33Params{
+func NewUpdateRProxyRepositoryParamsWithTimeout(timeout time.Duration) *UpdateRProxyRepositoryParams {
+	return &UpdateRProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository33ParamsWithContext creates a new UpdateRepository33Params object
+// NewUpdateRProxyRepositoryParamsWithContext creates a new UpdateRProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository33ParamsWithContext(ctx context.Context) *UpdateRepository33Params {
-	return &UpdateRepository33Params{
+func NewUpdateRProxyRepositoryParamsWithContext(ctx context.Context) *UpdateRProxyRepositoryParams {
+	return &UpdateRProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository33ParamsWithHTTPClient creates a new UpdateRepository33Params object
+// NewUpdateRProxyRepositoryParamsWithHTTPClient creates a new UpdateRProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository33ParamsWithHTTPClient(client *http.Client) *UpdateRepository33Params {
-	return &UpdateRepository33Params{
+func NewUpdateRProxyRepositoryParamsWithHTTPClient(client *http.Client) *UpdateRProxyRepositoryParams {
+	return &UpdateRProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository33Params contains all the parameters to send to the API endpoint
-   for the update repository 33 operation.
+/*
+UpdateRProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 33 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository33Params struct {
+type UpdateRProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.RProxyRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository33Params struct {
 // WithDefaults hydrates default values in the update repository 33 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository33Params) WithDefaults() *UpdateRepository33Params {
+func (o *UpdateRProxyRepositoryParams) WithDefaults() *UpdateRProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository33Params) WithDefaults() *UpdateRepository33Params {
 // SetDefaults hydrates default values in the update repository 33 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository33Params) SetDefaults() {
+func (o *UpdateRProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 33 params
-func (o *UpdateRepository33Params) WithTimeout(timeout time.Duration) *UpdateRepository33Params {
+func (o *UpdateRProxyRepositoryParams) WithTimeout(timeout time.Duration) *UpdateRProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 33 params
-func (o *UpdateRepository33Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateRProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 33 params
-func (o *UpdateRepository33Params) WithContext(ctx context.Context) *UpdateRepository33Params {
+func (o *UpdateRProxyRepositoryParams) WithContext(ctx context.Context) *UpdateRProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 33 params
-func (o *UpdateRepository33Params) SetContext(ctx context.Context) {
+func (o *UpdateRProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 33 params
-func (o *UpdateRepository33Params) WithHTTPClient(client *http.Client) *UpdateRepository33Params {
+func (o *UpdateRProxyRepositoryParams) WithHTTPClient(client *http.Client) *UpdateRProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 33 params
-func (o *UpdateRepository33Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateRProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 33 params
-func (o *UpdateRepository33Params) WithBody(body *models.RProxyRepositoryAPIRequest) *UpdateRepository33Params {
+func (o *UpdateRProxyRepositoryParams) WithBody(body *models.RProxyRepositoryAPIRequest) *UpdateRProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 33 params
-func (o *UpdateRepository33Params) SetBody(body *models.RProxyRepositoryAPIRequest) {
+func (o *UpdateRProxyRepositoryParams) SetBody(body *models.RProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 33 params
-func (o *UpdateRepository33Params) WithRepositoryName(repositoryName string) *UpdateRepository33Params {
+func (o *UpdateRProxyRepositoryParams) WithRepositoryName(repositoryName string) *UpdateRProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 33 params
-func (o *UpdateRepository33Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateRProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository33Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateRProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

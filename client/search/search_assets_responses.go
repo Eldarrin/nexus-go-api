@@ -39,7 +39,8 @@ func NewSearchAssetsOK() *SearchAssetsOK {
 	return &SearchAssetsOK{}
 }
 
-/* SearchAssetsOK describes a response with status code 200, with default header values.
+/*
+	SearchAssetsOK describes a response with status code 200, with default header values.
 
 successful operation
 */

@@ -36,7 +36,8 @@ func NewRemoveLicenseDefault(code int) *RemoveLicenseDefault {
 	}
 }
 
-/* RemoveLicenseDefault describes a response with status code -1, with default header values.
+/*
+	RemoveLicenseDefault describes a response with status code -1, with default header values.
 
 successful operation
 */

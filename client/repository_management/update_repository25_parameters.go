@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository25Params creates a new UpdateRepository25Params object,
+// NewUpdateGitLfsHostedRepositoryParams creates a new UpdateGitLfsHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository25Params() *UpdateRepository25Params {
-	return &UpdateRepository25Params{
+func NewUpdateGitLfsHostedRepositoryParams() *UpdateGitLfsHostedRepositoryParams {
+	return &UpdateGitLfsHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository25ParamsWithTimeout creates a new UpdateRepository25Params object
+// NewUpdateGitLfsHostedRepositoryParamsWithTimeout creates a new UpdateGitLfsHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository25ParamsWithTimeout(timeout time.Duration) *UpdateRepository25Params {
-	return &UpdateRepository25Params{
+func NewUpdateGitLfsHostedRepositoryParamsWithTimeout(timeout time.Duration) *UpdateGitLfsHostedRepositoryParams {
+	return &UpdateGitLfsHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository25ParamsWithContext creates a new UpdateRepository25Params object
+// NewUpdateGitLfsHostedRepositoryParamsWithContext creates a new UpdateGitLfsHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository25ParamsWithContext(ctx context.Context) *UpdateRepository25Params {
-	return &UpdateRepository25Params{
+func NewUpdateGitLfsHostedRepositoryParamsWithContext(ctx context.Context) *UpdateGitLfsHostedRepositoryParams {
+	return &UpdateGitLfsHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository25ParamsWithHTTPClient creates a new UpdateRepository25Params object
+// NewUpdateGitLfsHostedRepositoryParamsWithHTTPClient creates a new UpdateGitLfsHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository25ParamsWithHTTPClient(client *http.Client) *UpdateRepository25Params {
-	return &UpdateRepository25Params{
+func NewUpdateGitLfsHostedRepositoryParamsWithHTTPClient(client *http.Client) *UpdateGitLfsHostedRepositoryParams {
+	return &UpdateGitLfsHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository25Params contains all the parameters to send to the API endpoint
-   for the update repository 25 operation.
+/*
+UpdateGitLfsHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 25 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository25Params struct {
+type UpdateGitLfsHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.GitLfsHostedRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository25Params struct {
 // WithDefaults hydrates default values in the update repository 25 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository25Params) WithDefaults() *UpdateRepository25Params {
+func (o *UpdateGitLfsHostedRepositoryParams) WithDefaults() *UpdateGitLfsHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository25Params) WithDefaults() *UpdateRepository25Params {
 // SetDefaults hydrates default values in the update repository 25 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository25Params) SetDefaults() {
+func (o *UpdateGitLfsHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 25 params
-func (o *UpdateRepository25Params) WithTimeout(timeout time.Duration) *UpdateRepository25Params {
+func (o *UpdateGitLfsHostedRepositoryParams) WithTimeout(timeout time.Duration) *UpdateGitLfsHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 25 params
-func (o *UpdateRepository25Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateGitLfsHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 25 params
-func (o *UpdateRepository25Params) WithContext(ctx context.Context) *UpdateRepository25Params {
+func (o *UpdateGitLfsHostedRepositoryParams) WithContext(ctx context.Context) *UpdateGitLfsHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 25 params
-func (o *UpdateRepository25Params) SetContext(ctx context.Context) {
+func (o *UpdateGitLfsHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 25 params
-func (o *UpdateRepository25Params) WithHTTPClient(client *http.Client) *UpdateRepository25Params {
+func (o *UpdateGitLfsHostedRepositoryParams) WithHTTPClient(client *http.Client) *UpdateGitLfsHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 25 params
-func (o *UpdateRepository25Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateGitLfsHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 25 params
-func (o *UpdateRepository25Params) WithBody(body *models.GitLfsHostedRepositoryAPIRequest) *UpdateRepository25Params {
+func (o *UpdateGitLfsHostedRepositoryParams) WithBody(body *models.GitLfsHostedRepositoryAPIRequest) *UpdateGitLfsHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 25 params
-func (o *UpdateRepository25Params) SetBody(body *models.GitLfsHostedRepositoryAPIRequest) {
+func (o *UpdateGitLfsHostedRepositoryParams) SetBody(body *models.GitLfsHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 25 params
-func (o *UpdateRepository25Params) WithRepositoryName(repositoryName string) *UpdateRepository25Params {
+func (o *UpdateGitLfsHostedRepositoryParams) WithRepositoryName(repositoryName string) *UpdateGitLfsHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 25 params
-func (o *UpdateRepository25Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateGitLfsHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository25Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateGitLfsHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository9Params creates a new GetRepository9Params object,
+// NewGetNpmGroupRepositoryParams creates a new GetNpmGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository9Params() *GetRepository9Params {
-	return &GetRepository9Params{
+func NewGetNpmGroupRepositoryParams() *GetNpmGroupRepositoryParams {
+	return &GetNpmGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository9ParamsWithTimeout creates a new GetRepository9Params object
+// NewGetNpmGroupRepositoryParamsWithTimeout creates a new GetNpmGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository9ParamsWithTimeout(timeout time.Duration) *GetRepository9Params {
-	return &GetRepository9Params{
+func NewGetNpmGroupRepositoryParamsWithTimeout(timeout time.Duration) *GetNpmGroupRepositoryParams {
+	return &GetNpmGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository9ParamsWithContext creates a new GetRepository9Params object
+// NewGetNpmGroupRepositoryParamsWithContext creates a new GetNpmGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository9ParamsWithContext(ctx context.Context) *GetRepository9Params {
-	return &GetRepository9Params{
+func NewGetNpmGroupRepositoryParamsWithContext(ctx context.Context) *GetNpmGroupRepositoryParams {
+	return &GetNpmGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository9ParamsWithHTTPClient creates a new GetRepository9Params object
+// NewGetNpmGroupRepositoryParamsWithHTTPClient creates a new GetNpmGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository9ParamsWithHTTPClient(client *http.Client) *GetRepository9Params {
-	return &GetRepository9Params{
+func NewGetNpmGroupRepositoryParamsWithHTTPClient(client *http.Client) *GetNpmGroupRepositoryParams {
+	return &GetNpmGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository9Params contains all the parameters to send to the API endpoint
-   for the get repository 9 operation.
+/*
+GetNpmGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 9 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository9Params struct {
+type GetNpmGroupRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository9Params struct {
 // WithDefaults hydrates default values in the get repository 9 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository9Params) WithDefaults() *GetRepository9Params {
+func (o *GetNpmGroupRepositoryParams) WithDefaults() *GetNpmGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository9Params) WithDefaults() *GetRepository9Params {
 // SetDefaults hydrates default values in the get repository 9 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository9Params) SetDefaults() {
+func (o *GetNpmGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 9 params
-func (o *GetRepository9Params) WithTimeout(timeout time.Duration) *GetRepository9Params {
+func (o *GetNpmGroupRepositoryParams) WithTimeout(timeout time.Duration) *GetNpmGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 9 params
-func (o *GetRepository9Params) SetTimeout(timeout time.Duration) {
+func (o *GetNpmGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 9 params
-func (o *GetRepository9Params) WithContext(ctx context.Context) *GetRepository9Params {
+func (o *GetNpmGroupRepositoryParams) WithContext(ctx context.Context) *GetNpmGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 9 params
-func (o *GetRepository9Params) SetContext(ctx context.Context) {
+func (o *GetNpmGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 9 params
-func (o *GetRepository9Params) WithHTTPClient(client *http.Client) *GetRepository9Params {
+func (o *GetNpmGroupRepositoryParams) WithHTTPClient(client *http.Client) *GetNpmGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 9 params
-func (o *GetRepository9Params) SetHTTPClient(client *http.Client) {
+func (o *GetNpmGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 9 params
-func (o *GetRepository9Params) WithRepositoryName(repositoryName string) *GetRepository9Params {
+func (o *GetNpmGroupRepositoryParams) WithRepositoryName(repositoryName string) *GetNpmGroupRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 9 params
-func (o *GetRepository9Params) SetRepositoryName(repositoryName string) {
+func (o *GetNpmGroupRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository9Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetNpmGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

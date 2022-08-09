@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository7Params creates a new GetRepository7Params object,
+// NewGetRawHostedRepositoryParams creates a new GetRawHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository7Params() *GetRepository7Params {
-	return &GetRepository7Params{
+func NewGetRawHostedRepositoryParams() *GetRawHostedRepositoryParams {
+	return &GetRawHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository7ParamsWithTimeout creates a new GetRepository7Params object
+// NewGetRawHostedRepositoryParamsWithTimeout creates a new GetRawHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository7ParamsWithTimeout(timeout time.Duration) *GetRepository7Params {
-	return &GetRepository7Params{
+func NewGetRawHostedRepositoryParamsWithTimeout(timeout time.Duration) *GetRawHostedRepositoryParams {
+	return &GetRawHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository7ParamsWithContext creates a new GetRepository7Params object
+// NewGetRawHostedRepositoryParamsWithContext creates a new GetRawHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository7ParamsWithContext(ctx context.Context) *GetRepository7Params {
-	return &GetRepository7Params{
+func NewGetRawHostedRepositoryParamsWithContext(ctx context.Context) *GetRawHostedRepositoryParams {
+	return &GetRawHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository7ParamsWithHTTPClient creates a new GetRepository7Params object
+// NewGetRawHostedRepositoryParamsWithHTTPClient creates a new GetRawHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository7ParamsWithHTTPClient(client *http.Client) *GetRepository7Params {
-	return &GetRepository7Params{
+func NewGetRawHostedRepositoryParamsWithHTTPClient(client *http.Client) *GetRawHostedRepositoryParams {
+	return &GetRawHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository7Params contains all the parameters to send to the API endpoint
-   for the get repository 7 operation.
+/*
+GetRawHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 7 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository7Params struct {
+type GetRawHostedRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository7Params struct {
 // WithDefaults hydrates default values in the get repository 7 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository7Params) WithDefaults() *GetRepository7Params {
+func (o *GetRawHostedRepositoryParams) WithDefaults() *GetRawHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository7Params) WithDefaults() *GetRepository7Params {
 // SetDefaults hydrates default values in the get repository 7 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository7Params) SetDefaults() {
+func (o *GetRawHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 7 params
-func (o *GetRepository7Params) WithTimeout(timeout time.Duration) *GetRepository7Params {
+func (o *GetRawHostedRepositoryParams) WithTimeout(timeout time.Duration) *GetRawHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 7 params
-func (o *GetRepository7Params) SetTimeout(timeout time.Duration) {
+func (o *GetRawHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 7 params
-func (o *GetRepository7Params) WithContext(ctx context.Context) *GetRepository7Params {
+func (o *GetRawHostedRepositoryParams) WithContext(ctx context.Context) *GetRawHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 7 params
-func (o *GetRepository7Params) SetContext(ctx context.Context) {
+func (o *GetRawHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 7 params
-func (o *GetRepository7Params) WithHTTPClient(client *http.Client) *GetRepository7Params {
+func (o *GetRawHostedRepositoryParams) WithHTTPClient(client *http.Client) *GetRawHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 7 params
-func (o *GetRepository7Params) SetHTTPClient(client *http.Client) {
+func (o *GetRawHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 7 params
-func (o *GetRepository7Params) WithRepositoryName(repositoryName string) *GetRepository7Params {
+func (o *GetRawHostedRepositoryParams) WithRepositoryName(repositoryName string) *GetRawHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 7 params
-func (o *GetRepository7Params) SetRepositoryName(repositoryName string) {
+func (o *GetRawHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository7Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetRawHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

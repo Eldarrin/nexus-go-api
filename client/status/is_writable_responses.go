@@ -42,7 +42,8 @@ func NewIsWritableOK() *IsWritableOK {
 	return &IsWritableOK{}
 }
 
-/* IsWritableOK describes a response with status code 200, with default header values.
+/*
+	IsWritableOK describes a response with status code 200, with default header values.
 
 Available to service requests
 */
@@ -92,7 +93,8 @@ func NewIsWritableServiceUnavailable() *IsWritableServiceUnavailable {
 	return &IsWritableServiceUnavailable{}
 }
 
-/* IsWritableServiceUnavailable describes a response with status code 503, with default header values.
+/*
+	IsWritableServiceUnavailable describes a response with status code 503, with default header values.
 
 Unavailable to service requests
 */

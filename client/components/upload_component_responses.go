@@ -42,7 +42,8 @@ func NewUploadComponentForbidden() *UploadComponentForbidden {
 	return &UploadComponentForbidden{}
 }
 
-/* UploadComponentForbidden describes a response with status code 403, with default header values.
+/*
+	UploadComponentForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to upload a component
 */
@@ -92,7 +93,8 @@ func NewUploadComponentUnprocessableEntity() *UploadComponentUnprocessableEntity
 	return &UploadComponentUnprocessableEntity{}
 }
 
-/* UploadComponentUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+	UploadComponentUnprocessableEntity describes a response with status code 422, with default header values.
 
 Parameter 'repository' is required
 */

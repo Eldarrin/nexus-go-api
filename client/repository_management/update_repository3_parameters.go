@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository3Params creates a new UpdateRepository3Params object,
+// NewUpdateAptHostedRepositoryParams creates a new UpdateAptHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository3Params() *UpdateRepository3Params {
-	return &UpdateRepository3Params{
+func NewUpdateAptHostedRepositoryParams() *UpdateAptHostedRepositoryParams {
+	return &UpdateAptHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository3ParamsWithTimeout creates a new UpdateRepository3Params object
+// NewUpdateAptHostedRepositoryParamsWithTimeout creates a new UpdateAptHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository3ParamsWithTimeout(timeout time.Duration) *UpdateRepository3Params {
-	return &UpdateRepository3Params{
+func NewUpdateAptHostedRepositoryParamsWithTimeout(timeout time.Duration) *UpdateAptHostedRepositoryParams {
+	return &UpdateAptHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository3ParamsWithContext creates a new UpdateRepository3Params object
+// NewUpdateAptHostedRepositoryParamsWithContext creates a new UpdateAptHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository3ParamsWithContext(ctx context.Context) *UpdateRepository3Params {
-	return &UpdateRepository3Params{
+func NewUpdateAptHostedRepositoryParamsWithContext(ctx context.Context) *UpdateAptHostedRepositoryParams {
+	return &UpdateAptHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository3ParamsWithHTTPClient creates a new UpdateRepository3Params object
+// NewUpdateAptHostedRepositoryParamsWithHTTPClient creates a new UpdateAptHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository3ParamsWithHTTPClient(client *http.Client) *UpdateRepository3Params {
-	return &UpdateRepository3Params{
+func NewUpdateAptHostedRepositoryParamsWithHTTPClient(client *http.Client) *UpdateAptHostedRepositoryParams {
+	return &UpdateAptHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository3Params contains all the parameters to send to the API endpoint
-   for the update repository 3 operation.
+/*
+UpdateAptHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 3 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository3Params struct {
+type UpdateAptHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.AptHostedRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository3Params struct {
 // WithDefaults hydrates default values in the update repository 3 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository3Params) WithDefaults() *UpdateRepository3Params {
+func (o *UpdateAptHostedRepositoryParams) WithDefaults() *UpdateAptHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository3Params) WithDefaults() *UpdateRepository3Params {
 // SetDefaults hydrates default values in the update repository 3 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository3Params) SetDefaults() {
+func (o *UpdateAptHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 3 params
-func (o *UpdateRepository3Params) WithTimeout(timeout time.Duration) *UpdateRepository3Params {
+func (o *UpdateAptHostedRepositoryParams) WithTimeout(timeout time.Duration) *UpdateAptHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 3 params
-func (o *UpdateRepository3Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateAptHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 3 params
-func (o *UpdateRepository3Params) WithContext(ctx context.Context) *UpdateRepository3Params {
+func (o *UpdateAptHostedRepositoryParams) WithContext(ctx context.Context) *UpdateAptHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 3 params
-func (o *UpdateRepository3Params) SetContext(ctx context.Context) {
+func (o *UpdateAptHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 3 params
-func (o *UpdateRepository3Params) WithHTTPClient(client *http.Client) *UpdateRepository3Params {
+func (o *UpdateAptHostedRepositoryParams) WithHTTPClient(client *http.Client) *UpdateAptHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 3 params
-func (o *UpdateRepository3Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateAptHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 3 params
-func (o *UpdateRepository3Params) WithBody(body *models.AptHostedRepositoryAPIRequest) *UpdateRepository3Params {
+func (o *UpdateAptHostedRepositoryParams) WithBody(body *models.AptHostedRepositoryAPIRequest) *UpdateAptHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 3 params
-func (o *UpdateRepository3Params) SetBody(body *models.AptHostedRepositoryAPIRequest) {
+func (o *UpdateAptHostedRepositoryParams) SetBody(body *models.AptHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 3 params
-func (o *UpdateRepository3Params) WithRepositoryName(repositoryName string) *UpdateRepository3Params {
+func (o *UpdateAptHostedRepositoryParams) WithRepositoryName(repositoryName string) *UpdateAptHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 3 params
-func (o *UpdateRepository3Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateAptHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository3Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateAptHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

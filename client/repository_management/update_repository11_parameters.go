@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository11Params creates a new UpdateRepository11Params object,
+// NewUpdateNugetGroupRepositoryParams creates a new UpdateNugetGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository11Params() *UpdateRepository11Params {
-	return &UpdateRepository11Params{
+func NewUpdateNugetGroupRepositoryParams() *UpdateNugetGroupRepositoryParams {
+	return &UpdateNugetGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository11ParamsWithTimeout creates a new UpdateRepository11Params object
+// NewUpdateNugetGroupRepositoryParamsWithTimeout creates a new UpdateNugetGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository11ParamsWithTimeout(timeout time.Duration) *UpdateRepository11Params {
-	return &UpdateRepository11Params{
+func NewUpdateNugetGroupRepositoryParamsWithTimeout(timeout time.Duration) *UpdateNugetGroupRepositoryParams {
+	return &UpdateNugetGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository11ParamsWithContext creates a new UpdateRepository11Params object
+// NewUpdateNugetGroupRepositoryParamsWithContext creates a new UpdateNugetGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository11ParamsWithContext(ctx context.Context) *UpdateRepository11Params {
-	return &UpdateRepository11Params{
+func NewUpdateNugetGroupRepositoryParamsWithContext(ctx context.Context) *UpdateNugetGroupRepositoryParams {
+	return &UpdateNugetGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository11ParamsWithHTTPClient creates a new UpdateRepository11Params object
+// NewUpdateNugetGroupRepositoryParamsWithHTTPClient creates a new UpdateNugetGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository11ParamsWithHTTPClient(client *http.Client) *UpdateRepository11Params {
-	return &UpdateRepository11Params{
+func NewUpdateNugetGroupRepositoryParamsWithHTTPClient(client *http.Client) *UpdateNugetGroupRepositoryParams {
+	return &UpdateNugetGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository11Params contains all the parameters to send to the API endpoint
-   for the update repository 11 operation.
+/*
+UpdateNugetGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 11 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository11Params struct {
+type UpdateNugetGroupRepositoryParams struct {
 
 	// Body.
 	Body *models.NugetGroupRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository11Params struct {
 // WithDefaults hydrates default values in the update repository 11 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository11Params) WithDefaults() *UpdateRepository11Params {
+func (o *UpdateNugetGroupRepositoryParams) WithDefaults() *UpdateNugetGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository11Params) WithDefaults() *UpdateRepository11Params {
 // SetDefaults hydrates default values in the update repository 11 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository11Params) SetDefaults() {
+func (o *UpdateNugetGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 11 params
-func (o *UpdateRepository11Params) WithTimeout(timeout time.Duration) *UpdateRepository11Params {
+func (o *UpdateNugetGroupRepositoryParams) WithTimeout(timeout time.Duration) *UpdateNugetGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 11 params
-func (o *UpdateRepository11Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateNugetGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 11 params
-func (o *UpdateRepository11Params) WithContext(ctx context.Context) *UpdateRepository11Params {
+func (o *UpdateNugetGroupRepositoryParams) WithContext(ctx context.Context) *UpdateNugetGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 11 params
-func (o *UpdateRepository11Params) SetContext(ctx context.Context) {
+func (o *UpdateNugetGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 11 params
-func (o *UpdateRepository11Params) WithHTTPClient(client *http.Client) *UpdateRepository11Params {
+func (o *UpdateNugetGroupRepositoryParams) WithHTTPClient(client *http.Client) *UpdateNugetGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 11 params
-func (o *UpdateRepository11Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateNugetGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 11 params
-func (o *UpdateRepository11Params) WithBody(body *models.NugetGroupRepositoryAPIRequest) *UpdateRepository11Params {
+func (o *UpdateNugetGroupRepositoryParams) WithBody(body *models.NugetGroupRepositoryAPIRequest) *UpdateNugetGroupRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 11 params
-func (o *UpdateRepository11Params) SetBody(body *models.NugetGroupRepositoryAPIRequest) {
+func (o *UpdateNugetGroupRepositoryParams) SetBody(body *models.NugetGroupRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 11 params
-func (o *UpdateRepository11Params) WithRepositoryName(repositoryName string) *UpdateRepository11Params {
+func (o *UpdateNugetGroupRepositoryParams) WithRepositoryName(repositoryName string) *UpdateNugetGroupRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 11 params
-func (o *UpdateRepository11Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateNugetGroupRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository11Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateNugetGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -57,7 +57,8 @@ func NewGetAssetByIDOK() *GetAssetByIDOK {
 	return &GetAssetByIDOK{}
 }
 
-/* GetAssetByIDOK describes a response with status code 200, with default header values.
+/*
+	GetAssetByIDOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -119,7 +120,8 @@ func NewGetAssetByIDForbidden() *GetAssetByIDForbidden {
 	return &GetAssetByIDForbidden{}
 }
 
-/* GetAssetByIDForbidden describes a response with status code 403, with default header values.
+/*
+	GetAssetByIDForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to get asset
 */
@@ -169,7 +171,8 @@ func NewGetAssetByIDNotFound() *GetAssetByIDNotFound {
 	return &GetAssetByIDNotFound{}
 }
 
-/* GetAssetByIDNotFound describes a response with status code 404, with default header values.
+/*
+	GetAssetByIDNotFound describes a response with status code 404, with default header values.
 
 Asset not found
 */
@@ -219,7 +222,8 @@ func NewGetAssetByIDUnprocessableEntity() *GetAssetByIDUnprocessableEntity {
 	return &GetAssetByIDUnprocessableEntity{}
 }
 
-/* GetAssetByIDUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+	GetAssetByIDUnprocessableEntity describes a response with status code 422, with default header values.
 
 Malformed ID
 */

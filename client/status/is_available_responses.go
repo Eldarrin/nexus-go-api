@@ -42,7 +42,8 @@ func NewIsAvailableOK() *IsAvailableOK {
 	return &IsAvailableOK{}
 }
 
-/* IsAvailableOK describes a response with status code 200, with default header values.
+/*
+	IsAvailableOK describes a response with status code 200, with default header values.
 
 Available to service requests
 */
@@ -92,7 +93,8 @@ func NewIsAvailableServiceUnavailable() *IsAvailableServiceUnavailable {
 	return &IsAvailableServiceUnavailable{}
 }
 
-/* IsAvailableServiceUnavailable describes a response with status code 503, with default header values.
+/*
+	IsAvailableServiceUnavailable describes a response with status code 503, with default header values.
 
 Unavailable to service requests
 */

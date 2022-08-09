@@ -57,7 +57,8 @@ func NewGetComponentByIDOK() *GetComponentByIDOK {
 	return &GetComponentByIDOK{}
 }
 
-/* GetComponentByIDOK describes a response with status code 200, with default header values.
+/*
+	GetComponentByIDOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -119,7 +120,8 @@ func NewGetComponentByIDForbidden() *GetComponentByIDForbidden {
 	return &GetComponentByIDForbidden{}
 }
 
-/* GetComponentByIDForbidden describes a response with status code 403, with default header values.
+/*
+	GetComponentByIDForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to get component
 */
@@ -169,7 +171,8 @@ func NewGetComponentByIDNotFound() *GetComponentByIDNotFound {
 	return &GetComponentByIDNotFound{}
 }
 
-/* GetComponentByIDNotFound describes a response with status code 404, with default header values.
+/*
+	GetComponentByIDNotFound describes a response with status code 404, with default header values.
 
 Component not found
 */
@@ -219,7 +222,8 @@ func NewGetComponentByIDUnprocessableEntity() *GetComponentByIDUnprocessableEnti
 	return &GetComponentByIDUnprocessableEntity{}
 }
 
-/* GetComponentByIDUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+	GetComponentByIDUnprocessableEntity describes a response with status code 422, with default header values.
 
 Malformed ID
 */

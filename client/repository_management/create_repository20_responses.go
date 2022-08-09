@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository20Reader is a Reader for the CreateRepository20 structure.
-type CreateRepository20Reader struct {
+// CreateYumGroupRepositoryReader is a Reader for the CreateYumGroupRepository structure.
+type CreateYumGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository20Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateYumGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository20Created()
+		result := NewCreateYumGroupRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository20Unauthorized()
+		result := NewCreateYumGroupRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository20Forbidden()
+		result := NewCreateYumGroupRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository20Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository20Created creates a CreateRepository20Created with default headers values
-func NewCreateRepository20Created() *CreateRepository20Created {
-	return &CreateRepository20Created{}
+// NewCreateYumGroupRepositoryCreated creates a CreateYumGroupRepositoryCreated with default headers values
+func NewCreateYumGroupRepositoryCreated() *CreateYumGroupRepositoryCreated {
+	return &CreateYumGroupRepositoryCreated{}
 }
 
-/* CreateRepository20Created describes a response with status code 201, with default header values.
+/*
+	CreateYumGroupRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository20Created struct {
+type CreateYumGroupRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository20 created response has a 2xx status code
-func (o *CreateRepository20Created) IsSuccess() bool {
+func (o *CreateYumGroupRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository20 created response has a 3xx status code
-func (o *CreateRepository20Created) IsRedirect() bool {
+func (o *CreateYumGroupRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository20 created response has a 4xx status code
-func (o *CreateRepository20Created) IsClientError() bool {
+func (o *CreateYumGroupRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository20 created response has a 5xx status code
-func (o *CreateRepository20Created) IsServerError() bool {
+func (o *CreateYumGroupRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository20 created response a status code equal to that given
-func (o *CreateRepository20Created) IsCode(code int) bool {
+func (o *CreateYumGroupRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository20Created) Error() string {
+func (o *CreateYumGroupRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/group][%d] createRepository20Created ", 201)
 }
 
-func (o *CreateRepository20Created) String() string {
+func (o *CreateYumGroupRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/group][%d] createRepository20Created ", 201)
 }
 
-func (o *CreateRepository20Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateYumGroupRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository20Unauthorized creates a CreateRepository20Unauthorized with default headers values
-func NewCreateRepository20Unauthorized() *CreateRepository20Unauthorized {
-	return &CreateRepository20Unauthorized{}
+// NewCreateYumGroupRepositoryUnauthorized creates a CreateYumGroupRepositoryUnauthorized with default headers values
+func NewCreateYumGroupRepositoryUnauthorized() *CreateYumGroupRepositoryUnauthorized {
+	return &CreateYumGroupRepositoryUnauthorized{}
 }
 
-/* CreateRepository20Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateYumGroupRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository20Unauthorized struct {
+type CreateYumGroupRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository20 unauthorized response has a 2xx status code
-func (o *CreateRepository20Unauthorized) IsSuccess() bool {
+func (o *CreateYumGroupRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository20 unauthorized response has a 3xx status code
-func (o *CreateRepository20Unauthorized) IsRedirect() bool {
+func (o *CreateYumGroupRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository20 unauthorized response has a 4xx status code
-func (o *CreateRepository20Unauthorized) IsClientError() bool {
+func (o *CreateYumGroupRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository20 unauthorized response has a 5xx status code
-func (o *CreateRepository20Unauthorized) IsServerError() bool {
+func (o *CreateYumGroupRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository20 unauthorized response a status code equal to that given
-func (o *CreateRepository20Unauthorized) IsCode(code int) bool {
+func (o *CreateYumGroupRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository20Unauthorized) Error() string {
+func (o *CreateYumGroupRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/group][%d] createRepository20Unauthorized ", 401)
 }
 
-func (o *CreateRepository20Unauthorized) String() string {
+func (o *CreateYumGroupRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/group][%d] createRepository20Unauthorized ", 401)
 }
 
-func (o *CreateRepository20Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateYumGroupRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository20Forbidden creates a CreateRepository20Forbidden with default headers values
-func NewCreateRepository20Forbidden() *CreateRepository20Forbidden {
-	return &CreateRepository20Forbidden{}
+// NewCreateYumGroupRepositoryForbidden creates a CreateYumGroupRepositoryForbidden with default headers values
+func NewCreateYumGroupRepositoryForbidden() *CreateYumGroupRepositoryForbidden {
+	return &CreateYumGroupRepositoryForbidden{}
 }
 
-/* CreateRepository20Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateYumGroupRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository20Forbidden struct {
+type CreateYumGroupRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository20 forbidden response has a 2xx status code
-func (o *CreateRepository20Forbidden) IsSuccess() bool {
+func (o *CreateYumGroupRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository20 forbidden response has a 3xx status code
-func (o *CreateRepository20Forbidden) IsRedirect() bool {
+func (o *CreateYumGroupRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository20 forbidden response has a 4xx status code
-func (o *CreateRepository20Forbidden) IsClientError() bool {
+func (o *CreateYumGroupRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository20 forbidden response has a 5xx status code
-func (o *CreateRepository20Forbidden) IsServerError() bool {
+func (o *CreateYumGroupRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository20 forbidden response a status code equal to that given
-func (o *CreateRepository20Forbidden) IsCode(code int) bool {
+func (o *CreateYumGroupRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository20Forbidden) Error() string {
+func (o *CreateYumGroupRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/group][%d] createRepository20Forbidden ", 403)
 }
 
-func (o *CreateRepository20Forbidden) String() string {
+func (o *CreateYumGroupRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/yum/group][%d] createRepository20Forbidden ", 403)
 }
 
-func (o *CreateRepository20Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateYumGroupRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

@@ -48,7 +48,8 @@ func NewUpdatePrivilege5BadRequest() *UpdatePrivilege5BadRequest {
 	return &UpdatePrivilege5BadRequest{}
 }
 
-/* UpdatePrivilege5BadRequest describes a response with status code 400, with default header values.
+/*
+	UpdatePrivilege5BadRequest describes a response with status code 400, with default header values.
 
 Privilege object not configured properly.
 */
@@ -98,7 +99,8 @@ func NewUpdatePrivilege5Forbidden() *UpdatePrivilege5Forbidden {
 	return &UpdatePrivilege5Forbidden{}
 }
 
-/* UpdatePrivilege5Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdatePrivilege5Forbidden describes a response with status code 403, with default header values.
 
 The user does not have permission to perform the operation.
 */
@@ -148,7 +150,8 @@ func NewUpdatePrivilege5NotFound() *UpdatePrivilege5NotFound {
 	return &UpdatePrivilege5NotFound{}
 }
 
-/* UpdatePrivilege5NotFound describes a response with status code 404, with default header values.
+/*
+	UpdatePrivilege5NotFound describes a response with status code 404, with default header values.
 
 Privilege not found in the system.
 */

@@ -54,7 +54,8 @@ func NewUpdateBlobStore1NoContent() *UpdateBlobStore1NoContent {
 	return &UpdateBlobStore1NoContent{}
 }
 
-/* UpdateBlobStore1NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateBlobStore1NoContent describes a response with status code 204, with default header values.
 
 Azure blob store updated
 */
@@ -104,7 +105,8 @@ func NewUpdateBlobStore1BadRequest() *UpdateBlobStore1BadRequest {
 	return &UpdateBlobStore1BadRequest{}
 }
 
-/* UpdateBlobStore1BadRequest describes a response with status code 400, with default header values.
+/*
+	UpdateBlobStore1BadRequest describes a response with status code 400, with default header values.
 
 Specified Azure blob store doesn't exist
 */
@@ -154,7 +156,8 @@ func NewUpdateBlobStore1Unauthorized() *UpdateBlobStore1Unauthorized {
 	return &UpdateBlobStore1Unauthorized{}
 }
 
-/* UpdateBlobStore1Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateBlobStore1Unauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -204,7 +207,8 @@ func NewUpdateBlobStore1Forbidden() *UpdateBlobStore1Forbidden {
 	return &UpdateBlobStore1Forbidden{}
 }
 
-/* UpdateBlobStore1Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateBlobStore1Forbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

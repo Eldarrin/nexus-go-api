@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository25Params creates a new CreateRepository25Params object,
+// NewCreateGitLfsHostedRepositoryParams creates a new CreateGitLfsHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository25Params() *CreateRepository25Params {
-	return &CreateRepository25Params{
+func NewCreateGitLfsHostedRepositoryParams() *CreateGitLfsHostedRepositoryParams {
+	return &CreateGitLfsHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository25ParamsWithTimeout creates a new CreateRepository25Params object
+// NewCreateGitLfsHostedRepositoryParamsWithTimeout creates a new CreateGitLfsHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository25ParamsWithTimeout(timeout time.Duration) *CreateRepository25Params {
-	return &CreateRepository25Params{
+func NewCreateGitLfsHostedRepositoryParamsWithTimeout(timeout time.Duration) *CreateGitLfsHostedRepositoryParams {
+	return &CreateGitLfsHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository25ParamsWithContext creates a new CreateRepository25Params object
+// NewCreateGitLfsHostedRepositoryParamsWithContext creates a new CreateGitLfsHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository25ParamsWithContext(ctx context.Context) *CreateRepository25Params {
-	return &CreateRepository25Params{
+func NewCreateGitLfsHostedRepositoryParamsWithContext(ctx context.Context) *CreateGitLfsHostedRepositoryParams {
+	return &CreateGitLfsHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository25ParamsWithHTTPClient creates a new CreateRepository25Params object
+// NewCreateGitLfsHostedRepositoryParamsWithHTTPClient creates a new CreateGitLfsHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository25ParamsWithHTTPClient(client *http.Client) *CreateRepository25Params {
-	return &CreateRepository25Params{
+func NewCreateGitLfsHostedRepositoryParamsWithHTTPClient(client *http.Client) *CreateGitLfsHostedRepositoryParams {
+	return &CreateGitLfsHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository25Params contains all the parameters to send to the API endpoint
-   for the create repository 25 operation.
+/*
+CreateGitLfsHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 25 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository25Params struct {
+type CreateGitLfsHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.GitLfsHostedRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository25Params struct {
 // WithDefaults hydrates default values in the create repository 25 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository25Params) WithDefaults() *CreateRepository25Params {
+func (o *CreateGitLfsHostedRepositoryParams) WithDefaults() *CreateGitLfsHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository25Params) WithDefaults() *CreateRepository25Params {
 // SetDefaults hydrates default values in the create repository 25 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository25Params) SetDefaults() {
+func (o *CreateGitLfsHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 25 params
-func (o *CreateRepository25Params) WithTimeout(timeout time.Duration) *CreateRepository25Params {
+func (o *CreateGitLfsHostedRepositoryParams) WithTimeout(timeout time.Duration) *CreateGitLfsHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 25 params
-func (o *CreateRepository25Params) SetTimeout(timeout time.Duration) {
+func (o *CreateGitLfsHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 25 params
-func (o *CreateRepository25Params) WithContext(ctx context.Context) *CreateRepository25Params {
+func (o *CreateGitLfsHostedRepositoryParams) WithContext(ctx context.Context) *CreateGitLfsHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 25 params
-func (o *CreateRepository25Params) SetContext(ctx context.Context) {
+func (o *CreateGitLfsHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 25 params
-func (o *CreateRepository25Params) WithHTTPClient(client *http.Client) *CreateRepository25Params {
+func (o *CreateGitLfsHostedRepositoryParams) WithHTTPClient(client *http.Client) *CreateGitLfsHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 25 params
-func (o *CreateRepository25Params) SetHTTPClient(client *http.Client) {
+func (o *CreateGitLfsHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 25 params
-func (o *CreateRepository25Params) WithBody(body *models.GitLfsHostedRepositoryAPIRequest) *CreateRepository25Params {
+func (o *CreateGitLfsHostedRepositoryParams) WithBody(body *models.GitLfsHostedRepositoryAPIRequest) *CreateGitLfsHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 25 params
-func (o *CreateRepository25Params) SetBody(body *models.GitLfsHostedRepositoryAPIRequest) {
+func (o *CreateGitLfsHostedRepositoryParams) SetBody(body *models.GitLfsHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository25Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateGitLfsHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

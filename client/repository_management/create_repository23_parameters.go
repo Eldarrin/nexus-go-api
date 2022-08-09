@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository23Params creates a new CreateRepository23Params object,
+// NewCreateHelmHostedRepositoryParams creates a new CreateHelmHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository23Params() *CreateRepository23Params {
-	return &CreateRepository23Params{
+func NewCreateHelmHostedRepositoryParams() *CreateHelmHostedRepositoryParams {
+	return &CreateHelmHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository23ParamsWithTimeout creates a new CreateRepository23Params object
+// NewCreateHelmHostedRepositoryParamsWithTimeout creates a new CreateHelmHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository23ParamsWithTimeout(timeout time.Duration) *CreateRepository23Params {
-	return &CreateRepository23Params{
+func NewCreateHelmHostedRepositoryParamsWithTimeout(timeout time.Duration) *CreateHelmHostedRepositoryParams {
+	return &CreateHelmHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository23ParamsWithContext creates a new CreateRepository23Params object
+// NewCreateHelmHostedRepositoryParamsWithContext creates a new CreateHelmHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository23ParamsWithContext(ctx context.Context) *CreateRepository23Params {
-	return &CreateRepository23Params{
+func NewCreateHelmHostedRepositoryParamsWithContext(ctx context.Context) *CreateHelmHostedRepositoryParams {
+	return &CreateHelmHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository23ParamsWithHTTPClient creates a new CreateRepository23Params object
+// NewCreateHelmHostedRepositoryParamsWithHTTPClient creates a new CreateHelmHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository23ParamsWithHTTPClient(client *http.Client) *CreateRepository23Params {
-	return &CreateRepository23Params{
+func NewCreateHelmHostedRepositoryParamsWithHTTPClient(client *http.Client) *CreateHelmHostedRepositoryParams {
+	return &CreateHelmHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository23Params contains all the parameters to send to the API endpoint
-   for the create repository 23 operation.
+/*
+CreateHelmHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 23 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository23Params struct {
+type CreateHelmHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.HelmHostedRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository23Params struct {
 // WithDefaults hydrates default values in the create repository 23 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository23Params) WithDefaults() *CreateRepository23Params {
+func (o *CreateHelmHostedRepositoryParams) WithDefaults() *CreateHelmHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository23Params) WithDefaults() *CreateRepository23Params {
 // SetDefaults hydrates default values in the create repository 23 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository23Params) SetDefaults() {
+func (o *CreateHelmHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 23 params
-func (o *CreateRepository23Params) WithTimeout(timeout time.Duration) *CreateRepository23Params {
+func (o *CreateHelmHostedRepositoryParams) WithTimeout(timeout time.Duration) *CreateHelmHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 23 params
-func (o *CreateRepository23Params) SetTimeout(timeout time.Duration) {
+func (o *CreateHelmHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 23 params
-func (o *CreateRepository23Params) WithContext(ctx context.Context) *CreateRepository23Params {
+func (o *CreateHelmHostedRepositoryParams) WithContext(ctx context.Context) *CreateHelmHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 23 params
-func (o *CreateRepository23Params) SetContext(ctx context.Context) {
+func (o *CreateHelmHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 23 params
-func (o *CreateRepository23Params) WithHTTPClient(client *http.Client) *CreateRepository23Params {
+func (o *CreateHelmHostedRepositoryParams) WithHTTPClient(client *http.Client) *CreateHelmHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 23 params
-func (o *CreateRepository23Params) SetHTTPClient(client *http.Client) {
+func (o *CreateHelmHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 23 params
-func (o *CreateRepository23Params) WithBody(body *models.HelmHostedRepositoryAPIRequest) *CreateRepository23Params {
+func (o *CreateHelmHostedRepositoryParams) WithBody(body *models.HelmHostedRepositoryAPIRequest) *CreateHelmHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 23 params
-func (o *CreateRepository23Params) SetBody(body *models.HelmHostedRepositoryAPIRequest) {
+func (o *CreateHelmHostedRepositoryParams) SetBody(body *models.HelmHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository23Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateHelmHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -60,7 +60,8 @@ func NewRebuildIndexNoContent() *RebuildIndexNoContent {
 	return &RebuildIndexNoContent{}
 }
 
-/* RebuildIndexNoContent describes a response with status code 204, with default header values.
+/*
+	RebuildIndexNoContent describes a response with status code 204, with default header values.
 
 Repository search index rebuild has been scheduled
 */
@@ -110,7 +111,8 @@ func NewRebuildIndexBadRequest() *RebuildIndexBadRequest {
 	return &RebuildIndexBadRequest{}
 }
 
-/* RebuildIndexBadRequest describes a response with status code 400, with default header values.
+/*
+	RebuildIndexBadRequest describes a response with status code 400, with default header values.
 
 Repository is not of hosted or proxy type
 */
@@ -160,7 +162,8 @@ func NewRebuildIndexUnauthorized() *RebuildIndexUnauthorized {
 	return &RebuildIndexUnauthorized{}
 }
 
-/* RebuildIndexUnauthorized describes a response with status code 401, with default header values.
+/*
+	RebuildIndexUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -210,7 +213,8 @@ func NewRebuildIndexForbidden() *RebuildIndexForbidden {
 	return &RebuildIndexForbidden{}
 }
 
-/* RebuildIndexForbidden describes a response with status code 403, with default header values.
+/*
+	RebuildIndexForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
@@ -260,7 +264,8 @@ func NewRebuildIndexNotFound() *RebuildIndexNotFound {
 	return &RebuildIndexNotFound{}
 }
 
-/* RebuildIndexNotFound describes a response with status code 404, with default header values.
+/*
+	RebuildIndexNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */

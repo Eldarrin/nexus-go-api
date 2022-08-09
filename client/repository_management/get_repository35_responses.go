@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository35Reader is a Reader for the GetRepository35 structure.
-type GetRepository35Reader struct {
+// GetCocoapodsProxyRepositoryReader is a Reader for the GetCocoapodsProxyRepository structure.
+type GetCocoapodsProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository35Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetCocoapodsProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository35OK()
+		result := NewGetCocoapodsProxyRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository35Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository35OK creates a GetRepository35OK with default headers values
-func NewGetRepository35OK() *GetRepository35OK {
-	return &GetRepository35OK{}
+// NewGetCocoapodsProxyRepositoryOK creates a GetCocoapodsProxyRepositoryOK with default headers values
+func NewGetCocoapodsProxyRepositoryOK() *GetCocoapodsProxyRepositoryOK {
+	return &GetCocoapodsProxyRepositoryOK{}
 }
 
-/* GetRepository35OK describes a response with status code 200, with default header values.
+/*
+	GetCocoapodsProxyRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository35OK struct {
+type GetCocoapodsProxyRepositoryOK struct {
 	Payload *models.SimpleAPIProxyRepository
 }
 
 // IsSuccess returns true when this get repository35 o k response has a 2xx status code
-func (o *GetRepository35OK) IsSuccess() bool {
+func (o *GetCocoapodsProxyRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository35 o k response has a 3xx status code
-func (o *GetRepository35OK) IsRedirect() bool {
+func (o *GetCocoapodsProxyRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository35 o k response has a 4xx status code
-func (o *GetRepository35OK) IsClientError() bool {
+func (o *GetCocoapodsProxyRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository35 o k response has a 5xx status code
-func (o *GetRepository35OK) IsServerError() bool {
+func (o *GetCocoapodsProxyRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository35 o k response a status code equal to that given
-func (o *GetRepository35OK) IsCode(code int) bool {
+func (o *GetCocoapodsProxyRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository35OK) Error() string {
+func (o *GetCocoapodsProxyRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/cocoapods/proxy/{repositoryName}][%d] getRepository35OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository35OK) String() string {
+func (o *GetCocoapodsProxyRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/cocoapods/proxy/{repositoryName}][%d] getRepository35OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository35OK) GetPayload() *models.SimpleAPIProxyRepository {
+func (o *GetCocoapodsProxyRepositoryOK) GetPayload() *models.SimpleAPIProxyRepository {
 	return o.Payload
 }
 
-func (o *GetRepository35OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetCocoapodsProxyRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIProxyRepository)
 

@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository3Reader is a Reader for the CreateRepository3 structure.
-type CreateRepository3Reader struct {
+// CreateAptHostedRepositoryReader is a Reader for the CreateAptHostedRepository structure.
+type CreateAptHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository3Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateAptHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository3Created()
+		result := NewCreateAptHostedRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository3Unauthorized()
+		result := NewCreateAptHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository3Forbidden()
+		result := NewCreateAptHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 405:
-		result := NewCreateRepository3MethodNotAllowed()
+		result := NewCreateAptHostedRepositoryMethodNotAllowed()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *CreateRepository3Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewCreateRepository3Created creates a CreateRepository3Created with default headers values
-func NewCreateRepository3Created() *CreateRepository3Created {
-	return &CreateRepository3Created{}
+// NewCreateAptHostedRepositoryCreated creates a CreateAptHostedRepositoryCreated with default headers values
+func NewCreateAptHostedRepositoryCreated() *CreateAptHostedRepositoryCreated {
+	return &CreateAptHostedRepositoryCreated{}
 }
 
-/* CreateRepository3Created describes a response with status code 201, with default header values.
+/*
+	CreateAptHostedRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository3Created struct {
+type CreateAptHostedRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository3 created response has a 2xx status code
-func (o *CreateRepository3Created) IsSuccess() bool {
+func (o *CreateAptHostedRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository3 created response has a 3xx status code
-func (o *CreateRepository3Created) IsRedirect() bool {
+func (o *CreateAptHostedRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository3 created response has a 4xx status code
-func (o *CreateRepository3Created) IsClientError() bool {
+func (o *CreateAptHostedRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository3 created response has a 5xx status code
-func (o *CreateRepository3Created) IsServerError() bool {
+func (o *CreateAptHostedRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository3 created response a status code equal to that given
-func (o *CreateRepository3Created) IsCode(code int) bool {
+func (o *CreateAptHostedRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository3Created) Error() string {
+func (o *CreateAptHostedRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/hosted][%d] createRepository3Created ", 201)
 }
 
-func (o *CreateRepository3Created) String() string {
+func (o *CreateAptHostedRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/hosted][%d] createRepository3Created ", 201)
 }
 
-func (o *CreateRepository3Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateAptHostedRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository3Unauthorized creates a CreateRepository3Unauthorized with default headers values
-func NewCreateRepository3Unauthorized() *CreateRepository3Unauthorized {
-	return &CreateRepository3Unauthorized{}
+// NewCreateAptHostedRepositoryUnauthorized creates a CreateAptHostedRepositoryUnauthorized with default headers values
+func NewCreateAptHostedRepositoryUnauthorized() *CreateAptHostedRepositoryUnauthorized {
+	return &CreateAptHostedRepositoryUnauthorized{}
 }
 
-/* CreateRepository3Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateAptHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository3Unauthorized struct {
+type CreateAptHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository3 unauthorized response has a 2xx status code
-func (o *CreateRepository3Unauthorized) IsSuccess() bool {
+func (o *CreateAptHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository3 unauthorized response has a 3xx status code
-func (o *CreateRepository3Unauthorized) IsRedirect() bool {
+func (o *CreateAptHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository3 unauthorized response has a 4xx status code
-func (o *CreateRepository3Unauthorized) IsClientError() bool {
+func (o *CreateAptHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository3 unauthorized response has a 5xx status code
-func (o *CreateRepository3Unauthorized) IsServerError() bool {
+func (o *CreateAptHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository3 unauthorized response a status code equal to that given
-func (o *CreateRepository3Unauthorized) IsCode(code int) bool {
+func (o *CreateAptHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository3Unauthorized) Error() string {
+func (o *CreateAptHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/hosted][%d] createRepository3Unauthorized ", 401)
 }
 
-func (o *CreateRepository3Unauthorized) String() string {
+func (o *CreateAptHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/hosted][%d] createRepository3Unauthorized ", 401)
 }
 
-func (o *CreateRepository3Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateAptHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository3Forbidden creates a CreateRepository3Forbidden with default headers values
-func NewCreateRepository3Forbidden() *CreateRepository3Forbidden {
-	return &CreateRepository3Forbidden{}
+// NewCreateAptHostedRepositoryForbidden creates a CreateAptHostedRepositoryForbidden with default headers values
+func NewCreateAptHostedRepositoryForbidden() *CreateAptHostedRepositoryForbidden {
+	return &CreateAptHostedRepositoryForbidden{}
 }
 
-/* CreateRepository3Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateAptHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository3Forbidden struct {
+type CreateAptHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository3 forbidden response has a 2xx status code
-func (o *CreateRepository3Forbidden) IsSuccess() bool {
+func (o *CreateAptHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository3 forbidden response has a 3xx status code
-func (o *CreateRepository3Forbidden) IsRedirect() bool {
+func (o *CreateAptHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository3 forbidden response has a 4xx status code
-func (o *CreateRepository3Forbidden) IsClientError() bool {
+func (o *CreateAptHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository3 forbidden response has a 5xx status code
-func (o *CreateRepository3Forbidden) IsServerError() bool {
+func (o *CreateAptHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository3 forbidden response a status code equal to that given
-func (o *CreateRepository3Forbidden) IsCode(code int) bool {
+func (o *CreateAptHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository3Forbidden) Error() string {
+func (o *CreateAptHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/hosted][%d] createRepository3Forbidden ", 403)
 }
 
-func (o *CreateRepository3Forbidden) String() string {
+func (o *CreateAptHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/hosted][%d] createRepository3Forbidden ", 403)
 }
 
-func (o *CreateRepository3Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateAptHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository3MethodNotAllowed creates a CreateRepository3MethodNotAllowed with default headers values
-func NewCreateRepository3MethodNotAllowed() *CreateRepository3MethodNotAllowed {
-	return &CreateRepository3MethodNotAllowed{}
+// NewCreateAptHostedRepositoryMethodNotAllowed creates a CreateAptHostedRepositoryMethodNotAllowed with default headers values
+func NewCreateAptHostedRepositoryMethodNotAllowed() *CreateAptHostedRepositoryMethodNotAllowed {
+	return &CreateAptHostedRepositoryMethodNotAllowed{}
 }
 
-/* CreateRepository3MethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	CreateAptHostedRepositoryMethodNotAllowed describes a response with status code 405, with default header values.
 
 Feature is disabled in High Availability
 */
-type CreateRepository3MethodNotAllowed struct {
+type CreateAptHostedRepositoryMethodNotAllowed struct {
 }
 
 // IsSuccess returns true when this create repository3 method not allowed response has a 2xx status code
-func (o *CreateRepository3MethodNotAllowed) IsSuccess() bool {
+func (o *CreateAptHostedRepositoryMethodNotAllowed) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository3 method not allowed response has a 3xx status code
-func (o *CreateRepository3MethodNotAllowed) IsRedirect() bool {
+func (o *CreateAptHostedRepositoryMethodNotAllowed) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository3 method not allowed response has a 4xx status code
-func (o *CreateRepository3MethodNotAllowed) IsClientError() bool {
+func (o *CreateAptHostedRepositoryMethodNotAllowed) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository3 method not allowed response has a 5xx status code
-func (o *CreateRepository3MethodNotAllowed) IsServerError() bool {
+func (o *CreateAptHostedRepositoryMethodNotAllowed) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository3 method not allowed response a status code equal to that given
-func (o *CreateRepository3MethodNotAllowed) IsCode(code int) bool {
+func (o *CreateAptHostedRepositoryMethodNotAllowed) IsCode(code int) bool {
 	return code == 405
 }
 
-func (o *CreateRepository3MethodNotAllowed) Error() string {
+func (o *CreateAptHostedRepositoryMethodNotAllowed) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/hosted][%d] createRepository3MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository3MethodNotAllowed) String() string {
+func (o *CreateAptHostedRepositoryMethodNotAllowed) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/hosted][%d] createRepository3MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository3MethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateAptHostedRepositoryMethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

@@ -45,7 +45,8 @@ func NewTestEmailConfigurationOK() *TestEmailConfigurationOK {
 	return &TestEmailConfigurationOK{}
 }
 
-/* TestEmailConfigurationOK describes a response with status code 200, with default header values.
+/*
+	TestEmailConfigurationOK describes a response with status code 200, with default header values.
 
 Validation was complete, look at the body to determine success
 */
@@ -107,7 +108,8 @@ func NewTestEmailConfigurationForbidden() *TestEmailConfigurationForbidden {
 	return &TestEmailConfigurationForbidden{}
 }
 
-/* TestEmailConfigurationForbidden describes a response with status code 403, with default header values.
+/*
+	TestEmailConfigurationForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to verify the email configuration
 */

@@ -48,7 +48,8 @@ func NewEditNoContent() *EditNoContent {
 	return &EditNoContent{}
 }
 
-/* EditNoContent describes a response with status code 204, with default header values.
+/*
+	EditNoContent describes a response with status code 204, with default header values.
 
 Script was updated
 */
@@ -98,7 +99,8 @@ func NewEditNotFound() *EditNotFound {
 	return &EditNotFound{}
 }
 
-/* EditNotFound describes a response with status code 404, with default header values.
+/*
+	EditNotFound describes a response with status code 404, with default header values.
 
 No script with the specified name
 */
@@ -148,7 +150,8 @@ func NewEditGone() *EditGone {
 	return &EditGone{}
 }
 
-/* EditGone describes a response with status code 410, with default header values.
+/*
+	EditGone describes a response with status code 410, with default header values.
 
 Script updating is disabled
 */

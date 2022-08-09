@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository15Reader is a Reader for the UpdateRepository15 structure.
-type UpdateRepository15Reader struct {
+// UpdateRubyGemsHostedRepositoryReader is a Reader for the UpdateRubyGemsHostedRepository structure.
+type UpdateRubyGemsHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository15Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateRubyGemsHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository15NoContent()
+		result := NewUpdateRubyGemsHostedRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository15Unauthorized()
+		result := NewUpdateRubyGemsHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository15Forbidden()
+		result := NewUpdateRubyGemsHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository15Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository15NoContent creates a UpdateRepository15NoContent with default headers values
-func NewUpdateRepository15NoContent() *UpdateRepository15NoContent {
-	return &UpdateRepository15NoContent{}
+// NewUpdateRubyGemsHostedRepositoryNoContent creates a UpdateRubyGemsHostedRepositoryNoContent with default headers values
+func NewUpdateRubyGemsHostedRepositoryNoContent() *UpdateRubyGemsHostedRepositoryNoContent {
+	return &UpdateRubyGemsHostedRepositoryNoContent{}
 }
 
-/* UpdateRepository15NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateRubyGemsHostedRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository15NoContent struct {
+type UpdateRubyGemsHostedRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository15 no content response has a 2xx status code
-func (o *UpdateRepository15NoContent) IsSuccess() bool {
+func (o *UpdateRubyGemsHostedRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository15 no content response has a 3xx status code
-func (o *UpdateRepository15NoContent) IsRedirect() bool {
+func (o *UpdateRubyGemsHostedRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository15 no content response has a 4xx status code
-func (o *UpdateRepository15NoContent) IsClientError() bool {
+func (o *UpdateRubyGemsHostedRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository15 no content response has a 5xx status code
-func (o *UpdateRepository15NoContent) IsServerError() bool {
+func (o *UpdateRubyGemsHostedRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository15 no content response a status code equal to that given
-func (o *UpdateRepository15NoContent) IsCode(code int) bool {
+func (o *UpdateRubyGemsHostedRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository15NoContent) Error() string {
+func (o *UpdateRubyGemsHostedRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/hosted/{repositoryName}][%d] updateRepository15NoContent ", 204)
 }
 
-func (o *UpdateRepository15NoContent) String() string {
+func (o *UpdateRubyGemsHostedRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/hosted/{repositoryName}][%d] updateRepository15NoContent ", 204)
 }
 
-func (o *UpdateRepository15NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRubyGemsHostedRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository15Unauthorized creates a UpdateRepository15Unauthorized with default headers values
-func NewUpdateRepository15Unauthorized() *UpdateRepository15Unauthorized {
-	return &UpdateRepository15Unauthorized{}
+// NewUpdateRubyGemsHostedRepositoryUnauthorized creates a UpdateRubyGemsHostedRepositoryUnauthorized with default headers values
+func NewUpdateRubyGemsHostedRepositoryUnauthorized() *UpdateRubyGemsHostedRepositoryUnauthorized {
+	return &UpdateRubyGemsHostedRepositoryUnauthorized{}
 }
 
-/* UpdateRepository15Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateRubyGemsHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository15Unauthorized struct {
+type UpdateRubyGemsHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository15 unauthorized response has a 2xx status code
-func (o *UpdateRepository15Unauthorized) IsSuccess() bool {
+func (o *UpdateRubyGemsHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository15 unauthorized response has a 3xx status code
-func (o *UpdateRepository15Unauthorized) IsRedirect() bool {
+func (o *UpdateRubyGemsHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository15 unauthorized response has a 4xx status code
-func (o *UpdateRepository15Unauthorized) IsClientError() bool {
+func (o *UpdateRubyGemsHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository15 unauthorized response has a 5xx status code
-func (o *UpdateRepository15Unauthorized) IsServerError() bool {
+func (o *UpdateRubyGemsHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository15 unauthorized response a status code equal to that given
-func (o *UpdateRepository15Unauthorized) IsCode(code int) bool {
+func (o *UpdateRubyGemsHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository15Unauthorized) Error() string {
+func (o *UpdateRubyGemsHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/hosted/{repositoryName}][%d] updateRepository15Unauthorized ", 401)
 }
 
-func (o *UpdateRepository15Unauthorized) String() string {
+func (o *UpdateRubyGemsHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/hosted/{repositoryName}][%d] updateRepository15Unauthorized ", 401)
 }
 
-func (o *UpdateRepository15Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRubyGemsHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository15Forbidden creates a UpdateRepository15Forbidden with default headers values
-func NewUpdateRepository15Forbidden() *UpdateRepository15Forbidden {
-	return &UpdateRepository15Forbidden{}
+// NewUpdateRubyGemsHostedRepositoryForbidden creates a UpdateRubyGemsHostedRepositoryForbidden with default headers values
+func NewUpdateRubyGemsHostedRepositoryForbidden() *UpdateRubyGemsHostedRepositoryForbidden {
+	return &UpdateRubyGemsHostedRepositoryForbidden{}
 }
 
-/* UpdateRepository15Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateRubyGemsHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository15Forbidden struct {
+type UpdateRubyGemsHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository15 forbidden response has a 2xx status code
-func (o *UpdateRepository15Forbidden) IsSuccess() bool {
+func (o *UpdateRubyGemsHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository15 forbidden response has a 3xx status code
-func (o *UpdateRepository15Forbidden) IsRedirect() bool {
+func (o *UpdateRubyGemsHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository15 forbidden response has a 4xx status code
-func (o *UpdateRepository15Forbidden) IsClientError() bool {
+func (o *UpdateRubyGemsHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository15 forbidden response has a 5xx status code
-func (o *UpdateRepository15Forbidden) IsServerError() bool {
+func (o *UpdateRubyGemsHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository15 forbidden response a status code equal to that given
-func (o *UpdateRepository15Forbidden) IsCode(code int) bool {
+func (o *UpdateRubyGemsHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository15Forbidden) Error() string {
+func (o *UpdateRubyGemsHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/hosted/{repositoryName}][%d] updateRepository15Forbidden ", 403)
 }
 
-func (o *UpdateRepository15Forbidden) String() string {
+func (o *UpdateRubyGemsHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/hosted/{repositoryName}][%d] updateRepository15Forbidden ", 403)
 }
 
-func (o *UpdateRepository15Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRubyGemsHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository6Reader is a Reader for the UpdateRepository6 structure.
-type UpdateRepository6Reader struct {
+// UpdateRawHostedRepositoryReader is a Reader for the UpdateRawHostedRepository structure.
+type UpdateRawHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository6Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateRawHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository6NoContent()
+		result := NewUpdateRawHostedRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository6Unauthorized()
+		result := NewUpdateRawHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository6Forbidden()
+		result := NewUpdateRawHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository6Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewUpdateRepository6NoContent creates a UpdateRepository6NoContent with default headers values
-func NewUpdateRepository6NoContent() *UpdateRepository6NoContent {
-	return &UpdateRepository6NoContent{}
+// NewUpdateRawHostedRepositoryNoContent creates a UpdateRawHostedRepositoryNoContent with default headers values
+func NewUpdateRawHostedRepositoryNoContent() *UpdateRawHostedRepositoryNoContent {
+	return &UpdateRawHostedRepositoryNoContent{}
 }
 
-/* UpdateRepository6NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateRawHostedRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository6NoContent struct {
+type UpdateRawHostedRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository6 no content response has a 2xx status code
-func (o *UpdateRepository6NoContent) IsSuccess() bool {
+func (o *UpdateRawHostedRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository6 no content response has a 3xx status code
-func (o *UpdateRepository6NoContent) IsRedirect() bool {
+func (o *UpdateRawHostedRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository6 no content response has a 4xx status code
-func (o *UpdateRepository6NoContent) IsClientError() bool {
+func (o *UpdateRawHostedRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository6 no content response has a 5xx status code
-func (o *UpdateRepository6NoContent) IsServerError() bool {
+func (o *UpdateRawHostedRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository6 no content response a status code equal to that given
-func (o *UpdateRepository6NoContent) IsCode(code int) bool {
+func (o *UpdateRawHostedRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository6NoContent) Error() string {
+func (o *UpdateRawHostedRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/hosted/{repositoryName}][%d] updateRepository6NoContent ", 204)
 }
 
-func (o *UpdateRepository6NoContent) String() string {
+func (o *UpdateRawHostedRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/hosted/{repositoryName}][%d] updateRepository6NoContent ", 204)
 }
 
-func (o *UpdateRepository6NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRawHostedRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository6Unauthorized creates a UpdateRepository6Unauthorized with default headers values
-func NewUpdateRepository6Unauthorized() *UpdateRepository6Unauthorized {
-	return &UpdateRepository6Unauthorized{}
+// NewUpdateRawHostedRepositoryUnauthorized creates a UpdateRawHostedRepositoryUnauthorized with default headers values
+func NewUpdateRawHostedRepositoryUnauthorized() *UpdateRawHostedRepositoryUnauthorized {
+	return &UpdateRawHostedRepositoryUnauthorized{}
 }
 
-/* UpdateRepository6Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateRawHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository6Unauthorized struct {
+type UpdateRawHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository6 unauthorized response has a 2xx status code
-func (o *UpdateRepository6Unauthorized) IsSuccess() bool {
+func (o *UpdateRawHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository6 unauthorized response has a 3xx status code
-func (o *UpdateRepository6Unauthorized) IsRedirect() bool {
+func (o *UpdateRawHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository6 unauthorized response has a 4xx status code
-func (o *UpdateRepository6Unauthorized) IsClientError() bool {
+func (o *UpdateRawHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository6 unauthorized response has a 5xx status code
-func (o *UpdateRepository6Unauthorized) IsServerError() bool {
+func (o *UpdateRawHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository6 unauthorized response a status code equal to that given
-func (o *UpdateRepository6Unauthorized) IsCode(code int) bool {
+func (o *UpdateRawHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository6Unauthorized) Error() string {
+func (o *UpdateRawHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/hosted/{repositoryName}][%d] updateRepository6Unauthorized ", 401)
 }
 
-func (o *UpdateRepository6Unauthorized) String() string {
+func (o *UpdateRawHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/hosted/{repositoryName}][%d] updateRepository6Unauthorized ", 401)
 }
 
-func (o *UpdateRepository6Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRawHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository6Forbidden creates a UpdateRepository6Forbidden with default headers values
-func NewUpdateRepository6Forbidden() *UpdateRepository6Forbidden {
-	return &UpdateRepository6Forbidden{}
+// NewUpdateRawHostedRepositoryForbidden creates a UpdateRawHostedRepositoryForbidden with default headers values
+func NewUpdateRawHostedRepositoryForbidden() *UpdateRawHostedRepositoryForbidden {
+	return &UpdateRawHostedRepositoryForbidden{}
 }
 
-/* UpdateRepository6Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateRawHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository6Forbidden struct {
+type UpdateRawHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository6 forbidden response has a 2xx status code
-func (o *UpdateRepository6Forbidden) IsSuccess() bool {
+func (o *UpdateRawHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository6 forbidden response has a 3xx status code
-func (o *UpdateRepository6Forbidden) IsRedirect() bool {
+func (o *UpdateRawHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository6 forbidden response has a 4xx status code
-func (o *UpdateRepository6Forbidden) IsClientError() bool {
+func (o *UpdateRawHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository6 forbidden response has a 5xx status code
-func (o *UpdateRepository6Forbidden) IsServerError() bool {
+func (o *UpdateRawHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository6 forbidden response a status code equal to that given
-func (o *UpdateRepository6Forbidden) IsCode(code int) bool {
+func (o *UpdateRawHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository6Forbidden) Error() string {
+func (o *UpdateRawHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/hosted/{repositoryName}][%d] updateRepository6Forbidden ", 403)
 }
 
-func (o *UpdateRepository6Forbidden) String() string {
+func (o *UpdateRawHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/raw/hosted/{repositoryName}][%d] updateRepository6Forbidden ", 403)
 }
 
-func (o *UpdateRepository6Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRawHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

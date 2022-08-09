@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository11Reader is a Reader for the UpdateRepository11 structure.
-type UpdateRepository11Reader struct {
+// UpdateNugetGroupRepositoryReader is a Reader for the UpdateNugetGroupRepository structure.
+type UpdateNugetGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository11Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateNugetGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository11NoContent()
+		result := NewUpdateNugetGroupRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository11Unauthorized()
+		result := NewUpdateNugetGroupRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository11Forbidden()
+		result := NewUpdateNugetGroupRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository11Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository11NoContent creates a UpdateRepository11NoContent with default headers values
-func NewUpdateRepository11NoContent() *UpdateRepository11NoContent {
-	return &UpdateRepository11NoContent{}
+// NewUpdateNugetGroupRepositoryNoContent creates a UpdateNugetGroupRepositoryNoContent with default headers values
+func NewUpdateNugetGroupRepositoryNoContent() *UpdateNugetGroupRepositoryNoContent {
+	return &UpdateNugetGroupRepositoryNoContent{}
 }
 
-/* UpdateRepository11NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateNugetGroupRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository11NoContent struct {
+type UpdateNugetGroupRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository11 no content response has a 2xx status code
-func (o *UpdateRepository11NoContent) IsSuccess() bool {
+func (o *UpdateNugetGroupRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository11 no content response has a 3xx status code
-func (o *UpdateRepository11NoContent) IsRedirect() bool {
+func (o *UpdateNugetGroupRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository11 no content response has a 4xx status code
-func (o *UpdateRepository11NoContent) IsClientError() bool {
+func (o *UpdateNugetGroupRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository11 no content response has a 5xx status code
-func (o *UpdateRepository11NoContent) IsServerError() bool {
+func (o *UpdateNugetGroupRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository11 no content response a status code equal to that given
-func (o *UpdateRepository11NoContent) IsCode(code int) bool {
+func (o *UpdateNugetGroupRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository11NoContent) Error() string {
+func (o *UpdateNugetGroupRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/nuget/group/{repositoryName}][%d] updateRepository11NoContent ", 204)
 }
 
-func (o *UpdateRepository11NoContent) String() string {
+func (o *UpdateNugetGroupRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/nuget/group/{repositoryName}][%d] updateRepository11NoContent ", 204)
 }
 
-func (o *UpdateRepository11NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateNugetGroupRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository11Unauthorized creates a UpdateRepository11Unauthorized with default headers values
-func NewUpdateRepository11Unauthorized() *UpdateRepository11Unauthorized {
-	return &UpdateRepository11Unauthorized{}
+// NewUpdateNugetGroupRepositoryUnauthorized creates a UpdateNugetGroupRepositoryUnauthorized with default headers values
+func NewUpdateNugetGroupRepositoryUnauthorized() *UpdateNugetGroupRepositoryUnauthorized {
+	return &UpdateNugetGroupRepositoryUnauthorized{}
 }
 
-/* UpdateRepository11Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateNugetGroupRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository11Unauthorized struct {
+type UpdateNugetGroupRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository11 unauthorized response has a 2xx status code
-func (o *UpdateRepository11Unauthorized) IsSuccess() bool {
+func (o *UpdateNugetGroupRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository11 unauthorized response has a 3xx status code
-func (o *UpdateRepository11Unauthorized) IsRedirect() bool {
+func (o *UpdateNugetGroupRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository11 unauthorized response has a 4xx status code
-func (o *UpdateRepository11Unauthorized) IsClientError() bool {
+func (o *UpdateNugetGroupRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository11 unauthorized response has a 5xx status code
-func (o *UpdateRepository11Unauthorized) IsServerError() bool {
+func (o *UpdateNugetGroupRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository11 unauthorized response a status code equal to that given
-func (o *UpdateRepository11Unauthorized) IsCode(code int) bool {
+func (o *UpdateNugetGroupRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository11Unauthorized) Error() string {
+func (o *UpdateNugetGroupRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/nuget/group/{repositoryName}][%d] updateRepository11Unauthorized ", 401)
 }
 
-func (o *UpdateRepository11Unauthorized) String() string {
+func (o *UpdateNugetGroupRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/nuget/group/{repositoryName}][%d] updateRepository11Unauthorized ", 401)
 }
 
-func (o *UpdateRepository11Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateNugetGroupRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository11Forbidden creates a UpdateRepository11Forbidden with default headers values
-func NewUpdateRepository11Forbidden() *UpdateRepository11Forbidden {
-	return &UpdateRepository11Forbidden{}
+// NewUpdateNugetGroupRepositoryForbidden creates a UpdateNugetGroupRepositoryForbidden with default headers values
+func NewUpdateNugetGroupRepositoryForbidden() *UpdateNugetGroupRepositoryForbidden {
+	return &UpdateNugetGroupRepositoryForbidden{}
 }
 
-/* UpdateRepository11Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateNugetGroupRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository11Forbidden struct {
+type UpdateNugetGroupRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository11 forbidden response has a 2xx status code
-func (o *UpdateRepository11Forbidden) IsSuccess() bool {
+func (o *UpdateNugetGroupRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository11 forbidden response has a 3xx status code
-func (o *UpdateRepository11Forbidden) IsRedirect() bool {
+func (o *UpdateNugetGroupRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository11 forbidden response has a 4xx status code
-func (o *UpdateRepository11Forbidden) IsClientError() bool {
+func (o *UpdateNugetGroupRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository11 forbidden response has a 5xx status code
-func (o *UpdateRepository11Forbidden) IsServerError() bool {
+func (o *UpdateNugetGroupRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository11 forbidden response a status code equal to that given
-func (o *UpdateRepository11Forbidden) IsCode(code int) bool {
+func (o *UpdateNugetGroupRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository11Forbidden) Error() string {
+func (o *UpdateNugetGroupRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/nuget/group/{repositoryName}][%d] updateRepository11Forbidden ", 403)
 }
 
-func (o *UpdateRepository11Forbidden) String() string {
+func (o *UpdateNugetGroupRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/nuget/group/{repositoryName}][%d] updateRepository11Forbidden ", 403)
 }
 
-func (o *UpdateRepository11Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateNugetGroupRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

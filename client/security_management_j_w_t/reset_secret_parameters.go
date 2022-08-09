@@ -52,10 +52,12 @@ func NewResetSecretParamsWithHTTPClient(client *http.Client) *ResetSecretParams 
 	}
 }
 
-/* ResetSecretParams contains all the parameters to send to the API endpoint
-   for the reset secret operation.
+/*
+ResetSecretParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the reset secret operation.
+
+	Typically these are written to a http.Request.
 */
 type ResetSecretParams struct {
 	timeout    time.Duration

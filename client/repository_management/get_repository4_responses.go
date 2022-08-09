@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository4Reader is a Reader for the GetRepository4 structure.
-type GetRepository4Reader struct {
+// GetAptHostedRepositoryReader is a Reader for the GetAptHostedRepository structure.
+type GetAptHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository4Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetAptHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository4OK()
+		result := NewGetAptHostedRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository4Reader) ReadResponse(response runtime.ClientResponse, con
 	}
 }
 
-// NewGetRepository4OK creates a GetRepository4OK with default headers values
-func NewGetRepository4OK() *GetRepository4OK {
-	return &GetRepository4OK{}
+// NewGetAptHostedRepositoryOK creates a GetAptHostedRepositoryOK with default headers values
+func NewGetAptHostedRepositoryOK() *GetAptHostedRepositoryOK {
+	return &GetAptHostedRepositoryOK{}
 }
 
-/* GetRepository4OK describes a response with status code 200, with default header values.
+/*
+	GetAptHostedRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository4OK struct {
+type GetAptHostedRepositoryOK struct {
 	Payload *models.AptHostedAPIRepository
 }
 
 // IsSuccess returns true when this get repository4 o k response has a 2xx status code
-func (o *GetRepository4OK) IsSuccess() bool {
+func (o *GetAptHostedRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository4 o k response has a 3xx status code
-func (o *GetRepository4OK) IsRedirect() bool {
+func (o *GetAptHostedRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository4 o k response has a 4xx status code
-func (o *GetRepository4OK) IsClientError() bool {
+func (o *GetAptHostedRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository4 o k response has a 5xx status code
-func (o *GetRepository4OK) IsServerError() bool {
+func (o *GetAptHostedRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository4 o k response a status code equal to that given
-func (o *GetRepository4OK) IsCode(code int) bool {
+func (o *GetAptHostedRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository4OK) Error() string {
+func (o *GetAptHostedRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/apt/hosted/{repositoryName}][%d] getRepository4OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository4OK) String() string {
+func (o *GetAptHostedRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/apt/hosted/{repositoryName}][%d] getRepository4OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository4OK) GetPayload() *models.AptHostedAPIRepository {
+func (o *GetAptHostedRepositoryOK) GetPayload() *models.AptHostedAPIRepository {
 	return o.Payload
 }
 
-func (o *GetRepository4OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetAptHostedRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.AptHostedAPIRepository)
 

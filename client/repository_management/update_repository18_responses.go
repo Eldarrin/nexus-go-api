@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository18Reader is a Reader for the UpdateRepository18 structure.
-type UpdateRepository18Reader struct {
+// UpdateDockerHostedRepositoryReader is a Reader for the UpdateDockerHostedRepository structure.
+type UpdateDockerHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository18Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateDockerHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository18NoContent()
+		result := NewUpdateDockerHostedRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository18Unauthorized()
+		result := NewUpdateDockerHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository18Forbidden()
+		result := NewUpdateDockerHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 404:
-		result := NewUpdateRepository18NotFound()
+		result := NewUpdateDockerHostedRepositoryNotFound()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *UpdateRepository18Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository18NoContent creates a UpdateRepository18NoContent with default headers values
-func NewUpdateRepository18NoContent() *UpdateRepository18NoContent {
-	return &UpdateRepository18NoContent{}
+// NewUpdateDockerHostedRepositoryNoContent creates a UpdateDockerHostedRepositoryNoContent with default headers values
+func NewUpdateDockerHostedRepositoryNoContent() *UpdateDockerHostedRepositoryNoContent {
+	return &UpdateDockerHostedRepositoryNoContent{}
 }
 
-/* UpdateRepository18NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateDockerHostedRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository18NoContent struct {
+type UpdateDockerHostedRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository18 no content response has a 2xx status code
-func (o *UpdateRepository18NoContent) IsSuccess() bool {
+func (o *UpdateDockerHostedRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository18 no content response has a 3xx status code
-func (o *UpdateRepository18NoContent) IsRedirect() bool {
+func (o *UpdateDockerHostedRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository18 no content response has a 4xx status code
-func (o *UpdateRepository18NoContent) IsClientError() bool {
+func (o *UpdateDockerHostedRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository18 no content response has a 5xx status code
-func (o *UpdateRepository18NoContent) IsServerError() bool {
+func (o *UpdateDockerHostedRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository18 no content response a status code equal to that given
-func (o *UpdateRepository18NoContent) IsCode(code int) bool {
+func (o *UpdateDockerHostedRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository18NoContent) Error() string {
+func (o *UpdateDockerHostedRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/hosted/{repositoryName}][%d] updateRepository18NoContent ", 204)
 }
 
-func (o *UpdateRepository18NoContent) String() string {
+func (o *UpdateDockerHostedRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/hosted/{repositoryName}][%d] updateRepository18NoContent ", 204)
 }
 
-func (o *UpdateRepository18NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerHostedRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository18Unauthorized creates a UpdateRepository18Unauthorized with default headers values
-func NewUpdateRepository18Unauthorized() *UpdateRepository18Unauthorized {
-	return &UpdateRepository18Unauthorized{}
+// NewUpdateDockerHostedRepositoryUnauthorized creates a UpdateDockerHostedRepositoryUnauthorized with default headers values
+func NewUpdateDockerHostedRepositoryUnauthorized() *UpdateDockerHostedRepositoryUnauthorized {
+	return &UpdateDockerHostedRepositoryUnauthorized{}
 }
 
-/* UpdateRepository18Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateDockerHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository18Unauthorized struct {
+type UpdateDockerHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository18 unauthorized response has a 2xx status code
-func (o *UpdateRepository18Unauthorized) IsSuccess() bool {
+func (o *UpdateDockerHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository18 unauthorized response has a 3xx status code
-func (o *UpdateRepository18Unauthorized) IsRedirect() bool {
+func (o *UpdateDockerHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository18 unauthorized response has a 4xx status code
-func (o *UpdateRepository18Unauthorized) IsClientError() bool {
+func (o *UpdateDockerHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository18 unauthorized response has a 5xx status code
-func (o *UpdateRepository18Unauthorized) IsServerError() bool {
+func (o *UpdateDockerHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository18 unauthorized response a status code equal to that given
-func (o *UpdateRepository18Unauthorized) IsCode(code int) bool {
+func (o *UpdateDockerHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository18Unauthorized) Error() string {
+func (o *UpdateDockerHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/hosted/{repositoryName}][%d] updateRepository18Unauthorized ", 401)
 }
 
-func (o *UpdateRepository18Unauthorized) String() string {
+func (o *UpdateDockerHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/hosted/{repositoryName}][%d] updateRepository18Unauthorized ", 401)
 }
 
-func (o *UpdateRepository18Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository18Forbidden creates a UpdateRepository18Forbidden with default headers values
-func NewUpdateRepository18Forbidden() *UpdateRepository18Forbidden {
-	return &UpdateRepository18Forbidden{}
+// NewUpdateDockerHostedRepositoryForbidden creates a UpdateDockerHostedRepositoryForbidden with default headers values
+func NewUpdateDockerHostedRepositoryForbidden() *UpdateDockerHostedRepositoryForbidden {
+	return &UpdateDockerHostedRepositoryForbidden{}
 }
 
-/* UpdateRepository18Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateDockerHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository18Forbidden struct {
+type UpdateDockerHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository18 forbidden response has a 2xx status code
-func (o *UpdateRepository18Forbidden) IsSuccess() bool {
+func (o *UpdateDockerHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository18 forbidden response has a 3xx status code
-func (o *UpdateRepository18Forbidden) IsRedirect() bool {
+func (o *UpdateDockerHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository18 forbidden response has a 4xx status code
-func (o *UpdateRepository18Forbidden) IsClientError() bool {
+func (o *UpdateDockerHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository18 forbidden response has a 5xx status code
-func (o *UpdateRepository18Forbidden) IsServerError() bool {
+func (o *UpdateDockerHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository18 forbidden response a status code equal to that given
-func (o *UpdateRepository18Forbidden) IsCode(code int) bool {
+func (o *UpdateDockerHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository18Forbidden) Error() string {
+func (o *UpdateDockerHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/hosted/{repositoryName}][%d] updateRepository18Forbidden ", 403)
 }
 
-func (o *UpdateRepository18Forbidden) String() string {
+func (o *UpdateDockerHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/hosted/{repositoryName}][%d] updateRepository18Forbidden ", 403)
 }
 
-func (o *UpdateRepository18Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository18NotFound creates a UpdateRepository18NotFound with default headers values
-func NewUpdateRepository18NotFound() *UpdateRepository18NotFound {
-	return &UpdateRepository18NotFound{}
+// NewUpdateDockerHostedRepositoryNotFound creates a UpdateDockerHostedRepositoryNotFound with default headers values
+func NewUpdateDockerHostedRepositoryNotFound() *UpdateDockerHostedRepositoryNotFound {
+	return &UpdateDockerHostedRepositoryNotFound{}
 }
 
-/* UpdateRepository18NotFound describes a response with status code 404, with default header values.
+/*
+	UpdateDockerHostedRepositoryNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */
-type UpdateRepository18NotFound struct {
+type UpdateDockerHostedRepositoryNotFound struct {
 }
 
 // IsSuccess returns true when this update repository18 not found response has a 2xx status code
-func (o *UpdateRepository18NotFound) IsSuccess() bool {
+func (o *UpdateDockerHostedRepositoryNotFound) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository18 not found response has a 3xx status code
-func (o *UpdateRepository18NotFound) IsRedirect() bool {
+func (o *UpdateDockerHostedRepositoryNotFound) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository18 not found response has a 4xx status code
-func (o *UpdateRepository18NotFound) IsClientError() bool {
+func (o *UpdateDockerHostedRepositoryNotFound) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository18 not found response has a 5xx status code
-func (o *UpdateRepository18NotFound) IsServerError() bool {
+func (o *UpdateDockerHostedRepositoryNotFound) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository18 not found response a status code equal to that given
-func (o *UpdateRepository18NotFound) IsCode(code int) bool {
+func (o *UpdateDockerHostedRepositoryNotFound) IsCode(code int) bool {
 	return code == 404
 }
 
-func (o *UpdateRepository18NotFound) Error() string {
+func (o *UpdateDockerHostedRepositoryNotFound) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/hosted/{repositoryName}][%d] updateRepository18NotFound ", 404)
 }
 
-func (o *UpdateRepository18NotFound) String() string {
+func (o *UpdateDockerHostedRepositoryNotFound) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/hosted/{repositoryName}][%d] updateRepository18NotFound ", 404)
 }
 
-func (o *UpdateRepository18NotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerHostedRepositoryNotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

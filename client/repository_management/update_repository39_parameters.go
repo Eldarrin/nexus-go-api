@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository39Params creates a new UpdateRepository39Params object,
+// NewUpdateBowerHostedRepositoryParams creates a new UpdateBowerHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository39Params() *UpdateRepository39Params {
-	return &UpdateRepository39Params{
+func NewUpdateBowerHostedRepositoryParams() *UpdateBowerHostedRepositoryParams {
+	return &UpdateBowerHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository39ParamsWithTimeout creates a new UpdateRepository39Params object
+// NewUpdateBowerHostedRepositoryParamsWithTimeout creates a new UpdateBowerHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository39ParamsWithTimeout(timeout time.Duration) *UpdateRepository39Params {
-	return &UpdateRepository39Params{
+func NewUpdateBowerHostedRepositoryParamsWithTimeout(timeout time.Duration) *UpdateBowerHostedRepositoryParams {
+	return &UpdateBowerHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository39ParamsWithContext creates a new UpdateRepository39Params object
+// NewUpdateBowerHostedRepositoryParamsWithContext creates a new UpdateBowerHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository39ParamsWithContext(ctx context.Context) *UpdateRepository39Params {
-	return &UpdateRepository39Params{
+func NewUpdateBowerHostedRepositoryParamsWithContext(ctx context.Context) *UpdateBowerHostedRepositoryParams {
+	return &UpdateBowerHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository39ParamsWithHTTPClient creates a new UpdateRepository39Params object
+// NewUpdateBowerHostedRepositoryParamsWithHTTPClient creates a new UpdateBowerHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository39ParamsWithHTTPClient(client *http.Client) *UpdateRepository39Params {
-	return &UpdateRepository39Params{
+func NewUpdateBowerHostedRepositoryParamsWithHTTPClient(client *http.Client) *UpdateBowerHostedRepositoryParams {
+	return &UpdateBowerHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository39Params contains all the parameters to send to the API endpoint
-   for the update repository 39 operation.
+/*
+UpdateBowerHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 39 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository39Params struct {
+type UpdateBowerHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.BowerHostedRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository39Params struct {
 // WithDefaults hydrates default values in the update repository 39 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository39Params) WithDefaults() *UpdateRepository39Params {
+func (o *UpdateBowerHostedRepositoryParams) WithDefaults() *UpdateBowerHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository39Params) WithDefaults() *UpdateRepository39Params {
 // SetDefaults hydrates default values in the update repository 39 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository39Params) SetDefaults() {
+func (o *UpdateBowerHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 39 params
-func (o *UpdateRepository39Params) WithTimeout(timeout time.Duration) *UpdateRepository39Params {
+func (o *UpdateBowerHostedRepositoryParams) WithTimeout(timeout time.Duration) *UpdateBowerHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 39 params
-func (o *UpdateRepository39Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateBowerHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 39 params
-func (o *UpdateRepository39Params) WithContext(ctx context.Context) *UpdateRepository39Params {
+func (o *UpdateBowerHostedRepositoryParams) WithContext(ctx context.Context) *UpdateBowerHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 39 params
-func (o *UpdateRepository39Params) SetContext(ctx context.Context) {
+func (o *UpdateBowerHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 39 params
-func (o *UpdateRepository39Params) WithHTTPClient(client *http.Client) *UpdateRepository39Params {
+func (o *UpdateBowerHostedRepositoryParams) WithHTTPClient(client *http.Client) *UpdateBowerHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 39 params
-func (o *UpdateRepository39Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateBowerHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 39 params
-func (o *UpdateRepository39Params) WithBody(body *models.BowerHostedRepositoryAPIRequest) *UpdateRepository39Params {
+func (o *UpdateBowerHostedRepositoryParams) WithBody(body *models.BowerHostedRepositoryAPIRequest) *UpdateBowerHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 39 params
-func (o *UpdateRepository39Params) SetBody(body *models.BowerHostedRepositoryAPIRequest) {
+func (o *UpdateBowerHostedRepositoryParams) SetBody(body *models.BowerHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 39 params
-func (o *UpdateRepository39Params) WithRepositoryName(repositoryName string) *UpdateRepository39Params {
+func (o *UpdateBowerHostedRepositoryParams) WithRepositoryName(repositoryName string) *UpdateBowerHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 39 params
-func (o *UpdateRepository39Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateBowerHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository39Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateBowerHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

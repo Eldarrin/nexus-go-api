@@ -36,7 +36,8 @@ func NewUpdateConfigurationNoContent() *UpdateConfigurationNoContent {
 	return &UpdateConfigurationNoContent{}
 }
 
-/* UpdateConfigurationNoContent describes a response with status code 204, with default header values.
+/*
+	UpdateConfigurationNoContent describes a response with status code 204, with default header values.
 
 IQ server configuration has been updated
 */

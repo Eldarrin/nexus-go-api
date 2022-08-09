@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository29Reader is a Reader for the CreateRepository29 structure.
-type CreateRepository29Reader struct {
+// CreateCondaProxyRepositoryReader is a Reader for the CreateCondaProxyRepository structure.
+type CreateCondaProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository29Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateCondaProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository29Created()
+		result := NewCreateCondaProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository29Unauthorized()
+		result := NewCreateCondaProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository29Forbidden()
+		result := NewCreateCondaProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 405:
-		result := NewCreateRepository29MethodNotAllowed()
+		result := NewCreateCondaProxyRepositoryMethodNotAllowed()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *CreateRepository29Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository29Created creates a CreateRepository29Created with default headers values
-func NewCreateRepository29Created() *CreateRepository29Created {
-	return &CreateRepository29Created{}
+// NewCreateCondaProxyRepositoryCreated creates a CreateCondaProxyRepositoryCreated with default headers values
+func NewCreateCondaProxyRepositoryCreated() *CreateCondaProxyRepositoryCreated {
+	return &CreateCondaProxyRepositoryCreated{}
 }
 
-/* CreateRepository29Created describes a response with status code 201, with default header values.
+/*
+	CreateCondaProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository29Created struct {
+type CreateCondaProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository29 created response has a 2xx status code
-func (o *CreateRepository29Created) IsSuccess() bool {
+func (o *CreateCondaProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository29 created response has a 3xx status code
-func (o *CreateRepository29Created) IsRedirect() bool {
+func (o *CreateCondaProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository29 created response has a 4xx status code
-func (o *CreateRepository29Created) IsClientError() bool {
+func (o *CreateCondaProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository29 created response has a 5xx status code
-func (o *CreateRepository29Created) IsServerError() bool {
+func (o *CreateCondaProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository29 created response a status code equal to that given
-func (o *CreateRepository29Created) IsCode(code int) bool {
+func (o *CreateCondaProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository29Created) Error() string {
+func (o *CreateCondaProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/conda/proxy][%d] createRepository29Created ", 201)
 }
 
-func (o *CreateRepository29Created) String() string {
+func (o *CreateCondaProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/conda/proxy][%d] createRepository29Created ", 201)
 }
 
-func (o *CreateRepository29Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateCondaProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository29Unauthorized creates a CreateRepository29Unauthorized with default headers values
-func NewCreateRepository29Unauthorized() *CreateRepository29Unauthorized {
-	return &CreateRepository29Unauthorized{}
+// NewCreateCondaProxyRepositoryUnauthorized creates a CreateCondaProxyRepositoryUnauthorized with default headers values
+func NewCreateCondaProxyRepositoryUnauthorized() *CreateCondaProxyRepositoryUnauthorized {
+	return &CreateCondaProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository29Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateCondaProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository29Unauthorized struct {
+type CreateCondaProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository29 unauthorized response has a 2xx status code
-func (o *CreateRepository29Unauthorized) IsSuccess() bool {
+func (o *CreateCondaProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository29 unauthorized response has a 3xx status code
-func (o *CreateRepository29Unauthorized) IsRedirect() bool {
+func (o *CreateCondaProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository29 unauthorized response has a 4xx status code
-func (o *CreateRepository29Unauthorized) IsClientError() bool {
+func (o *CreateCondaProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository29 unauthorized response has a 5xx status code
-func (o *CreateRepository29Unauthorized) IsServerError() bool {
+func (o *CreateCondaProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository29 unauthorized response a status code equal to that given
-func (o *CreateRepository29Unauthorized) IsCode(code int) bool {
+func (o *CreateCondaProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository29Unauthorized) Error() string {
+func (o *CreateCondaProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/conda/proxy][%d] createRepository29Unauthorized ", 401)
 }
 
-func (o *CreateRepository29Unauthorized) String() string {
+func (o *CreateCondaProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/conda/proxy][%d] createRepository29Unauthorized ", 401)
 }
 
-func (o *CreateRepository29Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateCondaProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository29Forbidden creates a CreateRepository29Forbidden with default headers values
-func NewCreateRepository29Forbidden() *CreateRepository29Forbidden {
-	return &CreateRepository29Forbidden{}
+// NewCreateCondaProxyRepositoryForbidden creates a CreateCondaProxyRepositoryForbidden with default headers values
+func NewCreateCondaProxyRepositoryForbidden() *CreateCondaProxyRepositoryForbidden {
+	return &CreateCondaProxyRepositoryForbidden{}
 }
 
-/* CreateRepository29Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateCondaProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository29Forbidden struct {
+type CreateCondaProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository29 forbidden response has a 2xx status code
-func (o *CreateRepository29Forbidden) IsSuccess() bool {
+func (o *CreateCondaProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository29 forbidden response has a 3xx status code
-func (o *CreateRepository29Forbidden) IsRedirect() bool {
+func (o *CreateCondaProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository29 forbidden response has a 4xx status code
-func (o *CreateRepository29Forbidden) IsClientError() bool {
+func (o *CreateCondaProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository29 forbidden response has a 5xx status code
-func (o *CreateRepository29Forbidden) IsServerError() bool {
+func (o *CreateCondaProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository29 forbidden response a status code equal to that given
-func (o *CreateRepository29Forbidden) IsCode(code int) bool {
+func (o *CreateCondaProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository29Forbidden) Error() string {
+func (o *CreateCondaProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/conda/proxy][%d] createRepository29Forbidden ", 403)
 }
 
-func (o *CreateRepository29Forbidden) String() string {
+func (o *CreateCondaProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/conda/proxy][%d] createRepository29Forbidden ", 403)
 }
 
-func (o *CreateRepository29Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateCondaProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository29MethodNotAllowed creates a CreateRepository29MethodNotAllowed with default headers values
-func NewCreateRepository29MethodNotAllowed() *CreateRepository29MethodNotAllowed {
-	return &CreateRepository29MethodNotAllowed{}
+// NewCreateCondaProxyRepositoryMethodNotAllowed creates a CreateCondaProxyRepositoryMethodNotAllowed with default headers values
+func NewCreateCondaProxyRepositoryMethodNotAllowed() *CreateCondaProxyRepositoryMethodNotAllowed {
+	return &CreateCondaProxyRepositoryMethodNotAllowed{}
 }
 
-/* CreateRepository29MethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	CreateCondaProxyRepositoryMethodNotAllowed describes a response with status code 405, with default header values.
 
 Feature is disabled in High Availability
 */
-type CreateRepository29MethodNotAllowed struct {
+type CreateCondaProxyRepositoryMethodNotAllowed struct {
 }
 
 // IsSuccess returns true when this create repository29 method not allowed response has a 2xx status code
-func (o *CreateRepository29MethodNotAllowed) IsSuccess() bool {
+func (o *CreateCondaProxyRepositoryMethodNotAllowed) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository29 method not allowed response has a 3xx status code
-func (o *CreateRepository29MethodNotAllowed) IsRedirect() bool {
+func (o *CreateCondaProxyRepositoryMethodNotAllowed) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository29 method not allowed response has a 4xx status code
-func (o *CreateRepository29MethodNotAllowed) IsClientError() bool {
+func (o *CreateCondaProxyRepositoryMethodNotAllowed) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository29 method not allowed response has a 5xx status code
-func (o *CreateRepository29MethodNotAllowed) IsServerError() bool {
+func (o *CreateCondaProxyRepositoryMethodNotAllowed) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository29 method not allowed response a status code equal to that given
-func (o *CreateRepository29MethodNotAllowed) IsCode(code int) bool {
+func (o *CreateCondaProxyRepositoryMethodNotAllowed) IsCode(code int) bool {
 	return code == 405
 }
 
-func (o *CreateRepository29MethodNotAllowed) Error() string {
+func (o *CreateCondaProxyRepositoryMethodNotAllowed) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/conda/proxy][%d] createRepository29MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository29MethodNotAllowed) String() string {
+func (o *CreateCondaProxyRepositoryMethodNotAllowed) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/conda/proxy][%d] createRepository29MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository29MethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateCondaProxyRepositoryMethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

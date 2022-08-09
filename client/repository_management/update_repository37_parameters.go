@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository37Params creates a new UpdateRepository37Params object,
+// NewUpdateP2ProxyRepositoryParams creates a new UpdateP2ProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository37Params() *UpdateRepository37Params {
-	return &UpdateRepository37Params{
+func NewUpdateP2ProxyRepositoryParams() *UpdateP2ProxyRepositoryParams {
+	return &UpdateP2ProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository37ParamsWithTimeout creates a new UpdateRepository37Params object
+// NewUpdateP2ProxyRepositoryParamsWithTimeout creates a new UpdateP2ProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository37ParamsWithTimeout(timeout time.Duration) *UpdateRepository37Params {
-	return &UpdateRepository37Params{
+func NewUpdateP2ProxyRepositoryParamsWithTimeout(timeout time.Duration) *UpdateP2ProxyRepositoryParams {
+	return &UpdateP2ProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository37ParamsWithContext creates a new UpdateRepository37Params object
+// NewUpdateP2ProxyRepositoryParamsWithContext creates a new UpdateP2ProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository37ParamsWithContext(ctx context.Context) *UpdateRepository37Params {
-	return &UpdateRepository37Params{
+func NewUpdateP2ProxyRepositoryParamsWithContext(ctx context.Context) *UpdateP2ProxyRepositoryParams {
+	return &UpdateP2ProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository37ParamsWithHTTPClient creates a new UpdateRepository37Params object
+// NewUpdateP2ProxyRepositoryParamsWithHTTPClient creates a new UpdateP2ProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository37ParamsWithHTTPClient(client *http.Client) *UpdateRepository37Params {
-	return &UpdateRepository37Params{
+func NewUpdateP2ProxyRepositoryParamsWithHTTPClient(client *http.Client) *UpdateP2ProxyRepositoryParams {
+	return &UpdateP2ProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository37Params contains all the parameters to send to the API endpoint
-   for the update repository 37 operation.
+/*
+UpdateP2ProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 37 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository37Params struct {
+type UpdateP2ProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.P2ProxyRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository37Params struct {
 // WithDefaults hydrates default values in the update repository 37 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository37Params) WithDefaults() *UpdateRepository37Params {
+func (o *UpdateP2ProxyRepositoryParams) WithDefaults() *UpdateP2ProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository37Params) WithDefaults() *UpdateRepository37Params {
 // SetDefaults hydrates default values in the update repository 37 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository37Params) SetDefaults() {
+func (o *UpdateP2ProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 37 params
-func (o *UpdateRepository37Params) WithTimeout(timeout time.Duration) *UpdateRepository37Params {
+func (o *UpdateP2ProxyRepositoryParams) WithTimeout(timeout time.Duration) *UpdateP2ProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 37 params
-func (o *UpdateRepository37Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateP2ProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 37 params
-func (o *UpdateRepository37Params) WithContext(ctx context.Context) *UpdateRepository37Params {
+func (o *UpdateP2ProxyRepositoryParams) WithContext(ctx context.Context) *UpdateP2ProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 37 params
-func (o *UpdateRepository37Params) SetContext(ctx context.Context) {
+func (o *UpdateP2ProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 37 params
-func (o *UpdateRepository37Params) WithHTTPClient(client *http.Client) *UpdateRepository37Params {
+func (o *UpdateP2ProxyRepositoryParams) WithHTTPClient(client *http.Client) *UpdateP2ProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 37 params
-func (o *UpdateRepository37Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateP2ProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 37 params
-func (o *UpdateRepository37Params) WithBody(body *models.P2ProxyRepositoryAPIRequest) *UpdateRepository37Params {
+func (o *UpdateP2ProxyRepositoryParams) WithBody(body *models.P2ProxyRepositoryAPIRequest) *UpdateP2ProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 37 params
-func (o *UpdateRepository37Params) SetBody(body *models.P2ProxyRepositoryAPIRequest) {
+func (o *UpdateP2ProxyRepositoryParams) SetBody(body *models.P2ProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 37 params
-func (o *UpdateRepository37Params) WithRepositoryName(repositoryName string) *UpdateRepository37Params {
+func (o *UpdateP2ProxyRepositoryParams) WithRepositoryName(repositoryName string) *UpdateP2ProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 37 params
-func (o *UpdateRepository37Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateP2ProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository37Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateP2ProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository13Reader is a Reader for the CreateRepository13 structure.
-type CreateRepository13Reader struct {
+// CreateNugetProxyRepositoryReader is a Reader for the CreateNugetProxyRepository structure.
+type CreateNugetProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository13Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateNugetProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository13Created()
+		result := NewCreateNugetProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository13Unauthorized()
+		result := NewCreateNugetProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository13Forbidden()
+		result := NewCreateNugetProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository13Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository13Created creates a CreateRepository13Created with default headers values
-func NewCreateRepository13Created() *CreateRepository13Created {
-	return &CreateRepository13Created{}
+// NewCreateNugetProxyRepositoryCreated creates a CreateNugetProxyRepositoryCreated with default headers values
+func NewCreateNugetProxyRepositoryCreated() *CreateNugetProxyRepositoryCreated {
+	return &CreateNugetProxyRepositoryCreated{}
 }
 
-/* CreateRepository13Created describes a response with status code 201, with default header values.
+/*
+	CreateNugetProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository13Created struct {
+type CreateNugetProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository13 created response has a 2xx status code
-func (o *CreateRepository13Created) IsSuccess() bool {
+func (o *CreateNugetProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository13 created response has a 3xx status code
-func (o *CreateRepository13Created) IsRedirect() bool {
+func (o *CreateNugetProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository13 created response has a 4xx status code
-func (o *CreateRepository13Created) IsClientError() bool {
+func (o *CreateNugetProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository13 created response has a 5xx status code
-func (o *CreateRepository13Created) IsServerError() bool {
+func (o *CreateNugetProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository13 created response a status code equal to that given
-func (o *CreateRepository13Created) IsCode(code int) bool {
+func (o *CreateNugetProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository13Created) Error() string {
+func (o *CreateNugetProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/proxy][%d] createRepository13Created ", 201)
 }
 
-func (o *CreateRepository13Created) String() string {
+func (o *CreateNugetProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/proxy][%d] createRepository13Created ", 201)
 }
 
-func (o *CreateRepository13Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNugetProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository13Unauthorized creates a CreateRepository13Unauthorized with default headers values
-func NewCreateRepository13Unauthorized() *CreateRepository13Unauthorized {
-	return &CreateRepository13Unauthorized{}
+// NewCreateNugetProxyRepositoryUnauthorized creates a CreateNugetProxyRepositoryUnauthorized with default headers values
+func NewCreateNugetProxyRepositoryUnauthorized() *CreateNugetProxyRepositoryUnauthorized {
+	return &CreateNugetProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository13Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateNugetProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository13Unauthorized struct {
+type CreateNugetProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository13 unauthorized response has a 2xx status code
-func (o *CreateRepository13Unauthorized) IsSuccess() bool {
+func (o *CreateNugetProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository13 unauthorized response has a 3xx status code
-func (o *CreateRepository13Unauthorized) IsRedirect() bool {
+func (o *CreateNugetProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository13 unauthorized response has a 4xx status code
-func (o *CreateRepository13Unauthorized) IsClientError() bool {
+func (o *CreateNugetProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository13 unauthorized response has a 5xx status code
-func (o *CreateRepository13Unauthorized) IsServerError() bool {
+func (o *CreateNugetProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository13 unauthorized response a status code equal to that given
-func (o *CreateRepository13Unauthorized) IsCode(code int) bool {
+func (o *CreateNugetProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository13Unauthorized) Error() string {
+func (o *CreateNugetProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/proxy][%d] createRepository13Unauthorized ", 401)
 }
 
-func (o *CreateRepository13Unauthorized) String() string {
+func (o *CreateNugetProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/proxy][%d] createRepository13Unauthorized ", 401)
 }
 
-func (o *CreateRepository13Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNugetProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository13Forbidden creates a CreateRepository13Forbidden with default headers values
-func NewCreateRepository13Forbidden() *CreateRepository13Forbidden {
-	return &CreateRepository13Forbidden{}
+// NewCreateNugetProxyRepositoryForbidden creates a CreateNugetProxyRepositoryForbidden with default headers values
+func NewCreateNugetProxyRepositoryForbidden() *CreateNugetProxyRepositoryForbidden {
+	return &CreateNugetProxyRepositoryForbidden{}
 }
 
-/* CreateRepository13Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateNugetProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository13Forbidden struct {
+type CreateNugetProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository13 forbidden response has a 2xx status code
-func (o *CreateRepository13Forbidden) IsSuccess() bool {
+func (o *CreateNugetProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository13 forbidden response has a 3xx status code
-func (o *CreateRepository13Forbidden) IsRedirect() bool {
+func (o *CreateNugetProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository13 forbidden response has a 4xx status code
-func (o *CreateRepository13Forbidden) IsClientError() bool {
+func (o *CreateNugetProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository13 forbidden response has a 5xx status code
-func (o *CreateRepository13Forbidden) IsServerError() bool {
+func (o *CreateNugetProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository13 forbidden response a status code equal to that given
-func (o *CreateRepository13Forbidden) IsCode(code int) bool {
+func (o *CreateNugetProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository13Forbidden) Error() string {
+func (o *CreateNugetProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/proxy][%d] createRepository13Forbidden ", 403)
 }
 
-func (o *CreateRepository13Forbidden) String() string {
+func (o *CreateNugetProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/proxy][%d] createRepository13Forbidden ", 403)
 }
 
-func (o *CreateRepository13Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNugetProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

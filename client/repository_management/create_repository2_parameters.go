@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository2Params creates a new CreateRepository2Params object,
+// NewCreateMavenProxyRepositoryParams creates a new CreateMavenProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository2Params() *CreateRepository2Params {
-	return &CreateRepository2Params{
+func NewCreateMavenProxyRepositoryParams() *CreateMavenProxyRepositoryParams {
+	return &CreateMavenProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository2ParamsWithTimeout creates a new CreateRepository2Params object
+// NewCreateMavenProxyRepositoryParamsWithTimeout creates a new CreateMavenProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository2ParamsWithTimeout(timeout time.Duration) *CreateRepository2Params {
-	return &CreateRepository2Params{
+func NewCreateMavenProxyRepositoryParamsWithTimeout(timeout time.Duration) *CreateMavenProxyRepositoryParams {
+	return &CreateMavenProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository2ParamsWithContext creates a new CreateRepository2Params object
+// NewCreateMavenProxyRepositoryParamsWithContext creates a new CreateMavenProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository2ParamsWithContext(ctx context.Context) *CreateRepository2Params {
-	return &CreateRepository2Params{
+func NewCreateMavenProxyRepositoryParamsWithContext(ctx context.Context) *CreateMavenProxyRepositoryParams {
+	return &CreateMavenProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository2ParamsWithHTTPClient creates a new CreateRepository2Params object
+// NewCreateMavenProxyRepositoryParamsWithHTTPClient creates a new CreateMavenProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository2ParamsWithHTTPClient(client *http.Client) *CreateRepository2Params {
-	return &CreateRepository2Params{
+func NewCreateMavenProxyRepositoryParamsWithHTTPClient(client *http.Client) *CreateMavenProxyRepositoryParams {
+	return &CreateMavenProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository2Params contains all the parameters to send to the API endpoint
-   for the create repository 2 operation.
+/*
+CreateMavenProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 2 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository2Params struct {
+type CreateMavenProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.MavenProxyRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository2Params struct {
 // WithDefaults hydrates default values in the create repository 2 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository2Params) WithDefaults() *CreateRepository2Params {
+func (o *CreateMavenProxyRepositoryParams) WithDefaults() *CreateMavenProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository2Params) WithDefaults() *CreateRepository2Params {
 // SetDefaults hydrates default values in the create repository 2 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository2Params) SetDefaults() {
+func (o *CreateMavenProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 2 params
-func (o *CreateRepository2Params) WithTimeout(timeout time.Duration) *CreateRepository2Params {
+func (o *CreateMavenProxyRepositoryParams) WithTimeout(timeout time.Duration) *CreateMavenProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 2 params
-func (o *CreateRepository2Params) SetTimeout(timeout time.Duration) {
+func (o *CreateMavenProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 2 params
-func (o *CreateRepository2Params) WithContext(ctx context.Context) *CreateRepository2Params {
+func (o *CreateMavenProxyRepositoryParams) WithContext(ctx context.Context) *CreateMavenProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 2 params
-func (o *CreateRepository2Params) SetContext(ctx context.Context) {
+func (o *CreateMavenProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 2 params
-func (o *CreateRepository2Params) WithHTTPClient(client *http.Client) *CreateRepository2Params {
+func (o *CreateMavenProxyRepositoryParams) WithHTTPClient(client *http.Client) *CreateMavenProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 2 params
-func (o *CreateRepository2Params) SetHTTPClient(client *http.Client) {
+func (o *CreateMavenProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 2 params
-func (o *CreateRepository2Params) WithBody(body *models.MavenProxyRepositoryAPIRequest) *CreateRepository2Params {
+func (o *CreateMavenProxyRepositoryParams) WithBody(body *models.MavenProxyRepositoryAPIRequest) *CreateMavenProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 2 params
-func (o *CreateRepository2Params) SetBody(body *models.MavenProxyRepositoryAPIRequest) {
+func (o *CreateMavenProxyRepositoryParams) SetBody(body *models.MavenProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository2Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateMavenProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

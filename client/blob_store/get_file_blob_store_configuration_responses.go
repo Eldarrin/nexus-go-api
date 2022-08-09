@@ -51,7 +51,8 @@ func NewGetFileBlobStoreConfigurationOK() *GetFileBlobStoreConfigurationOK {
 	return &GetFileBlobStoreConfigurationOK{}
 }
 
-/* GetFileBlobStoreConfigurationOK describes a response with status code 200, with default header values.
+/*
+	GetFileBlobStoreConfigurationOK describes a response with status code 200, with default header values.
 
 Success
 */
@@ -113,7 +114,8 @@ func NewGetFileBlobStoreConfigurationForbidden() *GetFileBlobStoreConfigurationF
 	return &GetFileBlobStoreConfigurationForbidden{}
 }
 
-/* GetFileBlobStoreConfigurationForbidden describes a response with status code 403, with default header values.
+/*
+	GetFileBlobStoreConfigurationForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
@@ -163,7 +165,8 @@ func NewGetFileBlobStoreConfigurationNotFound() *GetFileBlobStoreConfigurationNo
 	return &GetFileBlobStoreConfigurationNotFound{}
 }
 
-/* GetFileBlobStoreConfigurationNotFound describes a response with status code 404, with default header values.
+/*
+	GetFileBlobStoreConfigurationNotFound describes a response with status code 404, with default header values.
 
 Blob store not found
 */

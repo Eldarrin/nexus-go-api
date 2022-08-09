@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository11Reader is a Reader for the GetRepository11 structure.
-type GetRepository11Reader struct {
+// GetNpmProxyRepositoryReader is a Reader for the GetNpmProxyRepository structure.
+type GetNpmProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository11Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetNpmProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository11OK()
+		result := NewGetNpmProxyRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository11Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository11OK creates a GetRepository11OK with default headers values
-func NewGetRepository11OK() *GetRepository11OK {
-	return &GetRepository11OK{}
+// NewGetNpmProxyRepositoryOK creates a GetNpmProxyRepositoryOK with default headers values
+func NewGetNpmProxyRepositoryOK() *GetNpmProxyRepositoryOK {
+	return &GetNpmProxyRepositoryOK{}
 }
 
-/* GetRepository11OK describes a response with status code 200, with default header values.
+/*
+	GetNpmProxyRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository11OK struct {
+type GetNpmProxyRepositoryOK struct {
 	Payload *models.NpmProxyAPIRepository
 }
 
 // IsSuccess returns true when this get repository11 o k response has a 2xx status code
-func (o *GetRepository11OK) IsSuccess() bool {
+func (o *GetNpmProxyRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository11 o k response has a 3xx status code
-func (o *GetRepository11OK) IsRedirect() bool {
+func (o *GetNpmProxyRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository11 o k response has a 4xx status code
-func (o *GetRepository11OK) IsClientError() bool {
+func (o *GetNpmProxyRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository11 o k response has a 5xx status code
-func (o *GetRepository11OK) IsServerError() bool {
+func (o *GetNpmProxyRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository11 o k response a status code equal to that given
-func (o *GetRepository11OK) IsCode(code int) bool {
+func (o *GetNpmProxyRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository11OK) Error() string {
+func (o *GetNpmProxyRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/npm/proxy/{repositoryName}][%d] getRepository11OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository11OK) String() string {
+func (o *GetNpmProxyRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/npm/proxy/{repositoryName}][%d] getRepository11OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository11OK) GetPayload() *models.NpmProxyAPIRepository {
+func (o *GetNpmProxyRepositoryOK) GetPayload() *models.NpmProxyAPIRepository {
 	return o.Payload
 }
 
-func (o *GetRepository11OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetNpmProxyRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.NpmProxyAPIRepository)
 

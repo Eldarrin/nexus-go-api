@@ -51,7 +51,8 @@ func NewGetUsersOK() *GetUsersOK {
 	return &GetUsersOK{}
 }
 
-/* GetUsersOK describes a response with status code 200, with default header values.
+/*
+	GetUsersOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -111,7 +112,8 @@ func NewGetUsersBadRequest() *GetUsersBadRequest {
 	return &GetUsersBadRequest{}
 }
 
-/* GetUsersBadRequest describes a response with status code 400, with default header values.
+/*
+	GetUsersBadRequest describes a response with status code 400, with default header values.
 
 Password was not supplied in the body of the request
 */
@@ -161,7 +163,8 @@ func NewGetUsersForbidden() *GetUsersForbidden {
 	return &GetUsersForbidden{}
 }
 
-/* GetUsersForbidden describes a response with status code 403, with default header values.
+/*
+	GetUsersForbidden describes a response with status code 403, with default header values.
 
 The user does not have permission to perform the operation.
 */

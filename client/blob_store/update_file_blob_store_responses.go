@@ -48,7 +48,8 @@ func NewUpdateFileBlobStoreNoContent() *UpdateFileBlobStoreNoContent {
 	return &UpdateFileBlobStoreNoContent{}
 }
 
-/* UpdateFileBlobStoreNoContent describes a response with status code 204, with default header values.
+/*
+	UpdateFileBlobStoreNoContent describes a response with status code 204, with default header values.
 
 Success
 */
@@ -98,7 +99,8 @@ func NewUpdateFileBlobStoreForbidden() *UpdateFileBlobStoreForbidden {
 	return &UpdateFileBlobStoreForbidden{}
 }
 
-/* UpdateFileBlobStoreForbidden describes a response with status code 403, with default header values.
+/*
+	UpdateFileBlobStoreForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
@@ -148,7 +150,8 @@ func NewUpdateFileBlobStoreNotFound() *UpdateFileBlobStoreNotFound {
 	return &UpdateFileBlobStoreNotFound{}
 }
 
-/* UpdateFileBlobStoreNotFound describes a response with status code 404, with default header values.
+/*
+	UpdateFileBlobStoreNotFound describes a response with status code 404, with default header values.
 
 Blob store not found
 */

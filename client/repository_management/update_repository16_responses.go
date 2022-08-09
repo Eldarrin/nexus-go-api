@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository16Reader is a Reader for the UpdateRepository16 structure.
-type UpdateRepository16Reader struct {
+// UpdateRubyGemsProxyRepositoryReader is a Reader for the UpdateRubyGemsProxyRepository structure.
+type UpdateRubyGemsProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository16Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateRubyGemsProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository16NoContent()
+		result := NewUpdateRubyGemsProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository16Unauthorized()
+		result := NewUpdateRubyGemsProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository16Forbidden()
+		result := NewUpdateRubyGemsProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository16Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository16NoContent creates a UpdateRepository16NoContent with default headers values
-func NewUpdateRepository16NoContent() *UpdateRepository16NoContent {
-	return &UpdateRepository16NoContent{}
+// NewUpdateRubyGemsProxyRepositoryNoContent creates a UpdateRubyGemsProxyRepositoryNoContent with default headers values
+func NewUpdateRubyGemsProxyRepositoryNoContent() *UpdateRubyGemsProxyRepositoryNoContent {
+	return &UpdateRubyGemsProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository16NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateRubyGemsProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository16NoContent struct {
+type UpdateRubyGemsProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository16 no content response has a 2xx status code
-func (o *UpdateRepository16NoContent) IsSuccess() bool {
+func (o *UpdateRubyGemsProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository16 no content response has a 3xx status code
-func (o *UpdateRepository16NoContent) IsRedirect() bool {
+func (o *UpdateRubyGemsProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository16 no content response has a 4xx status code
-func (o *UpdateRepository16NoContent) IsClientError() bool {
+func (o *UpdateRubyGemsProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository16 no content response has a 5xx status code
-func (o *UpdateRepository16NoContent) IsServerError() bool {
+func (o *UpdateRubyGemsProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository16 no content response a status code equal to that given
-func (o *UpdateRepository16NoContent) IsCode(code int) bool {
+func (o *UpdateRubyGemsProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository16NoContent) Error() string {
+func (o *UpdateRubyGemsProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/proxy/{repositoryName}][%d] updateRepository16NoContent ", 204)
 }
 
-func (o *UpdateRepository16NoContent) String() string {
+func (o *UpdateRubyGemsProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/proxy/{repositoryName}][%d] updateRepository16NoContent ", 204)
 }
 
-func (o *UpdateRepository16NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRubyGemsProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository16Unauthorized creates a UpdateRepository16Unauthorized with default headers values
-func NewUpdateRepository16Unauthorized() *UpdateRepository16Unauthorized {
-	return &UpdateRepository16Unauthorized{}
+// NewUpdateRubyGemsProxyRepositoryUnauthorized creates a UpdateRubyGemsProxyRepositoryUnauthorized with default headers values
+func NewUpdateRubyGemsProxyRepositoryUnauthorized() *UpdateRubyGemsProxyRepositoryUnauthorized {
+	return &UpdateRubyGemsProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository16Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateRubyGemsProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository16Unauthorized struct {
+type UpdateRubyGemsProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository16 unauthorized response has a 2xx status code
-func (o *UpdateRepository16Unauthorized) IsSuccess() bool {
+func (o *UpdateRubyGemsProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository16 unauthorized response has a 3xx status code
-func (o *UpdateRepository16Unauthorized) IsRedirect() bool {
+func (o *UpdateRubyGemsProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository16 unauthorized response has a 4xx status code
-func (o *UpdateRepository16Unauthorized) IsClientError() bool {
+func (o *UpdateRubyGemsProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository16 unauthorized response has a 5xx status code
-func (o *UpdateRepository16Unauthorized) IsServerError() bool {
+func (o *UpdateRubyGemsProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository16 unauthorized response a status code equal to that given
-func (o *UpdateRepository16Unauthorized) IsCode(code int) bool {
+func (o *UpdateRubyGemsProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository16Unauthorized) Error() string {
+func (o *UpdateRubyGemsProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/proxy/{repositoryName}][%d] updateRepository16Unauthorized ", 401)
 }
 
-func (o *UpdateRepository16Unauthorized) String() string {
+func (o *UpdateRubyGemsProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/proxy/{repositoryName}][%d] updateRepository16Unauthorized ", 401)
 }
 
-func (o *UpdateRepository16Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRubyGemsProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository16Forbidden creates a UpdateRepository16Forbidden with default headers values
-func NewUpdateRepository16Forbidden() *UpdateRepository16Forbidden {
-	return &UpdateRepository16Forbidden{}
+// NewUpdateRubyGemsProxyRepositoryForbidden creates a UpdateRubyGemsProxyRepositoryForbidden with default headers values
+func NewUpdateRubyGemsProxyRepositoryForbidden() *UpdateRubyGemsProxyRepositoryForbidden {
+	return &UpdateRubyGemsProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository16Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateRubyGemsProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository16Forbidden struct {
+type UpdateRubyGemsProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository16 forbidden response has a 2xx status code
-func (o *UpdateRepository16Forbidden) IsSuccess() bool {
+func (o *UpdateRubyGemsProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository16 forbidden response has a 3xx status code
-func (o *UpdateRepository16Forbidden) IsRedirect() bool {
+func (o *UpdateRubyGemsProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository16 forbidden response has a 4xx status code
-func (o *UpdateRepository16Forbidden) IsClientError() bool {
+func (o *UpdateRubyGemsProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository16 forbidden response has a 5xx status code
-func (o *UpdateRepository16Forbidden) IsServerError() bool {
+func (o *UpdateRubyGemsProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository16 forbidden response a status code equal to that given
-func (o *UpdateRepository16Forbidden) IsCode(code int) bool {
+func (o *UpdateRubyGemsProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository16Forbidden) Error() string {
+func (o *UpdateRubyGemsProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/proxy/{repositoryName}][%d] updateRepository16Forbidden ", 403)
 }
 
-func (o *UpdateRepository16Forbidden) String() string {
+func (o *UpdateRubyGemsProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/rubygems/proxy/{repositoryName}][%d] updateRepository16Forbidden ", 403)
 }
 
-func (o *UpdateRepository16Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateRubyGemsProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

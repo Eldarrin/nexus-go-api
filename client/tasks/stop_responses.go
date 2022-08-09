@@ -48,7 +48,8 @@ func NewStopNoContent() *StopNoContent {
 	return &StopNoContent{}
 }
 
-/* StopNoContent describes a response with status code 204, with default header values.
+/*
+	StopNoContent describes a response with status code 204, with default header values.
 
 Task was stopped
 */
@@ -98,7 +99,8 @@ func NewStopNotFound() *StopNotFound {
 	return &StopNotFound{}
 }
 
-/* StopNotFound describes a response with status code 404, with default header values.
+/*
+	StopNotFound describes a response with status code 404, with default header values.
 
 Task not found
 */
@@ -148,7 +150,8 @@ func NewStopConflict() *StopConflict {
 	return &StopConflict{}
 }
 
-/* StopConflict describes a response with status code 409, with default header values.
+/*
+	StopConflict describes a response with status code 409, with default header values.
 
 Unable to stop task
 */

@@ -48,7 +48,8 @@ func NewChangePasswordBadRequest() *ChangePasswordBadRequest {
 	return &ChangePasswordBadRequest{}
 }
 
-/* ChangePasswordBadRequest describes a response with status code 400, with default header values.
+/*
+	ChangePasswordBadRequest describes a response with status code 400, with default header values.
 
 Password was not supplied in the body of the request
 */
@@ -98,7 +99,8 @@ func NewChangePasswordForbidden() *ChangePasswordForbidden {
 	return &ChangePasswordForbidden{}
 }
 
-/* ChangePasswordForbidden describes a response with status code 403, with default header values.
+/*
+	ChangePasswordForbidden describes a response with status code 403, with default header values.
 
 The user does not have permission to perform the operation.
 */
@@ -148,7 +150,8 @@ func NewChangePasswordNotFound() *ChangePasswordNotFound {
 	return &ChangePasswordNotFound{}
 }
 
-/* ChangePasswordNotFound describes a response with status code 404, with default header values.
+/*
+	ChangePasswordNotFound describes a response with status code 404, with default header values.
 
 User not found in the system.
 */

@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository15Reader is a Reader for the GetRepository15 structure.
-type GetRepository15Reader struct {
+// GetRubyGemsGroupRepositoryReader is a Reader for the GetRubyGemsGroupRepository structure.
+type GetRubyGemsGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository15Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetRubyGemsGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository15OK()
+		result := NewGetRubyGemsGroupRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository15Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository15OK creates a GetRepository15OK with default headers values
-func NewGetRepository15OK() *GetRepository15OK {
-	return &GetRepository15OK{}
+// NewGetRubyGemsGroupRepositoryOK creates a GetRubyGemsGroupRepositoryOK with default headers values
+func NewGetRubyGemsGroupRepositoryOK() *GetRubyGemsGroupRepositoryOK {
+	return &GetRubyGemsGroupRepositoryOK{}
 }
 
-/* GetRepository15OK describes a response with status code 200, with default header values.
+/*
+	GetRubyGemsGroupRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository15OK struct {
+type GetRubyGemsGroupRepositoryOK struct {
 	Payload *models.SimpleAPIGroupRepository
 }
 
 // IsSuccess returns true when this get repository15 o k response has a 2xx status code
-func (o *GetRepository15OK) IsSuccess() bool {
+func (o *GetRubyGemsGroupRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository15 o k response has a 3xx status code
-func (o *GetRepository15OK) IsRedirect() bool {
+func (o *GetRubyGemsGroupRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository15 o k response has a 4xx status code
-func (o *GetRepository15OK) IsClientError() bool {
+func (o *GetRubyGemsGroupRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository15 o k response has a 5xx status code
-func (o *GetRepository15OK) IsServerError() bool {
+func (o *GetRubyGemsGroupRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository15 o k response a status code equal to that given
-func (o *GetRepository15OK) IsCode(code int) bool {
+func (o *GetRubyGemsGroupRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository15OK) Error() string {
+func (o *GetRubyGemsGroupRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/rubygems/group/{repositoryName}][%d] getRepository15OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository15OK) String() string {
+func (o *GetRubyGemsGroupRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/rubygems/group/{repositoryName}][%d] getRepository15OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository15OK) GetPayload() *models.SimpleAPIGroupRepository {
+func (o *GetRubyGemsGroupRepositoryOK) GetPayload() *models.SimpleAPIGroupRepository {
 	return o.Payload
 }
 
-func (o *GetRepository15OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetRubyGemsGroupRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIGroupRepository)
 

@@ -48,7 +48,8 @@ func NewCreateBlobStoreCreated() *CreateBlobStoreCreated {
 	return &CreateBlobStoreCreated{}
 }
 
-/* CreateBlobStoreCreated describes a response with status code 201, with default header values.
+/*
+	CreateBlobStoreCreated describes a response with status code 201, with default header values.
 
 S3 blob store created
 */
@@ -98,7 +99,8 @@ func NewCreateBlobStoreUnauthorized() *CreateBlobStoreUnauthorized {
 	return &CreateBlobStoreUnauthorized{}
 }
 
-/* CreateBlobStoreUnauthorized describes a response with status code 401, with default header values.
+/*
+	CreateBlobStoreUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -148,7 +150,8 @@ func NewCreateBlobStoreForbidden() *CreateBlobStoreForbidden {
 	return &CreateBlobStoreForbidden{}
 }
 
-/* CreateBlobStoreForbidden describes a response with status code 403, with default header values.
+/*
+	CreateBlobStoreForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

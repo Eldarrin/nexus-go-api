@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository7Params creates a new UpdateRepository7Params object,
+// NewUpdateRawProxyRepositoryParams creates a new UpdateRawProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository7Params() *UpdateRepository7Params {
-	return &UpdateRepository7Params{
+func NewUpdateRawProxyRepositoryParams() *UpdateRawProxyRepositoryParams {
+	return &UpdateRawProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository7ParamsWithTimeout creates a new UpdateRepository7Params object
+// NewUpdateRawProxyRepositoryParamsWithTimeout creates a new UpdateRawProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository7ParamsWithTimeout(timeout time.Duration) *UpdateRepository7Params {
-	return &UpdateRepository7Params{
+func NewUpdateRawProxyRepositoryParamsWithTimeout(timeout time.Duration) *UpdateRawProxyRepositoryParams {
+	return &UpdateRawProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository7ParamsWithContext creates a new UpdateRepository7Params object
+// NewUpdateRawProxyRepositoryParamsWithContext creates a new UpdateRawProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository7ParamsWithContext(ctx context.Context) *UpdateRepository7Params {
-	return &UpdateRepository7Params{
+func NewUpdateRawProxyRepositoryParamsWithContext(ctx context.Context) *UpdateRawProxyRepositoryParams {
+	return &UpdateRawProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository7ParamsWithHTTPClient creates a new UpdateRepository7Params object
+// NewUpdateRawProxyRepositoryParamsWithHTTPClient creates a new UpdateRawProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository7ParamsWithHTTPClient(client *http.Client) *UpdateRepository7Params {
-	return &UpdateRepository7Params{
+func NewUpdateRawProxyRepositoryParamsWithHTTPClient(client *http.Client) *UpdateRawProxyRepositoryParams {
+	return &UpdateRawProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository7Params contains all the parameters to send to the API endpoint
-   for the update repository 7 operation.
+/*
+UpdateRawProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 7 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository7Params struct {
+type UpdateRawProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.RawProxyRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository7Params struct {
 // WithDefaults hydrates default values in the update repository 7 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository7Params) WithDefaults() *UpdateRepository7Params {
+func (o *UpdateRawProxyRepositoryParams) WithDefaults() *UpdateRawProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository7Params) WithDefaults() *UpdateRepository7Params {
 // SetDefaults hydrates default values in the update repository 7 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository7Params) SetDefaults() {
+func (o *UpdateRawProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 7 params
-func (o *UpdateRepository7Params) WithTimeout(timeout time.Duration) *UpdateRepository7Params {
+func (o *UpdateRawProxyRepositoryParams) WithTimeout(timeout time.Duration) *UpdateRawProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 7 params
-func (o *UpdateRepository7Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateRawProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 7 params
-func (o *UpdateRepository7Params) WithContext(ctx context.Context) *UpdateRepository7Params {
+func (o *UpdateRawProxyRepositoryParams) WithContext(ctx context.Context) *UpdateRawProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 7 params
-func (o *UpdateRepository7Params) SetContext(ctx context.Context) {
+func (o *UpdateRawProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 7 params
-func (o *UpdateRepository7Params) WithHTTPClient(client *http.Client) *UpdateRepository7Params {
+func (o *UpdateRawProxyRepositoryParams) WithHTTPClient(client *http.Client) *UpdateRawProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 7 params
-func (o *UpdateRepository7Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateRawProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 7 params
-func (o *UpdateRepository7Params) WithBody(body *models.RawProxyRepositoryAPIRequest) *UpdateRepository7Params {
+func (o *UpdateRawProxyRepositoryParams) WithBody(body *models.RawProxyRepositoryAPIRequest) *UpdateRawProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 7 params
-func (o *UpdateRepository7Params) SetBody(body *models.RawProxyRepositoryAPIRequest) {
+func (o *UpdateRawProxyRepositoryParams) SetBody(body *models.RawProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 7 params
-func (o *UpdateRepository7Params) WithRepositoryName(repositoryName string) *UpdateRepository7Params {
+func (o *UpdateRawProxyRepositoryParams) WithRepositoryName(repositoryName string) *UpdateRawProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 7 params
-func (o *UpdateRepository7Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateRawProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository7Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateRawProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

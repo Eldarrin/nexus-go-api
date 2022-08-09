@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository7Reader is a Reader for the GetRepository7 structure.
-type GetRepository7Reader struct {
+// GetRawHostedRepositoryReader is a Reader for the GetRawHostedRepository structure.
+type GetRawHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository7Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetRawHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository7OK()
+		result := NewGetRawHostedRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository7Reader) ReadResponse(response runtime.ClientResponse, con
 	}
 }
 
-// NewGetRepository7OK creates a GetRepository7OK with default headers values
-func NewGetRepository7OK() *GetRepository7OK {
-	return &GetRepository7OK{}
+// NewGetRawHostedRepositoryOK creates a GetRawHostedRepositoryOK with default headers values
+func NewGetRawHostedRepositoryOK() *GetRawHostedRepositoryOK {
+	return &GetRawHostedRepositoryOK{}
 }
 
-/* GetRepository7OK describes a response with status code 200, with default header values.
+/*
+	GetRawHostedRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository7OK struct {
+type GetRawHostedRepositoryOK struct {
 	Payload *models.SimpleAPIHostedRepository
 }
 
 // IsSuccess returns true when this get repository7 o k response has a 2xx status code
-func (o *GetRepository7OK) IsSuccess() bool {
+func (o *GetRawHostedRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository7 o k response has a 3xx status code
-func (o *GetRepository7OK) IsRedirect() bool {
+func (o *GetRawHostedRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository7 o k response has a 4xx status code
-func (o *GetRepository7OK) IsClientError() bool {
+func (o *GetRawHostedRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository7 o k response has a 5xx status code
-func (o *GetRepository7OK) IsServerError() bool {
+func (o *GetRawHostedRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository7 o k response a status code equal to that given
-func (o *GetRepository7OK) IsCode(code int) bool {
+func (o *GetRawHostedRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository7OK) Error() string {
+func (o *GetRawHostedRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/raw/hosted/{repositoryName}][%d] getRepository7OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository7OK) String() string {
+func (o *GetRawHostedRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/raw/hosted/{repositoryName}][%d] getRepository7OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository7OK) GetPayload() *models.SimpleAPIHostedRepository {
+func (o *GetRawHostedRepositoryOK) GetPayload() *models.SimpleAPIHostedRepository {
 	return o.Payload
 }
 
-func (o *GetRepository7OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetRawHostedRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIHostedRepository)
 

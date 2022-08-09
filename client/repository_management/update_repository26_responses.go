@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository26Reader is a Reader for the UpdateRepository26 structure.
-type UpdateRepository26Reader struct {
+// UpdatePypiGroupRepositoryReader is a Reader for the UpdatePypiGroupRepository structure.
+type UpdatePypiGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository26Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdatePypiGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository26NoContent()
+		result := NewUpdatePypiGroupRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository26Unauthorized()
+		result := NewUpdatePypiGroupRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository26Forbidden()
+		result := NewUpdatePypiGroupRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository26Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository26NoContent creates a UpdateRepository26NoContent with default headers values
-func NewUpdateRepository26NoContent() *UpdateRepository26NoContent {
-	return &UpdateRepository26NoContent{}
+// NewUpdatePypiGroupRepositoryNoContent creates a UpdatePypiGroupRepositoryNoContent with default headers values
+func NewUpdatePypiGroupRepositoryNoContent() *UpdatePypiGroupRepositoryNoContent {
+	return &UpdatePypiGroupRepositoryNoContent{}
 }
 
-/* UpdateRepository26NoContent describes a response with status code 204, with default header values.
+/*
+	UpdatePypiGroupRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository26NoContent struct {
+type UpdatePypiGroupRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository26 no content response has a 2xx status code
-func (o *UpdateRepository26NoContent) IsSuccess() bool {
+func (o *UpdatePypiGroupRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository26 no content response has a 3xx status code
-func (o *UpdateRepository26NoContent) IsRedirect() bool {
+func (o *UpdatePypiGroupRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository26 no content response has a 4xx status code
-func (o *UpdateRepository26NoContent) IsClientError() bool {
+func (o *UpdatePypiGroupRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository26 no content response has a 5xx status code
-func (o *UpdateRepository26NoContent) IsServerError() bool {
+func (o *UpdatePypiGroupRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository26 no content response a status code equal to that given
-func (o *UpdateRepository26NoContent) IsCode(code int) bool {
+func (o *UpdatePypiGroupRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository26NoContent) Error() string {
+func (o *UpdatePypiGroupRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/group/{repositoryName}][%d] updateRepository26NoContent ", 204)
 }
 
-func (o *UpdateRepository26NoContent) String() string {
+func (o *UpdatePypiGroupRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/group/{repositoryName}][%d] updateRepository26NoContent ", 204)
 }
 
-func (o *UpdateRepository26NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdatePypiGroupRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository26Unauthorized creates a UpdateRepository26Unauthorized with default headers values
-func NewUpdateRepository26Unauthorized() *UpdateRepository26Unauthorized {
-	return &UpdateRepository26Unauthorized{}
+// NewUpdatePypiGroupRepositoryUnauthorized creates a UpdatePypiGroupRepositoryUnauthorized with default headers values
+func NewUpdatePypiGroupRepositoryUnauthorized() *UpdatePypiGroupRepositoryUnauthorized {
+	return &UpdatePypiGroupRepositoryUnauthorized{}
 }
 
-/* UpdateRepository26Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdatePypiGroupRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository26Unauthorized struct {
+type UpdatePypiGroupRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository26 unauthorized response has a 2xx status code
-func (o *UpdateRepository26Unauthorized) IsSuccess() bool {
+func (o *UpdatePypiGroupRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository26 unauthorized response has a 3xx status code
-func (o *UpdateRepository26Unauthorized) IsRedirect() bool {
+func (o *UpdatePypiGroupRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository26 unauthorized response has a 4xx status code
-func (o *UpdateRepository26Unauthorized) IsClientError() bool {
+func (o *UpdatePypiGroupRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository26 unauthorized response has a 5xx status code
-func (o *UpdateRepository26Unauthorized) IsServerError() bool {
+func (o *UpdatePypiGroupRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository26 unauthorized response a status code equal to that given
-func (o *UpdateRepository26Unauthorized) IsCode(code int) bool {
+func (o *UpdatePypiGroupRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository26Unauthorized) Error() string {
+func (o *UpdatePypiGroupRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/group/{repositoryName}][%d] updateRepository26Unauthorized ", 401)
 }
 
-func (o *UpdateRepository26Unauthorized) String() string {
+func (o *UpdatePypiGroupRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/group/{repositoryName}][%d] updateRepository26Unauthorized ", 401)
 }
 
-func (o *UpdateRepository26Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdatePypiGroupRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository26Forbidden creates a UpdateRepository26Forbidden with default headers values
-func NewUpdateRepository26Forbidden() *UpdateRepository26Forbidden {
-	return &UpdateRepository26Forbidden{}
+// NewUpdatePypiGroupRepositoryForbidden creates a UpdatePypiGroupRepositoryForbidden with default headers values
+func NewUpdatePypiGroupRepositoryForbidden() *UpdatePypiGroupRepositoryForbidden {
+	return &UpdatePypiGroupRepositoryForbidden{}
 }
 
-/* UpdateRepository26Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdatePypiGroupRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository26Forbidden struct {
+type UpdatePypiGroupRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository26 forbidden response has a 2xx status code
-func (o *UpdateRepository26Forbidden) IsSuccess() bool {
+func (o *UpdatePypiGroupRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository26 forbidden response has a 3xx status code
-func (o *UpdateRepository26Forbidden) IsRedirect() bool {
+func (o *UpdatePypiGroupRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository26 forbidden response has a 4xx status code
-func (o *UpdateRepository26Forbidden) IsClientError() bool {
+func (o *UpdatePypiGroupRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository26 forbidden response has a 5xx status code
-func (o *UpdateRepository26Forbidden) IsServerError() bool {
+func (o *UpdatePypiGroupRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository26 forbidden response a status code equal to that given
-func (o *UpdateRepository26Forbidden) IsCode(code int) bool {
+func (o *UpdatePypiGroupRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository26Forbidden) Error() string {
+func (o *UpdatePypiGroupRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/group/{repositoryName}][%d] updateRepository26Forbidden ", 403)
 }
 
-func (o *UpdateRepository26Forbidden) String() string {
+func (o *UpdatePypiGroupRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/group/{repositoryName}][%d] updateRepository26Forbidden ", 403)
 }
 
-func (o *UpdateRepository26Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdatePypiGroupRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

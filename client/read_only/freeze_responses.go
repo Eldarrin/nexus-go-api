@@ -48,7 +48,8 @@ func NewFreezeNoContent() *FreezeNoContent {
 	return &FreezeNoContent{}
 }
 
-/* FreezeNoContent describes a response with status code 204, with default header values.
+/*
+	FreezeNoContent describes a response with status code 204, with default header values.
 
 System is now read-only
 */
@@ -98,7 +99,8 @@ func NewFreezeForbidden() *FreezeForbidden {
 	return &FreezeForbidden{}
 }
 
-/* FreezeForbidden describes a response with status code 403, with default header values.
+/*
+	FreezeForbidden describes a response with status code 403, with default header values.
 
 Authentication required
 */
@@ -148,7 +150,8 @@ func NewFreezeNotFound() *FreezeNotFound {
 	return &FreezeNotFound{}
 }
 
-/* FreezeNotFound describes a response with status code 404, with default header values.
+/*
+	FreezeNotFound describes a response with status code 404, with default header values.
 
 No change to read-only state
 */

@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository37Params creates a new GetRepository37Params object,
+// NewGetGolangProxyRepositoryParams creates a new GetGolangProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository37Params() *GetRepository37Params {
-	return &GetRepository37Params{
+func NewGetGolangProxyRepositoryParams() *GetGolangProxyRepositoryParams {
+	return &GetGolangProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository37ParamsWithTimeout creates a new GetRepository37Params object
+// NewGetGolangProxyRepositoryParamsWithTimeout creates a new GetGolangProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository37ParamsWithTimeout(timeout time.Duration) *GetRepository37Params {
-	return &GetRepository37Params{
+func NewGetGolangProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetGolangProxyRepositoryParams {
+	return &GetGolangProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository37ParamsWithContext creates a new GetRepository37Params object
+// NewGetGolangProxyRepositoryParamsWithContext creates a new GetGolangProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository37ParamsWithContext(ctx context.Context) *GetRepository37Params {
-	return &GetRepository37Params{
+func NewGetGolangProxyRepositoryParamsWithContext(ctx context.Context) *GetGolangProxyRepositoryParams {
+	return &GetGolangProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository37ParamsWithHTTPClient creates a new GetRepository37Params object
+// NewGetGolangProxyRepositoryParamsWithHTTPClient creates a new GetGolangProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository37ParamsWithHTTPClient(client *http.Client) *GetRepository37Params {
-	return &GetRepository37Params{
+func NewGetGolangProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetGolangProxyRepositoryParams {
+	return &GetGolangProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository37Params contains all the parameters to send to the API endpoint
-   for the get repository 37 operation.
+/*
+GetGolangProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 37 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository37Params struct {
+type GetGolangProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository37Params struct {
 // WithDefaults hydrates default values in the get repository 37 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository37Params) WithDefaults() *GetRepository37Params {
+func (o *GetGolangProxyRepositoryParams) WithDefaults() *GetGolangProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository37Params) WithDefaults() *GetRepository37Params {
 // SetDefaults hydrates default values in the get repository 37 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository37Params) SetDefaults() {
+func (o *GetGolangProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 37 params
-func (o *GetRepository37Params) WithTimeout(timeout time.Duration) *GetRepository37Params {
+func (o *GetGolangProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetGolangProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 37 params
-func (o *GetRepository37Params) SetTimeout(timeout time.Duration) {
+func (o *GetGolangProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 37 params
-func (o *GetRepository37Params) WithContext(ctx context.Context) *GetRepository37Params {
+func (o *GetGolangProxyRepositoryParams) WithContext(ctx context.Context) *GetGolangProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 37 params
-func (o *GetRepository37Params) SetContext(ctx context.Context) {
+func (o *GetGolangProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 37 params
-func (o *GetRepository37Params) WithHTTPClient(client *http.Client) *GetRepository37Params {
+func (o *GetGolangProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetGolangProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 37 params
-func (o *GetRepository37Params) SetHTTPClient(client *http.Client) {
+func (o *GetGolangProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 37 params
-func (o *GetRepository37Params) WithRepositoryName(repositoryName string) *GetRepository37Params {
+func (o *GetGolangProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetGolangProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 37 params
-func (o *GetRepository37Params) SetRepositoryName(repositoryName string) {
+func (o *GetGolangProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository37Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetGolangProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

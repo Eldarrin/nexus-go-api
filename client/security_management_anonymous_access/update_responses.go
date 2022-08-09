@@ -45,7 +45,8 @@ func NewUpdateOK() *UpdateOK {
 	return &UpdateOK{}
 }
 
-/* UpdateOK describes a response with status code 200, with default header values.
+/*
+	UpdateOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -107,7 +108,8 @@ func NewUpdateForbidden() *UpdateForbidden {
 	return &UpdateForbidden{}
 }
 
-/* UpdateForbidden describes a response with status code 403, with default header values.
+/*
+	UpdateForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to update settings
 */

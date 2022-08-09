@@ -45,7 +45,8 @@ func NewGetTaskByIDOK() *GetTaskByIDOK {
 	return &GetTaskByIDOK{}
 }
 
-/* GetTaskByIDOK describes a response with status code 200, with default header values.
+/*
+	GetTaskByIDOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -107,7 +108,8 @@ func NewGetTaskByIDNotFound() *GetTaskByIDNotFound {
 	return &GetTaskByIDNotFound{}
 }
 
-/* GetTaskByIDNotFound describes a response with status code 404, with default header values.
+/*
+	GetTaskByIDNotFound describes a response with status code 404, with default header values.
 
 Task not found
 */

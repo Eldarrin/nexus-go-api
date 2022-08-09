@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository4Params creates a new CreateRepository4Params object,
+// NewCreateAptProxyRepositoryParams creates a new CreateAptProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository4Params() *CreateRepository4Params {
-	return &CreateRepository4Params{
+func NewCreateAptProxyRepositoryParams() *CreateAptProxyRepositoryParams {
+	return &CreateAptProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository4ParamsWithTimeout creates a new CreateRepository4Params object
+// NewCreateAptProxyRepositoryParamsWithTimeout creates a new CreateAptProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository4ParamsWithTimeout(timeout time.Duration) *CreateRepository4Params {
-	return &CreateRepository4Params{
+func NewCreateAptProxyRepositoryParamsWithTimeout(timeout time.Duration) *CreateAptProxyRepositoryParams {
+	return &CreateAptProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository4ParamsWithContext creates a new CreateRepository4Params object
+// NewCreateAptProxyRepositoryParamsWithContext creates a new CreateAptProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository4ParamsWithContext(ctx context.Context) *CreateRepository4Params {
-	return &CreateRepository4Params{
+func NewCreateAptProxyRepositoryParamsWithContext(ctx context.Context) *CreateAptProxyRepositoryParams {
+	return &CreateAptProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository4ParamsWithHTTPClient creates a new CreateRepository4Params object
+// NewCreateAptProxyRepositoryParamsWithHTTPClient creates a new CreateAptProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository4ParamsWithHTTPClient(client *http.Client) *CreateRepository4Params {
-	return &CreateRepository4Params{
+func NewCreateAptProxyRepositoryParamsWithHTTPClient(client *http.Client) *CreateAptProxyRepositoryParams {
+	return &CreateAptProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository4Params contains all the parameters to send to the API endpoint
-   for the create repository 4 operation.
+/*
+CreateAptProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 4 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository4Params struct {
+type CreateAptProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.AptProxyRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository4Params struct {
 // WithDefaults hydrates default values in the create repository 4 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository4Params) WithDefaults() *CreateRepository4Params {
+func (o *CreateAptProxyRepositoryParams) WithDefaults() *CreateAptProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository4Params) WithDefaults() *CreateRepository4Params {
 // SetDefaults hydrates default values in the create repository 4 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository4Params) SetDefaults() {
+func (o *CreateAptProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 4 params
-func (o *CreateRepository4Params) WithTimeout(timeout time.Duration) *CreateRepository4Params {
+func (o *CreateAptProxyRepositoryParams) WithTimeout(timeout time.Duration) *CreateAptProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 4 params
-func (o *CreateRepository4Params) SetTimeout(timeout time.Duration) {
+func (o *CreateAptProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 4 params
-func (o *CreateRepository4Params) WithContext(ctx context.Context) *CreateRepository4Params {
+func (o *CreateAptProxyRepositoryParams) WithContext(ctx context.Context) *CreateAptProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 4 params
-func (o *CreateRepository4Params) SetContext(ctx context.Context) {
+func (o *CreateAptProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 4 params
-func (o *CreateRepository4Params) WithHTTPClient(client *http.Client) *CreateRepository4Params {
+func (o *CreateAptProxyRepositoryParams) WithHTTPClient(client *http.Client) *CreateAptProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 4 params
-func (o *CreateRepository4Params) SetHTTPClient(client *http.Client) {
+func (o *CreateAptProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 4 params
-func (o *CreateRepository4Params) WithBody(body *models.AptProxyRepositoryAPIRequest) *CreateRepository4Params {
+func (o *CreateAptProxyRepositoryParams) WithBody(body *models.AptProxyRepositoryAPIRequest) *CreateAptProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 4 params
-func (o *CreateRepository4Params) SetBody(body *models.AptProxyRepositoryAPIRequest) {
+func (o *CreateAptProxyRepositoryParams) SetBody(body *models.AptProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository4Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateAptProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

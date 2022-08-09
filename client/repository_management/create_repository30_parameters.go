@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository30Params creates a new CreateRepository30Params object,
+// NewCreateConanProxyRepositoryParams creates a new CreateConanProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository30Params() *CreateRepository30Params {
-	return &CreateRepository30Params{
+func NewCreateConanProxyRepositoryParams() *CreateConanProxyRepositoryParams {
+	return &CreateConanProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository30ParamsWithTimeout creates a new CreateRepository30Params object
+// NewCreateConanProxyRepositoryParamsWithTimeout creates a new CreateConanProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository30ParamsWithTimeout(timeout time.Duration) *CreateRepository30Params {
-	return &CreateRepository30Params{
+func NewCreateConanProxyRepositoryParamsWithTimeout(timeout time.Duration) *CreateConanProxyRepositoryParams {
+	return &CreateConanProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository30ParamsWithContext creates a new CreateRepository30Params object
+// NewCreateConanProxyRepositoryParamsWithContext creates a new CreateConanProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository30ParamsWithContext(ctx context.Context) *CreateRepository30Params {
-	return &CreateRepository30Params{
+func NewCreateConanProxyRepositoryParamsWithContext(ctx context.Context) *CreateConanProxyRepositoryParams {
+	return &CreateConanProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository30ParamsWithHTTPClient creates a new CreateRepository30Params object
+// NewCreateConanProxyRepositoryParamsWithHTTPClient creates a new CreateConanProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository30ParamsWithHTTPClient(client *http.Client) *CreateRepository30Params {
-	return &CreateRepository30Params{
+func NewCreateConanProxyRepositoryParamsWithHTTPClient(client *http.Client) *CreateConanProxyRepositoryParams {
+	return &CreateConanProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository30Params contains all the parameters to send to the API endpoint
-   for the create repository 30 operation.
+/*
+CreateConanProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 30 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository30Params struct {
+type CreateConanProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.ConanProxyRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository30Params struct {
 // WithDefaults hydrates default values in the create repository 30 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository30Params) WithDefaults() *CreateRepository30Params {
+func (o *CreateConanProxyRepositoryParams) WithDefaults() *CreateConanProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository30Params) WithDefaults() *CreateRepository30Params {
 // SetDefaults hydrates default values in the create repository 30 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository30Params) SetDefaults() {
+func (o *CreateConanProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 30 params
-func (o *CreateRepository30Params) WithTimeout(timeout time.Duration) *CreateRepository30Params {
+func (o *CreateConanProxyRepositoryParams) WithTimeout(timeout time.Duration) *CreateConanProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 30 params
-func (o *CreateRepository30Params) SetTimeout(timeout time.Duration) {
+func (o *CreateConanProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 30 params
-func (o *CreateRepository30Params) WithContext(ctx context.Context) *CreateRepository30Params {
+func (o *CreateConanProxyRepositoryParams) WithContext(ctx context.Context) *CreateConanProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 30 params
-func (o *CreateRepository30Params) SetContext(ctx context.Context) {
+func (o *CreateConanProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 30 params
-func (o *CreateRepository30Params) WithHTTPClient(client *http.Client) *CreateRepository30Params {
+func (o *CreateConanProxyRepositoryParams) WithHTTPClient(client *http.Client) *CreateConanProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 30 params
-func (o *CreateRepository30Params) SetHTTPClient(client *http.Client) {
+func (o *CreateConanProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 30 params
-func (o *CreateRepository30Params) WithBody(body *models.ConanProxyRepositoryAPIRequest) *CreateRepository30Params {
+func (o *CreateConanProxyRepositoryParams) WithBody(body *models.ConanProxyRepositoryAPIRequest) *CreateConanProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 30 params
-func (o *CreateRepository30Params) SetBody(body *models.ConanProxyRepositoryAPIRequest) {
+func (o *CreateConanProxyRepositoryParams) SetBody(body *models.ConanProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository30Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateConanProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

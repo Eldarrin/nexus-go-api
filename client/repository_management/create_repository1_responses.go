@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository1Reader is a Reader for the CreateRepository1 structure.
-type CreateRepository1Reader struct {
+// CreateMavenHostedRepositoryReader is a Reader for the CreateMavenHostedRepository structure.
+type CreateMavenHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository1Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateMavenHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository1Created()
+		result := NewCreateMavenHostedRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository1Unauthorized()
+		result := NewCreateMavenHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository1Forbidden()
+		result := NewCreateMavenHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository1Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewCreateRepository1Created creates a CreateRepository1Created with default headers values
-func NewCreateRepository1Created() *CreateRepository1Created {
-	return &CreateRepository1Created{}
+// NewCreateMavenHostedRepositoryCreated creates a CreateMavenHostedRepositoryCreated with default headers values
+func NewCreateMavenHostedRepositoryCreated() *CreateMavenHostedRepositoryCreated {
+	return &CreateMavenHostedRepositoryCreated{}
 }
 
-/* CreateRepository1Created describes a response with status code 201, with default header values.
+/*
+	CreateMavenHostedRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository1Created struct {
+type CreateMavenHostedRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository1 created response has a 2xx status code
-func (o *CreateRepository1Created) IsSuccess() bool {
+func (o *CreateMavenHostedRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository1 created response has a 3xx status code
-func (o *CreateRepository1Created) IsRedirect() bool {
+func (o *CreateMavenHostedRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository1 created response has a 4xx status code
-func (o *CreateRepository1Created) IsClientError() bool {
+func (o *CreateMavenHostedRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository1 created response has a 5xx status code
-func (o *CreateRepository1Created) IsServerError() bool {
+func (o *CreateMavenHostedRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository1 created response a status code equal to that given
-func (o *CreateRepository1Created) IsCode(code int) bool {
+func (o *CreateMavenHostedRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository1Created) Error() string {
+func (o *CreateMavenHostedRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/maven/hosted][%d] createRepository1Created ", 201)
 }
 
-func (o *CreateRepository1Created) String() string {
+func (o *CreateMavenHostedRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/maven/hosted][%d] createRepository1Created ", 201)
 }
 
-func (o *CreateRepository1Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateMavenHostedRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository1Unauthorized creates a CreateRepository1Unauthorized with default headers values
-func NewCreateRepository1Unauthorized() *CreateRepository1Unauthorized {
-	return &CreateRepository1Unauthorized{}
+// NewCreateMavenHostedRepositoryUnauthorized creates a CreateMavenHostedRepositoryUnauthorized with default headers values
+func NewCreateMavenHostedRepositoryUnauthorized() *CreateMavenHostedRepositoryUnauthorized {
+	return &CreateMavenHostedRepositoryUnauthorized{}
 }
 
-/* CreateRepository1Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateMavenHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository1Unauthorized struct {
+type CreateMavenHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository1 unauthorized response has a 2xx status code
-func (o *CreateRepository1Unauthorized) IsSuccess() bool {
+func (o *CreateMavenHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository1 unauthorized response has a 3xx status code
-func (o *CreateRepository1Unauthorized) IsRedirect() bool {
+func (o *CreateMavenHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository1 unauthorized response has a 4xx status code
-func (o *CreateRepository1Unauthorized) IsClientError() bool {
+func (o *CreateMavenHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository1 unauthorized response has a 5xx status code
-func (o *CreateRepository1Unauthorized) IsServerError() bool {
+func (o *CreateMavenHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository1 unauthorized response a status code equal to that given
-func (o *CreateRepository1Unauthorized) IsCode(code int) bool {
+func (o *CreateMavenHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository1Unauthorized) Error() string {
+func (o *CreateMavenHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/maven/hosted][%d] createRepository1Unauthorized ", 401)
 }
 
-func (o *CreateRepository1Unauthorized) String() string {
+func (o *CreateMavenHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/maven/hosted][%d] createRepository1Unauthorized ", 401)
 }
 
-func (o *CreateRepository1Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateMavenHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository1Forbidden creates a CreateRepository1Forbidden with default headers values
-func NewCreateRepository1Forbidden() *CreateRepository1Forbidden {
-	return &CreateRepository1Forbidden{}
+// NewCreateMavenHostedRepositoryForbidden creates a CreateMavenHostedRepositoryForbidden with default headers values
+func NewCreateMavenHostedRepositoryForbidden() *CreateMavenHostedRepositoryForbidden {
+	return &CreateMavenHostedRepositoryForbidden{}
 }
 
-/* CreateRepository1Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateMavenHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository1Forbidden struct {
+type CreateMavenHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository1 forbidden response has a 2xx status code
-func (o *CreateRepository1Forbidden) IsSuccess() bool {
+func (o *CreateMavenHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository1 forbidden response has a 3xx status code
-func (o *CreateRepository1Forbidden) IsRedirect() bool {
+func (o *CreateMavenHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository1 forbidden response has a 4xx status code
-func (o *CreateRepository1Forbidden) IsClientError() bool {
+func (o *CreateMavenHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository1 forbidden response has a 5xx status code
-func (o *CreateRepository1Forbidden) IsServerError() bool {
+func (o *CreateMavenHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository1 forbidden response a status code equal to that given
-func (o *CreateRepository1Forbidden) IsCode(code int) bool {
+func (o *CreateMavenHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository1Forbidden) Error() string {
+func (o *CreateMavenHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/maven/hosted][%d] createRepository1Forbidden ", 403)
 }
 
-func (o *CreateRepository1Forbidden) String() string {
+func (o *CreateMavenHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/maven/hosted][%d] createRepository1Forbidden ", 403)
 }
 
-func (o *CreateRepository1Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateMavenHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

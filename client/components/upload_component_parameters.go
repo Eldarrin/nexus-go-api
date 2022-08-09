@@ -53,10 +53,12 @@ func NewUploadComponentParamsWithHTTPClient(client *http.Client) *UploadComponen
 	}
 }
 
-/* UploadComponentParams contains all the parameters to send to the API endpoint
-   for the upload component operation.
+/*
+UploadComponentParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the upload component operation.
+
+	Typically these are written to a http.Request.
 */
 type UploadComponentParams struct {
 

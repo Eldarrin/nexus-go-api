@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository20Reader is a Reader for the GetRepository20 structure.
-type GetRepository20Reader struct {
+// GetDockerProxyRepositoryReader is a Reader for the GetDockerProxyRepository structure.
+type GetDockerProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository20Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetDockerProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository20OK()
+		result := NewGetDockerProxyRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository20Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository20OK creates a GetRepository20OK with default headers values
-func NewGetRepository20OK() *GetRepository20OK {
-	return &GetRepository20OK{}
+// NewGetDockerProxyRepositoryOK creates a GetDockerProxyRepositoryOK with default headers values
+func NewGetDockerProxyRepositoryOK() *GetDockerProxyRepositoryOK {
+	return &GetDockerProxyRepositoryOK{}
 }
 
-/* GetRepository20OK describes a response with status code 200, with default header values.
+/*
+	GetDockerProxyRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository20OK struct {
+type GetDockerProxyRepositoryOK struct {
 	Payload *models.DockerProxyAPIRepository
 }
 
 // IsSuccess returns true when this get repository20 o k response has a 2xx status code
-func (o *GetRepository20OK) IsSuccess() bool {
+func (o *GetDockerProxyRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository20 o k response has a 3xx status code
-func (o *GetRepository20OK) IsRedirect() bool {
+func (o *GetDockerProxyRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository20 o k response has a 4xx status code
-func (o *GetRepository20OK) IsClientError() bool {
+func (o *GetDockerProxyRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository20 o k response has a 5xx status code
-func (o *GetRepository20OK) IsServerError() bool {
+func (o *GetDockerProxyRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository20 o k response a status code equal to that given
-func (o *GetRepository20OK) IsCode(code int) bool {
+func (o *GetDockerProxyRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository20OK) Error() string {
+func (o *GetDockerProxyRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/docker/proxy/{repositoryName}][%d] getRepository20OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository20OK) String() string {
+func (o *GetDockerProxyRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/docker/proxy/{repositoryName}][%d] getRepository20OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository20OK) GetPayload() *models.DockerProxyAPIRepository {
+func (o *GetDockerProxyRepositoryOK) GetPayload() *models.DockerProxyAPIRepository {
 	return o.Payload
 }
 
-func (o *GetRepository20OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetDockerProxyRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.DockerProxyAPIRepository)
 

@@ -51,7 +51,8 @@ func NewGetRepositoriesOK() *GetRepositoriesOK {
 	return &GetRepositoriesOK{}
 }
 
-/* GetRepositoriesOK describes a response with status code 200, with default header values.
+/*
+	GetRepositoriesOK describes a response with status code 200, with default header values.
 
 Repositories list returned
 */
@@ -111,7 +112,8 @@ func NewGetRepositoriesUnauthorized() *GetRepositoriesUnauthorized {
 	return &GetRepositoriesUnauthorized{}
 }
 
-/* GetRepositoriesUnauthorized describes a response with status code 401, with default header values.
+/*
+	GetRepositoriesUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -161,7 +163,8 @@ func NewGetRepositoriesForbidden() *GetRepositoriesForbidden {
 	return &GetRepositoriesForbidden{}
 }
 
-/* GetRepositoriesForbidden describes a response with status code 403, with default header values.
+/*
+	GetRepositoriesForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

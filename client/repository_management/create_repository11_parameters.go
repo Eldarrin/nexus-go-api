@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository11Params creates a new CreateRepository11Params object,
+// NewCreateNugetGroupRepositoryParams creates a new CreateNugetGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository11Params() *CreateRepository11Params {
-	return &CreateRepository11Params{
+func NewCreateNugetGroupRepositoryParams() *CreateNugetGroupRepositoryParams {
+	return &CreateNugetGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository11ParamsWithTimeout creates a new CreateRepository11Params object
+// NewCreateNugetGroupRepositoryParamsWithTimeout creates a new CreateNugetGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository11ParamsWithTimeout(timeout time.Duration) *CreateRepository11Params {
-	return &CreateRepository11Params{
+func NewCreateNugetGroupRepositoryParamsWithTimeout(timeout time.Duration) *CreateNugetGroupRepositoryParams {
+	return &CreateNugetGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository11ParamsWithContext creates a new CreateRepository11Params object
+// NewCreateNugetGroupRepositoryParamsWithContext creates a new CreateNugetGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository11ParamsWithContext(ctx context.Context) *CreateRepository11Params {
-	return &CreateRepository11Params{
+func NewCreateNugetGroupRepositoryParamsWithContext(ctx context.Context) *CreateNugetGroupRepositoryParams {
+	return &CreateNugetGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository11ParamsWithHTTPClient creates a new CreateRepository11Params object
+// NewCreateNugetGroupRepositoryParamsWithHTTPClient creates a new CreateNugetGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository11ParamsWithHTTPClient(client *http.Client) *CreateRepository11Params {
-	return &CreateRepository11Params{
+func NewCreateNugetGroupRepositoryParamsWithHTTPClient(client *http.Client) *CreateNugetGroupRepositoryParams {
+	return &CreateNugetGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository11Params contains all the parameters to send to the API endpoint
-   for the create repository 11 operation.
+/*
+CreateNugetGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 11 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository11Params struct {
+type CreateNugetGroupRepositoryParams struct {
 
 	// Body.
 	Body *models.NugetGroupRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository11Params struct {
 // WithDefaults hydrates default values in the create repository 11 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository11Params) WithDefaults() *CreateRepository11Params {
+func (o *CreateNugetGroupRepositoryParams) WithDefaults() *CreateNugetGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository11Params) WithDefaults() *CreateRepository11Params {
 // SetDefaults hydrates default values in the create repository 11 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository11Params) SetDefaults() {
+func (o *CreateNugetGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 11 params
-func (o *CreateRepository11Params) WithTimeout(timeout time.Duration) *CreateRepository11Params {
+func (o *CreateNugetGroupRepositoryParams) WithTimeout(timeout time.Duration) *CreateNugetGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 11 params
-func (o *CreateRepository11Params) SetTimeout(timeout time.Duration) {
+func (o *CreateNugetGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 11 params
-func (o *CreateRepository11Params) WithContext(ctx context.Context) *CreateRepository11Params {
+func (o *CreateNugetGroupRepositoryParams) WithContext(ctx context.Context) *CreateNugetGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 11 params
-func (o *CreateRepository11Params) SetContext(ctx context.Context) {
+func (o *CreateNugetGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 11 params
-func (o *CreateRepository11Params) WithHTTPClient(client *http.Client) *CreateRepository11Params {
+func (o *CreateNugetGroupRepositoryParams) WithHTTPClient(client *http.Client) *CreateNugetGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 11 params
-func (o *CreateRepository11Params) SetHTTPClient(client *http.Client) {
+func (o *CreateNugetGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 11 params
-func (o *CreateRepository11Params) WithBody(body *models.NugetGroupRepositoryAPIRequest) *CreateRepository11Params {
+func (o *CreateNugetGroupRepositoryParams) WithBody(body *models.NugetGroupRepositoryAPIRequest) *CreateNugetGroupRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 11 params
-func (o *CreateRepository11Params) SetBody(body *models.NugetGroupRepositoryAPIRequest) {
+func (o *CreateNugetGroupRepositoryParams) SetBody(body *models.NugetGroupRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository11Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateNugetGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

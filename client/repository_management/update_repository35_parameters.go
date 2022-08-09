@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository35Params creates a new UpdateRepository35Params object,
+// NewUpdateGolangGroupRepositoryParams creates a new UpdateGolangGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository35Params() *UpdateRepository35Params {
-	return &UpdateRepository35Params{
+func NewUpdateGolangGroupRepositoryParams() *UpdateGolangGroupRepositoryParams {
+	return &UpdateGolangGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository35ParamsWithTimeout creates a new UpdateRepository35Params object
+// NewUpdateGolangGroupRepositoryParamsWithTimeout creates a new UpdateGolangGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository35ParamsWithTimeout(timeout time.Duration) *UpdateRepository35Params {
-	return &UpdateRepository35Params{
+func NewUpdateGolangGroupRepositoryParamsWithTimeout(timeout time.Duration) *UpdateGolangGroupRepositoryParams {
+	return &UpdateGolangGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository35ParamsWithContext creates a new UpdateRepository35Params object
+// NewUpdateGolangGroupRepositoryParamsWithContext creates a new UpdateGolangGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository35ParamsWithContext(ctx context.Context) *UpdateRepository35Params {
-	return &UpdateRepository35Params{
+func NewUpdateGolangGroupRepositoryParamsWithContext(ctx context.Context) *UpdateGolangGroupRepositoryParams {
+	return &UpdateGolangGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository35ParamsWithHTTPClient creates a new UpdateRepository35Params object
+// NewUpdateGolangGroupRepositoryParamsWithHTTPClient creates a new UpdateGolangGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository35ParamsWithHTTPClient(client *http.Client) *UpdateRepository35Params {
-	return &UpdateRepository35Params{
+func NewUpdateGolangGroupRepositoryParamsWithHTTPClient(client *http.Client) *UpdateGolangGroupRepositoryParams {
+	return &UpdateGolangGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository35Params contains all the parameters to send to the API endpoint
-   for the update repository 35 operation.
+/*
+UpdateGolangGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 35 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository35Params struct {
+type UpdateGolangGroupRepositoryParams struct {
 
 	// Body.
 	Body *models.GolangGroupRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository35Params struct {
 // WithDefaults hydrates default values in the update repository 35 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository35Params) WithDefaults() *UpdateRepository35Params {
+func (o *UpdateGolangGroupRepositoryParams) WithDefaults() *UpdateGolangGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository35Params) WithDefaults() *UpdateRepository35Params {
 // SetDefaults hydrates default values in the update repository 35 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository35Params) SetDefaults() {
+func (o *UpdateGolangGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 35 params
-func (o *UpdateRepository35Params) WithTimeout(timeout time.Duration) *UpdateRepository35Params {
+func (o *UpdateGolangGroupRepositoryParams) WithTimeout(timeout time.Duration) *UpdateGolangGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 35 params
-func (o *UpdateRepository35Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateGolangGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 35 params
-func (o *UpdateRepository35Params) WithContext(ctx context.Context) *UpdateRepository35Params {
+func (o *UpdateGolangGroupRepositoryParams) WithContext(ctx context.Context) *UpdateGolangGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 35 params
-func (o *UpdateRepository35Params) SetContext(ctx context.Context) {
+func (o *UpdateGolangGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 35 params
-func (o *UpdateRepository35Params) WithHTTPClient(client *http.Client) *UpdateRepository35Params {
+func (o *UpdateGolangGroupRepositoryParams) WithHTTPClient(client *http.Client) *UpdateGolangGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 35 params
-func (o *UpdateRepository35Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateGolangGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 35 params
-func (o *UpdateRepository35Params) WithBody(body *models.GolangGroupRepositoryAPIRequest) *UpdateRepository35Params {
+func (o *UpdateGolangGroupRepositoryParams) WithBody(body *models.GolangGroupRepositoryAPIRequest) *UpdateGolangGroupRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 35 params
-func (o *UpdateRepository35Params) SetBody(body *models.GolangGroupRepositoryAPIRequest) {
+func (o *UpdateGolangGroupRepositoryParams) SetBody(body *models.GolangGroupRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 35 params
-func (o *UpdateRepository35Params) WithRepositoryName(repositoryName string) *UpdateRepository35Params {
+func (o *UpdateGolangGroupRepositoryParams) WithRepositoryName(repositoryName string) *UpdateGolangGroupRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 35 params
-func (o *UpdateRepository35Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateGolangGroupRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository35Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateGolangGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

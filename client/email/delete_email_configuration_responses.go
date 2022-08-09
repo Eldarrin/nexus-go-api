@@ -36,7 +36,8 @@ func NewDeleteEmailConfigurationNoContent() *DeleteEmailConfigurationNoContent {
 	return &DeleteEmailConfigurationNoContent{}
 }
 
-/* DeleteEmailConfigurationNoContent describes a response with status code 204, with default header values.
+/*
+	DeleteEmailConfigurationNoContent describes a response with status code 204, with default header values.
 
 Email configuration was successfully cleared
 */

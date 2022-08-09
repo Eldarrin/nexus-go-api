@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository13Params creates a new GetRepository13Params object,
+// NewGetNugetHostedRepositoryParams creates a new GetNugetHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository13Params() *GetRepository13Params {
-	return &GetRepository13Params{
+func NewGetNugetHostedRepositoryParams() *GetNugetHostedRepositoryParams {
+	return &GetNugetHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository13ParamsWithTimeout creates a new GetRepository13Params object
+// NewGetNugetHostedRepositoryParamsWithTimeout creates a new GetNugetHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository13ParamsWithTimeout(timeout time.Duration) *GetRepository13Params {
-	return &GetRepository13Params{
+func NewGetNugetHostedRepositoryParamsWithTimeout(timeout time.Duration) *GetNugetHostedRepositoryParams {
+	return &GetNugetHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository13ParamsWithContext creates a new GetRepository13Params object
+// NewGetNugetHostedRepositoryParamsWithContext creates a new GetNugetHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository13ParamsWithContext(ctx context.Context) *GetRepository13Params {
-	return &GetRepository13Params{
+func NewGetNugetHostedRepositoryParamsWithContext(ctx context.Context) *GetNugetHostedRepositoryParams {
+	return &GetNugetHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository13ParamsWithHTTPClient creates a new GetRepository13Params object
+// NewGetNugetHostedRepositoryParamsWithHTTPClient creates a new GetNugetHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository13ParamsWithHTTPClient(client *http.Client) *GetRepository13Params {
-	return &GetRepository13Params{
+func NewGetNugetHostedRepositoryParamsWithHTTPClient(client *http.Client) *GetNugetHostedRepositoryParams {
+	return &GetNugetHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository13Params contains all the parameters to send to the API endpoint
-   for the get repository 13 operation.
+/*
+GetNugetHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 13 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository13Params struct {
+type GetNugetHostedRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository13Params struct {
 // WithDefaults hydrates default values in the get repository 13 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository13Params) WithDefaults() *GetRepository13Params {
+func (o *GetNugetHostedRepositoryParams) WithDefaults() *GetNugetHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository13Params) WithDefaults() *GetRepository13Params {
 // SetDefaults hydrates default values in the get repository 13 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository13Params) SetDefaults() {
+func (o *GetNugetHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 13 params
-func (o *GetRepository13Params) WithTimeout(timeout time.Duration) *GetRepository13Params {
+func (o *GetNugetHostedRepositoryParams) WithTimeout(timeout time.Duration) *GetNugetHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 13 params
-func (o *GetRepository13Params) SetTimeout(timeout time.Duration) {
+func (o *GetNugetHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 13 params
-func (o *GetRepository13Params) WithContext(ctx context.Context) *GetRepository13Params {
+func (o *GetNugetHostedRepositoryParams) WithContext(ctx context.Context) *GetNugetHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 13 params
-func (o *GetRepository13Params) SetContext(ctx context.Context) {
+func (o *GetNugetHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 13 params
-func (o *GetRepository13Params) WithHTTPClient(client *http.Client) *GetRepository13Params {
+func (o *GetNugetHostedRepositoryParams) WithHTTPClient(client *http.Client) *GetNugetHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 13 params
-func (o *GetRepository13Params) SetHTTPClient(client *http.Client) {
+func (o *GetNugetHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 13 params
-func (o *GetRepository13Params) WithRepositoryName(repositoryName string) *GetRepository13Params {
+func (o *GetNugetHostedRepositoryParams) WithRepositoryName(repositoryName string) *GetNugetHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 13 params
-func (o *GetRepository13Params) SetRepositoryName(repositoryName string) {
+func (o *GetNugetHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository13Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetNugetHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -51,7 +51,8 @@ func NewGetAssetsOK() *GetAssetsOK {
 	return &GetAssetsOK{}
 }
 
-/* GetAssetsOK describes a response with status code 200, with default header values.
+/*
+	GetAssetsOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -113,7 +114,8 @@ func NewGetAssetsForbidden() *GetAssetsForbidden {
 	return &GetAssetsForbidden{}
 }
 
-/* GetAssetsForbidden describes a response with status code 403, with default header values.
+/*
+	GetAssetsForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to list assets
 */
@@ -163,7 +165,8 @@ func NewGetAssetsUnprocessableEntity() *GetAssetsUnprocessableEntity {
 	return &GetAssetsUnprocessableEntity{}
 }
 
-/* GetAssetsUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+	GetAssetsUnprocessableEntity describes a response with status code 422, with default header values.
 
 Parameter 'repository' is required
 */

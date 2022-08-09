@@ -48,7 +48,8 @@ func NewRunNoContent() *RunNoContent {
 	return &RunNoContent{}
 }
 
-/* RunNoContent describes a response with status code 204, with default header values.
+/*
+	RunNoContent describes a response with status code 204, with default header values.
 
 Task was run
 */
@@ -98,7 +99,8 @@ func NewRunNotFound() *RunNotFound {
 	return &RunNotFound{}
 }
 
-/* RunNotFound describes a response with status code 404, with default header values.
+/*
+	RunNotFound describes a response with status code 404, with default header values.
 
 Task not found
 */
@@ -148,7 +150,8 @@ func NewRunMethodNotAllowed() *RunMethodNotAllowed {
 	return &RunMethodNotAllowed{}
 }
 
-/* RunMethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	RunMethodNotAllowed describes a response with status code 405, with default header values.
 
 Task is disabled
 */

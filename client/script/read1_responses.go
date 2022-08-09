@@ -45,7 +45,8 @@ func NewRead1OK() *Read1OK {
 	return &Read1OK{}
 }
 
-/* Read1OK describes a response with status code 200, with default header values.
+/*
+	Read1OK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -107,7 +108,8 @@ func NewRead1NotFound() *Read1NotFound {
 	return &Read1NotFound{}
 }
 
-/* Read1NotFound describes a response with status code 404, with default header values.
+/*
+	Read1NotFound describes a response with status code 404, with default header values.
 
 No script with the specified name
 */

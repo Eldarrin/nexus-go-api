@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository8Params creates a new CreateRepository8Params object,
+// NewCreateNpmGroupRepositoryParams creates a new CreateNpmGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository8Params() *CreateRepository8Params {
-	return &CreateRepository8Params{
+func NewCreateNpmGroupRepositoryParams() *CreateNpmGroupRepositoryParams {
+	return &CreateNpmGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository8ParamsWithTimeout creates a new CreateRepository8Params object
+// NewCreateNpmGroupRepositoryParamsWithTimeout creates a new CreateNpmGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository8ParamsWithTimeout(timeout time.Duration) *CreateRepository8Params {
-	return &CreateRepository8Params{
+func NewCreateNpmGroupRepositoryParamsWithTimeout(timeout time.Duration) *CreateNpmGroupRepositoryParams {
+	return &CreateNpmGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository8ParamsWithContext creates a new CreateRepository8Params object
+// NewCreateNpmGroupRepositoryParamsWithContext creates a new CreateNpmGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository8ParamsWithContext(ctx context.Context) *CreateRepository8Params {
-	return &CreateRepository8Params{
+func NewCreateNpmGroupRepositoryParamsWithContext(ctx context.Context) *CreateNpmGroupRepositoryParams {
+	return &CreateNpmGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository8ParamsWithHTTPClient creates a new CreateRepository8Params object
+// NewCreateNpmGroupRepositoryParamsWithHTTPClient creates a new CreateNpmGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository8ParamsWithHTTPClient(client *http.Client) *CreateRepository8Params {
-	return &CreateRepository8Params{
+func NewCreateNpmGroupRepositoryParamsWithHTTPClient(client *http.Client) *CreateNpmGroupRepositoryParams {
+	return &CreateNpmGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository8Params contains all the parameters to send to the API endpoint
-   for the create repository 8 operation.
+/*
+CreateNpmGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 8 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository8Params struct {
+type CreateNpmGroupRepositoryParams struct {
 
 	// Body.
 	Body *models.NpmGroupRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository8Params struct {
 // WithDefaults hydrates default values in the create repository 8 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository8Params) WithDefaults() *CreateRepository8Params {
+func (o *CreateNpmGroupRepositoryParams) WithDefaults() *CreateNpmGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository8Params) WithDefaults() *CreateRepository8Params {
 // SetDefaults hydrates default values in the create repository 8 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository8Params) SetDefaults() {
+func (o *CreateNpmGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 8 params
-func (o *CreateRepository8Params) WithTimeout(timeout time.Duration) *CreateRepository8Params {
+func (o *CreateNpmGroupRepositoryParams) WithTimeout(timeout time.Duration) *CreateNpmGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 8 params
-func (o *CreateRepository8Params) SetTimeout(timeout time.Duration) {
+func (o *CreateNpmGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 8 params
-func (o *CreateRepository8Params) WithContext(ctx context.Context) *CreateRepository8Params {
+func (o *CreateNpmGroupRepositoryParams) WithContext(ctx context.Context) *CreateNpmGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 8 params
-func (o *CreateRepository8Params) SetContext(ctx context.Context) {
+func (o *CreateNpmGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 8 params
-func (o *CreateRepository8Params) WithHTTPClient(client *http.Client) *CreateRepository8Params {
+func (o *CreateNpmGroupRepositoryParams) WithHTTPClient(client *http.Client) *CreateNpmGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 8 params
-func (o *CreateRepository8Params) SetHTTPClient(client *http.Client) {
+func (o *CreateNpmGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 8 params
-func (o *CreateRepository8Params) WithBody(body *models.NpmGroupRepositoryAPIRequest) *CreateRepository8Params {
+func (o *CreateNpmGroupRepositoryParams) WithBody(body *models.NpmGroupRepositoryAPIRequest) *CreateNpmGroupRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 8 params
-func (o *CreateRepository8Params) SetBody(body *models.NpmGroupRepositoryAPIRequest) {
+func (o *CreateNpmGroupRepositoryParams) SetBody(body *models.NpmGroupRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository8Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateNpmGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository8Params creates a new GetRepository8Params object,
+// NewGetRawProxyRepositoryParams creates a new GetRawProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository8Params() *GetRepository8Params {
-	return &GetRepository8Params{
+func NewGetRawProxyRepositoryParams() *GetRawProxyRepositoryParams {
+	return &GetRawProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository8ParamsWithTimeout creates a new GetRepository8Params object
+// NewGetRawProxyRepositoryParamsWithTimeout creates a new GetRawProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository8ParamsWithTimeout(timeout time.Duration) *GetRepository8Params {
-	return &GetRepository8Params{
+func NewGetRawProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetRawProxyRepositoryParams {
+	return &GetRawProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository8ParamsWithContext creates a new GetRepository8Params object
+// NewGetRawProxyRepositoryParamsWithContext creates a new GetRawProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository8ParamsWithContext(ctx context.Context) *GetRepository8Params {
-	return &GetRepository8Params{
+func NewGetRawProxyRepositoryParamsWithContext(ctx context.Context) *GetRawProxyRepositoryParams {
+	return &GetRawProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository8ParamsWithHTTPClient creates a new GetRepository8Params object
+// NewGetRawProxyRepositoryParamsWithHTTPClient creates a new GetRawProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository8ParamsWithHTTPClient(client *http.Client) *GetRepository8Params {
-	return &GetRepository8Params{
+func NewGetRawProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetRawProxyRepositoryParams {
+	return &GetRawProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository8Params contains all the parameters to send to the API endpoint
-   for the get repository 8 operation.
+/*
+GetRawProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 8 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository8Params struct {
+type GetRawProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository8Params struct {
 // WithDefaults hydrates default values in the get repository 8 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository8Params) WithDefaults() *GetRepository8Params {
+func (o *GetRawProxyRepositoryParams) WithDefaults() *GetRawProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository8Params) WithDefaults() *GetRepository8Params {
 // SetDefaults hydrates default values in the get repository 8 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository8Params) SetDefaults() {
+func (o *GetRawProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 8 params
-func (o *GetRepository8Params) WithTimeout(timeout time.Duration) *GetRepository8Params {
+func (o *GetRawProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetRawProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 8 params
-func (o *GetRepository8Params) SetTimeout(timeout time.Duration) {
+func (o *GetRawProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 8 params
-func (o *GetRepository8Params) WithContext(ctx context.Context) *GetRepository8Params {
+func (o *GetRawProxyRepositoryParams) WithContext(ctx context.Context) *GetRawProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 8 params
-func (o *GetRepository8Params) SetContext(ctx context.Context) {
+func (o *GetRawProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 8 params
-func (o *GetRepository8Params) WithHTTPClient(client *http.Client) *GetRepository8Params {
+func (o *GetRawProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetRawProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 8 params
-func (o *GetRepository8Params) SetHTTPClient(client *http.Client) {
+func (o *GetRawProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 8 params
-func (o *GetRepository8Params) WithRepositoryName(repositoryName string) *GetRepository8Params {
+func (o *GetRawProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetRawProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 8 params
-func (o *GetRepository8Params) SetRepositoryName(repositoryName string) {
+func (o *GetRawProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository8Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetRawProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

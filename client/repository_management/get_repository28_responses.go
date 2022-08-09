@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository28Reader is a Reader for the GetRepository28 structure.
-type GetRepository28Reader struct {
+// GetPypiHostedRepositoryReader is a Reader for the GetPypiHostedRepository structure.
+type GetPypiHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository28Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetPypiHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository28OK()
+		result := NewGetPypiHostedRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository28Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository28OK creates a GetRepository28OK with default headers values
-func NewGetRepository28OK() *GetRepository28OK {
-	return &GetRepository28OK{}
+// NewGetPypiHostedRepositoryOK creates a GetPypiHostedRepositoryOK with default headers values
+func NewGetPypiHostedRepositoryOK() *GetPypiHostedRepositoryOK {
+	return &GetPypiHostedRepositoryOK{}
 }
 
-/* GetRepository28OK describes a response with status code 200, with default header values.
+/*
+	GetPypiHostedRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository28OK struct {
+type GetPypiHostedRepositoryOK struct {
 	Payload *models.SimpleAPIHostedRepository
 }
 
 // IsSuccess returns true when this get repository28 o k response has a 2xx status code
-func (o *GetRepository28OK) IsSuccess() bool {
+func (o *GetPypiHostedRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository28 o k response has a 3xx status code
-func (o *GetRepository28OK) IsRedirect() bool {
+func (o *GetPypiHostedRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository28 o k response has a 4xx status code
-func (o *GetRepository28OK) IsClientError() bool {
+func (o *GetPypiHostedRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository28 o k response has a 5xx status code
-func (o *GetRepository28OK) IsServerError() bool {
+func (o *GetPypiHostedRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository28 o k response a status code equal to that given
-func (o *GetRepository28OK) IsCode(code int) bool {
+func (o *GetPypiHostedRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository28OK) Error() string {
+func (o *GetPypiHostedRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/pypi/hosted/{repositoryName}][%d] getRepository28OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository28OK) String() string {
+func (o *GetPypiHostedRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/pypi/hosted/{repositoryName}][%d] getRepository28OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository28OK) GetPayload() *models.SimpleAPIHostedRepository {
+func (o *GetPypiHostedRepositoryOK) GetPayload() *models.SimpleAPIHostedRepository {
 	return o.Payload
 }
 
-func (o *GetRepository28OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetPypiHostedRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIHostedRepository)
 

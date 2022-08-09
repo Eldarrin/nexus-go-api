@@ -45,7 +45,8 @@ func NewGetEmailConfigurationOK() *GetEmailConfigurationOK {
 	return &GetEmailConfigurationOK{}
 }
 
-/* GetEmailConfigurationOK describes a response with status code 200, with default header values.
+/*
+	GetEmailConfigurationOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -107,7 +108,8 @@ func NewGetEmailConfigurationForbidden() *GetEmailConfigurationForbidden {
 	return &GetEmailConfigurationForbidden{}
 }
 
-/* GetEmailConfigurationForbidden describes a response with status code 403, with default header values.
+/*
+	GetEmailConfigurationForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to retrieve the email configuration
 */

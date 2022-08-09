@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository17Params creates a new UpdateRepository17Params object,
+// NewUpdateDockerGroupRepositoryParams creates a new UpdateDockerGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository17Params() *UpdateRepository17Params {
-	return &UpdateRepository17Params{
+func NewUpdateDockerGroupRepositoryParams() *UpdateDockerGroupRepositoryParams {
+	return &UpdateDockerGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository17ParamsWithTimeout creates a new UpdateRepository17Params object
+// NewUpdateDockerGroupRepositoryParamsWithTimeout creates a new UpdateDockerGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository17ParamsWithTimeout(timeout time.Duration) *UpdateRepository17Params {
-	return &UpdateRepository17Params{
+func NewUpdateDockerGroupRepositoryParamsWithTimeout(timeout time.Duration) *UpdateDockerGroupRepositoryParams {
+	return &UpdateDockerGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository17ParamsWithContext creates a new UpdateRepository17Params object
+// NewUpdateDockerGroupRepositoryParamsWithContext creates a new UpdateDockerGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository17ParamsWithContext(ctx context.Context) *UpdateRepository17Params {
-	return &UpdateRepository17Params{
+func NewUpdateDockerGroupRepositoryParamsWithContext(ctx context.Context) *UpdateDockerGroupRepositoryParams {
+	return &UpdateDockerGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository17ParamsWithHTTPClient creates a new UpdateRepository17Params object
+// NewUpdateDockerGroupRepositoryParamsWithHTTPClient creates a new UpdateDockerGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository17ParamsWithHTTPClient(client *http.Client) *UpdateRepository17Params {
-	return &UpdateRepository17Params{
+func NewUpdateDockerGroupRepositoryParamsWithHTTPClient(client *http.Client) *UpdateDockerGroupRepositoryParams {
+	return &UpdateDockerGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository17Params contains all the parameters to send to the API endpoint
-   for the update repository 17 operation.
+/*
+UpdateDockerGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 17 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository17Params struct {
+type UpdateDockerGroupRepositoryParams struct {
 
 	// Body.
 	Body *models.DockerGroupRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository17Params struct {
 // WithDefaults hydrates default values in the update repository 17 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository17Params) WithDefaults() *UpdateRepository17Params {
+func (o *UpdateDockerGroupRepositoryParams) WithDefaults() *UpdateDockerGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository17Params) WithDefaults() *UpdateRepository17Params {
 // SetDefaults hydrates default values in the update repository 17 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository17Params) SetDefaults() {
+func (o *UpdateDockerGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 17 params
-func (o *UpdateRepository17Params) WithTimeout(timeout time.Duration) *UpdateRepository17Params {
+func (o *UpdateDockerGroupRepositoryParams) WithTimeout(timeout time.Duration) *UpdateDockerGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 17 params
-func (o *UpdateRepository17Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateDockerGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 17 params
-func (o *UpdateRepository17Params) WithContext(ctx context.Context) *UpdateRepository17Params {
+func (o *UpdateDockerGroupRepositoryParams) WithContext(ctx context.Context) *UpdateDockerGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 17 params
-func (o *UpdateRepository17Params) SetContext(ctx context.Context) {
+func (o *UpdateDockerGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 17 params
-func (o *UpdateRepository17Params) WithHTTPClient(client *http.Client) *UpdateRepository17Params {
+func (o *UpdateDockerGroupRepositoryParams) WithHTTPClient(client *http.Client) *UpdateDockerGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 17 params
-func (o *UpdateRepository17Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateDockerGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 17 params
-func (o *UpdateRepository17Params) WithBody(body *models.DockerGroupRepositoryAPIRequest) *UpdateRepository17Params {
+func (o *UpdateDockerGroupRepositoryParams) WithBody(body *models.DockerGroupRepositoryAPIRequest) *UpdateDockerGroupRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 17 params
-func (o *UpdateRepository17Params) SetBody(body *models.DockerGroupRepositoryAPIRequest) {
+func (o *UpdateDockerGroupRepositoryParams) SetBody(body *models.DockerGroupRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 17 params
-func (o *UpdateRepository17Params) WithRepositoryName(repositoryName string) *UpdateRepository17Params {
+func (o *UpdateDockerGroupRepositoryParams) WithRepositoryName(repositoryName string) *UpdateDockerGroupRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 17 params
-func (o *UpdateRepository17Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateDockerGroupRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository17Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateDockerGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

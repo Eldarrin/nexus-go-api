@@ -39,7 +39,8 @@ func NewGet1OK() *Get1OK {
 	return &Get1OK{}
 }
 
-/* Get1OK describes a response with status code 200, with default header values.
+/*
+	Get1OK describes a response with status code 200, with default header values.
 
 successful operation
 */

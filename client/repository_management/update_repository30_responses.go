@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository30Reader is a Reader for the UpdateRepository30 structure.
-type UpdateRepository30Reader struct {
+// UpdateConanProxyRepositoryReader is a Reader for the UpdateConanProxyRepository structure.
+type UpdateConanProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository30Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateConanProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository30NoContent()
+		result := NewUpdateConanProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository30Unauthorized()
+		result := NewUpdateConanProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository30Forbidden()
+		result := NewUpdateConanProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 404:
-		result := NewUpdateRepository30NotFound()
+		result := NewUpdateConanProxyRepositoryNotFound()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *UpdateRepository30Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository30NoContent creates a UpdateRepository30NoContent with default headers values
-func NewUpdateRepository30NoContent() *UpdateRepository30NoContent {
-	return &UpdateRepository30NoContent{}
+// NewUpdateConanProxyRepositoryNoContent creates a UpdateConanProxyRepositoryNoContent with default headers values
+func NewUpdateConanProxyRepositoryNoContent() *UpdateConanProxyRepositoryNoContent {
+	return &UpdateConanProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository30NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateConanProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository30NoContent struct {
+type UpdateConanProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository30 no content response has a 2xx status code
-func (o *UpdateRepository30NoContent) IsSuccess() bool {
+func (o *UpdateConanProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository30 no content response has a 3xx status code
-func (o *UpdateRepository30NoContent) IsRedirect() bool {
+func (o *UpdateConanProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository30 no content response has a 4xx status code
-func (o *UpdateRepository30NoContent) IsClientError() bool {
+func (o *UpdateConanProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository30 no content response has a 5xx status code
-func (o *UpdateRepository30NoContent) IsServerError() bool {
+func (o *UpdateConanProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository30 no content response a status code equal to that given
-func (o *UpdateRepository30NoContent) IsCode(code int) bool {
+func (o *UpdateConanProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository30NoContent) Error() string {
+func (o *UpdateConanProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conan/proxy/{repositoryName}][%d] updateRepository30NoContent ", 204)
 }
 
-func (o *UpdateRepository30NoContent) String() string {
+func (o *UpdateConanProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conan/proxy/{repositoryName}][%d] updateRepository30NoContent ", 204)
 }
 
-func (o *UpdateRepository30NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateConanProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository30Unauthorized creates a UpdateRepository30Unauthorized with default headers values
-func NewUpdateRepository30Unauthorized() *UpdateRepository30Unauthorized {
-	return &UpdateRepository30Unauthorized{}
+// NewUpdateConanProxyRepositoryUnauthorized creates a UpdateConanProxyRepositoryUnauthorized with default headers values
+func NewUpdateConanProxyRepositoryUnauthorized() *UpdateConanProxyRepositoryUnauthorized {
+	return &UpdateConanProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository30Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateConanProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository30Unauthorized struct {
+type UpdateConanProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository30 unauthorized response has a 2xx status code
-func (o *UpdateRepository30Unauthorized) IsSuccess() bool {
+func (o *UpdateConanProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository30 unauthorized response has a 3xx status code
-func (o *UpdateRepository30Unauthorized) IsRedirect() bool {
+func (o *UpdateConanProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository30 unauthorized response has a 4xx status code
-func (o *UpdateRepository30Unauthorized) IsClientError() bool {
+func (o *UpdateConanProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository30 unauthorized response has a 5xx status code
-func (o *UpdateRepository30Unauthorized) IsServerError() bool {
+func (o *UpdateConanProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository30 unauthorized response a status code equal to that given
-func (o *UpdateRepository30Unauthorized) IsCode(code int) bool {
+func (o *UpdateConanProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository30Unauthorized) Error() string {
+func (o *UpdateConanProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conan/proxy/{repositoryName}][%d] updateRepository30Unauthorized ", 401)
 }
 
-func (o *UpdateRepository30Unauthorized) String() string {
+func (o *UpdateConanProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conan/proxy/{repositoryName}][%d] updateRepository30Unauthorized ", 401)
 }
 
-func (o *UpdateRepository30Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateConanProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository30Forbidden creates a UpdateRepository30Forbidden with default headers values
-func NewUpdateRepository30Forbidden() *UpdateRepository30Forbidden {
-	return &UpdateRepository30Forbidden{}
+// NewUpdateConanProxyRepositoryForbidden creates a UpdateConanProxyRepositoryForbidden with default headers values
+func NewUpdateConanProxyRepositoryForbidden() *UpdateConanProxyRepositoryForbidden {
+	return &UpdateConanProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository30Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateConanProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository30Forbidden struct {
+type UpdateConanProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository30 forbidden response has a 2xx status code
-func (o *UpdateRepository30Forbidden) IsSuccess() bool {
+func (o *UpdateConanProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository30 forbidden response has a 3xx status code
-func (o *UpdateRepository30Forbidden) IsRedirect() bool {
+func (o *UpdateConanProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository30 forbidden response has a 4xx status code
-func (o *UpdateRepository30Forbidden) IsClientError() bool {
+func (o *UpdateConanProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository30 forbidden response has a 5xx status code
-func (o *UpdateRepository30Forbidden) IsServerError() bool {
+func (o *UpdateConanProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository30 forbidden response a status code equal to that given
-func (o *UpdateRepository30Forbidden) IsCode(code int) bool {
+func (o *UpdateConanProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository30Forbidden) Error() string {
+func (o *UpdateConanProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conan/proxy/{repositoryName}][%d] updateRepository30Forbidden ", 403)
 }
 
-func (o *UpdateRepository30Forbidden) String() string {
+func (o *UpdateConanProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conan/proxy/{repositoryName}][%d] updateRepository30Forbidden ", 403)
 }
 
-func (o *UpdateRepository30Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateConanProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository30NotFound creates a UpdateRepository30NotFound with default headers values
-func NewUpdateRepository30NotFound() *UpdateRepository30NotFound {
-	return &UpdateRepository30NotFound{}
+// NewUpdateConanProxyRepositoryNotFound creates a UpdateConanProxyRepositoryNotFound with default headers values
+func NewUpdateConanProxyRepositoryNotFound() *UpdateConanProxyRepositoryNotFound {
+	return &UpdateConanProxyRepositoryNotFound{}
 }
 
-/* UpdateRepository30NotFound describes a response with status code 404, with default header values.
+/*
+	UpdateConanProxyRepositoryNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */
-type UpdateRepository30NotFound struct {
+type UpdateConanProxyRepositoryNotFound struct {
 }
 
 // IsSuccess returns true when this update repository30 not found response has a 2xx status code
-func (o *UpdateRepository30NotFound) IsSuccess() bool {
+func (o *UpdateConanProxyRepositoryNotFound) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository30 not found response has a 3xx status code
-func (o *UpdateRepository30NotFound) IsRedirect() bool {
+func (o *UpdateConanProxyRepositoryNotFound) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository30 not found response has a 4xx status code
-func (o *UpdateRepository30NotFound) IsClientError() bool {
+func (o *UpdateConanProxyRepositoryNotFound) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository30 not found response has a 5xx status code
-func (o *UpdateRepository30NotFound) IsServerError() bool {
+func (o *UpdateConanProxyRepositoryNotFound) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository30 not found response a status code equal to that given
-func (o *UpdateRepository30NotFound) IsCode(code int) bool {
+func (o *UpdateConanProxyRepositoryNotFound) IsCode(code int) bool {
 	return code == 404
 }
 
-func (o *UpdateRepository30NotFound) Error() string {
+func (o *UpdateConanProxyRepositoryNotFound) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conan/proxy/{repositoryName}][%d] updateRepository30NotFound ", 404)
 }
 
-func (o *UpdateRepository30NotFound) String() string {
+func (o *UpdateConanProxyRepositoryNotFound) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/conan/proxy/{repositoryName}][%d] updateRepository30NotFound ", 404)
 }
 
-func (o *UpdateRepository30NotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateConanProxyRepositoryNotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

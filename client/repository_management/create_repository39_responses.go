@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository39Reader is a Reader for the CreateRepository39 structure.
-type CreateRepository39Reader struct {
+// CreateBowerHostedRepositoryReader is a Reader for the CreateBowerHostedRepository structure.
+type CreateBowerHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository39Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateBowerHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository39Created()
+		result := NewCreateBowerHostedRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository39Unauthorized()
+		result := NewCreateBowerHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository39Forbidden()
+		result := NewCreateBowerHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository39Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository39Created creates a CreateRepository39Created with default headers values
-func NewCreateRepository39Created() *CreateRepository39Created {
-	return &CreateRepository39Created{}
+// NewCreateBowerHostedRepositoryCreated creates a CreateBowerHostedRepositoryCreated with default headers values
+func NewCreateBowerHostedRepositoryCreated() *CreateBowerHostedRepositoryCreated {
+	return &CreateBowerHostedRepositoryCreated{}
 }
 
-/* CreateRepository39Created describes a response with status code 201, with default header values.
+/*
+	CreateBowerHostedRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository39Created struct {
+type CreateBowerHostedRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository39 created response has a 2xx status code
-func (o *CreateRepository39Created) IsSuccess() bool {
+func (o *CreateBowerHostedRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository39 created response has a 3xx status code
-func (o *CreateRepository39Created) IsRedirect() bool {
+func (o *CreateBowerHostedRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository39 created response has a 4xx status code
-func (o *CreateRepository39Created) IsClientError() bool {
+func (o *CreateBowerHostedRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository39 created response has a 5xx status code
-func (o *CreateRepository39Created) IsServerError() bool {
+func (o *CreateBowerHostedRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository39 created response a status code equal to that given
-func (o *CreateRepository39Created) IsCode(code int) bool {
+func (o *CreateBowerHostedRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository39Created) Error() string {
+func (o *CreateBowerHostedRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/bower/hosted][%d] createRepository39Created ", 201)
 }
 
-func (o *CreateRepository39Created) String() string {
+func (o *CreateBowerHostedRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/bower/hosted][%d] createRepository39Created ", 201)
 }
 
-func (o *CreateRepository39Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateBowerHostedRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository39Unauthorized creates a CreateRepository39Unauthorized with default headers values
-func NewCreateRepository39Unauthorized() *CreateRepository39Unauthorized {
-	return &CreateRepository39Unauthorized{}
+// NewCreateBowerHostedRepositoryUnauthorized creates a CreateBowerHostedRepositoryUnauthorized with default headers values
+func NewCreateBowerHostedRepositoryUnauthorized() *CreateBowerHostedRepositoryUnauthorized {
+	return &CreateBowerHostedRepositoryUnauthorized{}
 }
 
-/* CreateRepository39Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateBowerHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository39Unauthorized struct {
+type CreateBowerHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository39 unauthorized response has a 2xx status code
-func (o *CreateRepository39Unauthorized) IsSuccess() bool {
+func (o *CreateBowerHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository39 unauthorized response has a 3xx status code
-func (o *CreateRepository39Unauthorized) IsRedirect() bool {
+func (o *CreateBowerHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository39 unauthorized response has a 4xx status code
-func (o *CreateRepository39Unauthorized) IsClientError() bool {
+func (o *CreateBowerHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository39 unauthorized response has a 5xx status code
-func (o *CreateRepository39Unauthorized) IsServerError() bool {
+func (o *CreateBowerHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository39 unauthorized response a status code equal to that given
-func (o *CreateRepository39Unauthorized) IsCode(code int) bool {
+func (o *CreateBowerHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository39Unauthorized) Error() string {
+func (o *CreateBowerHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/bower/hosted][%d] createRepository39Unauthorized ", 401)
 }
 
-func (o *CreateRepository39Unauthorized) String() string {
+func (o *CreateBowerHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/bower/hosted][%d] createRepository39Unauthorized ", 401)
 }
 
-func (o *CreateRepository39Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateBowerHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository39Forbidden creates a CreateRepository39Forbidden with default headers values
-func NewCreateRepository39Forbidden() *CreateRepository39Forbidden {
-	return &CreateRepository39Forbidden{}
+// NewCreateBowerHostedRepositoryForbidden creates a CreateBowerHostedRepositoryForbidden with default headers values
+func NewCreateBowerHostedRepositoryForbidden() *CreateBowerHostedRepositoryForbidden {
+	return &CreateBowerHostedRepositoryForbidden{}
 }
 
-/* CreateRepository39Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateBowerHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository39Forbidden struct {
+type CreateBowerHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository39 forbidden response has a 2xx status code
-func (o *CreateRepository39Forbidden) IsSuccess() bool {
+func (o *CreateBowerHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository39 forbidden response has a 3xx status code
-func (o *CreateRepository39Forbidden) IsRedirect() bool {
+func (o *CreateBowerHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository39 forbidden response has a 4xx status code
-func (o *CreateRepository39Forbidden) IsClientError() bool {
+func (o *CreateBowerHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository39 forbidden response has a 5xx status code
-func (o *CreateRepository39Forbidden) IsServerError() bool {
+func (o *CreateBowerHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository39 forbidden response a status code equal to that given
-func (o *CreateRepository39Forbidden) IsCode(code int) bool {
+func (o *CreateBowerHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository39Forbidden) Error() string {
+func (o *CreateBowerHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/bower/hosted][%d] createRepository39Forbidden ", 403)
 }
 
-func (o *CreateRepository39Forbidden) String() string {
+func (o *CreateBowerHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/bower/hosted][%d] createRepository39Forbidden ", 403)
 }
 
-func (o *CreateRepository39Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateBowerHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

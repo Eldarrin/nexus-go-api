@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository32Params creates a new UpdateRepository32Params object,
+// NewUpdateRHostedRepositoryParams creates a new UpdateRHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository32Params() *UpdateRepository32Params {
-	return &UpdateRepository32Params{
+func NewUpdateRHostedRepositoryParams() *UpdateRHostedRepositoryParams {
+	return &UpdateRHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository32ParamsWithTimeout creates a new UpdateRepository32Params object
+// NewUpdateRHostedRepositoryParamsWithTimeout creates a new UpdateRHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository32ParamsWithTimeout(timeout time.Duration) *UpdateRepository32Params {
-	return &UpdateRepository32Params{
+func NewUpdateRHostedRepositoryParamsWithTimeout(timeout time.Duration) *UpdateRHostedRepositoryParams {
+	return &UpdateRHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository32ParamsWithContext creates a new UpdateRepository32Params object
+// NewUpdateRHostedRepositoryParamsWithContext creates a new UpdateRHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository32ParamsWithContext(ctx context.Context) *UpdateRepository32Params {
-	return &UpdateRepository32Params{
+func NewUpdateRHostedRepositoryParamsWithContext(ctx context.Context) *UpdateRHostedRepositoryParams {
+	return &UpdateRHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository32ParamsWithHTTPClient creates a new UpdateRepository32Params object
+// NewUpdateRHostedRepositoryParamsWithHTTPClient creates a new UpdateRHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository32ParamsWithHTTPClient(client *http.Client) *UpdateRepository32Params {
-	return &UpdateRepository32Params{
+func NewUpdateRHostedRepositoryParamsWithHTTPClient(client *http.Client) *UpdateRHostedRepositoryParams {
+	return &UpdateRHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository32Params contains all the parameters to send to the API endpoint
-   for the update repository 32 operation.
+/*
+UpdateRHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 32 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository32Params struct {
+type UpdateRHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.RHostedRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository32Params struct {
 // WithDefaults hydrates default values in the update repository 32 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository32Params) WithDefaults() *UpdateRepository32Params {
+func (o *UpdateRHostedRepositoryParams) WithDefaults() *UpdateRHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository32Params) WithDefaults() *UpdateRepository32Params {
 // SetDefaults hydrates default values in the update repository 32 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository32Params) SetDefaults() {
+func (o *UpdateRHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 32 params
-func (o *UpdateRepository32Params) WithTimeout(timeout time.Duration) *UpdateRepository32Params {
+func (o *UpdateRHostedRepositoryParams) WithTimeout(timeout time.Duration) *UpdateRHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 32 params
-func (o *UpdateRepository32Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateRHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 32 params
-func (o *UpdateRepository32Params) WithContext(ctx context.Context) *UpdateRepository32Params {
+func (o *UpdateRHostedRepositoryParams) WithContext(ctx context.Context) *UpdateRHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 32 params
-func (o *UpdateRepository32Params) SetContext(ctx context.Context) {
+func (o *UpdateRHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 32 params
-func (o *UpdateRepository32Params) WithHTTPClient(client *http.Client) *UpdateRepository32Params {
+func (o *UpdateRHostedRepositoryParams) WithHTTPClient(client *http.Client) *UpdateRHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 32 params
-func (o *UpdateRepository32Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateRHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 32 params
-func (o *UpdateRepository32Params) WithBody(body *models.RHostedRepositoryAPIRequest) *UpdateRepository32Params {
+func (o *UpdateRHostedRepositoryParams) WithBody(body *models.RHostedRepositoryAPIRequest) *UpdateRHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 32 params
-func (o *UpdateRepository32Params) SetBody(body *models.RHostedRepositoryAPIRequest) {
+func (o *UpdateRHostedRepositoryParams) SetBody(body *models.RHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 32 params
-func (o *UpdateRepository32Params) WithRepositoryName(repositoryName string) *UpdateRepository32Params {
+func (o *UpdateRHostedRepositoryParams) WithRepositoryName(repositoryName string) *UpdateRHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 32 params
-func (o *UpdateRepository32Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateRHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository32Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateRHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -48,7 +48,8 @@ func NewReleaseNoContent() *ReleaseNoContent {
 	return &ReleaseNoContent{}
 }
 
-/* ReleaseNoContent describes a response with status code 204, with default header values.
+/*
+	ReleaseNoContent describes a response with status code 204, with default header values.
 
 System is no longer read-only
 */
@@ -98,7 +99,8 @@ func NewReleaseForbidden() *ReleaseForbidden {
 	return &ReleaseForbidden{}
 }
 
-/* ReleaseForbidden describes a response with status code 403, with default header values.
+/*
+	ReleaseForbidden describes a response with status code 403, with default header values.
 
 Authentication required
 */
@@ -148,7 +150,8 @@ func NewReleaseNotFound() *ReleaseNotFound {
 	return &ReleaseNotFound{}
 }
 
-/* ReleaseNotFound describes a response with status code 404, with default header values.
+/*
+	ReleaseNotFound describes a response with status code 404, with default header values.
 
 No change to read-only state
 */

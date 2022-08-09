@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository27Reader is a Reader for the UpdateRepository27 structure.
-type UpdateRepository27Reader struct {
+// UpdatePypiHostedRepositoryReader is a Reader for the UpdatePypiHostedRepository structure.
+type UpdatePypiHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository27Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdatePypiHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository27NoContent()
+		result := NewUpdatePypiHostedRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository27Unauthorized()
+		result := NewUpdatePypiHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository27Forbidden()
+		result := NewUpdatePypiHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository27Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository27NoContent creates a UpdateRepository27NoContent with default headers values
-func NewUpdateRepository27NoContent() *UpdateRepository27NoContent {
-	return &UpdateRepository27NoContent{}
+// NewUpdatePypiHostedRepositoryNoContent creates a UpdatePypiHostedRepositoryNoContent with default headers values
+func NewUpdatePypiHostedRepositoryNoContent() *UpdatePypiHostedRepositoryNoContent {
+	return &UpdatePypiHostedRepositoryNoContent{}
 }
 
-/* UpdateRepository27NoContent describes a response with status code 204, with default header values.
+/*
+	UpdatePypiHostedRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository27NoContent struct {
+type UpdatePypiHostedRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository27 no content response has a 2xx status code
-func (o *UpdateRepository27NoContent) IsSuccess() bool {
+func (o *UpdatePypiHostedRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository27 no content response has a 3xx status code
-func (o *UpdateRepository27NoContent) IsRedirect() bool {
+func (o *UpdatePypiHostedRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository27 no content response has a 4xx status code
-func (o *UpdateRepository27NoContent) IsClientError() bool {
+func (o *UpdatePypiHostedRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository27 no content response has a 5xx status code
-func (o *UpdateRepository27NoContent) IsServerError() bool {
+func (o *UpdatePypiHostedRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository27 no content response a status code equal to that given
-func (o *UpdateRepository27NoContent) IsCode(code int) bool {
+func (o *UpdatePypiHostedRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository27NoContent) Error() string {
+func (o *UpdatePypiHostedRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/hosted/{repositoryName}][%d] updateRepository27NoContent ", 204)
 }
 
-func (o *UpdateRepository27NoContent) String() string {
+func (o *UpdatePypiHostedRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/hosted/{repositoryName}][%d] updateRepository27NoContent ", 204)
 }
 
-func (o *UpdateRepository27NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdatePypiHostedRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository27Unauthorized creates a UpdateRepository27Unauthorized with default headers values
-func NewUpdateRepository27Unauthorized() *UpdateRepository27Unauthorized {
-	return &UpdateRepository27Unauthorized{}
+// NewUpdatePypiHostedRepositoryUnauthorized creates a UpdatePypiHostedRepositoryUnauthorized with default headers values
+func NewUpdatePypiHostedRepositoryUnauthorized() *UpdatePypiHostedRepositoryUnauthorized {
+	return &UpdatePypiHostedRepositoryUnauthorized{}
 }
 
-/* UpdateRepository27Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdatePypiHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository27Unauthorized struct {
+type UpdatePypiHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository27 unauthorized response has a 2xx status code
-func (o *UpdateRepository27Unauthorized) IsSuccess() bool {
+func (o *UpdatePypiHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository27 unauthorized response has a 3xx status code
-func (o *UpdateRepository27Unauthorized) IsRedirect() bool {
+func (o *UpdatePypiHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository27 unauthorized response has a 4xx status code
-func (o *UpdateRepository27Unauthorized) IsClientError() bool {
+func (o *UpdatePypiHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository27 unauthorized response has a 5xx status code
-func (o *UpdateRepository27Unauthorized) IsServerError() bool {
+func (o *UpdatePypiHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository27 unauthorized response a status code equal to that given
-func (o *UpdateRepository27Unauthorized) IsCode(code int) bool {
+func (o *UpdatePypiHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository27Unauthorized) Error() string {
+func (o *UpdatePypiHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/hosted/{repositoryName}][%d] updateRepository27Unauthorized ", 401)
 }
 
-func (o *UpdateRepository27Unauthorized) String() string {
+func (o *UpdatePypiHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/hosted/{repositoryName}][%d] updateRepository27Unauthorized ", 401)
 }
 
-func (o *UpdateRepository27Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdatePypiHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository27Forbidden creates a UpdateRepository27Forbidden with default headers values
-func NewUpdateRepository27Forbidden() *UpdateRepository27Forbidden {
-	return &UpdateRepository27Forbidden{}
+// NewUpdatePypiHostedRepositoryForbidden creates a UpdatePypiHostedRepositoryForbidden with default headers values
+func NewUpdatePypiHostedRepositoryForbidden() *UpdatePypiHostedRepositoryForbidden {
+	return &UpdatePypiHostedRepositoryForbidden{}
 }
 
-/* UpdateRepository27Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdatePypiHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository27Forbidden struct {
+type UpdatePypiHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository27 forbidden response has a 2xx status code
-func (o *UpdateRepository27Forbidden) IsSuccess() bool {
+func (o *UpdatePypiHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository27 forbidden response has a 3xx status code
-func (o *UpdateRepository27Forbidden) IsRedirect() bool {
+func (o *UpdatePypiHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository27 forbidden response has a 4xx status code
-func (o *UpdateRepository27Forbidden) IsClientError() bool {
+func (o *UpdatePypiHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository27 forbidden response has a 5xx status code
-func (o *UpdateRepository27Forbidden) IsServerError() bool {
+func (o *UpdatePypiHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository27 forbidden response a status code equal to that given
-func (o *UpdateRepository27Forbidden) IsCode(code int) bool {
+func (o *UpdatePypiHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository27Forbidden) Error() string {
+func (o *UpdatePypiHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/hosted/{repositoryName}][%d] updateRepository27Forbidden ", 403)
 }
 
-func (o *UpdateRepository27Forbidden) String() string {
+func (o *UpdatePypiHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/pypi/hosted/{repositoryName}][%d] updateRepository27Forbidden ", 403)
 }
 
-func (o *UpdateRepository27Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdatePypiHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository3Params creates a new GetRepository3Params object,
+// NewGetMavenProxyRepositoryParams creates a new GetMavenProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository3Params() *GetRepository3Params {
-	return &GetRepository3Params{
+func NewGetMavenProxyRepositoryParams() *GetMavenProxyRepositoryParams {
+	return &GetMavenProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository3ParamsWithTimeout creates a new GetRepository3Params object
+// NewGetMavenProxyRepositoryParamsWithTimeout creates a new GetMavenProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository3ParamsWithTimeout(timeout time.Duration) *GetRepository3Params {
-	return &GetRepository3Params{
+func NewGetMavenProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetMavenProxyRepositoryParams {
+	return &GetMavenProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository3ParamsWithContext creates a new GetRepository3Params object
+// NewGetMavenProxyRepositoryParamsWithContext creates a new GetMavenProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository3ParamsWithContext(ctx context.Context) *GetRepository3Params {
-	return &GetRepository3Params{
+func NewGetMavenProxyRepositoryParamsWithContext(ctx context.Context) *GetMavenProxyRepositoryParams {
+	return &GetMavenProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository3ParamsWithHTTPClient creates a new GetRepository3Params object
+// NewGetMavenProxyRepositoryParamsWithHTTPClient creates a new GetMavenProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository3ParamsWithHTTPClient(client *http.Client) *GetRepository3Params {
-	return &GetRepository3Params{
+func NewGetMavenProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetMavenProxyRepositoryParams {
+	return &GetMavenProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository3Params contains all the parameters to send to the API endpoint
-   for the get repository 3 operation.
+/*
+GetMavenProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 3 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository3Params struct {
+type GetMavenProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository3Params struct {
 // WithDefaults hydrates default values in the get repository 3 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository3Params) WithDefaults() *GetRepository3Params {
+func (o *GetMavenProxyRepositoryParams) WithDefaults() *GetMavenProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository3Params) WithDefaults() *GetRepository3Params {
 // SetDefaults hydrates default values in the get repository 3 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository3Params) SetDefaults() {
+func (o *GetMavenProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 3 params
-func (o *GetRepository3Params) WithTimeout(timeout time.Duration) *GetRepository3Params {
+func (o *GetMavenProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetMavenProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 3 params
-func (o *GetRepository3Params) SetTimeout(timeout time.Duration) {
+func (o *GetMavenProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 3 params
-func (o *GetRepository3Params) WithContext(ctx context.Context) *GetRepository3Params {
+func (o *GetMavenProxyRepositoryParams) WithContext(ctx context.Context) *GetMavenProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 3 params
-func (o *GetRepository3Params) SetContext(ctx context.Context) {
+func (o *GetMavenProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 3 params
-func (o *GetRepository3Params) WithHTTPClient(client *http.Client) *GetRepository3Params {
+func (o *GetMavenProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetMavenProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 3 params
-func (o *GetRepository3Params) SetHTTPClient(client *http.Client) {
+func (o *GetMavenProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 3 params
-func (o *GetRepository3Params) WithRepositoryName(repositoryName string) *GetRepository3Params {
+func (o *GetMavenProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetMavenProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 3 params
-func (o *GetRepository3Params) SetRepositoryName(repositoryName string) {
+func (o *GetMavenProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository3Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetMavenProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

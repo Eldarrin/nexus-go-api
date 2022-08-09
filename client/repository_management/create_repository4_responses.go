@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository4Reader is a Reader for the CreateRepository4 structure.
-type CreateRepository4Reader struct {
+// CreateAptProxyRepositoryReader is a Reader for the CreateAptProxyRepository structure.
+type CreateAptProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository4Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateAptProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository4Created()
+		result := NewCreateAptProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository4Unauthorized()
+		result := NewCreateAptProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository4Forbidden()
+		result := NewCreateAptProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 405:
-		result := NewCreateRepository4MethodNotAllowed()
+		result := NewCreateAptProxyRepositoryMethodNotAllowed()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *CreateRepository4Reader) ReadResponse(response runtime.ClientResponse, 
 	}
 }
 
-// NewCreateRepository4Created creates a CreateRepository4Created with default headers values
-func NewCreateRepository4Created() *CreateRepository4Created {
-	return &CreateRepository4Created{}
+// NewCreateAptProxyRepositoryCreated creates a CreateAptProxyRepositoryCreated with default headers values
+func NewCreateAptProxyRepositoryCreated() *CreateAptProxyRepositoryCreated {
+	return &CreateAptProxyRepositoryCreated{}
 }
 
-/* CreateRepository4Created describes a response with status code 201, with default header values.
+/*
+	CreateAptProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository4Created struct {
+type CreateAptProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository4 created response has a 2xx status code
-func (o *CreateRepository4Created) IsSuccess() bool {
+func (o *CreateAptProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository4 created response has a 3xx status code
-func (o *CreateRepository4Created) IsRedirect() bool {
+func (o *CreateAptProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository4 created response has a 4xx status code
-func (o *CreateRepository4Created) IsClientError() bool {
+func (o *CreateAptProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository4 created response has a 5xx status code
-func (o *CreateRepository4Created) IsServerError() bool {
+func (o *CreateAptProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository4 created response a status code equal to that given
-func (o *CreateRepository4Created) IsCode(code int) bool {
+func (o *CreateAptProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository4Created) Error() string {
+func (o *CreateAptProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/proxy][%d] createRepository4Created ", 201)
 }
 
-func (o *CreateRepository4Created) String() string {
+func (o *CreateAptProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/proxy][%d] createRepository4Created ", 201)
 }
 
-func (o *CreateRepository4Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateAptProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository4Unauthorized creates a CreateRepository4Unauthorized with default headers values
-func NewCreateRepository4Unauthorized() *CreateRepository4Unauthorized {
-	return &CreateRepository4Unauthorized{}
+// NewCreateAptProxyRepositoryUnauthorized creates a CreateAptProxyRepositoryUnauthorized with default headers values
+func NewCreateAptProxyRepositoryUnauthorized() *CreateAptProxyRepositoryUnauthorized {
+	return &CreateAptProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository4Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateAptProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository4Unauthorized struct {
+type CreateAptProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository4 unauthorized response has a 2xx status code
-func (o *CreateRepository4Unauthorized) IsSuccess() bool {
+func (o *CreateAptProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository4 unauthorized response has a 3xx status code
-func (o *CreateRepository4Unauthorized) IsRedirect() bool {
+func (o *CreateAptProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository4 unauthorized response has a 4xx status code
-func (o *CreateRepository4Unauthorized) IsClientError() bool {
+func (o *CreateAptProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository4 unauthorized response has a 5xx status code
-func (o *CreateRepository4Unauthorized) IsServerError() bool {
+func (o *CreateAptProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository4 unauthorized response a status code equal to that given
-func (o *CreateRepository4Unauthorized) IsCode(code int) bool {
+func (o *CreateAptProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository4Unauthorized) Error() string {
+func (o *CreateAptProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/proxy][%d] createRepository4Unauthorized ", 401)
 }
 
-func (o *CreateRepository4Unauthorized) String() string {
+func (o *CreateAptProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/proxy][%d] createRepository4Unauthorized ", 401)
 }
 
-func (o *CreateRepository4Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateAptProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository4Forbidden creates a CreateRepository4Forbidden with default headers values
-func NewCreateRepository4Forbidden() *CreateRepository4Forbidden {
-	return &CreateRepository4Forbidden{}
+// NewCreateAptProxyRepositoryForbidden creates a CreateAptProxyRepositoryForbidden with default headers values
+func NewCreateAptProxyRepositoryForbidden() *CreateAptProxyRepositoryForbidden {
+	return &CreateAptProxyRepositoryForbidden{}
 }
 
-/* CreateRepository4Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateAptProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository4Forbidden struct {
+type CreateAptProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository4 forbidden response has a 2xx status code
-func (o *CreateRepository4Forbidden) IsSuccess() bool {
+func (o *CreateAptProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository4 forbidden response has a 3xx status code
-func (o *CreateRepository4Forbidden) IsRedirect() bool {
+func (o *CreateAptProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository4 forbidden response has a 4xx status code
-func (o *CreateRepository4Forbidden) IsClientError() bool {
+func (o *CreateAptProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository4 forbidden response has a 5xx status code
-func (o *CreateRepository4Forbidden) IsServerError() bool {
+func (o *CreateAptProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository4 forbidden response a status code equal to that given
-func (o *CreateRepository4Forbidden) IsCode(code int) bool {
+func (o *CreateAptProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository4Forbidden) Error() string {
+func (o *CreateAptProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/proxy][%d] createRepository4Forbidden ", 403)
 }
 
-func (o *CreateRepository4Forbidden) String() string {
+func (o *CreateAptProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/proxy][%d] createRepository4Forbidden ", 403)
 }
 
-func (o *CreateRepository4Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateAptProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository4MethodNotAllowed creates a CreateRepository4MethodNotAllowed with default headers values
-func NewCreateRepository4MethodNotAllowed() *CreateRepository4MethodNotAllowed {
-	return &CreateRepository4MethodNotAllowed{}
+// NewCreateAptProxyRepositoryMethodNotAllowed creates a CreateAptProxyRepositoryMethodNotAllowed with default headers values
+func NewCreateAptProxyRepositoryMethodNotAllowed() *CreateAptProxyRepositoryMethodNotAllowed {
+	return &CreateAptProxyRepositoryMethodNotAllowed{}
 }
 
-/* CreateRepository4MethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	CreateAptProxyRepositoryMethodNotAllowed describes a response with status code 405, with default header values.
 
 Feature is disabled in High Availability
 */
-type CreateRepository4MethodNotAllowed struct {
+type CreateAptProxyRepositoryMethodNotAllowed struct {
 }
 
 // IsSuccess returns true when this create repository4 method not allowed response has a 2xx status code
-func (o *CreateRepository4MethodNotAllowed) IsSuccess() bool {
+func (o *CreateAptProxyRepositoryMethodNotAllowed) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository4 method not allowed response has a 3xx status code
-func (o *CreateRepository4MethodNotAllowed) IsRedirect() bool {
+func (o *CreateAptProxyRepositoryMethodNotAllowed) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository4 method not allowed response has a 4xx status code
-func (o *CreateRepository4MethodNotAllowed) IsClientError() bool {
+func (o *CreateAptProxyRepositoryMethodNotAllowed) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository4 method not allowed response has a 5xx status code
-func (o *CreateRepository4MethodNotAllowed) IsServerError() bool {
+func (o *CreateAptProxyRepositoryMethodNotAllowed) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository4 method not allowed response a status code equal to that given
-func (o *CreateRepository4MethodNotAllowed) IsCode(code int) bool {
+func (o *CreateAptProxyRepositoryMethodNotAllowed) IsCode(code int) bool {
 	return code == 405
 }
 
-func (o *CreateRepository4MethodNotAllowed) Error() string {
+func (o *CreateAptProxyRepositoryMethodNotAllowed) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/proxy][%d] createRepository4MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository4MethodNotAllowed) String() string {
+func (o *CreateAptProxyRepositoryMethodNotAllowed) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/apt/proxy][%d] createRepository4MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository4MethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateAptProxyRepositoryMethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

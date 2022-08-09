@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository23Params creates a new GetRepository23Params object,
+// NewGetYumProxyRepositoryParams creates a new GetYumProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository23Params() *GetRepository23Params {
-	return &GetRepository23Params{
+func NewGetYumProxyRepositoryParams() *GetYumProxyRepositoryParams {
+	return &GetYumProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository23ParamsWithTimeout creates a new GetRepository23Params object
+// NewGetYumProxyRepositoryParamsWithTimeout creates a new GetYumProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository23ParamsWithTimeout(timeout time.Duration) *GetRepository23Params {
-	return &GetRepository23Params{
+func NewGetYumProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetYumProxyRepositoryParams {
+	return &GetYumProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository23ParamsWithContext creates a new GetRepository23Params object
+// NewGetYumProxyRepositoryParamsWithContext creates a new GetYumProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository23ParamsWithContext(ctx context.Context) *GetRepository23Params {
-	return &GetRepository23Params{
+func NewGetYumProxyRepositoryParamsWithContext(ctx context.Context) *GetYumProxyRepositoryParams {
+	return &GetYumProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository23ParamsWithHTTPClient creates a new GetRepository23Params object
+// NewGetYumProxyRepositoryParamsWithHTTPClient creates a new GetYumProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository23ParamsWithHTTPClient(client *http.Client) *GetRepository23Params {
-	return &GetRepository23Params{
+func NewGetYumProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetYumProxyRepositoryParams {
+	return &GetYumProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository23Params contains all the parameters to send to the API endpoint
-   for the get repository 23 operation.
+/*
+GetYumProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 23 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository23Params struct {
+type GetYumProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository23Params struct {
 // WithDefaults hydrates default values in the get repository 23 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository23Params) WithDefaults() *GetRepository23Params {
+func (o *GetYumProxyRepositoryParams) WithDefaults() *GetYumProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository23Params) WithDefaults() *GetRepository23Params {
 // SetDefaults hydrates default values in the get repository 23 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository23Params) SetDefaults() {
+func (o *GetYumProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 23 params
-func (o *GetRepository23Params) WithTimeout(timeout time.Duration) *GetRepository23Params {
+func (o *GetYumProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetYumProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 23 params
-func (o *GetRepository23Params) SetTimeout(timeout time.Duration) {
+func (o *GetYumProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 23 params
-func (o *GetRepository23Params) WithContext(ctx context.Context) *GetRepository23Params {
+func (o *GetYumProxyRepositoryParams) WithContext(ctx context.Context) *GetYumProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 23 params
-func (o *GetRepository23Params) SetContext(ctx context.Context) {
+func (o *GetYumProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 23 params
-func (o *GetRepository23Params) WithHTTPClient(client *http.Client) *GetRepository23Params {
+func (o *GetYumProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetYumProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 23 params
-func (o *GetRepository23Params) SetHTTPClient(client *http.Client) {
+func (o *GetYumProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 23 params
-func (o *GetRepository23Params) WithRepositoryName(repositoryName string) *GetRepository23Params {
+func (o *GetYumProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetYumProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 23 params
-func (o *GetRepository23Params) SetRepositoryName(repositoryName string) {
+func (o *GetYumProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository23Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetYumProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

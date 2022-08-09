@@ -54,7 +54,8 @@ func NewVerifyConnection1NoContent() *VerifyConnection1NoContent {
 	return &VerifyConnection1NoContent{}
 }
 
-/* VerifyConnection1NoContent describes a response with status code 204, with default header values.
+/*
+	VerifyConnection1NoContent describes a response with status code 204, with default header values.
 
 Azure Blob Store connection was successful
 */
@@ -104,7 +105,8 @@ func NewVerifyConnection1BadRequest() *VerifyConnection1BadRequest {
 	return &VerifyConnection1BadRequest{}
 }
 
-/* VerifyConnection1BadRequest describes a response with status code 400, with default header values.
+/*
+	VerifyConnection1BadRequest describes a response with status code 400, with default header values.
 
 Azure Blob Store connection failed
 */
@@ -154,7 +156,8 @@ func NewVerifyConnection1Unauthorized() *VerifyConnection1Unauthorized {
 	return &VerifyConnection1Unauthorized{}
 }
 
-/* VerifyConnection1Unauthorized describes a response with status code 401, with default header values.
+/*
+	VerifyConnection1Unauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -204,7 +207,8 @@ func NewVerifyConnection1Forbidden() *VerifyConnection1Forbidden {
 	return &VerifyConnection1Forbidden{}
 }
 
-/* VerifyConnection1Forbidden describes a response with status code 403, with default header values.
+/*
+	VerifyConnection1Forbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository34Reader is a Reader for the UpdateRepository34 structure.
-type UpdateRepository34Reader struct {
+// UpdateCocoapodsProxyRepositoryReader is a Reader for the UpdateCocoapodsProxyRepository structure.
+type UpdateCocoapodsProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository34Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateCocoapodsProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository34NoContent()
+		result := NewUpdateCocoapodsProxyRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository34Unauthorized()
+		result := NewUpdateCocoapodsProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository34Forbidden()
+		result := NewUpdateCocoapodsProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *UpdateRepository34Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository34NoContent creates a UpdateRepository34NoContent with default headers values
-func NewUpdateRepository34NoContent() *UpdateRepository34NoContent {
-	return &UpdateRepository34NoContent{}
+// NewUpdateCocoapodsProxyRepositoryNoContent creates a UpdateCocoapodsProxyRepositoryNoContent with default headers values
+func NewUpdateCocoapodsProxyRepositoryNoContent() *UpdateCocoapodsProxyRepositoryNoContent {
+	return &UpdateCocoapodsProxyRepositoryNoContent{}
 }
 
-/* UpdateRepository34NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateCocoapodsProxyRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository34NoContent struct {
+type UpdateCocoapodsProxyRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository34 no content response has a 2xx status code
-func (o *UpdateRepository34NoContent) IsSuccess() bool {
+func (o *UpdateCocoapodsProxyRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository34 no content response has a 3xx status code
-func (o *UpdateRepository34NoContent) IsRedirect() bool {
+func (o *UpdateCocoapodsProxyRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository34 no content response has a 4xx status code
-func (o *UpdateRepository34NoContent) IsClientError() bool {
+func (o *UpdateCocoapodsProxyRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository34 no content response has a 5xx status code
-func (o *UpdateRepository34NoContent) IsServerError() bool {
+func (o *UpdateCocoapodsProxyRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository34 no content response a status code equal to that given
-func (o *UpdateRepository34NoContent) IsCode(code int) bool {
+func (o *UpdateCocoapodsProxyRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository34NoContent) Error() string {
+func (o *UpdateCocoapodsProxyRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/cocoapods/proxy/{repositoryName}][%d] updateRepository34NoContent ", 204)
 }
 
-func (o *UpdateRepository34NoContent) String() string {
+func (o *UpdateCocoapodsProxyRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/cocoapods/proxy/{repositoryName}][%d] updateRepository34NoContent ", 204)
 }
 
-func (o *UpdateRepository34NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateCocoapodsProxyRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository34Unauthorized creates a UpdateRepository34Unauthorized with default headers values
-func NewUpdateRepository34Unauthorized() *UpdateRepository34Unauthorized {
-	return &UpdateRepository34Unauthorized{}
+// NewUpdateCocoapodsProxyRepositoryUnauthorized creates a UpdateCocoapodsProxyRepositoryUnauthorized with default headers values
+func NewUpdateCocoapodsProxyRepositoryUnauthorized() *UpdateCocoapodsProxyRepositoryUnauthorized {
+	return &UpdateCocoapodsProxyRepositoryUnauthorized{}
 }
 
-/* UpdateRepository34Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateCocoapodsProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository34Unauthorized struct {
+type UpdateCocoapodsProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository34 unauthorized response has a 2xx status code
-func (o *UpdateRepository34Unauthorized) IsSuccess() bool {
+func (o *UpdateCocoapodsProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository34 unauthorized response has a 3xx status code
-func (o *UpdateRepository34Unauthorized) IsRedirect() bool {
+func (o *UpdateCocoapodsProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository34 unauthorized response has a 4xx status code
-func (o *UpdateRepository34Unauthorized) IsClientError() bool {
+func (o *UpdateCocoapodsProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository34 unauthorized response has a 5xx status code
-func (o *UpdateRepository34Unauthorized) IsServerError() bool {
+func (o *UpdateCocoapodsProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository34 unauthorized response a status code equal to that given
-func (o *UpdateRepository34Unauthorized) IsCode(code int) bool {
+func (o *UpdateCocoapodsProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository34Unauthorized) Error() string {
+func (o *UpdateCocoapodsProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/cocoapods/proxy/{repositoryName}][%d] updateRepository34Unauthorized ", 401)
 }
 
-func (o *UpdateRepository34Unauthorized) String() string {
+func (o *UpdateCocoapodsProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/cocoapods/proxy/{repositoryName}][%d] updateRepository34Unauthorized ", 401)
 }
 
-func (o *UpdateRepository34Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateCocoapodsProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository34Forbidden creates a UpdateRepository34Forbidden with default headers values
-func NewUpdateRepository34Forbidden() *UpdateRepository34Forbidden {
-	return &UpdateRepository34Forbidden{}
+// NewUpdateCocoapodsProxyRepositoryForbidden creates a UpdateCocoapodsProxyRepositoryForbidden with default headers values
+func NewUpdateCocoapodsProxyRepositoryForbidden() *UpdateCocoapodsProxyRepositoryForbidden {
+	return &UpdateCocoapodsProxyRepositoryForbidden{}
 }
 
-/* UpdateRepository34Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateCocoapodsProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository34Forbidden struct {
+type UpdateCocoapodsProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository34 forbidden response has a 2xx status code
-func (o *UpdateRepository34Forbidden) IsSuccess() bool {
+func (o *UpdateCocoapodsProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository34 forbidden response has a 3xx status code
-func (o *UpdateRepository34Forbidden) IsRedirect() bool {
+func (o *UpdateCocoapodsProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository34 forbidden response has a 4xx status code
-func (o *UpdateRepository34Forbidden) IsClientError() bool {
+func (o *UpdateCocoapodsProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository34 forbidden response has a 5xx status code
-func (o *UpdateRepository34Forbidden) IsServerError() bool {
+func (o *UpdateCocoapodsProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository34 forbidden response a status code equal to that given
-func (o *UpdateRepository34Forbidden) IsCode(code int) bool {
+func (o *UpdateCocoapodsProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository34Forbidden) Error() string {
+func (o *UpdateCocoapodsProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/cocoapods/proxy/{repositoryName}][%d] updateRepository34Forbidden ", 403)
 }
 
-func (o *UpdateRepository34Forbidden) String() string {
+func (o *UpdateCocoapodsProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/cocoapods/proxy/{repositoryName}][%d] updateRepository34Forbidden ", 403)
 }
 
-func (o *UpdateRepository34Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateCocoapodsProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

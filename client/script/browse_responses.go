@@ -39,7 +39,8 @@ func NewBrowseOK() *BrowseOK {
 	return &BrowseOK{}
 }
 
-/* BrowseOK describes a response with status code 200, with default header values.
+/*
+	BrowseOK describes a response with status code 200, with default header values.
 
 successful operation
 */

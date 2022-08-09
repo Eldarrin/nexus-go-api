@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository29Params creates a new UpdateRepository29Params object,
+// NewUpdateCondaProxyRepositoryParams creates a new UpdateCondaProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository29Params() *UpdateRepository29Params {
-	return &UpdateRepository29Params{
+func NewUpdateCondaProxyRepositoryParams() *UpdateCondaProxyRepositoryParams {
+	return &UpdateCondaProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository29ParamsWithTimeout creates a new UpdateRepository29Params object
+// NewUpdateCondaProxyRepositoryParamsWithTimeout creates a new UpdateCondaProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository29ParamsWithTimeout(timeout time.Duration) *UpdateRepository29Params {
-	return &UpdateRepository29Params{
+func NewUpdateCondaProxyRepositoryParamsWithTimeout(timeout time.Duration) *UpdateCondaProxyRepositoryParams {
+	return &UpdateCondaProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository29ParamsWithContext creates a new UpdateRepository29Params object
+// NewUpdateCondaProxyRepositoryParamsWithContext creates a new UpdateCondaProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository29ParamsWithContext(ctx context.Context) *UpdateRepository29Params {
-	return &UpdateRepository29Params{
+func NewUpdateCondaProxyRepositoryParamsWithContext(ctx context.Context) *UpdateCondaProxyRepositoryParams {
+	return &UpdateCondaProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository29ParamsWithHTTPClient creates a new UpdateRepository29Params object
+// NewUpdateCondaProxyRepositoryParamsWithHTTPClient creates a new UpdateCondaProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository29ParamsWithHTTPClient(client *http.Client) *UpdateRepository29Params {
-	return &UpdateRepository29Params{
+func NewUpdateCondaProxyRepositoryParamsWithHTTPClient(client *http.Client) *UpdateCondaProxyRepositoryParams {
+	return &UpdateCondaProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository29Params contains all the parameters to send to the API endpoint
-   for the update repository 29 operation.
+/*
+UpdateCondaProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 29 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository29Params struct {
+type UpdateCondaProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.CondaProxyRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository29Params struct {
 // WithDefaults hydrates default values in the update repository 29 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository29Params) WithDefaults() *UpdateRepository29Params {
+func (o *UpdateCondaProxyRepositoryParams) WithDefaults() *UpdateCondaProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository29Params) WithDefaults() *UpdateRepository29Params {
 // SetDefaults hydrates default values in the update repository 29 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository29Params) SetDefaults() {
+func (o *UpdateCondaProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 29 params
-func (o *UpdateRepository29Params) WithTimeout(timeout time.Duration) *UpdateRepository29Params {
+func (o *UpdateCondaProxyRepositoryParams) WithTimeout(timeout time.Duration) *UpdateCondaProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 29 params
-func (o *UpdateRepository29Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateCondaProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 29 params
-func (o *UpdateRepository29Params) WithContext(ctx context.Context) *UpdateRepository29Params {
+func (o *UpdateCondaProxyRepositoryParams) WithContext(ctx context.Context) *UpdateCondaProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 29 params
-func (o *UpdateRepository29Params) SetContext(ctx context.Context) {
+func (o *UpdateCondaProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 29 params
-func (o *UpdateRepository29Params) WithHTTPClient(client *http.Client) *UpdateRepository29Params {
+func (o *UpdateCondaProxyRepositoryParams) WithHTTPClient(client *http.Client) *UpdateCondaProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 29 params
-func (o *UpdateRepository29Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateCondaProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 29 params
-func (o *UpdateRepository29Params) WithBody(body *models.CondaProxyRepositoryAPIRequest) *UpdateRepository29Params {
+func (o *UpdateCondaProxyRepositoryParams) WithBody(body *models.CondaProxyRepositoryAPIRequest) *UpdateCondaProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 29 params
-func (o *UpdateRepository29Params) SetBody(body *models.CondaProxyRepositoryAPIRequest) {
+func (o *UpdateCondaProxyRepositoryParams) SetBody(body *models.CondaProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 29 params
-func (o *UpdateRepository29Params) WithRepositoryName(repositoryName string) *UpdateRepository29Params {
+func (o *UpdateCondaProxyRepositoryParams) WithRepositoryName(repositoryName string) *UpdateCondaProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 29 params
-func (o *UpdateRepository29Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateCondaProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository29Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateCondaProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

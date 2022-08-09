@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository35Reader is a Reader for the CreateRepository35 structure.
-type CreateRepository35Reader struct {
+// CreateGolangGroupRepositoryReader is a Reader for the CreateGolangGroupRepository structure.
+type CreateGolangGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository35Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateGolangGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository35Created()
+		result := NewCreateGolangGroupRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository35Unauthorized()
+		result := NewCreateGolangGroupRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository35Forbidden()
+		result := NewCreateGolangGroupRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 405:
-		result := NewCreateRepository35MethodNotAllowed()
+		result := NewCreateGolangGroupRepositoryMethodNotAllowed()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *CreateRepository35Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository35Created creates a CreateRepository35Created with default headers values
-func NewCreateRepository35Created() *CreateRepository35Created {
-	return &CreateRepository35Created{}
+// NewCreateGolangGroupRepositoryCreated creates a CreateGolangGroupRepositoryCreated with default headers values
+func NewCreateGolangGroupRepositoryCreated() *CreateGolangGroupRepositoryCreated {
+	return &CreateGolangGroupRepositoryCreated{}
 }
 
-/* CreateRepository35Created describes a response with status code 201, with default header values.
+/*
+	CreateGolangGroupRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository35Created struct {
+type CreateGolangGroupRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository35 created response has a 2xx status code
-func (o *CreateRepository35Created) IsSuccess() bool {
+func (o *CreateGolangGroupRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository35 created response has a 3xx status code
-func (o *CreateRepository35Created) IsRedirect() bool {
+func (o *CreateGolangGroupRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository35 created response has a 4xx status code
-func (o *CreateRepository35Created) IsClientError() bool {
+func (o *CreateGolangGroupRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository35 created response has a 5xx status code
-func (o *CreateRepository35Created) IsServerError() bool {
+func (o *CreateGolangGroupRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository35 created response a status code equal to that given
-func (o *CreateRepository35Created) IsCode(code int) bool {
+func (o *CreateGolangGroupRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository35Created) Error() string {
+func (o *CreateGolangGroupRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/group][%d] createRepository35Created ", 201)
 }
 
-func (o *CreateRepository35Created) String() string {
+func (o *CreateGolangGroupRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/group][%d] createRepository35Created ", 201)
 }
 
-func (o *CreateRepository35Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateGolangGroupRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository35Unauthorized creates a CreateRepository35Unauthorized with default headers values
-func NewCreateRepository35Unauthorized() *CreateRepository35Unauthorized {
-	return &CreateRepository35Unauthorized{}
+// NewCreateGolangGroupRepositoryUnauthorized creates a CreateGolangGroupRepositoryUnauthorized with default headers values
+func NewCreateGolangGroupRepositoryUnauthorized() *CreateGolangGroupRepositoryUnauthorized {
+	return &CreateGolangGroupRepositoryUnauthorized{}
 }
 
-/* CreateRepository35Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateGolangGroupRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository35Unauthorized struct {
+type CreateGolangGroupRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository35 unauthorized response has a 2xx status code
-func (o *CreateRepository35Unauthorized) IsSuccess() bool {
+func (o *CreateGolangGroupRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository35 unauthorized response has a 3xx status code
-func (o *CreateRepository35Unauthorized) IsRedirect() bool {
+func (o *CreateGolangGroupRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository35 unauthorized response has a 4xx status code
-func (o *CreateRepository35Unauthorized) IsClientError() bool {
+func (o *CreateGolangGroupRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository35 unauthorized response has a 5xx status code
-func (o *CreateRepository35Unauthorized) IsServerError() bool {
+func (o *CreateGolangGroupRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository35 unauthorized response a status code equal to that given
-func (o *CreateRepository35Unauthorized) IsCode(code int) bool {
+func (o *CreateGolangGroupRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository35Unauthorized) Error() string {
+func (o *CreateGolangGroupRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/group][%d] createRepository35Unauthorized ", 401)
 }
 
-func (o *CreateRepository35Unauthorized) String() string {
+func (o *CreateGolangGroupRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/group][%d] createRepository35Unauthorized ", 401)
 }
 
-func (o *CreateRepository35Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateGolangGroupRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository35Forbidden creates a CreateRepository35Forbidden with default headers values
-func NewCreateRepository35Forbidden() *CreateRepository35Forbidden {
-	return &CreateRepository35Forbidden{}
+// NewCreateGolangGroupRepositoryForbidden creates a CreateGolangGroupRepositoryForbidden with default headers values
+func NewCreateGolangGroupRepositoryForbidden() *CreateGolangGroupRepositoryForbidden {
+	return &CreateGolangGroupRepositoryForbidden{}
 }
 
-/* CreateRepository35Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateGolangGroupRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository35Forbidden struct {
+type CreateGolangGroupRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository35 forbidden response has a 2xx status code
-func (o *CreateRepository35Forbidden) IsSuccess() bool {
+func (o *CreateGolangGroupRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository35 forbidden response has a 3xx status code
-func (o *CreateRepository35Forbidden) IsRedirect() bool {
+func (o *CreateGolangGroupRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository35 forbidden response has a 4xx status code
-func (o *CreateRepository35Forbidden) IsClientError() bool {
+func (o *CreateGolangGroupRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository35 forbidden response has a 5xx status code
-func (o *CreateRepository35Forbidden) IsServerError() bool {
+func (o *CreateGolangGroupRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository35 forbidden response a status code equal to that given
-func (o *CreateRepository35Forbidden) IsCode(code int) bool {
+func (o *CreateGolangGroupRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository35Forbidden) Error() string {
+func (o *CreateGolangGroupRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/group][%d] createRepository35Forbidden ", 403)
 }
 
-func (o *CreateRepository35Forbidden) String() string {
+func (o *CreateGolangGroupRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/group][%d] createRepository35Forbidden ", 403)
 }
 
-func (o *CreateRepository35Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateGolangGroupRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository35MethodNotAllowed creates a CreateRepository35MethodNotAllowed with default headers values
-func NewCreateRepository35MethodNotAllowed() *CreateRepository35MethodNotAllowed {
-	return &CreateRepository35MethodNotAllowed{}
+// NewCreateGolangGroupRepositoryMethodNotAllowed creates a CreateGolangGroupRepositoryMethodNotAllowed with default headers values
+func NewCreateGolangGroupRepositoryMethodNotAllowed() *CreateGolangGroupRepositoryMethodNotAllowed {
+	return &CreateGolangGroupRepositoryMethodNotAllowed{}
 }
 
-/* CreateRepository35MethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	CreateGolangGroupRepositoryMethodNotAllowed describes a response with status code 405, with default header values.
 
 Feature is disabled in High Availability
 */
-type CreateRepository35MethodNotAllowed struct {
+type CreateGolangGroupRepositoryMethodNotAllowed struct {
 }
 
 // IsSuccess returns true when this create repository35 method not allowed response has a 2xx status code
-func (o *CreateRepository35MethodNotAllowed) IsSuccess() bool {
+func (o *CreateGolangGroupRepositoryMethodNotAllowed) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository35 method not allowed response has a 3xx status code
-func (o *CreateRepository35MethodNotAllowed) IsRedirect() bool {
+func (o *CreateGolangGroupRepositoryMethodNotAllowed) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository35 method not allowed response has a 4xx status code
-func (o *CreateRepository35MethodNotAllowed) IsClientError() bool {
+func (o *CreateGolangGroupRepositoryMethodNotAllowed) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository35 method not allowed response has a 5xx status code
-func (o *CreateRepository35MethodNotAllowed) IsServerError() bool {
+func (o *CreateGolangGroupRepositoryMethodNotAllowed) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository35 method not allowed response a status code equal to that given
-func (o *CreateRepository35MethodNotAllowed) IsCode(code int) bool {
+func (o *CreateGolangGroupRepositoryMethodNotAllowed) IsCode(code int) bool {
 	return code == 405
 }
 
-func (o *CreateRepository35MethodNotAllowed) Error() string {
+func (o *CreateGolangGroupRepositoryMethodNotAllowed) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/group][%d] createRepository35MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository35MethodNotAllowed) String() string {
+func (o *CreateGolangGroupRepositoryMethodNotAllowed) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/group][%d] createRepository35MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository35MethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateGolangGroupRepositoryMethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

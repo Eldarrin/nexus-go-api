@@ -12,28 +12,28 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository12Reader is a Reader for the CreateRepository12 structure.
-type CreateRepository12Reader struct {
+// CreateNugetHostedRepositoryReader is a Reader for the CreateNugetHostedRepository structure.
+type CreateNugetHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository12Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateNugetHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository12Created()
+		result := NewCreateNugetHostedRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository12Unauthorized()
+		result := NewCreateNugetHostedRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository12Forbidden()
+		result := NewCreateNugetHostedRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -43,152 +43,155 @@ func (o *CreateRepository12Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository12Created creates a CreateRepository12Created with default headers values
-func NewCreateRepository12Created() *CreateRepository12Created {
-	return &CreateRepository12Created{}
+// NewCreateNugetHostedRepositoryCreated creates a CreateNugetHostedRepositoryCreated with default headers values
+func NewCreateNugetHostedRepositoryCreated() *CreateNugetHostedRepositoryCreated {
+	return &CreateNugetHostedRepositoryCreated{}
 }
 
-/* CreateRepository12Created describes a response with status code 201, with default header values.
+/*
+	CreateNugetHostedRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository12Created struct {
+type CreateNugetHostedRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository12 created response has a 2xx status code
-func (o *CreateRepository12Created) IsSuccess() bool {
+func (o *CreateNugetHostedRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository12 created response has a 3xx status code
-func (o *CreateRepository12Created) IsRedirect() bool {
+func (o *CreateNugetHostedRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository12 created response has a 4xx status code
-func (o *CreateRepository12Created) IsClientError() bool {
+func (o *CreateNugetHostedRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository12 created response has a 5xx status code
-func (o *CreateRepository12Created) IsServerError() bool {
+func (o *CreateNugetHostedRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository12 created response a status code equal to that given
-func (o *CreateRepository12Created) IsCode(code int) bool {
+func (o *CreateNugetHostedRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository12Created) Error() string {
+func (o *CreateNugetHostedRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/hosted][%d] createRepository12Created ", 201)
 }
 
-func (o *CreateRepository12Created) String() string {
+func (o *CreateNugetHostedRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/hosted][%d] createRepository12Created ", 201)
 }
 
-func (o *CreateRepository12Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNugetHostedRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository12Unauthorized creates a CreateRepository12Unauthorized with default headers values
-func NewCreateRepository12Unauthorized() *CreateRepository12Unauthorized {
-	return &CreateRepository12Unauthorized{}
+// NewCreateNugetHostedRepositoryUnauthorized creates a CreateNugetHostedRepositoryUnauthorized with default headers values
+func NewCreateNugetHostedRepositoryUnauthorized() *CreateNugetHostedRepositoryUnauthorized {
+	return &CreateNugetHostedRepositoryUnauthorized{}
 }
 
-/* CreateRepository12Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateNugetHostedRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository12Unauthorized struct {
+type CreateNugetHostedRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository12 unauthorized response has a 2xx status code
-func (o *CreateRepository12Unauthorized) IsSuccess() bool {
+func (o *CreateNugetHostedRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository12 unauthorized response has a 3xx status code
-func (o *CreateRepository12Unauthorized) IsRedirect() bool {
+func (o *CreateNugetHostedRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository12 unauthorized response has a 4xx status code
-func (o *CreateRepository12Unauthorized) IsClientError() bool {
+func (o *CreateNugetHostedRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository12 unauthorized response has a 5xx status code
-func (o *CreateRepository12Unauthorized) IsServerError() bool {
+func (o *CreateNugetHostedRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository12 unauthorized response a status code equal to that given
-func (o *CreateRepository12Unauthorized) IsCode(code int) bool {
+func (o *CreateNugetHostedRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository12Unauthorized) Error() string {
+func (o *CreateNugetHostedRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/hosted][%d] createRepository12Unauthorized ", 401)
 }
 
-func (o *CreateRepository12Unauthorized) String() string {
+func (o *CreateNugetHostedRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/hosted][%d] createRepository12Unauthorized ", 401)
 }
 
-func (o *CreateRepository12Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNugetHostedRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository12Forbidden creates a CreateRepository12Forbidden with default headers values
-func NewCreateRepository12Forbidden() *CreateRepository12Forbidden {
-	return &CreateRepository12Forbidden{}
+// NewCreateNugetHostedRepositoryForbidden creates a CreateNugetHostedRepositoryForbidden with default headers values
+func NewCreateNugetHostedRepositoryForbidden() *CreateNugetHostedRepositoryForbidden {
+	return &CreateNugetHostedRepositoryForbidden{}
 }
 
-/* CreateRepository12Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateNugetHostedRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository12Forbidden struct {
+type CreateNugetHostedRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository12 forbidden response has a 2xx status code
-func (o *CreateRepository12Forbidden) IsSuccess() bool {
+func (o *CreateNugetHostedRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository12 forbidden response has a 3xx status code
-func (o *CreateRepository12Forbidden) IsRedirect() bool {
+func (o *CreateNugetHostedRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository12 forbidden response has a 4xx status code
-func (o *CreateRepository12Forbidden) IsClientError() bool {
+func (o *CreateNugetHostedRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository12 forbidden response has a 5xx status code
-func (o *CreateRepository12Forbidden) IsServerError() bool {
+func (o *CreateNugetHostedRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository12 forbidden response a status code equal to that given
-func (o *CreateRepository12Forbidden) IsCode(code int) bool {
+func (o *CreateNugetHostedRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository12Forbidden) Error() string {
+func (o *CreateNugetHostedRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/hosted][%d] createRepository12Forbidden ", 403)
 }
 
-func (o *CreateRepository12Forbidden) String() string {
+func (o *CreateNugetHostedRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/nuget/hosted][%d] createRepository12Forbidden ", 403)
 }
 
-func (o *CreateRepository12Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateNugetHostedRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

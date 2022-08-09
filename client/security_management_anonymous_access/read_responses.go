@@ -45,7 +45,8 @@ func NewReadOK() *ReadOK {
 	return &ReadOK{}
 }
 
-/* ReadOK describes a response with status code 200, with default header values.
+/*
+	ReadOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -107,7 +108,8 @@ func NewReadForbidden() *ReadForbidden {
 	return &ReadForbidden{}
 }
 
-/* ReadForbidden describes a response with status code 403, with default header values.
+/*
+	ReadForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to update settings
 */

@@ -48,7 +48,8 @@ func NewUpdateUserBadRequest() *UpdateUserBadRequest {
 	return &UpdateUserBadRequest{}
 }
 
-/* UpdateUserBadRequest describes a response with status code 400, with default header values.
+/*
+	UpdateUserBadRequest describes a response with status code 400, with default header values.
 
 Password was not supplied in the body of the request
 */
@@ -98,7 +99,8 @@ func NewUpdateUserForbidden() *UpdateUserForbidden {
 	return &UpdateUserForbidden{}
 }
 
-/* UpdateUserForbidden describes a response with status code 403, with default header values.
+/*
+	UpdateUserForbidden describes a response with status code 403, with default header values.
 
 The user does not have permission to perform the operation.
 */
@@ -148,7 +150,8 @@ func NewUpdateUserNotFound() *UpdateUserNotFound {
 	return &UpdateUserNotFound{}
 }
 
-/* UpdateUserNotFound describes a response with status code 404, with default header values.
+/*
+	UpdateUserNotFound describes a response with status code 404, with default header values.
 
 User or user source not found in the system.
 */

@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository36Reader is a Reader for the CreateRepository36 structure.
-type CreateRepository36Reader struct {
+// CreateGolangProxyRepositoryReader is a Reader for the CreateGolangProxyRepository structure.
+type CreateGolangProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository36Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateGolangProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository36Created()
+		result := NewCreateGolangProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository36Unauthorized()
+		result := NewCreateGolangProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository36Forbidden()
+		result := NewCreateGolangProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 405:
-		result := NewCreateRepository36MethodNotAllowed()
+		result := NewCreateGolangProxyRepositoryMethodNotAllowed()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *CreateRepository36Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository36Created creates a CreateRepository36Created with default headers values
-func NewCreateRepository36Created() *CreateRepository36Created {
-	return &CreateRepository36Created{}
+// NewCreateGolangProxyRepositoryCreated creates a CreateGolangProxyRepositoryCreated with default headers values
+func NewCreateGolangProxyRepositoryCreated() *CreateGolangProxyRepositoryCreated {
+	return &CreateGolangProxyRepositoryCreated{}
 }
 
-/* CreateRepository36Created describes a response with status code 201, with default header values.
+/*
+	CreateGolangProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository36Created struct {
+type CreateGolangProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository36 created response has a 2xx status code
-func (o *CreateRepository36Created) IsSuccess() bool {
+func (o *CreateGolangProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository36 created response has a 3xx status code
-func (o *CreateRepository36Created) IsRedirect() bool {
+func (o *CreateGolangProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository36 created response has a 4xx status code
-func (o *CreateRepository36Created) IsClientError() bool {
+func (o *CreateGolangProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository36 created response has a 5xx status code
-func (o *CreateRepository36Created) IsServerError() bool {
+func (o *CreateGolangProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository36 created response a status code equal to that given
-func (o *CreateRepository36Created) IsCode(code int) bool {
+func (o *CreateGolangProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository36Created) Error() string {
+func (o *CreateGolangProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/proxy][%d] createRepository36Created ", 201)
 }
 
-func (o *CreateRepository36Created) String() string {
+func (o *CreateGolangProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/proxy][%d] createRepository36Created ", 201)
 }
 
-func (o *CreateRepository36Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateGolangProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository36Unauthorized creates a CreateRepository36Unauthorized with default headers values
-func NewCreateRepository36Unauthorized() *CreateRepository36Unauthorized {
-	return &CreateRepository36Unauthorized{}
+// NewCreateGolangProxyRepositoryUnauthorized creates a CreateGolangProxyRepositoryUnauthorized with default headers values
+func NewCreateGolangProxyRepositoryUnauthorized() *CreateGolangProxyRepositoryUnauthorized {
+	return &CreateGolangProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository36Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateGolangProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository36Unauthorized struct {
+type CreateGolangProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository36 unauthorized response has a 2xx status code
-func (o *CreateRepository36Unauthorized) IsSuccess() bool {
+func (o *CreateGolangProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository36 unauthorized response has a 3xx status code
-func (o *CreateRepository36Unauthorized) IsRedirect() bool {
+func (o *CreateGolangProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository36 unauthorized response has a 4xx status code
-func (o *CreateRepository36Unauthorized) IsClientError() bool {
+func (o *CreateGolangProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository36 unauthorized response has a 5xx status code
-func (o *CreateRepository36Unauthorized) IsServerError() bool {
+func (o *CreateGolangProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository36 unauthorized response a status code equal to that given
-func (o *CreateRepository36Unauthorized) IsCode(code int) bool {
+func (o *CreateGolangProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository36Unauthorized) Error() string {
+func (o *CreateGolangProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/proxy][%d] createRepository36Unauthorized ", 401)
 }
 
-func (o *CreateRepository36Unauthorized) String() string {
+func (o *CreateGolangProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/proxy][%d] createRepository36Unauthorized ", 401)
 }
 
-func (o *CreateRepository36Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateGolangProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository36Forbidden creates a CreateRepository36Forbidden with default headers values
-func NewCreateRepository36Forbidden() *CreateRepository36Forbidden {
-	return &CreateRepository36Forbidden{}
+// NewCreateGolangProxyRepositoryForbidden creates a CreateGolangProxyRepositoryForbidden with default headers values
+func NewCreateGolangProxyRepositoryForbidden() *CreateGolangProxyRepositoryForbidden {
+	return &CreateGolangProxyRepositoryForbidden{}
 }
 
-/* CreateRepository36Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateGolangProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository36Forbidden struct {
+type CreateGolangProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository36 forbidden response has a 2xx status code
-func (o *CreateRepository36Forbidden) IsSuccess() bool {
+func (o *CreateGolangProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository36 forbidden response has a 3xx status code
-func (o *CreateRepository36Forbidden) IsRedirect() bool {
+func (o *CreateGolangProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository36 forbidden response has a 4xx status code
-func (o *CreateRepository36Forbidden) IsClientError() bool {
+func (o *CreateGolangProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository36 forbidden response has a 5xx status code
-func (o *CreateRepository36Forbidden) IsServerError() bool {
+func (o *CreateGolangProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository36 forbidden response a status code equal to that given
-func (o *CreateRepository36Forbidden) IsCode(code int) bool {
+func (o *CreateGolangProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository36Forbidden) Error() string {
+func (o *CreateGolangProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/proxy][%d] createRepository36Forbidden ", 403)
 }
 
-func (o *CreateRepository36Forbidden) String() string {
+func (o *CreateGolangProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/proxy][%d] createRepository36Forbidden ", 403)
 }
 
-func (o *CreateRepository36Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateGolangProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository36MethodNotAllowed creates a CreateRepository36MethodNotAllowed with default headers values
-func NewCreateRepository36MethodNotAllowed() *CreateRepository36MethodNotAllowed {
-	return &CreateRepository36MethodNotAllowed{}
+// NewCreateGolangProxyRepositoryMethodNotAllowed creates a CreateGolangProxyRepositoryMethodNotAllowed with default headers values
+func NewCreateGolangProxyRepositoryMethodNotAllowed() *CreateGolangProxyRepositoryMethodNotAllowed {
+	return &CreateGolangProxyRepositoryMethodNotAllowed{}
 }
 
-/* CreateRepository36MethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	CreateGolangProxyRepositoryMethodNotAllowed describes a response with status code 405, with default header values.
 
 Feature is disabled in High Availability
 */
-type CreateRepository36MethodNotAllowed struct {
+type CreateGolangProxyRepositoryMethodNotAllowed struct {
 }
 
 // IsSuccess returns true when this create repository36 method not allowed response has a 2xx status code
-func (o *CreateRepository36MethodNotAllowed) IsSuccess() bool {
+func (o *CreateGolangProxyRepositoryMethodNotAllowed) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository36 method not allowed response has a 3xx status code
-func (o *CreateRepository36MethodNotAllowed) IsRedirect() bool {
+func (o *CreateGolangProxyRepositoryMethodNotAllowed) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository36 method not allowed response has a 4xx status code
-func (o *CreateRepository36MethodNotAllowed) IsClientError() bool {
+func (o *CreateGolangProxyRepositoryMethodNotAllowed) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository36 method not allowed response has a 5xx status code
-func (o *CreateRepository36MethodNotAllowed) IsServerError() bool {
+func (o *CreateGolangProxyRepositoryMethodNotAllowed) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository36 method not allowed response a status code equal to that given
-func (o *CreateRepository36MethodNotAllowed) IsCode(code int) bool {
+func (o *CreateGolangProxyRepositoryMethodNotAllowed) IsCode(code int) bool {
 	return code == 405
 }
 
-func (o *CreateRepository36MethodNotAllowed) Error() string {
+func (o *CreateGolangProxyRepositoryMethodNotAllowed) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/proxy][%d] createRepository36MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository36MethodNotAllowed) String() string {
+func (o *CreateGolangProxyRepositoryMethodNotAllowed) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/go/proxy][%d] createRepository36MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository36MethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateGolangProxyRepositoryMethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

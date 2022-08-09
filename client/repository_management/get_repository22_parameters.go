@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository22Params creates a new GetRepository22Params object,
+// NewGetYumHostedRepositoryParams creates a new GetYumHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository22Params() *GetRepository22Params {
-	return &GetRepository22Params{
+func NewGetYumHostedRepositoryParams() *GetYumHostedRepositoryParams {
+	return &GetYumHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository22ParamsWithTimeout creates a new GetRepository22Params object
+// NewGetYumHostedRepositoryParamsWithTimeout creates a new GetYumHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository22ParamsWithTimeout(timeout time.Duration) *GetRepository22Params {
-	return &GetRepository22Params{
+func NewGetYumHostedRepositoryParamsWithTimeout(timeout time.Duration) *GetYumHostedRepositoryParams {
+	return &GetYumHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository22ParamsWithContext creates a new GetRepository22Params object
+// NewGetYumHostedRepositoryParamsWithContext creates a new GetYumHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository22ParamsWithContext(ctx context.Context) *GetRepository22Params {
-	return &GetRepository22Params{
+func NewGetYumHostedRepositoryParamsWithContext(ctx context.Context) *GetYumHostedRepositoryParams {
+	return &GetYumHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository22ParamsWithHTTPClient creates a new GetRepository22Params object
+// NewGetYumHostedRepositoryParamsWithHTTPClient creates a new GetYumHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository22ParamsWithHTTPClient(client *http.Client) *GetRepository22Params {
-	return &GetRepository22Params{
+func NewGetYumHostedRepositoryParamsWithHTTPClient(client *http.Client) *GetYumHostedRepositoryParams {
+	return &GetYumHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository22Params contains all the parameters to send to the API endpoint
-   for the get repository 22 operation.
+/*
+GetYumHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 22 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository22Params struct {
+type GetYumHostedRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository22Params struct {
 // WithDefaults hydrates default values in the get repository 22 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository22Params) WithDefaults() *GetRepository22Params {
+func (o *GetYumHostedRepositoryParams) WithDefaults() *GetYumHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository22Params) WithDefaults() *GetRepository22Params {
 // SetDefaults hydrates default values in the get repository 22 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository22Params) SetDefaults() {
+func (o *GetYumHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 22 params
-func (o *GetRepository22Params) WithTimeout(timeout time.Duration) *GetRepository22Params {
+func (o *GetYumHostedRepositoryParams) WithTimeout(timeout time.Duration) *GetYumHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 22 params
-func (o *GetRepository22Params) SetTimeout(timeout time.Duration) {
+func (o *GetYumHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 22 params
-func (o *GetRepository22Params) WithContext(ctx context.Context) *GetRepository22Params {
+func (o *GetYumHostedRepositoryParams) WithContext(ctx context.Context) *GetYumHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 22 params
-func (o *GetRepository22Params) SetContext(ctx context.Context) {
+func (o *GetYumHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 22 params
-func (o *GetRepository22Params) WithHTTPClient(client *http.Client) *GetRepository22Params {
+func (o *GetYumHostedRepositoryParams) WithHTTPClient(client *http.Client) *GetYumHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 22 params
-func (o *GetRepository22Params) SetHTTPClient(client *http.Client) {
+func (o *GetYumHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 22 params
-func (o *GetRepository22Params) WithRepositoryName(repositoryName string) *GetRepository22Params {
+func (o *GetYumHostedRepositoryParams) WithRepositoryName(repositoryName string) *GetYumHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 22 params
-func (o *GetRepository22Params) SetRepositoryName(repositoryName string) {
+func (o *GetYumHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository22Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetYumHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

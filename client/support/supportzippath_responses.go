@@ -39,7 +39,8 @@ func NewSupportzippathOK() *SupportzippathOK {
 	return &SupportzippathOK{}
 }
 
-/* SupportzippathOK describes a response with status code 200, with default header values.
+/*
+	SupportzippathOK describes a response with status code 200, with default header values.
 
 successful operation
 */

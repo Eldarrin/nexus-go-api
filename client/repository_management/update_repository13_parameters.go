@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository13Params creates a new UpdateRepository13Params object,
+// NewUpdateNugetProxyRepositoryParams creates a new UpdateNugetProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository13Params() *UpdateRepository13Params {
-	return &UpdateRepository13Params{
+func NewUpdateNugetProxyRepositoryParams() *UpdateNugetProxyRepositoryParams {
+	return &UpdateNugetProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository13ParamsWithTimeout creates a new UpdateRepository13Params object
+// NewUpdateNugetProxyRepositoryParamsWithTimeout creates a new UpdateNugetProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository13ParamsWithTimeout(timeout time.Duration) *UpdateRepository13Params {
-	return &UpdateRepository13Params{
+func NewUpdateNugetProxyRepositoryParamsWithTimeout(timeout time.Duration) *UpdateNugetProxyRepositoryParams {
+	return &UpdateNugetProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository13ParamsWithContext creates a new UpdateRepository13Params object
+// NewUpdateNugetProxyRepositoryParamsWithContext creates a new UpdateNugetProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository13ParamsWithContext(ctx context.Context) *UpdateRepository13Params {
-	return &UpdateRepository13Params{
+func NewUpdateNugetProxyRepositoryParamsWithContext(ctx context.Context) *UpdateNugetProxyRepositoryParams {
+	return &UpdateNugetProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository13ParamsWithHTTPClient creates a new UpdateRepository13Params object
+// NewUpdateNugetProxyRepositoryParamsWithHTTPClient creates a new UpdateNugetProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository13ParamsWithHTTPClient(client *http.Client) *UpdateRepository13Params {
-	return &UpdateRepository13Params{
+func NewUpdateNugetProxyRepositoryParamsWithHTTPClient(client *http.Client) *UpdateNugetProxyRepositoryParams {
+	return &UpdateNugetProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository13Params contains all the parameters to send to the API endpoint
-   for the update repository 13 operation.
+/*
+UpdateNugetProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 13 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository13Params struct {
+type UpdateNugetProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.NugetProxyRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository13Params struct {
 // WithDefaults hydrates default values in the update repository 13 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository13Params) WithDefaults() *UpdateRepository13Params {
+func (o *UpdateNugetProxyRepositoryParams) WithDefaults() *UpdateNugetProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository13Params) WithDefaults() *UpdateRepository13Params {
 // SetDefaults hydrates default values in the update repository 13 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository13Params) SetDefaults() {
+func (o *UpdateNugetProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 13 params
-func (o *UpdateRepository13Params) WithTimeout(timeout time.Duration) *UpdateRepository13Params {
+func (o *UpdateNugetProxyRepositoryParams) WithTimeout(timeout time.Duration) *UpdateNugetProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 13 params
-func (o *UpdateRepository13Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateNugetProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 13 params
-func (o *UpdateRepository13Params) WithContext(ctx context.Context) *UpdateRepository13Params {
+func (o *UpdateNugetProxyRepositoryParams) WithContext(ctx context.Context) *UpdateNugetProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 13 params
-func (o *UpdateRepository13Params) SetContext(ctx context.Context) {
+func (o *UpdateNugetProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 13 params
-func (o *UpdateRepository13Params) WithHTTPClient(client *http.Client) *UpdateRepository13Params {
+func (o *UpdateNugetProxyRepositoryParams) WithHTTPClient(client *http.Client) *UpdateNugetProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 13 params
-func (o *UpdateRepository13Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateNugetProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 13 params
-func (o *UpdateRepository13Params) WithBody(body *models.NugetProxyRepositoryAPIRequest) *UpdateRepository13Params {
+func (o *UpdateNugetProxyRepositoryParams) WithBody(body *models.NugetProxyRepositoryAPIRequest) *UpdateNugetProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 13 params
-func (o *UpdateRepository13Params) SetBody(body *models.NugetProxyRepositoryAPIRequest) {
+func (o *UpdateNugetProxyRepositoryParams) SetBody(body *models.NugetProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 13 params
-func (o *UpdateRepository13Params) WithRepositoryName(repositoryName string) *UpdateRepository13Params {
+func (o *UpdateNugetProxyRepositoryParams) WithRepositoryName(repositoryName string) *UpdateNugetProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 13 params
-func (o *UpdateRepository13Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateNugetProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository13Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateNugetProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

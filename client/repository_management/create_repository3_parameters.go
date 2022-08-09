@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository3Params creates a new CreateRepository3Params object,
+// NewCreateAptHostedRepositoryParams creates a new CreateAptHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository3Params() *CreateRepository3Params {
-	return &CreateRepository3Params{
+func NewCreateAptHostedRepositoryParams() *CreateAptHostedRepositoryParams {
+	return &CreateAptHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository3ParamsWithTimeout creates a new CreateRepository3Params object
+// NewCreateAptHostedRepositoryParamsWithTimeout creates a new CreateAptHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository3ParamsWithTimeout(timeout time.Duration) *CreateRepository3Params {
-	return &CreateRepository3Params{
+func NewCreateAptHostedRepositoryParamsWithTimeout(timeout time.Duration) *CreateAptHostedRepositoryParams {
+	return &CreateAptHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository3ParamsWithContext creates a new CreateRepository3Params object
+// NewCreateAptHostedRepositoryParamsWithContext creates a new CreateAptHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository3ParamsWithContext(ctx context.Context) *CreateRepository3Params {
-	return &CreateRepository3Params{
+func NewCreateAptHostedRepositoryParamsWithContext(ctx context.Context) *CreateAptHostedRepositoryParams {
+	return &CreateAptHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository3ParamsWithHTTPClient creates a new CreateRepository3Params object
+// NewCreateAptHostedRepositoryParamsWithHTTPClient creates a new CreateAptHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository3ParamsWithHTTPClient(client *http.Client) *CreateRepository3Params {
-	return &CreateRepository3Params{
+func NewCreateAptHostedRepositoryParamsWithHTTPClient(client *http.Client) *CreateAptHostedRepositoryParams {
+	return &CreateAptHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository3Params contains all the parameters to send to the API endpoint
-   for the create repository 3 operation.
+/*
+CreateAptHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 3 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository3Params struct {
+type CreateAptHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.AptHostedRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository3Params struct {
 // WithDefaults hydrates default values in the create repository 3 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository3Params) WithDefaults() *CreateRepository3Params {
+func (o *CreateAptHostedRepositoryParams) WithDefaults() *CreateAptHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository3Params) WithDefaults() *CreateRepository3Params {
 // SetDefaults hydrates default values in the create repository 3 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository3Params) SetDefaults() {
+func (o *CreateAptHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 3 params
-func (o *CreateRepository3Params) WithTimeout(timeout time.Duration) *CreateRepository3Params {
+func (o *CreateAptHostedRepositoryParams) WithTimeout(timeout time.Duration) *CreateAptHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 3 params
-func (o *CreateRepository3Params) SetTimeout(timeout time.Duration) {
+func (o *CreateAptHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 3 params
-func (o *CreateRepository3Params) WithContext(ctx context.Context) *CreateRepository3Params {
+func (o *CreateAptHostedRepositoryParams) WithContext(ctx context.Context) *CreateAptHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 3 params
-func (o *CreateRepository3Params) SetContext(ctx context.Context) {
+func (o *CreateAptHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 3 params
-func (o *CreateRepository3Params) WithHTTPClient(client *http.Client) *CreateRepository3Params {
+func (o *CreateAptHostedRepositoryParams) WithHTTPClient(client *http.Client) *CreateAptHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 3 params
-func (o *CreateRepository3Params) SetHTTPClient(client *http.Client) {
+func (o *CreateAptHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 3 params
-func (o *CreateRepository3Params) WithBody(body *models.AptHostedRepositoryAPIRequest) *CreateRepository3Params {
+func (o *CreateAptHostedRepositoryParams) WithBody(body *models.AptHostedRepositoryAPIRequest) *CreateAptHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 3 params
-func (o *CreateRepository3Params) SetBody(body *models.AptHostedRepositoryAPIRequest) {
+func (o *CreateAptHostedRepositoryParams) SetBody(body *models.AptHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository3Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateAptHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

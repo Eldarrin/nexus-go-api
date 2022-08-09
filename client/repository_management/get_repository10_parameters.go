@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository10Params creates a new GetRepository10Params object,
+// NewGetNpmHostedRepositoryParams creates a new GetNpmHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository10Params() *GetRepository10Params {
-	return &GetRepository10Params{
+func NewGetNpmHostedRepositoryParams() *GetNpmHostedRepositoryParams {
+	return &GetNpmHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository10ParamsWithTimeout creates a new GetRepository10Params object
+// NewGetNpmHostedRepositoryParamsWithTimeout creates a new GetNpmHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository10ParamsWithTimeout(timeout time.Duration) *GetRepository10Params {
-	return &GetRepository10Params{
+func NewGetNpmHostedRepositoryParamsWithTimeout(timeout time.Duration) *GetNpmHostedRepositoryParams {
+	return &GetNpmHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository10ParamsWithContext creates a new GetRepository10Params object
+// NewGetNpmHostedRepositoryParamsWithContext creates a new GetNpmHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository10ParamsWithContext(ctx context.Context) *GetRepository10Params {
-	return &GetRepository10Params{
+func NewGetNpmHostedRepositoryParamsWithContext(ctx context.Context) *GetNpmHostedRepositoryParams {
+	return &GetNpmHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository10ParamsWithHTTPClient creates a new GetRepository10Params object
+// NewGetNpmHostedRepositoryParamsWithHTTPClient creates a new GetNpmHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository10ParamsWithHTTPClient(client *http.Client) *GetRepository10Params {
-	return &GetRepository10Params{
+func NewGetNpmHostedRepositoryParamsWithHTTPClient(client *http.Client) *GetNpmHostedRepositoryParams {
+	return &GetNpmHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository10Params contains all the parameters to send to the API endpoint
-   for the get repository 10 operation.
+/*
+GetNpmHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 10 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository10Params struct {
+type GetNpmHostedRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository10Params struct {
 // WithDefaults hydrates default values in the get repository 10 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository10Params) WithDefaults() *GetRepository10Params {
+func (o *GetNpmHostedRepositoryParams) WithDefaults() *GetNpmHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository10Params) WithDefaults() *GetRepository10Params {
 // SetDefaults hydrates default values in the get repository 10 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository10Params) SetDefaults() {
+func (o *GetNpmHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 10 params
-func (o *GetRepository10Params) WithTimeout(timeout time.Duration) *GetRepository10Params {
+func (o *GetNpmHostedRepositoryParams) WithTimeout(timeout time.Duration) *GetNpmHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 10 params
-func (o *GetRepository10Params) SetTimeout(timeout time.Duration) {
+func (o *GetNpmHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 10 params
-func (o *GetRepository10Params) WithContext(ctx context.Context) *GetRepository10Params {
+func (o *GetNpmHostedRepositoryParams) WithContext(ctx context.Context) *GetNpmHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 10 params
-func (o *GetRepository10Params) SetContext(ctx context.Context) {
+func (o *GetNpmHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 10 params
-func (o *GetRepository10Params) WithHTTPClient(client *http.Client) *GetRepository10Params {
+func (o *GetNpmHostedRepositoryParams) WithHTTPClient(client *http.Client) *GetNpmHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 10 params
-func (o *GetRepository10Params) SetHTTPClient(client *http.Client) {
+func (o *GetNpmHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 10 params
-func (o *GetRepository10Params) WithRepositoryName(repositoryName string) *GetRepository10Params {
+func (o *GetNpmHostedRepositoryParams) WithRepositoryName(repositoryName string) *GetNpmHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 10 params
-func (o *GetRepository10Params) SetRepositoryName(repositoryName string) {
+func (o *GetNpmHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository10Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetNpmHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository40Params creates a new GetRepository40Params object,
+// NewGetBowerHostedRepositoryParams creates a new GetBowerHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository40Params() *GetRepository40Params {
-	return &GetRepository40Params{
+func NewGetBowerHostedRepositoryParams() *GetBowerHostedRepositoryParams {
+	return &GetBowerHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository40ParamsWithTimeout creates a new GetRepository40Params object
+// NewGetBowerHostedRepositoryParamsWithTimeout creates a new GetBowerHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository40ParamsWithTimeout(timeout time.Duration) *GetRepository40Params {
-	return &GetRepository40Params{
+func NewGetBowerHostedRepositoryParamsWithTimeout(timeout time.Duration) *GetBowerHostedRepositoryParams {
+	return &GetBowerHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository40ParamsWithContext creates a new GetRepository40Params object
+// NewGetBowerHostedRepositoryParamsWithContext creates a new GetBowerHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository40ParamsWithContext(ctx context.Context) *GetRepository40Params {
-	return &GetRepository40Params{
+func NewGetBowerHostedRepositoryParamsWithContext(ctx context.Context) *GetBowerHostedRepositoryParams {
+	return &GetBowerHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository40ParamsWithHTTPClient creates a new GetRepository40Params object
+// NewGetBowerHostedRepositoryParamsWithHTTPClient creates a new GetBowerHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository40ParamsWithHTTPClient(client *http.Client) *GetRepository40Params {
-	return &GetRepository40Params{
+func NewGetBowerHostedRepositoryParamsWithHTTPClient(client *http.Client) *GetBowerHostedRepositoryParams {
+	return &GetBowerHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository40Params contains all the parameters to send to the API endpoint
-   for the get repository 40 operation.
+/*
+GetBowerHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 40 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository40Params struct {
+type GetBowerHostedRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository40Params struct {
 // WithDefaults hydrates default values in the get repository 40 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository40Params) WithDefaults() *GetRepository40Params {
+func (o *GetBowerHostedRepositoryParams) WithDefaults() *GetBowerHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository40Params) WithDefaults() *GetRepository40Params {
 // SetDefaults hydrates default values in the get repository 40 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository40Params) SetDefaults() {
+func (o *GetBowerHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 40 params
-func (o *GetRepository40Params) WithTimeout(timeout time.Duration) *GetRepository40Params {
+func (o *GetBowerHostedRepositoryParams) WithTimeout(timeout time.Duration) *GetBowerHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 40 params
-func (o *GetRepository40Params) SetTimeout(timeout time.Duration) {
+func (o *GetBowerHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 40 params
-func (o *GetRepository40Params) WithContext(ctx context.Context) *GetRepository40Params {
+func (o *GetBowerHostedRepositoryParams) WithContext(ctx context.Context) *GetBowerHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 40 params
-func (o *GetRepository40Params) SetContext(ctx context.Context) {
+func (o *GetBowerHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 40 params
-func (o *GetRepository40Params) WithHTTPClient(client *http.Client) *GetRepository40Params {
+func (o *GetBowerHostedRepositoryParams) WithHTTPClient(client *http.Client) *GetBowerHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 40 params
-func (o *GetRepository40Params) SetHTTPClient(client *http.Client) {
+func (o *GetBowerHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 40 params
-func (o *GetRepository40Params) WithRepositoryName(repositoryName string) *GetRepository40Params {
+func (o *GetBowerHostedRepositoryParams) WithRepositoryName(repositoryName string) *GetBowerHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 40 params
-func (o *GetRepository40Params) SetRepositoryName(repositoryName string) {
+func (o *GetBowerHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository40Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetBowerHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

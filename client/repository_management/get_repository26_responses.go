@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository26Reader is a Reader for the GetRepository26 structure.
-type GetRepository26Reader struct {
+// GetGitLfsHostedRepositoryReader is a Reader for the GetGitLfsHostedRepository structure.
+type GetGitLfsHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository26Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetGitLfsHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository26OK()
+		result := NewGetGitLfsHostedRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository26Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository26OK creates a GetRepository26OK with default headers values
-func NewGetRepository26OK() *GetRepository26OK {
-	return &GetRepository26OK{}
+// NewGetGitLfsHostedRepositoryOK creates a GetGitLfsHostedRepositoryOK with default headers values
+func NewGetGitLfsHostedRepositoryOK() *GetGitLfsHostedRepositoryOK {
+	return &GetGitLfsHostedRepositoryOK{}
 }
 
-/* GetRepository26OK describes a response with status code 200, with default header values.
+/*
+	GetGitLfsHostedRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository26OK struct {
+type GetGitLfsHostedRepositoryOK struct {
 	Payload *models.SimpleAPIHostedRepository
 }
 
 // IsSuccess returns true when this get repository26 o k response has a 2xx status code
-func (o *GetRepository26OK) IsSuccess() bool {
+func (o *GetGitLfsHostedRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository26 o k response has a 3xx status code
-func (o *GetRepository26OK) IsRedirect() bool {
+func (o *GetGitLfsHostedRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository26 o k response has a 4xx status code
-func (o *GetRepository26OK) IsClientError() bool {
+func (o *GetGitLfsHostedRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository26 o k response has a 5xx status code
-func (o *GetRepository26OK) IsServerError() bool {
+func (o *GetGitLfsHostedRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository26 o k response a status code equal to that given
-func (o *GetRepository26OK) IsCode(code int) bool {
+func (o *GetGitLfsHostedRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository26OK) Error() string {
+func (o *GetGitLfsHostedRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/gitlfs/hosted/{repositoryName}][%d] getRepository26OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository26OK) String() string {
+func (o *GetGitLfsHostedRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/gitlfs/hosted/{repositoryName}][%d] getRepository26OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository26OK) GetPayload() *models.SimpleAPIHostedRepository {
+func (o *GetGitLfsHostedRepositoryOK) GetPayload() *models.SimpleAPIHostedRepository {
 	return o.Payload
 }
 
-func (o *GetRepository26OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetGitLfsHostedRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIHostedRepository)
 

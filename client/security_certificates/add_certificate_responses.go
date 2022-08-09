@@ -51,7 +51,8 @@ func NewAddCertificateCreated() *AddCertificateCreated {
 	return &AddCertificateCreated{}
 }
 
-/* AddCertificateCreated describes a response with status code 201, with default header values.
+/*
+	AddCertificateCreated describes a response with status code 201, with default header values.
 
 The certificate was successfully added.
 */
@@ -113,7 +114,8 @@ func NewAddCertificateForbidden() *AddCertificateForbidden {
 	return &AddCertificateForbidden{}
 }
 
-/* AddCertificateForbidden describes a response with status code 403, with default header values.
+/*
+	AddCertificateForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to add certificate to the trust store.
 */
@@ -163,7 +165,8 @@ func NewAddCertificateConflict() *AddCertificateConflict {
 	return &AddCertificateConflict{}
 }
 
-/* AddCertificateConflict describes a response with status code 409, with default header values.
+/*
+	AddCertificateConflict describes a response with status code 409, with default header values.
 
 The certificate already exists in the system.
 */

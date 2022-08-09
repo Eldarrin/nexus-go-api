@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository33Params creates a new CreateRepository33Params object,
+// NewCreateRProxyRepositoryParams creates a new CreateRProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository33Params() *CreateRepository33Params {
-	return &CreateRepository33Params{
+func NewCreateRProxyRepositoryParams() *CreateRProxyRepositoryParams {
+	return &CreateRProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository33ParamsWithTimeout creates a new CreateRepository33Params object
+// NewCreateRProxyRepositoryParamsWithTimeout creates a new CreateRProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository33ParamsWithTimeout(timeout time.Duration) *CreateRepository33Params {
-	return &CreateRepository33Params{
+func NewCreateRProxyRepositoryParamsWithTimeout(timeout time.Duration) *CreateRProxyRepositoryParams {
+	return &CreateRProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository33ParamsWithContext creates a new CreateRepository33Params object
+// NewCreateRProxyRepositoryParamsWithContext creates a new CreateRProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository33ParamsWithContext(ctx context.Context) *CreateRepository33Params {
-	return &CreateRepository33Params{
+func NewCreateRProxyRepositoryParamsWithContext(ctx context.Context) *CreateRProxyRepositoryParams {
+	return &CreateRProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository33ParamsWithHTTPClient creates a new CreateRepository33Params object
+// NewCreateRProxyRepositoryParamsWithHTTPClient creates a new CreateRProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository33ParamsWithHTTPClient(client *http.Client) *CreateRepository33Params {
-	return &CreateRepository33Params{
+func NewCreateRProxyRepositoryParamsWithHTTPClient(client *http.Client) *CreateRProxyRepositoryParams {
+	return &CreateRProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository33Params contains all the parameters to send to the API endpoint
-   for the create repository 33 operation.
+/*
+CreateRProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 33 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository33Params struct {
+type CreateRProxyRepositoryParams struct {
 
 	// Body.
 	Body *models.RProxyRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository33Params struct {
 // WithDefaults hydrates default values in the create repository 33 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository33Params) WithDefaults() *CreateRepository33Params {
+func (o *CreateRProxyRepositoryParams) WithDefaults() *CreateRProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository33Params) WithDefaults() *CreateRepository33Params {
 // SetDefaults hydrates default values in the create repository 33 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository33Params) SetDefaults() {
+func (o *CreateRProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 33 params
-func (o *CreateRepository33Params) WithTimeout(timeout time.Duration) *CreateRepository33Params {
+func (o *CreateRProxyRepositoryParams) WithTimeout(timeout time.Duration) *CreateRProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 33 params
-func (o *CreateRepository33Params) SetTimeout(timeout time.Duration) {
+func (o *CreateRProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 33 params
-func (o *CreateRepository33Params) WithContext(ctx context.Context) *CreateRepository33Params {
+func (o *CreateRProxyRepositoryParams) WithContext(ctx context.Context) *CreateRProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 33 params
-func (o *CreateRepository33Params) SetContext(ctx context.Context) {
+func (o *CreateRProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 33 params
-func (o *CreateRepository33Params) WithHTTPClient(client *http.Client) *CreateRepository33Params {
+func (o *CreateRProxyRepositoryParams) WithHTTPClient(client *http.Client) *CreateRProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 33 params
-func (o *CreateRepository33Params) SetHTTPClient(client *http.Client) {
+func (o *CreateRProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 33 params
-func (o *CreateRepository33Params) WithBody(body *models.RProxyRepositoryAPIRequest) *CreateRepository33Params {
+func (o *CreateRProxyRepositoryParams) WithBody(body *models.RProxyRepositoryAPIRequest) *CreateRProxyRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 33 params
-func (o *CreateRepository33Params) SetBody(body *models.RProxyRepositoryAPIRequest) {
+func (o *CreateRProxyRepositoryParams) SetBody(body *models.RProxyRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository33Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateRProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

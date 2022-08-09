@@ -39,7 +39,8 @@ func NewSetLicenseOK() *SetLicenseOK {
 	return &SetLicenseOK{}
 }
 
-/* SetLicenseOK describes a response with status code 200, with default header values.
+/*
+	SetLicenseOK describes a response with status code 200, with default header values.
 
 successful operation
 */

@@ -16,48 +16,50 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// NewGetRepository31Params creates a new GetRepository31Params object,
+// NewGetConanProxyRepositoryParams creates a new GetConanProxyRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewGetRepository31Params() *GetRepository31Params {
-	return &GetRepository31Params{
+func NewGetConanProxyRepositoryParams() *GetConanProxyRepositoryParams {
+	return &GetConanProxyRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewGetRepository31ParamsWithTimeout creates a new GetRepository31Params object
+// NewGetConanProxyRepositoryParamsWithTimeout creates a new GetConanProxyRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewGetRepository31ParamsWithTimeout(timeout time.Duration) *GetRepository31Params {
-	return &GetRepository31Params{
+func NewGetConanProxyRepositoryParamsWithTimeout(timeout time.Duration) *GetConanProxyRepositoryParams {
+	return &GetConanProxyRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewGetRepository31ParamsWithContext creates a new GetRepository31Params object
+// NewGetConanProxyRepositoryParamsWithContext creates a new GetConanProxyRepositoryParams object
 // with the ability to set a context for a request.
-func NewGetRepository31ParamsWithContext(ctx context.Context) *GetRepository31Params {
-	return &GetRepository31Params{
+func NewGetConanProxyRepositoryParamsWithContext(ctx context.Context) *GetConanProxyRepositoryParams {
+	return &GetConanProxyRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewGetRepository31ParamsWithHTTPClient creates a new GetRepository31Params object
+// NewGetConanProxyRepositoryParamsWithHTTPClient creates a new GetConanProxyRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewGetRepository31ParamsWithHTTPClient(client *http.Client) *GetRepository31Params {
-	return &GetRepository31Params{
+func NewGetConanProxyRepositoryParamsWithHTTPClient(client *http.Client) *GetConanProxyRepositoryParams {
+	return &GetConanProxyRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* GetRepository31Params contains all the parameters to send to the API endpoint
-   for the get repository 31 operation.
+/*
+GetConanProxyRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get repository 31 operation.
+
+	Typically these are written to a http.Request.
 */
-type GetRepository31Params struct {
+type GetConanProxyRepositoryParams struct {
 
 	// RepositoryName.
 	RepositoryName string
@@ -70,7 +72,7 @@ type GetRepository31Params struct {
 // WithDefaults hydrates default values in the get repository 31 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository31Params) WithDefaults() *GetRepository31Params {
+func (o *GetConanProxyRepositoryParams) WithDefaults() *GetConanProxyRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -78,56 +80,56 @@ func (o *GetRepository31Params) WithDefaults() *GetRepository31Params {
 // SetDefaults hydrates default values in the get repository 31 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *GetRepository31Params) SetDefaults() {
+func (o *GetConanProxyRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the get repository 31 params
-func (o *GetRepository31Params) WithTimeout(timeout time.Duration) *GetRepository31Params {
+func (o *GetConanProxyRepositoryParams) WithTimeout(timeout time.Duration) *GetConanProxyRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the get repository 31 params
-func (o *GetRepository31Params) SetTimeout(timeout time.Duration) {
+func (o *GetConanProxyRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the get repository 31 params
-func (o *GetRepository31Params) WithContext(ctx context.Context) *GetRepository31Params {
+func (o *GetConanProxyRepositoryParams) WithContext(ctx context.Context) *GetConanProxyRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the get repository 31 params
-func (o *GetRepository31Params) SetContext(ctx context.Context) {
+func (o *GetConanProxyRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the get repository 31 params
-func (o *GetRepository31Params) WithHTTPClient(client *http.Client) *GetRepository31Params {
+func (o *GetConanProxyRepositoryParams) WithHTTPClient(client *http.Client) *GetConanProxyRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the get repository 31 params
-func (o *GetRepository31Params) SetHTTPClient(client *http.Client) {
+func (o *GetConanProxyRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithRepositoryName adds the repositoryName to the get repository 31 params
-func (o *GetRepository31Params) WithRepositoryName(repositoryName string) *GetRepository31Params {
+func (o *GetConanProxyRepositoryParams) WithRepositoryName(repositoryName string) *GetConanProxyRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the get repository 31 params
-func (o *GetRepository31Params) SetRepositoryName(repositoryName string) {
+func (o *GetConanProxyRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *GetRepository31Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *GetConanProxyRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -51,7 +51,8 @@ func NewCreateUserOK() *CreateUserOK {
 	return &CreateUserOK{}
 }
 
-/* CreateUserOK describes a response with status code 200, with default header values.
+/*
+	CreateUserOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -113,7 +114,8 @@ func NewCreateUserBadRequest() *CreateUserBadRequest {
 	return &CreateUserBadRequest{}
 }
 
-/* CreateUserBadRequest describes a response with status code 400, with default header values.
+/*
+	CreateUserBadRequest describes a response with status code 400, with default header values.
 
 Password was not supplied in the body of the request
 */
@@ -163,7 +165,8 @@ func NewCreateUserForbidden() *CreateUserForbidden {
 	return &CreateUserForbidden{}
 }
 
-/* CreateUserForbidden describes a response with status code 403, with default header values.
+/*
+	CreateUserForbidden describes a response with status code 403, with default header values.
 
 The user does not have permission to perform the operation.
 */

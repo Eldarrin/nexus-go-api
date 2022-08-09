@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository20Params creates a new UpdateRepository20Params object,
+// NewUpdateYumGroupRepositoryParams creates a new UpdateYumGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository20Params() *UpdateRepository20Params {
-	return &UpdateRepository20Params{
+func NewUpdateYumGroupRepositoryParams() *UpdateYumGroupRepositoryParams {
+	return &UpdateYumGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository20ParamsWithTimeout creates a new UpdateRepository20Params object
+// NewUpdateYumGroupRepositoryParamsWithTimeout creates a new UpdateYumGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository20ParamsWithTimeout(timeout time.Duration) *UpdateRepository20Params {
-	return &UpdateRepository20Params{
+func NewUpdateYumGroupRepositoryParamsWithTimeout(timeout time.Duration) *UpdateYumGroupRepositoryParams {
+	return &UpdateYumGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository20ParamsWithContext creates a new UpdateRepository20Params object
+// NewUpdateYumGroupRepositoryParamsWithContext creates a new UpdateYumGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository20ParamsWithContext(ctx context.Context) *UpdateRepository20Params {
-	return &UpdateRepository20Params{
+func NewUpdateYumGroupRepositoryParamsWithContext(ctx context.Context) *UpdateYumGroupRepositoryParams {
+	return &UpdateYumGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository20ParamsWithHTTPClient creates a new UpdateRepository20Params object
+// NewUpdateYumGroupRepositoryParamsWithHTTPClient creates a new UpdateYumGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository20ParamsWithHTTPClient(client *http.Client) *UpdateRepository20Params {
-	return &UpdateRepository20Params{
+func NewUpdateYumGroupRepositoryParamsWithHTTPClient(client *http.Client) *UpdateYumGroupRepositoryParams {
+	return &UpdateYumGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository20Params contains all the parameters to send to the API endpoint
-   for the update repository 20 operation.
+/*
+UpdateYumGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 20 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository20Params struct {
+type UpdateYumGroupRepositoryParams struct {
 
 	// Body.
 	Body *models.YumGroupRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository20Params struct {
 // WithDefaults hydrates default values in the update repository 20 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository20Params) WithDefaults() *UpdateRepository20Params {
+func (o *UpdateYumGroupRepositoryParams) WithDefaults() *UpdateYumGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository20Params) WithDefaults() *UpdateRepository20Params {
 // SetDefaults hydrates default values in the update repository 20 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository20Params) SetDefaults() {
+func (o *UpdateYumGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 20 params
-func (o *UpdateRepository20Params) WithTimeout(timeout time.Duration) *UpdateRepository20Params {
+func (o *UpdateYumGroupRepositoryParams) WithTimeout(timeout time.Duration) *UpdateYumGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 20 params
-func (o *UpdateRepository20Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateYumGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 20 params
-func (o *UpdateRepository20Params) WithContext(ctx context.Context) *UpdateRepository20Params {
+func (o *UpdateYumGroupRepositoryParams) WithContext(ctx context.Context) *UpdateYumGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 20 params
-func (o *UpdateRepository20Params) SetContext(ctx context.Context) {
+func (o *UpdateYumGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 20 params
-func (o *UpdateRepository20Params) WithHTTPClient(client *http.Client) *UpdateRepository20Params {
+func (o *UpdateYumGroupRepositoryParams) WithHTTPClient(client *http.Client) *UpdateYumGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 20 params
-func (o *UpdateRepository20Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateYumGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 20 params
-func (o *UpdateRepository20Params) WithBody(body *models.YumGroupRepositoryAPIRequest) *UpdateRepository20Params {
+func (o *UpdateYumGroupRepositoryParams) WithBody(body *models.YumGroupRepositoryAPIRequest) *UpdateYumGroupRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 20 params
-func (o *UpdateRepository20Params) SetBody(body *models.YumGroupRepositoryAPIRequest) {
+func (o *UpdateYumGroupRepositoryParams) SetBody(body *models.YumGroupRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 20 params
-func (o *UpdateRepository20Params) WithRepositoryName(repositoryName string) *UpdateRepository20Params {
+func (o *UpdateYumGroupRepositoryParams) WithRepositoryName(repositoryName string) *UpdateYumGroupRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 20 params
-func (o *UpdateRepository20Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateYumGroupRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository20Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateYumGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository14Reader is a Reader for the GetRepository14 structure.
-type GetRepository14Reader struct {
+// GetNugetProxyRepositoryReader is a Reader for the GetNugetProxyRepository structure.
+type GetNugetProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository14Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetNugetProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository14OK()
+		result := NewGetNugetProxyRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository14Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository14OK creates a GetRepository14OK with default headers values
-func NewGetRepository14OK() *GetRepository14OK {
-	return &GetRepository14OK{}
+// NewGetNugetProxyRepositoryOK creates a GetNugetProxyRepositoryOK with default headers values
+func NewGetNugetProxyRepositoryOK() *GetNugetProxyRepositoryOK {
+	return &GetNugetProxyRepositoryOK{}
 }
 
-/* GetRepository14OK describes a response with status code 200, with default header values.
+/*
+	GetNugetProxyRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository14OK struct {
+type GetNugetProxyRepositoryOK struct {
 	Payload *models.NugetProxyAPIRepository
 }
 
 // IsSuccess returns true when this get repository14 o k response has a 2xx status code
-func (o *GetRepository14OK) IsSuccess() bool {
+func (o *GetNugetProxyRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository14 o k response has a 3xx status code
-func (o *GetRepository14OK) IsRedirect() bool {
+func (o *GetNugetProxyRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository14 o k response has a 4xx status code
-func (o *GetRepository14OK) IsClientError() bool {
+func (o *GetNugetProxyRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository14 o k response has a 5xx status code
-func (o *GetRepository14OK) IsServerError() bool {
+func (o *GetNugetProxyRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository14 o k response a status code equal to that given
-func (o *GetRepository14OK) IsCode(code int) bool {
+func (o *GetNugetProxyRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository14OK) Error() string {
+func (o *GetNugetProxyRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/nuget/proxy/{repositoryName}][%d] getRepository14OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository14OK) String() string {
+func (o *GetNugetProxyRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/nuget/proxy/{repositoryName}][%d] getRepository14OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository14OK) GetPayload() *models.NugetProxyAPIRepository {
+func (o *GetNugetProxyRepositoryOK) GetPayload() *models.NugetProxyAPIRepository {
 	return o.Payload
 }
 
-func (o *GetRepository14OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetNugetProxyRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.NugetProxyAPIRepository)
 

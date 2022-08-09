@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository6Params creates a new CreateRepository6Params object,
+// NewCreateRawHostedRepositoryParams creates a new CreateRawHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository6Params() *CreateRepository6Params {
-	return &CreateRepository6Params{
+func NewCreateRawHostedRepositoryParams() *CreateRawHostedRepositoryParams {
+	return &CreateRawHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository6ParamsWithTimeout creates a new CreateRepository6Params object
+// NewCreateRawHostedRepositoryParamsWithTimeout creates a new CreateRawHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository6ParamsWithTimeout(timeout time.Duration) *CreateRepository6Params {
-	return &CreateRepository6Params{
+func NewCreateRawHostedRepositoryParamsWithTimeout(timeout time.Duration) *CreateRawHostedRepositoryParams {
+	return &CreateRawHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository6ParamsWithContext creates a new CreateRepository6Params object
+// NewCreateRawHostedRepositoryParamsWithContext creates a new CreateRawHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository6ParamsWithContext(ctx context.Context) *CreateRepository6Params {
-	return &CreateRepository6Params{
+func NewCreateRawHostedRepositoryParamsWithContext(ctx context.Context) *CreateRawHostedRepositoryParams {
+	return &CreateRawHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository6ParamsWithHTTPClient creates a new CreateRepository6Params object
+// NewCreateRawHostedRepositoryParamsWithHTTPClient creates a new CreateRawHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository6ParamsWithHTTPClient(client *http.Client) *CreateRepository6Params {
-	return &CreateRepository6Params{
+func NewCreateRawHostedRepositoryParamsWithHTTPClient(client *http.Client) *CreateRawHostedRepositoryParams {
+	return &CreateRawHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository6Params contains all the parameters to send to the API endpoint
-   for the create repository 6 operation.
+/*
+CreateRawHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 6 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository6Params struct {
+type CreateRawHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.RawHostedRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository6Params struct {
 // WithDefaults hydrates default values in the create repository 6 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository6Params) WithDefaults() *CreateRepository6Params {
+func (o *CreateRawHostedRepositoryParams) WithDefaults() *CreateRawHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository6Params) WithDefaults() *CreateRepository6Params {
 // SetDefaults hydrates default values in the create repository 6 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository6Params) SetDefaults() {
+func (o *CreateRawHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 6 params
-func (o *CreateRepository6Params) WithTimeout(timeout time.Duration) *CreateRepository6Params {
+func (o *CreateRawHostedRepositoryParams) WithTimeout(timeout time.Duration) *CreateRawHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 6 params
-func (o *CreateRepository6Params) SetTimeout(timeout time.Duration) {
+func (o *CreateRawHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 6 params
-func (o *CreateRepository6Params) WithContext(ctx context.Context) *CreateRepository6Params {
+func (o *CreateRawHostedRepositoryParams) WithContext(ctx context.Context) *CreateRawHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 6 params
-func (o *CreateRepository6Params) SetContext(ctx context.Context) {
+func (o *CreateRawHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 6 params
-func (o *CreateRepository6Params) WithHTTPClient(client *http.Client) *CreateRepository6Params {
+func (o *CreateRawHostedRepositoryParams) WithHTTPClient(client *http.Client) *CreateRawHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 6 params
-func (o *CreateRepository6Params) SetHTTPClient(client *http.Client) {
+func (o *CreateRawHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 6 params
-func (o *CreateRepository6Params) WithBody(body *models.RawHostedRepositoryAPIRequest) *CreateRepository6Params {
+func (o *CreateRawHostedRepositoryParams) WithBody(body *models.RawHostedRepositoryAPIRequest) *CreateRawHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 6 params
-func (o *CreateRepository6Params) SetBody(body *models.RawHostedRepositoryAPIRequest) {
+func (o *CreateRawHostedRepositoryParams) SetBody(body *models.RawHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository6Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateRawHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

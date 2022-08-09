@@ -42,7 +42,8 @@ func NewCreatePrivilege1BadRequest() *CreatePrivilege1BadRequest {
 	return &CreatePrivilege1BadRequest{}
 }
 
-/* CreatePrivilege1BadRequest describes a response with status code 400, with default header values.
+/*
+	CreatePrivilege1BadRequest describes a response with status code 400, with default header values.
 
 Privilege object not configured properly.
 */
@@ -92,7 +93,8 @@ func NewCreatePrivilege1Forbidden() *CreatePrivilege1Forbidden {
 	return &CreatePrivilege1Forbidden{}
 }
 
-/* CreatePrivilege1Forbidden describes a response with status code 403, with default header values.
+/*
+	CreatePrivilege1Forbidden describes a response with status code 403, with default header values.
 
 The user does not have permission to perform the operation.
 */

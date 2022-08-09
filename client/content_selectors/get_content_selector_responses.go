@@ -45,7 +45,8 @@ func NewGetContentSelectorOK() *GetContentSelectorOK {
 	return &GetContentSelectorOK{}
 }
 
-/* GetContentSelectorOK describes a response with status code 200, with default header values.
+/*
+	GetContentSelectorOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -107,7 +108,8 @@ func NewGetContentSelectorForbidden() *GetContentSelectorForbidden {
 	return &GetContentSelectorForbidden{}
 }
 
-/* GetContentSelectorForbidden describes a response with status code 403, with default header values.
+/*
+	GetContentSelectorForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to read the content selector
 */

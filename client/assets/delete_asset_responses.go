@@ -54,7 +54,8 @@ func NewDeleteAssetNoContent() *DeleteAssetNoContent {
 	return &DeleteAssetNoContent{}
 }
 
-/* DeleteAssetNoContent describes a response with status code 204, with default header values.
+/*
+	DeleteAssetNoContent describes a response with status code 204, with default header values.
 
 Asset was successfully deleted
 */
@@ -104,7 +105,8 @@ func NewDeleteAssetForbidden() *DeleteAssetForbidden {
 	return &DeleteAssetForbidden{}
 }
 
-/* DeleteAssetForbidden describes a response with status code 403, with default header values.
+/*
+	DeleteAssetForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to delete asset
 */
@@ -154,7 +156,8 @@ func NewDeleteAssetNotFound() *DeleteAssetNotFound {
 	return &DeleteAssetNotFound{}
 }
 
-/* DeleteAssetNotFound describes a response with status code 404, with default header values.
+/*
+	DeleteAssetNotFound describes a response with status code 404, with default header values.
 
 Asset not found
 */
@@ -204,7 +207,8 @@ func NewDeleteAssetUnprocessableEntity() *DeleteAssetUnprocessableEntity {
 	return &DeleteAssetUnprocessableEntity{}
 }
 
-/* DeleteAssetUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+	DeleteAssetUnprocessableEntity describes a response with status code 422, with default header values.
 
 Malformed ID
 */

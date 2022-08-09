@@ -54,7 +54,8 @@ func NewDeleteLdapServerNoContent() *DeleteLdapServerNoContent {
 	return &DeleteLdapServerNoContent{}
 }
 
-/* DeleteLdapServerNoContent describes a response with status code 204, with default header values.
+/*
+	DeleteLdapServerNoContent describes a response with status code 204, with default header values.
 
 LDAP server deleted
 */
@@ -104,7 +105,8 @@ func NewDeleteLdapServerUnauthorized() *DeleteLdapServerUnauthorized {
 	return &DeleteLdapServerUnauthorized{}
 }
 
-/* DeleteLdapServerUnauthorized describes a response with status code 401, with default header values.
+/*
+	DeleteLdapServerUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -154,7 +156,8 @@ func NewDeleteLdapServerForbidden() *DeleteLdapServerForbidden {
 	return &DeleteLdapServerForbidden{}
 }
 
-/* DeleteLdapServerForbidden describes a response with status code 403, with default header values.
+/*
+	DeleteLdapServerForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
@@ -204,7 +207,8 @@ func NewDeleteLdapServerNotFound() *DeleteLdapServerNotFound {
 	return &DeleteLdapServerNotFound{}
 }
 
-/* DeleteLdapServerNotFound describes a response with status code 404, with default header values.
+/*
+	DeleteLdapServerNotFound describes a response with status code 404, with default header values.
 
 LDAP server not found
 */

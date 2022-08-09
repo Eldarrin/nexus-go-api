@@ -53,10 +53,12 @@ func NewSearchAssetsParamsWithHTTPClient(client *http.Client) *SearchAssetsParam
 	}
 }
 
-/* SearchAssetsParams contains all the parameters to send to the API endpoint
-   for the search assets operation.
+/*
+SearchAssetsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the search assets operation.
+
+	Typically these are written to a http.Request.
 */
 type SearchAssetsParams struct {
 

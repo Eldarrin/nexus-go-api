@@ -48,7 +48,8 @@ func NewCreateRoutingRuleNoContent() *CreateRoutingRuleNoContent {
 	return &CreateRoutingRuleNoContent{}
 }
 
-/* CreateRoutingRuleNoContent describes a response with status code 204, with default header values.
+/*
+	CreateRoutingRuleNoContent describes a response with status code 204, with default header values.
 
 Routing rule was successfully created
 */
@@ -98,7 +99,8 @@ func NewCreateRoutingRuleBadRequest() *CreateRoutingRuleBadRequest {
 	return &CreateRoutingRuleBadRequest{}
 }
 
-/* CreateRoutingRuleBadRequest describes a response with status code 400, with default header values.
+/*
+	CreateRoutingRuleBadRequest describes a response with status code 400, with default header values.
 
 A routing rule with the same name already exists or required parameters missing
 */
@@ -148,7 +150,8 @@ func NewCreateRoutingRuleForbidden() *CreateRoutingRuleForbidden {
 	return &CreateRoutingRuleForbidden{}
 }
 
-/* CreateRoutingRuleForbidden describes a response with status code 403, with default header values.
+/*
+	CreateRoutingRuleForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to create routing rule
 */

@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CreateRepository34Reader is a Reader for the CreateRepository34 structure.
-type CreateRepository34Reader struct {
+// CreateCocoapodsProxyRepositoryReader is a Reader for the CreateCocoapodsProxyRepository structure.
+type CreateCocoapodsProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *CreateRepository34Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *CreateCocoapodsProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 201:
-		result := NewCreateRepository34Created()
+		result := NewCreateCocoapodsProxyRepositoryCreated()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewCreateRepository34Unauthorized()
+		result := NewCreateCocoapodsProxyRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewCreateRepository34Forbidden()
+		result := NewCreateCocoapodsProxyRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 405:
-		result := NewCreateRepository34MethodNotAllowed()
+		result := NewCreateCocoapodsProxyRepositoryMethodNotAllowed()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *CreateRepository34Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewCreateRepository34Created creates a CreateRepository34Created with default headers values
-func NewCreateRepository34Created() *CreateRepository34Created {
-	return &CreateRepository34Created{}
+// NewCreateCocoapodsProxyRepositoryCreated creates a CreateCocoapodsProxyRepositoryCreated with default headers values
+func NewCreateCocoapodsProxyRepositoryCreated() *CreateCocoapodsProxyRepositoryCreated {
+	return &CreateCocoapodsProxyRepositoryCreated{}
 }
 
-/* CreateRepository34Created describes a response with status code 201, with default header values.
+/*
+	CreateCocoapodsProxyRepositoryCreated describes a response with status code 201, with default header values.
 
 Repository created
 */
-type CreateRepository34Created struct {
+type CreateCocoapodsProxyRepositoryCreated struct {
 }
 
 // IsSuccess returns true when this create repository34 created response has a 2xx status code
-func (o *CreateRepository34Created) IsSuccess() bool {
+func (o *CreateCocoapodsProxyRepositoryCreated) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this create repository34 created response has a 3xx status code
-func (o *CreateRepository34Created) IsRedirect() bool {
+func (o *CreateCocoapodsProxyRepositoryCreated) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository34 created response has a 4xx status code
-func (o *CreateRepository34Created) IsClientError() bool {
+func (o *CreateCocoapodsProxyRepositoryCreated) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this create repository34 created response has a 5xx status code
-func (o *CreateRepository34Created) IsServerError() bool {
+func (o *CreateCocoapodsProxyRepositoryCreated) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository34 created response a status code equal to that given
-func (o *CreateRepository34Created) IsCode(code int) bool {
+func (o *CreateCocoapodsProxyRepositoryCreated) IsCode(code int) bool {
 	return code == 201
 }
 
-func (o *CreateRepository34Created) Error() string {
+func (o *CreateCocoapodsProxyRepositoryCreated) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/cocoapods/proxy][%d] createRepository34Created ", 201)
 }
 
-func (o *CreateRepository34Created) String() string {
+func (o *CreateCocoapodsProxyRepositoryCreated) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/cocoapods/proxy][%d] createRepository34Created ", 201)
 }
 
-func (o *CreateRepository34Created) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateCocoapodsProxyRepositoryCreated) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository34Unauthorized creates a CreateRepository34Unauthorized with default headers values
-func NewCreateRepository34Unauthorized() *CreateRepository34Unauthorized {
-	return &CreateRepository34Unauthorized{}
+// NewCreateCocoapodsProxyRepositoryUnauthorized creates a CreateCocoapodsProxyRepositoryUnauthorized with default headers values
+func NewCreateCocoapodsProxyRepositoryUnauthorized() *CreateCocoapodsProxyRepositoryUnauthorized {
+	return &CreateCocoapodsProxyRepositoryUnauthorized{}
 }
 
-/* CreateRepository34Unauthorized describes a response with status code 401, with default header values.
+/*
+	CreateCocoapodsProxyRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type CreateRepository34Unauthorized struct {
+type CreateCocoapodsProxyRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this create repository34 unauthorized response has a 2xx status code
-func (o *CreateRepository34Unauthorized) IsSuccess() bool {
+func (o *CreateCocoapodsProxyRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository34 unauthorized response has a 3xx status code
-func (o *CreateRepository34Unauthorized) IsRedirect() bool {
+func (o *CreateCocoapodsProxyRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository34 unauthorized response has a 4xx status code
-func (o *CreateRepository34Unauthorized) IsClientError() bool {
+func (o *CreateCocoapodsProxyRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository34 unauthorized response has a 5xx status code
-func (o *CreateRepository34Unauthorized) IsServerError() bool {
+func (o *CreateCocoapodsProxyRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository34 unauthorized response a status code equal to that given
-func (o *CreateRepository34Unauthorized) IsCode(code int) bool {
+func (o *CreateCocoapodsProxyRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *CreateRepository34Unauthorized) Error() string {
+func (o *CreateCocoapodsProxyRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/cocoapods/proxy][%d] createRepository34Unauthorized ", 401)
 }
 
-func (o *CreateRepository34Unauthorized) String() string {
+func (o *CreateCocoapodsProxyRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/cocoapods/proxy][%d] createRepository34Unauthorized ", 401)
 }
 
-func (o *CreateRepository34Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateCocoapodsProxyRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository34Forbidden creates a CreateRepository34Forbidden with default headers values
-func NewCreateRepository34Forbidden() *CreateRepository34Forbidden {
-	return &CreateRepository34Forbidden{}
+// NewCreateCocoapodsProxyRepositoryForbidden creates a CreateCocoapodsProxyRepositoryForbidden with default headers values
+func NewCreateCocoapodsProxyRepositoryForbidden() *CreateCocoapodsProxyRepositoryForbidden {
+	return &CreateCocoapodsProxyRepositoryForbidden{}
 }
 
-/* CreateRepository34Forbidden describes a response with status code 403, with default header values.
+/*
+	CreateCocoapodsProxyRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type CreateRepository34Forbidden struct {
+type CreateCocoapodsProxyRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this create repository34 forbidden response has a 2xx status code
-func (o *CreateRepository34Forbidden) IsSuccess() bool {
+func (o *CreateCocoapodsProxyRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository34 forbidden response has a 3xx status code
-func (o *CreateRepository34Forbidden) IsRedirect() bool {
+func (o *CreateCocoapodsProxyRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository34 forbidden response has a 4xx status code
-func (o *CreateRepository34Forbidden) IsClientError() bool {
+func (o *CreateCocoapodsProxyRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository34 forbidden response has a 5xx status code
-func (o *CreateRepository34Forbidden) IsServerError() bool {
+func (o *CreateCocoapodsProxyRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository34 forbidden response a status code equal to that given
-func (o *CreateRepository34Forbidden) IsCode(code int) bool {
+func (o *CreateCocoapodsProxyRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *CreateRepository34Forbidden) Error() string {
+func (o *CreateCocoapodsProxyRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/cocoapods/proxy][%d] createRepository34Forbidden ", 403)
 }
 
-func (o *CreateRepository34Forbidden) String() string {
+func (o *CreateCocoapodsProxyRepositoryForbidden) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/cocoapods/proxy][%d] createRepository34Forbidden ", 403)
 }
 
-func (o *CreateRepository34Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateCocoapodsProxyRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewCreateRepository34MethodNotAllowed creates a CreateRepository34MethodNotAllowed with default headers values
-func NewCreateRepository34MethodNotAllowed() *CreateRepository34MethodNotAllowed {
-	return &CreateRepository34MethodNotAllowed{}
+// NewCreateCocoapodsProxyRepositoryMethodNotAllowed creates a CreateCocoapodsProxyRepositoryMethodNotAllowed with default headers values
+func NewCreateCocoapodsProxyRepositoryMethodNotAllowed() *CreateCocoapodsProxyRepositoryMethodNotAllowed {
+	return &CreateCocoapodsProxyRepositoryMethodNotAllowed{}
 }
 
-/* CreateRepository34MethodNotAllowed describes a response with status code 405, with default header values.
+/*
+	CreateCocoapodsProxyRepositoryMethodNotAllowed describes a response with status code 405, with default header values.
 
 Feature is disabled in High Availability
 */
-type CreateRepository34MethodNotAllowed struct {
+type CreateCocoapodsProxyRepositoryMethodNotAllowed struct {
 }
 
 // IsSuccess returns true when this create repository34 method not allowed response has a 2xx status code
-func (o *CreateRepository34MethodNotAllowed) IsSuccess() bool {
+func (o *CreateCocoapodsProxyRepositoryMethodNotAllowed) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this create repository34 method not allowed response has a 3xx status code
-func (o *CreateRepository34MethodNotAllowed) IsRedirect() bool {
+func (o *CreateCocoapodsProxyRepositoryMethodNotAllowed) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this create repository34 method not allowed response has a 4xx status code
-func (o *CreateRepository34MethodNotAllowed) IsClientError() bool {
+func (o *CreateCocoapodsProxyRepositoryMethodNotAllowed) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this create repository34 method not allowed response has a 5xx status code
-func (o *CreateRepository34MethodNotAllowed) IsServerError() bool {
+func (o *CreateCocoapodsProxyRepositoryMethodNotAllowed) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this create repository34 method not allowed response a status code equal to that given
-func (o *CreateRepository34MethodNotAllowed) IsCode(code int) bool {
+func (o *CreateCocoapodsProxyRepositoryMethodNotAllowed) IsCode(code int) bool {
 	return code == 405
 }
 
-func (o *CreateRepository34MethodNotAllowed) Error() string {
+func (o *CreateCocoapodsProxyRepositoryMethodNotAllowed) Error() string {
 	return fmt.Sprintf("[POST /v1/repositories/cocoapods/proxy][%d] createRepository34MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository34MethodNotAllowed) String() string {
+func (o *CreateCocoapodsProxyRepositoryMethodNotAllowed) String() string {
 	return fmt.Sprintf("[POST /v1/repositories/cocoapods/proxy][%d] createRepository34MethodNotAllowed ", 405)
 }
 
-func (o *CreateRepository34MethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *CreateCocoapodsProxyRepositoryMethodNotAllowed) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

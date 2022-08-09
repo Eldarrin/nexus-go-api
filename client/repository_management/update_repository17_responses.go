@@ -12,34 +12,34 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// UpdateRepository17Reader is a Reader for the UpdateRepository17 structure.
-type UpdateRepository17Reader struct {
+// UpdateDockerGroupRepositoryReader is a Reader for the UpdateDockerGroupRepository structure.
+type UpdateDockerGroupRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *UpdateRepository17Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *UpdateDockerGroupRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 204:
-		result := NewUpdateRepository17NoContent()
+		result := NewUpdateDockerGroupRepositoryNoContent()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return result, nil
 	case 401:
-		result := NewUpdateRepository17Unauthorized()
+		result := NewUpdateDockerGroupRepositoryUnauthorized()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 403:
-		result := NewUpdateRepository17Forbidden()
+		result := NewUpdateDockerGroupRepositoryForbidden()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
 		return nil, result
 	case 404:
-		result := NewUpdateRepository17NotFound()
+		result := NewUpdateDockerGroupRepositoryNotFound()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -49,202 +49,206 @@ func (o *UpdateRepository17Reader) ReadResponse(response runtime.ClientResponse,
 	}
 }
 
-// NewUpdateRepository17NoContent creates a UpdateRepository17NoContent with default headers values
-func NewUpdateRepository17NoContent() *UpdateRepository17NoContent {
-	return &UpdateRepository17NoContent{}
+// NewUpdateDockerGroupRepositoryNoContent creates a UpdateDockerGroupRepositoryNoContent with default headers values
+func NewUpdateDockerGroupRepositoryNoContent() *UpdateDockerGroupRepositoryNoContent {
+	return &UpdateDockerGroupRepositoryNoContent{}
 }
 
-/* UpdateRepository17NoContent describes a response with status code 204, with default header values.
+/*
+	UpdateDockerGroupRepositoryNoContent describes a response with status code 204, with default header values.
 
 Repository updated
 */
-type UpdateRepository17NoContent struct {
+type UpdateDockerGroupRepositoryNoContent struct {
 }
 
 // IsSuccess returns true when this update repository17 no content response has a 2xx status code
-func (o *UpdateRepository17NoContent) IsSuccess() bool {
+func (o *UpdateDockerGroupRepositoryNoContent) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this update repository17 no content response has a 3xx status code
-func (o *UpdateRepository17NoContent) IsRedirect() bool {
+func (o *UpdateDockerGroupRepositoryNoContent) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository17 no content response has a 4xx status code
-func (o *UpdateRepository17NoContent) IsClientError() bool {
+func (o *UpdateDockerGroupRepositoryNoContent) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this update repository17 no content response has a 5xx status code
-func (o *UpdateRepository17NoContent) IsServerError() bool {
+func (o *UpdateDockerGroupRepositoryNoContent) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository17 no content response a status code equal to that given
-func (o *UpdateRepository17NoContent) IsCode(code int) bool {
+func (o *UpdateDockerGroupRepositoryNoContent) IsCode(code int) bool {
 	return code == 204
 }
 
-func (o *UpdateRepository17NoContent) Error() string {
+func (o *UpdateDockerGroupRepositoryNoContent) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/group/{repositoryName}][%d] updateRepository17NoContent ", 204)
 }
 
-func (o *UpdateRepository17NoContent) String() string {
+func (o *UpdateDockerGroupRepositoryNoContent) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/group/{repositoryName}][%d] updateRepository17NoContent ", 204)
 }
 
-func (o *UpdateRepository17NoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerGroupRepositoryNoContent) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository17Unauthorized creates a UpdateRepository17Unauthorized with default headers values
-func NewUpdateRepository17Unauthorized() *UpdateRepository17Unauthorized {
-	return &UpdateRepository17Unauthorized{}
+// NewUpdateDockerGroupRepositoryUnauthorized creates a UpdateDockerGroupRepositoryUnauthorized with default headers values
+func NewUpdateDockerGroupRepositoryUnauthorized() *UpdateDockerGroupRepositoryUnauthorized {
+	return &UpdateDockerGroupRepositoryUnauthorized{}
 }
 
-/* UpdateRepository17Unauthorized describes a response with status code 401, with default header values.
+/*
+	UpdateDockerGroupRepositoryUnauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
-type UpdateRepository17Unauthorized struct {
+type UpdateDockerGroupRepositoryUnauthorized struct {
 }
 
 // IsSuccess returns true when this update repository17 unauthorized response has a 2xx status code
-func (o *UpdateRepository17Unauthorized) IsSuccess() bool {
+func (o *UpdateDockerGroupRepositoryUnauthorized) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository17 unauthorized response has a 3xx status code
-func (o *UpdateRepository17Unauthorized) IsRedirect() bool {
+func (o *UpdateDockerGroupRepositoryUnauthorized) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository17 unauthorized response has a 4xx status code
-func (o *UpdateRepository17Unauthorized) IsClientError() bool {
+func (o *UpdateDockerGroupRepositoryUnauthorized) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository17 unauthorized response has a 5xx status code
-func (o *UpdateRepository17Unauthorized) IsServerError() bool {
+func (o *UpdateDockerGroupRepositoryUnauthorized) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository17 unauthorized response a status code equal to that given
-func (o *UpdateRepository17Unauthorized) IsCode(code int) bool {
+func (o *UpdateDockerGroupRepositoryUnauthorized) IsCode(code int) bool {
 	return code == 401
 }
 
-func (o *UpdateRepository17Unauthorized) Error() string {
+func (o *UpdateDockerGroupRepositoryUnauthorized) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/group/{repositoryName}][%d] updateRepository17Unauthorized ", 401)
 }
 
-func (o *UpdateRepository17Unauthorized) String() string {
+func (o *UpdateDockerGroupRepositoryUnauthorized) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/group/{repositoryName}][%d] updateRepository17Unauthorized ", 401)
 }
 
-func (o *UpdateRepository17Unauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerGroupRepositoryUnauthorized) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository17Forbidden creates a UpdateRepository17Forbidden with default headers values
-func NewUpdateRepository17Forbidden() *UpdateRepository17Forbidden {
-	return &UpdateRepository17Forbidden{}
+// NewUpdateDockerGroupRepositoryForbidden creates a UpdateDockerGroupRepositoryForbidden with default headers values
+func NewUpdateDockerGroupRepositoryForbidden() *UpdateDockerGroupRepositoryForbidden {
+	return &UpdateDockerGroupRepositoryForbidden{}
 }
 
-/* UpdateRepository17Forbidden describes a response with status code 403, with default header values.
+/*
+	UpdateDockerGroupRepositoryForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */
-type UpdateRepository17Forbidden struct {
+type UpdateDockerGroupRepositoryForbidden struct {
 }
 
 // IsSuccess returns true when this update repository17 forbidden response has a 2xx status code
-func (o *UpdateRepository17Forbidden) IsSuccess() bool {
+func (o *UpdateDockerGroupRepositoryForbidden) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository17 forbidden response has a 3xx status code
-func (o *UpdateRepository17Forbidden) IsRedirect() bool {
+func (o *UpdateDockerGroupRepositoryForbidden) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository17 forbidden response has a 4xx status code
-func (o *UpdateRepository17Forbidden) IsClientError() bool {
+func (o *UpdateDockerGroupRepositoryForbidden) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository17 forbidden response has a 5xx status code
-func (o *UpdateRepository17Forbidden) IsServerError() bool {
+func (o *UpdateDockerGroupRepositoryForbidden) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository17 forbidden response a status code equal to that given
-func (o *UpdateRepository17Forbidden) IsCode(code int) bool {
+func (o *UpdateDockerGroupRepositoryForbidden) IsCode(code int) bool {
 	return code == 403
 }
 
-func (o *UpdateRepository17Forbidden) Error() string {
+func (o *UpdateDockerGroupRepositoryForbidden) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/group/{repositoryName}][%d] updateRepository17Forbidden ", 403)
 }
 
-func (o *UpdateRepository17Forbidden) String() string {
+func (o *UpdateDockerGroupRepositoryForbidden) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/group/{repositoryName}][%d] updateRepository17Forbidden ", 403)
 }
 
-func (o *UpdateRepository17Forbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerGroupRepositoryForbidden) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }
 
-// NewUpdateRepository17NotFound creates a UpdateRepository17NotFound with default headers values
-func NewUpdateRepository17NotFound() *UpdateRepository17NotFound {
-	return &UpdateRepository17NotFound{}
+// NewUpdateDockerGroupRepositoryNotFound creates a UpdateDockerGroupRepositoryNotFound with default headers values
+func NewUpdateDockerGroupRepositoryNotFound() *UpdateDockerGroupRepositoryNotFound {
+	return &UpdateDockerGroupRepositoryNotFound{}
 }
 
-/* UpdateRepository17NotFound describes a response with status code 404, with default header values.
+/*
+	UpdateDockerGroupRepositoryNotFound describes a response with status code 404, with default header values.
 
 Repository not found
 */
-type UpdateRepository17NotFound struct {
+type UpdateDockerGroupRepositoryNotFound struct {
 }
 
 // IsSuccess returns true when this update repository17 not found response has a 2xx status code
-func (o *UpdateRepository17NotFound) IsSuccess() bool {
+func (o *UpdateDockerGroupRepositoryNotFound) IsSuccess() bool {
 	return false
 }
 
 // IsRedirect returns true when this update repository17 not found response has a 3xx status code
-func (o *UpdateRepository17NotFound) IsRedirect() bool {
+func (o *UpdateDockerGroupRepositoryNotFound) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this update repository17 not found response has a 4xx status code
-func (o *UpdateRepository17NotFound) IsClientError() bool {
+func (o *UpdateDockerGroupRepositoryNotFound) IsClientError() bool {
 	return true
 }
 
 // IsServerError returns true when this update repository17 not found response has a 5xx status code
-func (o *UpdateRepository17NotFound) IsServerError() bool {
+func (o *UpdateDockerGroupRepositoryNotFound) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this update repository17 not found response a status code equal to that given
-func (o *UpdateRepository17NotFound) IsCode(code int) bool {
+func (o *UpdateDockerGroupRepositoryNotFound) IsCode(code int) bool {
 	return code == 404
 }
 
-func (o *UpdateRepository17NotFound) Error() string {
+func (o *UpdateDockerGroupRepositoryNotFound) Error() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/group/{repositoryName}][%d] updateRepository17NotFound ", 404)
 }
 
-func (o *UpdateRepository17NotFound) String() string {
+func (o *UpdateDockerGroupRepositoryNotFound) String() string {
 	return fmt.Sprintf("[PUT /v1/repositories/docker/group/{repositoryName}][%d] updateRepository17NotFound ", 404)
 }
 
-func (o *UpdateRepository17NotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *UpdateDockerGroupRepositoryNotFound) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	return nil
 }

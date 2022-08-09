@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository17Reader is a Reader for the GetRepository17 structure.
-type GetRepository17Reader struct {
+// GetRubyGemsProxyRepositoryReader is a Reader for the GetRubyGemsProxyRepository structure.
+type GetRubyGemsProxyRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository17Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetRubyGemsProxyRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository17OK()
+		result := NewGetRubyGemsProxyRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository17Reader) ReadResponse(response runtime.ClientResponse, co
 	}
 }
 
-// NewGetRepository17OK creates a GetRepository17OK with default headers values
-func NewGetRepository17OK() *GetRepository17OK {
-	return &GetRepository17OK{}
+// NewGetRubyGemsProxyRepositoryOK creates a GetRubyGemsProxyRepositoryOK with default headers values
+func NewGetRubyGemsProxyRepositoryOK() *GetRubyGemsProxyRepositoryOK {
+	return &GetRubyGemsProxyRepositoryOK{}
 }
 
-/* GetRepository17OK describes a response with status code 200, with default header values.
+/*
+	GetRubyGemsProxyRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository17OK struct {
+type GetRubyGemsProxyRepositoryOK struct {
 	Payload *models.SimpleAPIProxyRepository
 }
 
 // IsSuccess returns true when this get repository17 o k response has a 2xx status code
-func (o *GetRepository17OK) IsSuccess() bool {
+func (o *GetRubyGemsProxyRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository17 o k response has a 3xx status code
-func (o *GetRepository17OK) IsRedirect() bool {
+func (o *GetRubyGemsProxyRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository17 o k response has a 4xx status code
-func (o *GetRepository17OK) IsClientError() bool {
+func (o *GetRubyGemsProxyRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository17 o k response has a 5xx status code
-func (o *GetRepository17OK) IsServerError() bool {
+func (o *GetRubyGemsProxyRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository17 o k response a status code equal to that given
-func (o *GetRepository17OK) IsCode(code int) bool {
+func (o *GetRubyGemsProxyRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository17OK) Error() string {
+func (o *GetRubyGemsProxyRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/rubygems/proxy/{repositoryName}][%d] getRepository17OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository17OK) String() string {
+func (o *GetRubyGemsProxyRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/rubygems/proxy/{repositoryName}][%d] getRepository17OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository17OK) GetPayload() *models.SimpleAPIProxyRepository {
+func (o *GetRubyGemsProxyRepositoryOK) GetPayload() *models.SimpleAPIProxyRepository {
 	return o.Payload
 }
 
-func (o *GetRepository17OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetRubyGemsProxyRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.SimpleAPIProxyRepository)
 

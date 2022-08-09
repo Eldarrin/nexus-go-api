@@ -57,7 +57,8 @@ func NewGetBlobStore1OK() *GetBlobStore1OK {
 	return &GetBlobStore1OK{}
 }
 
-/* GetBlobStore1OK describes a response with status code 200, with default header values.
+/*
+	GetBlobStore1OK describes a response with status code 200, with default header values.
 
 Success
 */
@@ -119,7 +120,8 @@ func NewGetBlobStore1BadRequest() *GetBlobStore1BadRequest {
 	return &GetBlobStore1BadRequest{}
 }
 
-/* GetBlobStore1BadRequest describes a response with status code 400, with default header values.
+/*
+	GetBlobStore1BadRequest describes a response with status code 400, with default header values.
 
 Specified Azure blob store doesn't exist
 */
@@ -169,7 +171,8 @@ func NewGetBlobStore1Unauthorized() *GetBlobStore1Unauthorized {
 	return &GetBlobStore1Unauthorized{}
 }
 
-/* GetBlobStore1Unauthorized describes a response with status code 401, with default header values.
+/*
+	GetBlobStore1Unauthorized describes a response with status code 401, with default header values.
 
 Authentication required
 */
@@ -219,7 +222,8 @@ func NewGetBlobStore1Forbidden() *GetBlobStore1Forbidden {
 	return &GetBlobStore1Forbidden{}
 }
 
-/* GetBlobStore1Forbidden describes a response with status code 403, with default header values.
+/*
+	GetBlobStore1Forbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions
 */

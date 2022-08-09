@@ -15,16 +15,16 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// GetRepository2Reader is a Reader for the GetRepository2 structure.
-type GetRepository2Reader struct {
+// GetMavenHostedRepositoryReader is a Reader for the GetMavenHostedRepository structure.
+type GetMavenHostedRepositoryReader struct {
 	formats strfmt.Registry
 }
 
 // ReadResponse reads a server response into the received o.
-func (o *GetRepository2Reader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
+func (o *GetMavenHostedRepositoryReader) ReadResponse(response runtime.ClientResponse, consumer runtime.Consumer) (interface{}, error) {
 	switch response.Code() {
 	case 200:
-		result := NewGetRepository2OK()
+		result := NewGetMavenHostedRepositoryOK()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
 			return nil, err
 		}
@@ -34,57 +34,58 @@ func (o *GetRepository2Reader) ReadResponse(response runtime.ClientResponse, con
 	}
 }
 
-// NewGetRepository2OK creates a GetRepository2OK with default headers values
-func NewGetRepository2OK() *GetRepository2OK {
-	return &GetRepository2OK{}
+// NewGetMavenHostedRepositoryOK creates a GetMavenHostedRepositoryOK with default headers values
+func NewGetMavenHostedRepositoryOK() *GetMavenHostedRepositoryOK {
+	return &GetMavenHostedRepositoryOK{}
 }
 
-/* GetRepository2OK describes a response with status code 200, with default header values.
+/*
+	GetMavenHostedRepositoryOK describes a response with status code 200, with default header values.
 
 successful operation
 */
-type GetRepository2OK struct {
+type GetMavenHostedRepositoryOK struct {
 	Payload *models.MavenHostedAPIRepository
 }
 
 // IsSuccess returns true when this get repository2 o k response has a 2xx status code
-func (o *GetRepository2OK) IsSuccess() bool {
+func (o *GetMavenHostedRepositoryOK) IsSuccess() bool {
 	return true
 }
 
 // IsRedirect returns true when this get repository2 o k response has a 3xx status code
-func (o *GetRepository2OK) IsRedirect() bool {
+func (o *GetMavenHostedRepositoryOK) IsRedirect() bool {
 	return false
 }
 
 // IsClientError returns true when this get repository2 o k response has a 4xx status code
-func (o *GetRepository2OK) IsClientError() bool {
+func (o *GetMavenHostedRepositoryOK) IsClientError() bool {
 	return false
 }
 
 // IsServerError returns true when this get repository2 o k response has a 5xx status code
-func (o *GetRepository2OK) IsServerError() bool {
+func (o *GetMavenHostedRepositoryOK) IsServerError() bool {
 	return false
 }
 
 // IsCode returns true when this get repository2 o k response a status code equal to that given
-func (o *GetRepository2OK) IsCode(code int) bool {
+func (o *GetMavenHostedRepositoryOK) IsCode(code int) bool {
 	return code == 200
 }
 
-func (o *GetRepository2OK) Error() string {
+func (o *GetMavenHostedRepositoryOK) Error() string {
 	return fmt.Sprintf("[GET /v1/repositories/maven/hosted/{repositoryName}][%d] getRepository2OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository2OK) String() string {
+func (o *GetMavenHostedRepositoryOK) String() string {
 	return fmt.Sprintf("[GET /v1/repositories/maven/hosted/{repositoryName}][%d] getRepository2OK  %+v", 200, o.Payload)
 }
 
-func (o *GetRepository2OK) GetPayload() *models.MavenHostedAPIRepository {
+func (o *GetMavenHostedRepositoryOK) GetPayload() *models.MavenHostedAPIRepository {
 	return o.Payload
 }
 
-func (o *GetRepository2OK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+func (o *GetMavenHostedRepositoryOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
 	o.Payload = new(models.MavenHostedAPIRepository)
 

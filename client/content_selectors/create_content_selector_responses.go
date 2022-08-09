@@ -48,7 +48,8 @@ func NewCreateContentSelectorNoContent() *CreateContentSelectorNoContent {
 	return &CreateContentSelectorNoContent{}
 }
 
-/* CreateContentSelectorNoContent describes a response with status code 204, with default header values.
+/*
+	CreateContentSelectorNoContent describes a response with status code 204, with default header values.
 
 Content selector successfully created
 */
@@ -98,7 +99,8 @@ func NewCreateContentSelectorBadRequest() *CreateContentSelectorBadRequest {
 	return &CreateContentSelectorBadRequest{}
 }
 
-/* CreateContentSelectorBadRequest describes a response with status code 400, with default header values.
+/*
+	CreateContentSelectorBadRequest describes a response with status code 400, with default header values.
 
 Invalid request
 */
@@ -148,7 +150,8 @@ func NewCreateContentSelectorForbidden() *CreateContentSelectorForbidden {
 	return &CreateContentSelectorForbidden{}
 }
 
-/* CreateContentSelectorForbidden describes a response with status code 403, with default header values.
+/*
+	CreateContentSelectorForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to create content selectors
 */

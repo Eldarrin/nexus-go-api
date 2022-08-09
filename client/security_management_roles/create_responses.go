@@ -45,7 +45,8 @@ func NewCreateOK() *CreateOK {
 	return &CreateOK{}
 }
 
-/* CreateOK describes a response with status code 200, with default header values.
+/*
+	CreateOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -107,7 +108,8 @@ func NewCreateForbidden() *CreateForbidden {
 	return &CreateForbidden{}
 }
 
-/* CreateForbidden describes a response with status code 403, with default header values.
+/*
+	CreateForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to create role
 */

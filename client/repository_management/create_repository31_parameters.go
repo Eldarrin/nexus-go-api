@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewCreateRepository31Params creates a new CreateRepository31Params object,
+// NewCreateRGroupRepositoryParams creates a new CreateRGroupRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewCreateRepository31Params() *CreateRepository31Params {
-	return &CreateRepository31Params{
+func NewCreateRGroupRepositoryParams() *CreateRGroupRepositoryParams {
+	return &CreateRGroupRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewCreateRepository31ParamsWithTimeout creates a new CreateRepository31Params object
+// NewCreateRGroupRepositoryParamsWithTimeout creates a new CreateRGroupRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewCreateRepository31ParamsWithTimeout(timeout time.Duration) *CreateRepository31Params {
-	return &CreateRepository31Params{
+func NewCreateRGroupRepositoryParamsWithTimeout(timeout time.Duration) *CreateRGroupRepositoryParams {
+	return &CreateRGroupRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewCreateRepository31ParamsWithContext creates a new CreateRepository31Params object
+// NewCreateRGroupRepositoryParamsWithContext creates a new CreateRGroupRepositoryParams object
 // with the ability to set a context for a request.
-func NewCreateRepository31ParamsWithContext(ctx context.Context) *CreateRepository31Params {
-	return &CreateRepository31Params{
+func NewCreateRGroupRepositoryParamsWithContext(ctx context.Context) *CreateRGroupRepositoryParams {
+	return &CreateRGroupRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewCreateRepository31ParamsWithHTTPClient creates a new CreateRepository31Params object
+// NewCreateRGroupRepositoryParamsWithHTTPClient creates a new CreateRGroupRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewCreateRepository31ParamsWithHTTPClient(client *http.Client) *CreateRepository31Params {
-	return &CreateRepository31Params{
+func NewCreateRGroupRepositoryParamsWithHTTPClient(client *http.Client) *CreateRGroupRepositoryParams {
+	return &CreateRGroupRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* CreateRepository31Params contains all the parameters to send to the API endpoint
-   for the create repository 31 operation.
+/*
+CreateRGroupRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create repository 31 operation.
+
+	Typically these are written to a http.Request.
 */
-type CreateRepository31Params struct {
+type CreateRGroupRepositoryParams struct {
 
 	// Body.
 	Body *models.RGroupRepositoryAPIRequest
@@ -72,7 +74,7 @@ type CreateRepository31Params struct {
 // WithDefaults hydrates default values in the create repository 31 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository31Params) WithDefaults() *CreateRepository31Params {
+func (o *CreateRGroupRepositoryParams) WithDefaults() *CreateRGroupRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -80,56 +82,56 @@ func (o *CreateRepository31Params) WithDefaults() *CreateRepository31Params {
 // SetDefaults hydrates default values in the create repository 31 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *CreateRepository31Params) SetDefaults() {
+func (o *CreateRGroupRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the create repository 31 params
-func (o *CreateRepository31Params) WithTimeout(timeout time.Duration) *CreateRepository31Params {
+func (o *CreateRGroupRepositoryParams) WithTimeout(timeout time.Duration) *CreateRGroupRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the create repository 31 params
-func (o *CreateRepository31Params) SetTimeout(timeout time.Duration) {
+func (o *CreateRGroupRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the create repository 31 params
-func (o *CreateRepository31Params) WithContext(ctx context.Context) *CreateRepository31Params {
+func (o *CreateRGroupRepositoryParams) WithContext(ctx context.Context) *CreateRGroupRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the create repository 31 params
-func (o *CreateRepository31Params) SetContext(ctx context.Context) {
+func (o *CreateRGroupRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the create repository 31 params
-func (o *CreateRepository31Params) WithHTTPClient(client *http.Client) *CreateRepository31Params {
+func (o *CreateRGroupRepositoryParams) WithHTTPClient(client *http.Client) *CreateRGroupRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the create repository 31 params
-func (o *CreateRepository31Params) SetHTTPClient(client *http.Client) {
+func (o *CreateRGroupRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the create repository 31 params
-func (o *CreateRepository31Params) WithBody(body *models.RGroupRepositoryAPIRequest) *CreateRepository31Params {
+func (o *CreateRGroupRepositoryParams) WithBody(body *models.RGroupRepositoryAPIRequest) *CreateRGroupRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the create repository 31 params
-func (o *CreateRepository31Params) SetBody(body *models.RGroupRepositoryAPIRequest) {
+func (o *CreateRGroupRepositoryParams) SetBody(body *models.RGroupRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *CreateRepository31Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *CreateRGroupRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err

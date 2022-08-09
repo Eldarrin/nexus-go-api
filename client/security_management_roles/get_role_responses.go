@@ -57,7 +57,8 @@ func NewGetRoleOK() *GetRoleOK {
 	return &GetRoleOK{}
 }
 
-/* GetRoleOK describes a response with status code 200, with default header values.
+/*
+	GetRoleOK describes a response with status code 200, with default header values.
 
 successful operation
 */
@@ -119,7 +120,8 @@ func NewGetRoleBadRequest() *GetRoleBadRequest {
 	return &GetRoleBadRequest{}
 }
 
-/* GetRoleBadRequest describes a response with status code 400, with default header values.
+/*
+	GetRoleBadRequest describes a response with status code 400, with default header values.
 
 The specified source does not exist
 */
@@ -169,7 +171,8 @@ func NewGetRoleForbidden() *GetRoleForbidden {
 	return &GetRoleForbidden{}
 }
 
-/* GetRoleForbidden describes a response with status code 403, with default header values.
+/*
+	GetRoleForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to read roles
 */
@@ -219,7 +222,8 @@ func NewGetRoleNotFound() *GetRoleNotFound {
 	return &GetRoleNotFound{}
 }
 
-/* GetRoleNotFound describes a response with status code 404, with default header values.
+/*
+	GetRoleNotFound describes a response with status code 404, with default header values.
 
 Role not found
 */

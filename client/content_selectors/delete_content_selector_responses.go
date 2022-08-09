@@ -48,7 +48,8 @@ func NewDeleteContentSelectorNoContent() *DeleteContentSelectorNoContent {
 	return &DeleteContentSelectorNoContent{}
 }
 
-/* DeleteContentSelectorNoContent describes a response with status code 204, with default header values.
+/*
+	DeleteContentSelectorNoContent describes a response with status code 204, with default header values.
 
 Content selector deleted successfully
 */
@@ -98,7 +99,8 @@ func NewDeleteContentSelectorBadRequest() *DeleteContentSelectorBadRequest {
 	return &DeleteContentSelectorBadRequest{}
 }
 
-/* DeleteContentSelectorBadRequest describes a response with status code 400, with default header values.
+/*
+	DeleteContentSelectorBadRequest describes a response with status code 400, with default header values.
 
 Invalid request
 */
@@ -148,7 +150,8 @@ func NewDeleteContentSelectorForbidden() *DeleteContentSelectorForbidden {
 	return &DeleteContentSelectorForbidden{}
 }
 
-/* DeleteContentSelectorForbidden describes a response with status code 403, with default header values.
+/*
+	DeleteContentSelectorForbidden describes a response with status code 403, with default header values.
 
 Insufficient permissions to delete the content selector
 */

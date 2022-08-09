@@ -18,48 +18,50 @@ import (
 	"github.com/Eldarrin/nexus-go-api/models"
 )
 
-// NewUpdateRepository1Params creates a new UpdateRepository1Params object,
+// NewUpdateMavenHostedRepositoryParams creates a new UpdateMavenHostedRepositoryParams object,
 // with the default timeout for this client.
 //
 // Default values are not hydrated, since defaults are normally applied by the API server side.
 //
 // To enforce default values in parameter, use SetDefaults or WithDefaults.
-func NewUpdateRepository1Params() *UpdateRepository1Params {
-	return &UpdateRepository1Params{
+func NewUpdateMavenHostedRepositoryParams() *UpdateMavenHostedRepositoryParams {
+	return &UpdateMavenHostedRepositoryParams{
 		timeout: cr.DefaultTimeout,
 	}
 }
 
-// NewUpdateRepository1ParamsWithTimeout creates a new UpdateRepository1Params object
+// NewUpdateMavenHostedRepositoryParamsWithTimeout creates a new UpdateMavenHostedRepositoryParams object
 // with the ability to set a timeout on a request.
-func NewUpdateRepository1ParamsWithTimeout(timeout time.Duration) *UpdateRepository1Params {
-	return &UpdateRepository1Params{
+func NewUpdateMavenHostedRepositoryParamsWithTimeout(timeout time.Duration) *UpdateMavenHostedRepositoryParams {
+	return &UpdateMavenHostedRepositoryParams{
 		timeout: timeout,
 	}
 }
 
-// NewUpdateRepository1ParamsWithContext creates a new UpdateRepository1Params object
+// NewUpdateMavenHostedRepositoryParamsWithContext creates a new UpdateMavenHostedRepositoryParams object
 // with the ability to set a context for a request.
-func NewUpdateRepository1ParamsWithContext(ctx context.Context) *UpdateRepository1Params {
-	return &UpdateRepository1Params{
+func NewUpdateMavenHostedRepositoryParamsWithContext(ctx context.Context) *UpdateMavenHostedRepositoryParams {
+	return &UpdateMavenHostedRepositoryParams{
 		Context: ctx,
 	}
 }
 
-// NewUpdateRepository1ParamsWithHTTPClient creates a new UpdateRepository1Params object
+// NewUpdateMavenHostedRepositoryParamsWithHTTPClient creates a new UpdateMavenHostedRepositoryParams object
 // with the ability to set a custom HTTPClient for a request.
-func NewUpdateRepository1ParamsWithHTTPClient(client *http.Client) *UpdateRepository1Params {
-	return &UpdateRepository1Params{
+func NewUpdateMavenHostedRepositoryParamsWithHTTPClient(client *http.Client) *UpdateMavenHostedRepositoryParams {
+	return &UpdateMavenHostedRepositoryParams{
 		HTTPClient: client,
 	}
 }
 
-/* UpdateRepository1Params contains all the parameters to send to the API endpoint
-   for the update repository 1 operation.
+/*
+UpdateMavenHostedRepositoryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update repository 1 operation.
+
+	Typically these are written to a http.Request.
 */
-type UpdateRepository1Params struct {
+type UpdateMavenHostedRepositoryParams struct {
 
 	// Body.
 	Body *models.MavenHostedRepositoryAPIRequest
@@ -78,7 +80,7 @@ type UpdateRepository1Params struct {
 // WithDefaults hydrates default values in the update repository 1 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository1Params) WithDefaults() *UpdateRepository1Params {
+func (o *UpdateMavenHostedRepositoryParams) WithDefaults() *UpdateMavenHostedRepositoryParams {
 	o.SetDefaults()
 	return o
 }
@@ -86,67 +88,67 @@ func (o *UpdateRepository1Params) WithDefaults() *UpdateRepository1Params {
 // SetDefaults hydrates default values in the update repository 1 params (not the query body).
 //
 // All values with no default are reset to their zero value.
-func (o *UpdateRepository1Params) SetDefaults() {
+func (o *UpdateMavenHostedRepositoryParams) SetDefaults() {
 	// no default values defined for this parameter
 }
 
 // WithTimeout adds the timeout to the update repository 1 params
-func (o *UpdateRepository1Params) WithTimeout(timeout time.Duration) *UpdateRepository1Params {
+func (o *UpdateMavenHostedRepositoryParams) WithTimeout(timeout time.Duration) *UpdateMavenHostedRepositoryParams {
 	o.SetTimeout(timeout)
 	return o
 }
 
 // SetTimeout adds the timeout to the update repository 1 params
-func (o *UpdateRepository1Params) SetTimeout(timeout time.Duration) {
+func (o *UpdateMavenHostedRepositoryParams) SetTimeout(timeout time.Duration) {
 	o.timeout = timeout
 }
 
 // WithContext adds the context to the update repository 1 params
-func (o *UpdateRepository1Params) WithContext(ctx context.Context) *UpdateRepository1Params {
+func (o *UpdateMavenHostedRepositoryParams) WithContext(ctx context.Context) *UpdateMavenHostedRepositoryParams {
 	o.SetContext(ctx)
 	return o
 }
 
 // SetContext adds the context to the update repository 1 params
-func (o *UpdateRepository1Params) SetContext(ctx context.Context) {
+func (o *UpdateMavenHostedRepositoryParams) SetContext(ctx context.Context) {
 	o.Context = ctx
 }
 
 // WithHTTPClient adds the HTTPClient to the update repository 1 params
-func (o *UpdateRepository1Params) WithHTTPClient(client *http.Client) *UpdateRepository1Params {
+func (o *UpdateMavenHostedRepositoryParams) WithHTTPClient(client *http.Client) *UpdateMavenHostedRepositoryParams {
 	o.SetHTTPClient(client)
 	return o
 }
 
 // SetHTTPClient adds the HTTPClient to the update repository 1 params
-func (o *UpdateRepository1Params) SetHTTPClient(client *http.Client) {
+func (o *UpdateMavenHostedRepositoryParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
 // WithBody adds the body to the update repository 1 params
-func (o *UpdateRepository1Params) WithBody(body *models.MavenHostedRepositoryAPIRequest) *UpdateRepository1Params {
+func (o *UpdateMavenHostedRepositoryParams) WithBody(body *models.MavenHostedRepositoryAPIRequest) *UpdateMavenHostedRepositoryParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update repository 1 params
-func (o *UpdateRepository1Params) SetBody(body *models.MavenHostedRepositoryAPIRequest) {
+func (o *UpdateMavenHostedRepositoryParams) SetBody(body *models.MavenHostedRepositoryAPIRequest) {
 	o.Body = body
 }
 
 // WithRepositoryName adds the repositoryName to the update repository 1 params
-func (o *UpdateRepository1Params) WithRepositoryName(repositoryName string) *UpdateRepository1Params {
+func (o *UpdateMavenHostedRepositoryParams) WithRepositoryName(repositoryName string) *UpdateMavenHostedRepositoryParams {
 	o.SetRepositoryName(repositoryName)
 	return o
 }
 
 // SetRepositoryName adds the repositoryName to the update repository 1 params
-func (o *UpdateRepository1Params) SetRepositoryName(repositoryName string) {
+func (o *UpdateMavenHostedRepositoryParams) SetRepositoryName(repositoryName string) {
 	o.RepositoryName = repositoryName
 }
 
 // WriteToRequest writes these params to a swagger request
-func (o *UpdateRepository1Params) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
+func (o *UpdateMavenHostedRepositoryParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
 	if err := r.SetTimeout(o.timeout); err != nil {
 		return err
