@@ -49,6 +49,9 @@ func reworkCreateRepoParams(fileName string, sType []string) {
 
 		log.Printf("New string: %s", nS)
 
+		sO := []byte(nS) // convert string to byte slice
+		os.WriteFile(directoryStructure+"\\tmp\\"+fileName, sO, 0644)
+
 	}
 }
 
@@ -97,6 +100,9 @@ func reworkCreateRepoResp(fileName string, sType []string) {
 
 		log.Printf("New string: %s", nS)
 
+		sO := []byte(nS) // convert string to byte slice
+		os.WriteFile(directoryStructure+"\\tmp\\"+fileName, sO, 0644)
+
 	}
 }
 
@@ -143,9 +149,22 @@ func reworkGetRepoUpdate(fileName string, sType []string) {
 		nS := strings.ReplaceAll(s, oldName, newName)
 
 		log.Printf("New string: %s", nS)
+		sO := []byte(nS) // convert string to byte slice
+		os.WriteFile(directoryStructure+"\\tmp\\"+fileName, sO, 0644)
 
 		// repeat replace for params file
+		fileName = "get_" + sType[1] + "_parameters.go"
+		dataParams, err := os.ReadFile(directoryStructure + "\\" + fileName)
+		if err != nil {
+			log.Fatal(err)
+		}
 
+		s = string(dataParams)
+		nS = strings.ReplaceAll(s, oldName, newName)
+
+		log.Printf("New string: %s", nS)
+		sO = []byte(nS) // convert string to byte slice
+		os.WriteFile(directoryStructure+"\\tmp\\"+fileName, sO, 0644)
 	}
 }
 
@@ -189,6 +208,9 @@ func reworkUpdateRepoParams(fileName string, sType []string) {
 		nS := strings.ReplaceAll(s, oldName, newName)
 
 		log.Printf("New string: %s", nS)
+
+		sO := []byte(nS) // convert string to byte slice
+		os.WriteFile(directoryStructure+"\\tmp\\"+fileName, sO, 0644)
 
 	}
 }
@@ -238,6 +260,9 @@ func reworkUpdateRepoResp(fileName string, sType []string) {
 
 		log.Printf("New string: %s", nS)
 
+		sO := []byte(nS) // convert string to byte slice
+		os.WriteFile(directoryStructure+"\\tmp\\"+fileName, sO, 0644)
+
 	}
 }
 
@@ -254,19 +279,17 @@ func main() {
 			switch sType[0] {
 			case "create":
 				if sType[2] == "responses.go" {
-					//reworkCreateRepoResp(file.Name(), sType)
+					reworkCreateRepoResp(file.Name(), sType)
 				} else {
-					//reworkCreateRepoParams(file.Name(), sType)
+					reworkCreateRepoParams(file.Name(), sType)
 				}
 			case "get":
 				if sType[2] == "responses.go" {
-					//reworkGetRepoUpdate(file.Name(), sType)
-				} else {
-					//reworkCreateRepoParams(file.Name(), sType)
+					reworkGetRepoUpdate(file.Name(), sType)
 				}
 			case "update":
 				if sType[2] == "responses.go" {
-					//reworkUpdateRepoResp(file.Name(), sType)
+					reworkUpdateRepoResp(file.Name(), sType)
 				} else {
 					reworkUpdateRepoParams(file.Name(), sType)
 				}
