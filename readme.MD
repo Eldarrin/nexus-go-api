@@ -1,4 +1,4 @@
-#Sonatype Nexus Go API
+# Sonatype Nexus Go API
 
 Based on their swagger 2.0 doc for the Nexus Go API. Version: 3.40.1
 
